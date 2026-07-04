@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TENOS Care Portal — gemeinsam gegen ALS. Forschung beschleunigen.">
+  <title>TENOS Care Portal</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      background: #0a0a0a;
+    }
+
+    /* The background image comes from the React app: Caddy proxies
+       /app/* to Vite, and Vite serves public/ under the app prefix.
+       So /app/auth-hero.jpg lives on the same origin as the landing
+       page. */
+    .splash {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      /* Image as the top layer, dark brand tint as fallback color
+         underneath — prevents white flashes while the image loads and
+         fills any gaps. Value identical to AUTH_HERO_BG in
+         web/src/components/layout/BrandedAuthHero.tsx. */
+      background: url('/app/auth-hero.jpg') center / cover no-repeat, #1a1021;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      /* 2.5rem all around — exactly like BrandedAuthHero.tsx
+         (`<Stack style={{ padding: '2.5rem' }}>`). If that changes,
+         change it here too. */
+      padding: 2.5rem;
+    }
+
+    /* Light vignette overlay so the white text stays reliably
+       readable on the mountain image, regardless of the region. */
+    .splash::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.25) 0%,
+          rgba(0, 0, 0, 0.0) 30%,
+          rgba(0, 0, 0, 0.0) 60%,
+          rgba(0, 0, 0, 0.55) 100%
+        );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Stacking context for all content above the vignette overlay. */
+    .splash > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Top: Logo ─────────────────────────────────── */
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    /* 32 px logo height — 1:1 like BrandedAuthHero.tsx
+       (`<img style={{ height: 32 }} />`). Mobile value: see the
+       media query below (26 px, matching `MobileBrand`). */
+    .brand img {
+      height: 32px;
+      display: block;
+    }
+
+    /* ── Center: Action card ──────────────────────── */
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem 0;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 360px;
+    }
+    /* Mantine button size="md" + defaultRadius "sm" (= 4px), like
+       all buttons in the React frontend. Values mirrored from
+       Mantine v9; Mantine's defaults rarely change. */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.625rem;          /* size="md" → 42px */
+      padding: 0 1rem;           /* size="md" padding-inline */
+      border-radius: 8px;
+      font-size: 0.875rem;       /* sm font */
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background-color 120ms ease, color 120ms ease,
+                  box-shadow 120ms ease;
+    }
+    .btn-primary {
+      background: #ffffff;
+      color: #0a0a0a;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: #f1f3f5;
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.92);
+      color: #0a0a0a;
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      background: #ffffff;
+    }
+    .portal-label {
+      margin-top: 0.5rem;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* ── Bottom: Tagline ───────────────────────────
+       Values are 1:1 like the React variant
+       (web/src/components/layout/BrandedAuthHero.tsx).
+       If that changes, change it here too. */
+    .tagline {
+      max-width: 460px;
+    }
+    .tagline-line {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .tagline-line-secondary {
+      opacity: 0.7;
+    }
+    .tagline-mark {
+      margin-top: 1.25rem;
+      font-size: 13px;
+      line-height: 1.5;
+      opacity: 0.85;
+      max-width: 380px;
+    }
+    .tagline-mark a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .tagline-mark a:hover {
+      opacity: 1;
+    }
+
+    /* ── Responsive ───────────────────────────────── */
+    /* On very narrow phones, pull the padding back a bit so the
+       tagline lines don't stick to the edge. The auth page has no
+       dedicated mobile override — the hero is hidden below 859 px
+       anyway — so there is no exact mirror of BrandedAuthHero here. */
+    @media (max-width: 600px) {
+      .splash {
+        padding: 1.5rem;
+      }
+      .brand img {
+        height: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <!-- Top-left: logo (not linked) -->
+    <div class="brand" aria-label="help cure ALS">
+      <img src="logo.svg" alt="help cure ALS">
+    </div>
+
+    <!-- Center: Action Card -->
+    <section class="center" aria-label="Zugang zum Portal">
+      <div class="actions">
+        <a class="btn btn-primary" href="/app/" data-i18n="signIn">Anmelden</a>
+        <a
+          class="btn btn-secondary"
+          href="https://tenos.app/de/ambulanz-kontakt/"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="requestAccess"
+        >Zugang beantragen</a>
+      </div>
+      <p class="portal-label">TENOS Care Portal</p>
+    </section>
+
+    <!-- Bottom-left: Tagline -->
+    <section class="tagline">
+      <p class="tagline-line" data-i18n="taglineLine1">Gemeinsam gegen ALS.</p>
+      <p class="tagline-line tagline-line-secondary" data-i18n="taglineLine2">Forschung beschleunigen.</p>
+      <p class="tagline-mark" data-i18n-html="footerMark">
+        Ein gemeinnütziges Projekt, von
+        <a
+          href="https://help-cure-als.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >help cure ALS e.V.</a>,
+        zur Begleitung von Menschen mit ALS und zur Förderung der ALS-Forschung.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Wave UI.18 — language detection for the landing page.
+    // Order:
+    //   1. localStorage['i18nextLng']     — the i18next LanguageDetector
+    //                                       caches the user's choice from
+    //                                       the app here. If the user
+    //                                       switched to EN on the login
+    //                                       page, the landing shows EN too.
+    //   2. navigator.language             — browser default.
+    //
+    // Default is German (the HTML stays). On non-German detection we
+    // replace all marked texts with their English counterparts and set
+    // <html lang="en">.
+    //
+    // Strings are 1:1 with the i18n translations in the React app
+    // (web/src/i18n/locales/{de,en}.json) — if something changes there,
+    // adjust it here too.
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('i18nextLng');
+      } catch (_) {
+        // Private browsing / localStorage blocked — fine, falls
+        // back to the browser default.
+      }
+      var effectiveLang = (stored || navigator.language || 'en')
+        .toLowerCase();
+      var isGerman =
+        effectiveLang === 'de' || effectiveLang.indexOf('de-') === 0;
+      if (isGerman) return; // default HTML is already German
+
+      var dict = {
+        signIn: 'Sign in',
+        requestAccess: 'Request access',
+        taglineLine1: 'Together against ALS.',
+        taglineLine2: 'Accelerating research.',
+        footerMark:
+          'A nonprofit project by ' +
+          '<a href="https://help-cure-als.org/" target="_blank" rel="noopener noreferrer">help cure ALS e.V.</a>, ' +
+          'supporting people with ALS and accelerating ALS research.',
+      };
+
+      document.documentElement.lang = 'en';
+      document.title = 'TENOS Care Portal';
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+    })();
+  </script>
+</body>
+</html>

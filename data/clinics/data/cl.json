@@ -1,0 +1,304 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CL"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cl-001",
+        "name": "Unidad de Manejo Integral de Enfermedades de Motoneurona – Clínica Dávila",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+56 2 2730-8000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.davila.cl/nueva-unidad-para-el-manejo-integral-de-la-esclerosis-lateral-amiotrofica/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Recoleta 464"
+            ],
+            "city": "Santiago",
+            "state": "Región Metropolitana",
+            "country": "CL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Exklusives medizinisches Versorgungszentrum fuer Patienten mit Motoneuron-Erkrankungen; multidisziplinaeres Team aus Neurologen, Pneumologen, Psychologen, Kinesiologen und Logopaedinnen; Centro de Enfermedades Neuromusculares; Leitung durch Dr. Nicholas Earle; aktive Forschung zu moeglichen ALS-Behandlungen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cl-002",
+        "name": "Departamento de Neurología y Neurocirugía – Hospital Clínico Universidad de Chile (Dr. José Joaquín Aguirre)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+56 2 2978-8260"
+          },
+          {
+            "system": "url",
+            "value": "https://www.redclinica.cl/actividad-academica/departamentos-academicos/neurologia-y-neurocirugia.aspx"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dr. Carlos Lorca Tobar 999 (ex Santos Dumont)"
+            ],
+            "city": "Santiago",
+            "state": "Región Metropolitana",
+            "country": "CL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Universitaetskrankenhaus mit starker neurologischer Abteilung; erstes epidemiologisches Studium zur Inzidenz von ALS in Chile durchgefuehrt; Aufbau eines Nationalen Registers fuer Motoneuron-Erkrankungen; Aus- und Weiterbildung von Fachspezialist:innen in Neurologie und Neurochirurgie; klinische und epidemiologische Forschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universidad de Chile"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cl-003",
+        "name": "Instituto de Neurocirugía Dr. Alfonso Asenjo",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+56 2 2575-4600"
+          },
+          {
+            "system": "url",
+            "value": "https://www.institutodeneurocirugia.cl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "José Manuel Infante 553"
+            ],
+            "city": "Santiago",
+            "state": "Región Metropolitana",
+            "country": "CL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einzigartiges oeffentliches Krankenhaus in Chile, spezialisiert auf komplexe neurochirurgische Pathologie; nationales Referenzzentrum fuer Neurochirurgie und interventionelle Neuroradiologie; gegruendet 1939; 91 Betten einschliesslich 14 Intensivbetten; versorgt Patienten aus der gesamten Region Metropolitana und dem ganzen Land; Neurologie-Konsultationen verfuegbar"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Servicio de Salud Metropolitano Oriente"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cl-004",
+        "name": "Instituto Chileno de Neurología",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+56 2 3339-7408"
+          },
+          {
+            "system": "phone",
+            "value": "+56 9 4290-0263"
+          },
+          {
+            "system": "email",
+            "value": "contacto@icnsalud.cl"
+          },
+          {
+            "system": "url",
+            "value": "https://www.institutochilenodeneurologia.cl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Estoril 120, Oficina 214"
+            ],
+            "city": "Santiago",
+            "state": "Región Metropolitana",
+            "country": "CL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Privates neurologisches Institut in Las Condes; Behandlung neuromuskulaerer Erkrankungen einschliesslich Esclerosis Lateral Amiotrofica (ELA); ambulante Sprechstunden; Terminvereinbarung per Telefon oder WhatsApp"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cl-005",
+        "name": "Corporación ELA Chile",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@corporacionelachile.cl"
+          },
+          {
+            "system": "url",
+            "value": "https://www.corporacionelachile.cl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              ""
+            ],
+            "city": "Santiago",
+            "state": "Región Metropolitana",
+            "country": "CL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinnuetzige Patientenorganisation, gegruendet von Luis Alberto Keitel; Ziel: Verbesserung der Lebensqualitaet von ALS-Betroffenen; betreibt ein multidisziplinaeres Zentrum mit Kinesiologen, Logopaedinnen, Ernaehrungsberaterin und Sozialarbeiterin; geoeffnet montags, dienstags und donnerstags (ausser Februar/Ferien); Bewertung und Beratung fuer Patienten und Familien in allen Krankheitsphasen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    }
+  ]
+}

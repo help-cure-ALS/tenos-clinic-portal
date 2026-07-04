@@ -1,0 +1,24 @@
+FROM oven/bun:1
+
+WORKDIR /app
+
+COPY package.json bun.lock* ./
+
+# Dev override for `@hca/mantine-workbench`: in production the library
+# is a github: dependency (pinned tag), but for local development we
+# want live edits against the sibling checkout instead. At build time
+# the dependency line is stripped with `sed`, so `bun install` only
+# installs the regular deps. At runtime the sibling repo is volume-
+# mounted to `/app/hca-mantine-workbench` and the `command` in
+# docker-compose.override.yml symlinks it into
+# `node_modules/@hca/mantine-workbench`. Vite then resolves the
+# library through regular npm module resolution. The full package.json
+# (with the github: dep) arrives in the following `COPY . .` and stays
+# in the container — Vite/Bun need it at runtime for module lookup.
+RUN sed -i '/"@hca\/mantine-workbench"/d' package.json && bun install
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["bun", "run", "dev", "--host"]

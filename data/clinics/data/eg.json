@@ -1,0 +1,332 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "EG"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-001",
+        "name": "Neuromuscular Unit, Ain Shams University Hospital (وحدة الأمراض العصبية العضلية، مستشفى عين شمس الجامعي)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://med.asu.edu.eg/neurology/units/neuromuscular-unit/"
+          },
+          {
+            "system": "url",
+            "value": "https://med.asu.edu.eg/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ain Shams University Hospitals (Demerdash), Abbasia Square"
+            ],
+            "city": "Cairo",
+            "postalCode": "11566",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einzige spezialisierte und umfassende Einheit fuer Motoneuronerkrankungen in Aegypten; gegruendet 1996 durch die Abteilung fuer Neuropsychiatrie; umfasst spezialisierte Labore fuer Histopathologie, Immunhistochemie und Genanalyse sowie eine Biobank fuer Muskelbiopsien und biologische Proben; dient als ueberregionales Ueberweisungszentrum fuer alle neuromuskulaeren Erkrankungen inkl. ALS aus ganz Aegypten und Nachbarlaendern; betreibt seit 2018 gemeinsam mit der German University in Cairo (GUC) das erste ALS-Register Afrikas mit ueber 180 Patienten; fuehrt Forschung zu familiaerer ALS, Genetik (SOD1, C9orf72, TARDBP), epidemiologischen Merkmalen und Diagnostik-Biomarkern durch; Kooperationspartner der Universitaet Ulm (Deutschland)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Kooperation mit Universitaet Ulm (Prof. Albert Ludolph); Teil des aegyptischen MND-Populationsregisters ueber mehrere Gouvernorate"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-002",
+        "name": "International Medical Center – ALS Specialized Clinic (المركز الطبي الدولي – عيادة التصلب الجانبي الضموري)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+20 2 24775902"
+          },
+          {
+            "system": "url",
+            "value": "https://imc.imceg.org/"
+          },
+          {
+            "system": "email",
+            "value": "IMC@imc.org.eg"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kilometer 42, Cairo-Ismailia Desert Road, Shorouk City"
+            ],
+            "city": "Cairo",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Erste spezialisierte ALS-Klinik in Nordafrika und der arabischen Welt; gegruendet am 15. Dezember 2019; multidisziplinaeres Team aus spezialisierten Neurologen mit ALS-Erfahrung; Ziel: fruehe Diagnosestellung, Durchfuehrung diagnostischer Tests und geeignete Versorgung zur Verbesserung der Lebensqualitaet; bietet auch psychologische Unterstuetzung fuer Angehoerige/Pflegende; Telemedizinangebot fuer registrierte ALS-Patienten; betrieben vom aegyptischen Militaer mit US-amerikanischer Expertise; Betrieb seit 2005"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-003",
+        "name": "Department of Neurology, Kasr Al-Ainy Hospital, Cairo University (قسم الأمراض العصبية، مستشفى قصر العيني، جامعة القاهرة)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "http://neurology.kasralainy.edu.eg/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kasr Al-Ainy Street, Old Cairo"
+            ],
+            "city": "Cairo",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aelteste Neurologieabteilung im Nahen Osten und Afrika (gegruendet 1932 von Prof. Youssef Barrada); Forschungs- und Lehrkrankenhaus der Medizinischen Fakultaet der Universitaet Kairo; klinisch-neurophysiologische Abteilung mit ALS-bezogener Forschung; Studien zu ALS-aehnlichen Erkrankungen in der aegyptischen Bevoelkerung und frueher ALS-Erkennung; WFN (World Federation of Neurology) anerkanntes Trainingszentrum"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-004",
+        "name": "Alexandria Neuromuscular Unit, Alexandria University Hospital (وحدة الأمراض العصبية العضلية، مستشفى جامعة الإسكندرية)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.alexu.edu.eg/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Alexandria Main University Hospital, Azarita"
+            ],
+            "city": "Alexandria",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskulaere Einheit innerhalb der Neurologieabteilung an der Universitaet Alexandria (Nordkueste Aegyptens); umfasst woechentliche neuromuskulaere Klinik mit Neurophysiologie-Einheit und Elektrodiagnostik; Teil des aegyptischen MND-Populationsregisters (Alexandria hat ca. 5,5 Millionen Einwohner); wichtiger Standort fuer die epidemiologische Erforschung von ALS in Aegypten"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Teil des aegyptischen populationsbasierten MND-Registers (mehrere Gouvernorate)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-005",
+        "name": "Egyptian Society of Neurology, Psychiatry and Neurosurgery – ESNPN (الجمعية المصرية للأمراض العصبية والنفسية وجراحة الأعصاب)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://esnpnegypt.com/"
+          },
+          {
+            "system": "url",
+            "value": "https://ejnpn.springeropen.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dar El-Hekmah, Egyptian Medical Association"
+            ],
+            "city": "Cairo",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet 1955 als Zweig der Aegyptischen Aerztekammer (Dar El-Hekmah); gemeinnuetzige Fachgesellschaft fuer alle Mitglieder der Neurologie-Gemeinschaft in Aegypten; offizielles Mitglied der World Federation of Neurology (WFN); gibt das Egyptian Journal of Neurology, Psychiatry and Neurosurgery heraus (peer-reviewed, Open Access, bei Springer Nature); veroeffentlicht regelmaessig ALS-bezogene Forschung (neuromuskulaerer Ultraschall, Neurosonographie, Diagnostik bei ALS); organisiert jaehrliche Konferenzen (Cairo Neurology Conference)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Mitglied der World Federation of Neurology (WFN)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-eg-006",
+        "name": "German University in Cairo – Neuromuscular Diseases Research Cluster (الجامعة الألمانية بالقاهرة – مجموعة أبحاث الأمراض العصبية العضلية)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.guc.edu.eg/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Main Entrance Al Tagamoa Al Khames, New Cairo City"
+            ],
+            "city": "Cairo",
+            "country": "EG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Forschungsgruppe fuer neuromuskulaere Erkrankungen innerhalb der Abteilung fuer Pharmakologie und Toxikologie; geleitet von Prof. Nabila Hamdi (Molekularmedizin und Pathologie, Abteilung fuer Pharmakologie und Toxikologie); Schwerpunkt auf ALS-Genetik in der aegyptischen Bevoelkerung; baut gemeinsam mit der Ain Shams University das erste populationsbasierte ALS-Register auf dem afrikanischen Kontinent auf; Forschung zu familiaerer ALS mit Fokus auf Konsanguinitaet und homozygote Genvarianten (SOD1, C9orf72, TARDBP, SPG11, MAPT); enge Kooperation mit der Universitaet Ulm (Hans-Kupczyk-Gastprofessur)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Kooperationspartner: Universitaet Ulm (Deutschland), Ain Shams University (NMU-ASU)"
+          }
+        ]
+      }
+    }
+  ]
+}

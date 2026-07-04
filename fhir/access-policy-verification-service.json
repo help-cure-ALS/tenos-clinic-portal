@@ -1,0 +1,12 @@
+{
+  "resourceType": "AccessPolicy",
+  "id": "access-policy-verification-service",
+  "name": "Verification Service",
+  "resource": [
+    { "resourceType": "Organization" },
+    { "resourceType": "Practitioner" },
+    { "resourceType": "PractitionerRole" },
+    { "resourceType": "Basic" },
+    { "resourceType": "ResearchStudy", "readonly": true }
+  ]
+}

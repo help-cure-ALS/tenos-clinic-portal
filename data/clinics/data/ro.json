@@ -1,0 +1,798 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "RO"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-001",
+        "name": "Clinica de Neurologie – Spitalul Universitar de Urgență București",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 21 318 0522"
+          },
+          {
+            "system": "url",
+            "value": "https://www.suub.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Splaiul Independenței 169"
+            ],
+            "city": "București",
+            "postalCode": "050098",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes universitäres Notfallkrankenhaus Rumäniens; Neurologische Klinik mit ALS-Diagnostik und -Versorgung; angegliedert an die Universitatea de Medicină și Farmacie Carol Davila; EMG-Labor; eines der wichtigsten Zentren für ALS in Rumänien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-002",
+        "name": "Clinica de Neurologie – Spitalul Clinic Colentina, București",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 21 317 3245"
+          },
+          {
+            "system": "url",
+            "value": "https://www.colentina.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Șoseaua Ștefan cel Mare 19-21"
+            ],
+            "city": "București",
+            "postalCode": "020125",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Schwerpunkt; angegliedert an die UMF Carol Davila; EMG-Labor und Neurophysiologie; wichtiges Überweisungszentrum für neuromuskuläre Erkrankungen in București"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-003",
+        "name": "Secția Neurologie – Spitalul Clinic de Urgență Bagdasar-Arseni, București",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 21 334 6900"
+          },
+          {
+            "system": "url",
+            "value": "https://www.bagdasar-arseni.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Șoseaua Berceni 12"
+            ],
+            "city": "București",
+            "postalCode": "041915",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes neurochirurgisches Krankenhaus Rumäniens; Neurologie- und Neurorehabilitations-Abteilung mit ALS-Diagnostik; angegliedert an die UMF Carol Davila; nicht zu verwechseln mit dem benachbarten INNBN (Institutul Național de Neurologie și Boli Neurovasculare)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-004",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Cluj-Napoca",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 264 592 771"
+          },
+          {
+            "system": "url",
+            "value": "https://www.scjcj.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Clinicilor 3-5"
+            ],
+            "city": "Cluj-Napoca",
+            "postalCode": "400006",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; angegliedert an die Universitatea de Medicină și Farmacie Iuliu Hațieganu; wichtigstes ALS-Zentrum Siebenbürgens (Transilvania); EMG-Labor und multidisziplinäre Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-005",
+        "name": "Clinica de Neurologie – Spitalul Clinic de Recuperare, Iași",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 232 266 044"
+          },
+          {
+            "system": "url",
+            "value": "https://www.scr-iasi.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Pantelimon Halipa 14"
+            ],
+            "city": "Iași",
+            "postalCode": "700661",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Universitatea de Medicină și Farmacie Grigore T. Popa; Versorgung für Moldau (Nordostrumänien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-006",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Timișoara",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 256 220 484"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosptm.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bulevardul Liviu Rebreanu 156"
+            ],
+            "city": "Timișoara",
+            "postalCode": "300723",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Universitatea de Medicină și Farmacie Victor Babeș; Versorgung für das Banat (Westrumänien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-007",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Craiova",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 251 502 200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.scjuc.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Tabaci 1"
+            ],
+            "city": "Craiova",
+            "postalCode": "200642",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Universitatea de Medicină și Farmacie din Craiova; Versorgung für Oltenien (Südwestrumänien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-008",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean Mureș, Târgu Mureș",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 265 212 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitaljudeteanmures.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Bernády György 6"
+            ],
+            "city": "Târgu Mureș",
+            "postalCode": "540072",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Universitatea de Medicină, Farmacie, Științe și Tehnologie George Emil Palade; Versorgung für Zentralsiebenbürgen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-009",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Sibiu",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 269 215 050"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitalsibiu.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bulevardul Corneliu Coposu 2-4"
+            ],
+            "city": "Sibiu",
+            "postalCode": "550245",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik; angegliedert an die Universitatea Lucian Blaga; Versorgung für Südsiebenbürgen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-010",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Brașov",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 268 320 022"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitjbv.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calea București 25-27"
+            ],
+            "city": "Brașov",
+            "postalCode": "500326",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik; Versorgung für die Region Brașov und Südostsiebenbürgen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-011",
+        "name": "Clinica de Neurologie – Spitalul Clinic Județean de Urgență Constanța",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 241 662 222"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitalulconstanta.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bulevardul Tomis 145"
+            ],
+            "city": "Constanța",
+            "postalCode": "900591",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik; angegliedert an die Universitatea Ovidius; Versorgung für die Schwarzmeerküste (Dobrogea)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-012",
+        "name": "Secția Neurologie – Spitalul Clinic Județean de Urgență Oradea",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 259 434 956"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitaloradea.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Republicii 37"
+            ],
+            "city": "Oradea",
+            "postalCode": "410159",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; angegliedert an die Universitatea din Oradea; Versorgung für Nordwestrumänien (Bihor)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-013",
+        "name": "Secția Neurologie – Spitalul Clinic Județean de Urgență Arad",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 257 256 454"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitalarad.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Andrényi Károly 2-4"
+            ],
+            "city": "Arad",
+            "postalCode": "310037",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für den Kreis Arad (Westrumänien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-014",
+        "name": "Secția Neurologie – Spitalul Clinic Județean de Urgență Galați",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+40 236 310 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.spitalulclinicjudetean.ro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Str. Brăilei 177"
+            ],
+            "city": "Galați",
+            "postalCode": "800578",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; angegliedert an die Universitatea Dunărea de Jos; Versorgung für Südostrumänien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ro-015",
+        "name": "Asociația Învingem SLA",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.invingemsla.ro/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Sârbova",
+            "country": "RO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Rumänische ALS-Patientenorganisation; Information, Beratung und Interessenvertretung für ALS-Betroffene und Angehörige"
+          }
+        ]
+      }
+    }
+  ]
+}

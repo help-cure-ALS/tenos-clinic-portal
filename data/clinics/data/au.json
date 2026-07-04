@@ -1,0 +1,987 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "AU"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-001",
+        "name": "Macquarie University MND Research Centre, Sydney",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 9812 3700"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mq.edu.au/research/mnd"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2 Technology Place, Macquarie Park"
+            ],
+            "city": "Sydney",
+            "state": "NSW",
+            "postalCode": "2109",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Macquarie University MND Research Centre unter Leitung von Prof. Dominic Rowe AM; eines der führenden MND-Forschungszentren Australiens; klinische Forschung, Biomarker, Neurophysiologie und klinische Studien; multidisziplinäre MND-Klinik"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FightMND, MND Australia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-002",
+        "name": "Brain and Mind Centre / NeuRA – University of Sydney, Royal Prince Alfred Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 9515 6111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sydney.edu.au/brain-mind/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "94 Mallett Street, Camperdown"
+            ],
+            "city": "Sydney",
+            "state": "NSW",
+            "postalCode": "2050",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Forschungszentrum unter Prof. Matthew Kiernan; Brain and Mind Centre der University of Sydney und Neuroscience Research Australia (NeuRA); angebunden an Royal Prince Alfred Hospital; Bushell Chair of Neurology; weltweit führende Forschung zu Nervenexzitabilität, Biomarkern, Neuroimaging und klinischen MND-Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-003",
+        "name": "MND Multidisciplinary Clinic – Concord Repatriation General Hospital, Sydney",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 9767 5000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.slhd.nsw.gov.au/concord/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hospital Road, Concord"
+            ],
+            "city": "Sydney",
+            "state": "NSW",
+            "postalCode": "2139",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Multidisziplinäre MND-Klinik am Concord Hospital; Wirkungsstätte von Prof. Steve Vucic; TMS-Labor (Transkranielle Magnetstimulation); weltweit führende Forschung zu kortikaler Hyperexzitabilität als frühes ALS-Biomarker; klinische Studien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-004",
+        "name": "MND Clinic – Westmead Hospital, Sydney",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 8890 5555"
+          },
+          {
+            "system": "url",
+            "value": "https://www.wslhd.health.nsw.gov.au/Westmead-Hospital"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hawkesbury Road"
+            ],
+            "city": "Westmead",
+            "state": "NSW",
+            "postalCode": "2145",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Westmead Hospital; multidisziplinäres Team; Versorgung für Western Sydney"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-005",
+        "name": "MND Clinic – John Hunter Hospital, Newcastle",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 4921 3000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hnehealth.nsw.gov.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Lookout Road, New Lambton Heights"
+            ],
+            "city": "Newcastle",
+            "state": "NSW",
+            "postalCode": "2305",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am John Hunter Hospital; angegliedert an die University of Newcastle; Versorgung für die Hunter-Region und Nordküste von NSW"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-006",
+        "name": "MND Clinic – Calvary Health Care Bethlehem, Melbourne",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 9596 2853"
+          },
+          {
+            "system": "url",
+            "value": "https://www.calvarycare.org.au/bethlehem/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "476 Kooyong Road, South Caulfield"
+            ],
+            "city": "Melbourne",
+            "state": "VIC",
+            "postalCode": "3162",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größte und älteste multidisziplinäre MND-Klinik in Victoria; spezialisiert auf progressive neurologische Erkrankungen; umfassendes multidisziplinäres Team inkl. Palliativmedizin; unter Leitung von A/Prof. Susan Mathers"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-007",
+        "name": "MND Clinic – Royal Melbourne Hospital, University of Melbourne",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 9342 7000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.thermh.org.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "300 Grattan Street, Parkville"
+            ],
+            "city": "Melbourne",
+            "state": "VIC",
+            "postalCode": "3050",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Royal Melbourne Hospital; angegliedert an die University of Melbourne; Department of Neuroscience; klinische Studien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-008",
+        "name": "MND Clinic – Austin Health, Melbourne",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 9496 5000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.austin.org.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "145 Studley Road, Heidelberg"
+            ],
+            "city": "Melbourne",
+            "state": "VIC",
+            "postalCode": "3084",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Austin Hospital; Florey Institute of Neuroscience and Mental Health; multidisziplinäres Team"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-009",
+        "name": "MND Clinic – Barwon Health, University Hospital Geelong",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 4215 0000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.barwonhealth.org.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ryrie Street, Geelong"
+            ],
+            "city": "Geelong",
+            "state": "VIC",
+            "postalCode": "3220",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik unter Leitung von Prof. Paul Talman; angegliedert an die Deakin University; Prof. Talman initiierte das Australian MND Registry; Versorgung für die Barwon South West Region"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-010",
+        "name": "MND Clinic – Royal Brisbane and Women's Hospital (RBWH), Brisbane",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 7 3646 8111"
+          },
+          {
+            "system": "url",
+            "value": "https://metronorth.health.qld.gov.au/rbwh"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Butterfield Street, Herston"
+            ],
+            "city": "Brisbane",
+            "state": "QLD",
+            "postalCode": "4029",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größte MND-Klinik in Queensland; multidisziplinäres Team unter Prof. Pamela McCombe; angegliedert an die University of Queensland (UQ); Centre for Clinical Research; klinische Studien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-011",
+        "name": "MND Clinic – Gold Coast University Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 7 5687 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.goldcoast.health.qld.gov.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Hospital Boulevard, Southport"
+            ],
+            "city": "Gold Coast",
+            "state": "QLD",
+            "postalCode": "4215",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung mit MND-Versorgung; angegliedert an die Griffith University; Versorgung für die Gold-Coast-Region und Süd-Queensland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-012",
+        "name": "MND Clinic – Flinders Medical Centre, Adelaide",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 8 8204 5511"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sahealth.sa.gov.au/flindersmedicalcentre"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Flinders Drive, Bedford Park"
+            ],
+            "city": "Adelaide",
+            "state": "SA",
+            "postalCode": "5042",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Multidisziplinäre MND-Klinik am Flinders Medical Centre; angegliedert an die Flinders University; Hauptzentrum für MND in South Australia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-013",
+        "name": "MND Clinic – Sir Charles Gairdner Hospital / Perron Institute, Perth",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 8 6457 3333"
+          },
+          {
+            "system": "url",
+            "value": "https://www.perroninstitute.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hospital Avenue, Nedlands"
+            ],
+            "city": "Perth",
+            "state": "WA",
+            "postalCode": "6009",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Sir Charles Gairdner Hospital; Perron Institute for Neurological and Translational Science; angegliedert an die University of Western Australia; Hauptzentrum für MND in Western Australia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-014",
+        "name": "MND Clinic – Fiona Stanley Hospital, Perth",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 8 6152 2222"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fionastanley.health.wa.gov.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11 Robin Warren Drive, Murdoch"
+            ],
+            "city": "Perth",
+            "state": "WA",
+            "postalCode": "6150",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Fiona Stanley Hospital; ergänzt Sir Charles Gairdner als zweites MND-Versorgungszentrum in Perth; Versorgung für südliches Perth"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-015",
+        "name": "MND Clinic – Launceston General Hospital, Tasmania",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 6777 6777"
+          },
+          {
+            "system": "url",
+            "value": "https://www.health.tas.gov.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "274-280 Charles Street"
+            ],
+            "city": "Launceston",
+            "state": "TAS",
+            "postalCode": "7250",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Launceston General Hospital; Hauptzentrum für MND-Versorgung in Tasmania"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-016",
+        "name": "Neurology Department – University of Canberra Hospital, ACT",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 5124 0000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.canberrahealthservices.act.gov.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Bruce Drive, Bruce"
+            ],
+            "city": "Canberra",
+            "state": "ACT",
+            "postalCode": "2617",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Ambulanz mit MND-Versorgung am University of Canberra Hospital; angegliedert an die Australian National University (ANU); Versorgung für das Australian Capital Territory"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-017",
+        "name": "MND Australia",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 2 8287 4980"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mndaustralia.org.au/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "PO Box 430, North Sydney"
+            ],
+            "city": "Sydney",
+            "state": "NSW",
+            "postalCode": "2059",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationale MND-Dachorganisation Australiens; Dachverband der State MND Associations; Forschungsförderung; koordiniert nationales MND-Register (Australian MND Registry) und Advocacy"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-au-018",
+        "name": "FightMND",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+61 3 9820 4483"
+          },
+          {
+            "system": "url",
+            "value": "https://fightmnd.org.au/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Melbourne",
+            "state": "VIC",
+            "country": "AU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größte MND-Forschungsförderungsorganisation Australiens; gegründet von Neale Daniher (ehemaliger AFL-Spieler und -Trainer); Big Freeze at the G Kampagne; finanziert klinische Studien und Grundlagenforschung"
+          }
+        ]
+      }
+    }
+  ]
+}

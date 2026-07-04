@@ -1,0 +1,239 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CU"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cu-001",
+        "name": "Centro Internacional de Restauración Neurológica (CIREN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+53 7 2715044"
+          },
+          {
+            "system": "phone",
+            "value": "+53 7 2736003"
+          },
+          {
+            "system": "email",
+            "value": "cineuro@neuro.ciren.cu"
+          },
+          {
+            "system": "url",
+            "value": "http://www.ciren.cu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ave 25 No. 15805 e/ 158 y 160, Cubanacán, Playa"
+            ],
+            "city": "La Habana",
+            "postalCode": "11300",
+            "country": "CU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "International renommiertes Zentrum fuer neurologische Wiederherstellung; gegruendet am 26. Februar 1989; Patienten aus ueber 90 Laendern; spezialisiert auf Bewegungsstoerungen, neurodegenerative Erkrankungen und neuromuskulaere Laesionen; multidisziplinaeres, intensives und personalisiertes Neurorestaurationsprogramm (bis zu 7 Stunden Therapie taeglich); Forschung in Neurowissenschaften und Neuropharmakologie; moderne Ausstattung inkl. MRT, CT, EEG, Roboter-Therapie und nicht-invasive Hirnstimulation; Oeffnungszeiten 8:30-16:30 Uhr"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Internationale Partnerschaften mit Kliniken in ueber 90 Laendern"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cu-002",
+        "name": "Instituto de Neurología y Neurocirugía \"Prof. Dr. Rafael Estrada González\" (INN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+53 7 8345550"
+          },
+          {
+            "system": "phone",
+            "value": "+53 7 8345505"
+          },
+          {
+            "system": "url",
+            "value": "https://instituciones.sld.cu/ineuro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle 29 No. 139 esq. D, Vedado, Plaza de la Revolución"
+            ],
+            "city": "La Habana",
+            "postalCode": "10400",
+            "country": "CU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aeltestes und wichtigstes Neurologie-Institut Kubas; 1962 als Hospital de Neurología von Prof. Rafael Estrada González gegruendet, ab 1966 als Institut; Pionier in der neurologischen endovaskulaeren Therapie und Wirbelsaeulenchirurgie mit Instrumentierung in Kuba; umfasst Neuropathologie, Neuroradiologie, Neurophysiologie, Neuroophthalmologie, Neurochemie, Neuroimmunologie, Neuropsychologie, Neurogenetik, Neuropharmakologie und experimentelle Neurologie; Oeffnungszeiten Mo-Fr 8:00-16:30 Uhr"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cu-003",
+        "name": "Hospital Clínico Quirúrgico \"Hermanos Ameijeiras\"",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+53 7 8761029"
+          },
+          {
+            "system": "url",
+            "value": "https://instituciones.sld.cu/hospitalameijeiras/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "San Lázaro No. 701 esq. a Belascoaín, Centro Habana"
+            ],
+            "city": "La Habana",
+            "postalCode": "10300",
+            "country": "CU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes klinisch-chirurgisches Krankenhaus Kubas; eroeffnet 1982; Neurologie gehoert zu den Hauptfachgebieten; 38 medizinische und paramedizinische Fachrichtungen; fortgeschrittene medizinische Forschung und komplexe Behandlungen; international anerkannt fuer medizinische Innovationen; Postgraduiertenausbildung; Oeffnungszeiten Mo-Fr 8:30-16:30 Uhr"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cu-004",
+        "name": "Centro de Neurociencias de Cuba (CNEURO)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+53 7 2637100"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cneuro.cu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle 190 No. 19818 e/ Ave 25 y Ave 27, Cubanacán, Playa"
+            ],
+            "city": "La Habana",
+            "postalCode": "11300",
+            "country": "CU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Kubanisches Neurowissenschaftszentrum; liegt im selben Campus-Gebiet wie CIREN in Cubanacán; Grundlagenforschung und angewandte Forschung zu neurologischen und neurodegenerativen Erkrankungen; entwickelt Neuroimaging- und Neurophysiologie-Technologien; potenziell relevant fuer ALS-Forschung durch neurowissenschaftliche Grundlagenarbeit"
+          }
+        ]
+      }
+    }
+  ]
+}

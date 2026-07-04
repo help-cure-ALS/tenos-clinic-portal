@@ -1,0 +1,235 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "LU"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lu-001",
+        "name": "Service de Neurologie – Centre Hospitalier de Luxembourg (CHL)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+352 4411 6627"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chl.lu/fr/service/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "4, Rue Nicolas Ernest Barblé"
+            ],
+            "city": "Luxembourg",
+            "postalCode": "1210",
+            "country": "LU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einziges Krankenhaus Luxemburgs mit ERN-EURO-NMD-Mitgliedschaft; 20 Neurologie-Betten (inkl. 6 Stroke Unit); 579 Betten gesamt; ERN-Kontakt: Dr. Fernand Pauly (Schwerpunkt pädiatrische neuromuskuläre Pathologie); kein dedizierter ALS-Spezialist für Erwachsene identifiziert; Patienten werden ggf. an Zentren in BE, FR oder DE überwiesen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ERN-EURO-NMD"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lu-002",
+        "name": "Service de Neurologie – Hôpitaux Robert Schuman, Hôpital Kirchberg, Luxembourg",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+352 286 911"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hopitauxschuman.lu/fr/specialites-maladies-traitements/neurologie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "9, Rue Edward Steichen"
+            ],
+            "city": "Luxembourg",
+            "postalCode": "2540",
+            "country": "LU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Allgemeine neurologische Versorgung; keine dedizierte ALS-Klinik verifiziert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lu-003",
+        "name": "Waertvollt Liewen a.s.b.l.",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+352 621 412 360"
+          },
+          {
+            "system": "email",
+            "value": "info@waertvollt-liewen.lu"
+          },
+          {
+            "system": "url",
+            "value": "https://www.waertvollt-liewen.lu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5, Rue de Longuyon"
+            ],
+            "city": "Bereldange",
+            "postalCode": "7236",
+            "country": "LU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dedizierte ALS-Patientenorganisation Luxemburgs; gegründet Februar 2012; Mitglied der International Alliance of ALS/MND Associations; nationales Netzwerk für ALS-Expertise; Begleitung von Patienten und Familien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lu-004",
+        "name": "ALAN – Maladies Rares Luxembourg a.s.b.l.",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+352 266 112 1"
+          },
+          {
+            "system": "email",
+            "value": "info@alan.lu"
+          },
+          {
+            "system": "url",
+            "value": "https://alan.lu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Parc Luxite, 13 Rue de l'Innovation"
+            ],
+            "city": "Kockelscheuer",
+            "postalCode": "1896",
+            "country": "LU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dachorganisation für seltene Krankheiten in Luxemburg; gegründet 1998 (ursprünglich für neuromuskuläre Erkrankungen, seit 2005 alle seltenen Krankheiten); kostenlose administrative, soziale und psychologische Unterstützung"
+          }
+        ]
+      }
+    }
+  ]
+}

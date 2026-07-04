@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+.env
+.env.prod
+docker-compose.override.yml
+*.log
+postgres_data/
+seed/*.sql
+fhir/*.batch.json
+medplum.config.json
+web/node_modules/
+verification-service/node_modules/
+backups/

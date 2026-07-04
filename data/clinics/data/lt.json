@@ -1,0 +1,179 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "LT"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lt-001",
+        "name": "Nervų ir raumenų ligų centras – LSMU Kauno klinikos (Centre for Neuromuscular Disorders, Kaunas Clinics)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen / ALS"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+370 37 326675"
+          },
+          {
+            "system": "email",
+            "value": "neurologijos.klinika@kaunoklinikos.lt"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kaunoklinikos.lt/contacts/clinical-departments-/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Eivenių g. 2"
+            ],
+            "city": "Kaunas",
+            "postalCode": "LT-50161",
+            "country": "LT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes und spezialisiertestes neuromuskuläres Zentrum Litauens und des gesamten Baltikums; Nervų ir raumenų ligų centras (Zentrum für neuromuskuläre Erkrankungen) 2012 gegründet, 2018 reorganisiert; multidisziplinäre Versorgung für pädiatrische und erwachsene Patienten mit neuromuskulären Erkrankungen inkl. ALS; 2019 vom litauischen Gesundheitsministerium für ERN EURO-NMD benannt; Gastgeber der 3. Baltic School of Neuro-Myology: Motor Neuron Diseases (Kaunas, September 2023); angegliedert an die Lithuanian University of Health Sciences (LSMU) und deren Neuroscience Institute; LSMU Kauno klinikos ist das größte Krankenhaus Litauens und des Baltikums"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ERN EURO-NMD (2019 vom Gesundheitsministerium benannt; Status auf ERN-Website: pending)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lt-002",
+        "name": "Neurologijos centras – VUL Santaros klinikos (Centre of Neurology, Vilnius University Hospital Santaros Klinikos)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+370 5 236 5000"
+          },
+          {
+            "system": "phone",
+            "value": "+370 5 236 5222",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "info@santa.lt"
+          },
+          {
+            "system": "url",
+            "value": "https://www.santa.lt/center-of-neurology-about-center/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Santariškių g. 2"
+            ],
+            "city": "Vilnius",
+            "postalCode": "LT-08661",
+            "country": "LT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologiezentrum am größten Universitätskrankenhaus in Vilnius; umfasst stationäre Neurologie, Notfall-Neurologie, ambulante Neurologie und klinische Neurophysiologie; ALS-Diagnostik und -Versorgung im Rahmen der allgemeinen Neurologie; angegliedert an die Klinik für Neurologie und Neurochirurgie der Medizinischen Fakultät der Universität Vilnius; kein dediziertes ALS-Zentrum verifiziert, aber ALS-Patienten werden hier versorgt; Leiter der Klinik: Prof. Dalius Jatužis"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lt-003",
+        "name": "Lietuvos sergančiųjų genetinėmis nervų-raumenų ligomis asociacija 'Sraunija'",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://sraunija.lt/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Litauen",
+            "country": "LT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Litauische Patientenorganisation für genetische neuromuskuläre Erkrankungen; gegründet am 3. Dezember 2010; vereint Familien mit Betroffenen genetischer Nerv-Muskel-Erkrankungen; Ziel: Aufbau eines litauischen Registers für neuromuskuläre Erkrankungen im europäischen TREAT-NMD-Register; umfasst Muskeldystrophien und Motoneuronerkrankungen; genaue Adresse konnte nicht verifiziert werden; KEINE dedizierte ALS-Patientenorganisation in Litauen identifiziert – Sraunija ist die nächstliegende Patientenvertretung"
+          }
+        ]
+      }
+    }
+  ]
+}

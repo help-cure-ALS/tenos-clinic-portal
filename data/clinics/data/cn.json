@@ -1,0 +1,837 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CN"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-001",
+        "name": "北京大学第三医院 神经内科 – ALS专病门诊",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 10 82266699"
+          },
+          {
+            "system": "url",
+            "value": "https://www.puh3.net.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "海淀区花园北路49号"
+            ],
+            "city": "北京市",
+            "district": "海淀区",
+            "postalCode": "100191",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Peking University Third Hospital (PUTH, 北医三院); groesstes und fuehrendes ALS-Zentrum Chinas; Neurologische Abteilung unter Leitung von Prof. Fan Dongsheng; ueber 3.000 ALS-Patienten in 30 Jahren klinischer Erfahrung; Koordinationszentrum des CHALSR (China ALS Registry), dem ersten nationalen, multizentrischen, prospektiven ALS-Register mit 88 teilnehmenden Krankenhaeusern; Forschung zu SOD1-Mutationen, Biomarkern, Tetramethylpyrazin-Nitron (TMP-Nitron, klinische Studie Phase II in JAMA Network Open 2025); Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); PACTALS-Mitglied (Pan-Asian Consortium for Treatment and Research in ALS)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry); PACTALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-002",
+        "name": "中国人民解放军总医院（301医院）神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 10 66887329"
+          },
+          {
+            "system": "url",
+            "value": "https://www.301hospital.com.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "海淀区复兴路28号"
+            ],
+            "city": "北京市",
+            "district": "海淀区",
+            "postalCode": "100853",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Chinese PLA General Hospital (301 Hospital); groesstes militaerisches Krankenhaus Chinas, gegruendet 1953; Abteilung fuer Neurologie im First Medical Center mit ALS-Forschungsschwerpunkt unter Prof. Huang Xusheng; National Clinical Research Center for Geriatric Diseases; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); Forschung zu ALS-Biomarkern (Cystatin C), ALS-FTD-Spektrum und Ernaehrungsstatus bei ALS-Patienten; umfangreiche diagnostische Ausstattung (PET-CT, PET-MR)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-003",
+        "name": "北京协和医院 神经科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 10 69156114"
+          },
+          {
+            "system": "url",
+            "value": "https://www.pumch.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "东城区帅府园1号"
+            ],
+            "city": "北京市",
+            "district": "东城区",
+            "postalCode": "100730",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Peking Union Medical College Hospital (PUMCH, 协和医院); aelteste neurologische Abteilung Chinas (gegruendet 1921); sieben Jahre in Folge Platz 1 in der Fudan-Universitaet-Ranking 'China Hospital Specialty'; unter Leitung von Prof. Cui Liying; ueber 1.627 ALS-Patienten (2014-2022) diagnostiziert; 'Goldstandard' fuer ALS-Diagnostik mittels Elektromyographie (EMG) entwickelt; einzige nationale Leiteinrichtung fuer das Seltene-Krankheiten-Diagnose- und Behandlungsnetzwerk; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); genetische Forschung (ERBB4, ANXA11, FUS, SOD1-Mutationen)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-004",
+        "name": "复旦大学附属华山医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 21 52889999"
+          },
+          {
+            "system": "url",
+            "value": "https://www.huashan.org.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "静安区乌鲁木齐中路12号"
+            ],
+            "city": "上海市",
+            "district": "静安区",
+            "postalCode": "200040",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Huashan Hospital, Fudan University (华山医院); gegruendet 1907 als Chinesisches Rotes Kreuz Allgemeines Krankenhaus; Neurologie ist nationales klinisches Schluesselfach (Bildungsministerium); National Center for Neurological Disorders; Huashan Rare Disease Center; ALS-Forschungsprogramme seit 2008; neuromuskulaere Klinik unter Dr. Zhu Wenhua; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); Forschung zu neurodegenerativen und neuromuskulaeren Erkrankungen; fortschrittliche Neuroimaging- und Neurophysiologie-Diagnostik"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-005",
+        "name": "四川大学华西医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 28 85422114"
+          },
+          {
+            "system": "url",
+            "value": "https://www.wchscu.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "武侯区国学巷37号"
+            ],
+            "city": "成都市",
+            "district": "武侯区",
+            "postalCode": "610041",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "West China Hospital, Sichuan University (华西医院); groesstes Krankenhaus Suedwestchinas; grosse ALS-Registerdatenbank mit ueber 1.131 Patienten (2006-2014); Fachgruppe fuer neurodegenerative Erkrankungen im Fachbereich Neurologie; ALS-Forschung unter Dr. Chen Yongping (klinisches Staging, SOD1-Mutationsanalyse, miRNA-Forschung); Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); Forschungsschwerpunkte: klinische Phaenotypen, Genetik, Bildgebung bei Motoneuron-Erkrankungen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-006",
+        "name": "华中科技大学同济医学院附属同济医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 27 83662688"
+          },
+          {
+            "system": "url",
+            "value": "https://www.tjh.com.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "硚口区解放大道1095号"
+            ],
+            "city": "武汉市",
+            "district": "硚口区",
+            "postalCode": "430030",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology; fuehrendes Universitaetskrankenhaus in Zentralchina (Wuhan); Neurologische Abteilung mit aktiver ALS-Forschung; Forschung zu Astrozyten-vermittelter Motoneurondegeneration ueber TRAIL-DR5-Signalweg; Darmmikrobiom und kognitive Beeintraechtigung bei ALS; traditionelle chinesische Medizin (TCM) in der ALS-Behandlung (CARE-TCM-Studie); Prof. Wang Wei (Changjiang-Scholar, National Science Fund for Distinguished Young Scholars)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-007",
+        "name": "首都医科大学宣武医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 10 83198899"
+          },
+          {
+            "system": "url",
+            "value": "https://www.xwhosp.com.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "西城区长椿街45号"
+            ],
+            "city": "北京市",
+            "district": "西城区",
+            "postalCode": "100053",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Xuanwu Hospital, Capital Medical University; gegruendet 1958; Nationales Medizinisches Zentrum fuer Neurologische Erkrankungen; Neurologie-Abteilung seit 1968 als erstes nationales Forschungszentrum fuer Neurologie anerkannt; ALS/MND-Klinik mit Forschung zu familiaerem ALS (SOD1-Mutationen); Schluesellabor fuer neurodegenerative Erkrankungen (Bildungsministerium); Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); breites Spektrum an neuromuskulaeren Erkrankungen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-008",
+        "name": "中山大学附属第一医院 神经科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 20 87755766"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fahsysu.org.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "越秀区中山二路58号"
+            ],
+            "city": "广州市",
+            "district": "越秀区",
+            "postalCode": "510080",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "First Affiliated Hospital, Sun Yat-sen University (中山一院); gegruendet 1910; eines der aeltesten und renommiertesten Krankenhaeuser Suedchinas; Neurologie als nationales klinisches Schluesselfach; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); wichtigstes ALS-Behandlungszentrum in der Provinz Guangdong und der Pearl-River-Delta-Region; Forschung zu neuromuskulaeren und neurodegenerativen Erkrankungen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-009",
+        "name": "山东大学齐鲁医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 531 82169114"
+          },
+          {
+            "system": "url",
+            "value": "https://www.qiluhospital.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "历下区文化西路107号"
+            ],
+            "city": "济南市",
+            "district": "历下区",
+            "postalCode": "250012",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Qilu Hospital, Shandong University (齐鲁医院); Platz 1 in Shandong, Platz 20 in China; Forschungsinstitut fuer neuromuskulaere und neurodegenerative Erkrankungen innerhalb der Neurologie-Abteilung; aktive ALS-Forschung zu Hippocampus-Subfeldern, Choroid-Plexus-Veraenderungen und Amygdala-Anomalien bei ALS; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); FUS-Protein-Forschung in Hautbiopsien als diagnostisches Fenster fuer ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-010",
+        "name": "江苏省人民医院（南京医科大学第一附属医院）神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 25 68136000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.jsph.org.cn/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "鼓楼区广州路300号"
+            ],
+            "city": "南京市",
+            "district": "鼓楼区",
+            "postalCode": "210029",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Jiangsu Province People's Hospital / First Affiliated Hospital of Nanjing Medical University (江苏省人民医院); gegruendet 1936; Grade 3A Krankenhaus; Neurologie als provinziales klinisches Schluesselfach; Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); beteiligt an der CHALSR-Multizenterstudie; wichtiges ALS-Behandlungszentrum in der Provinz Jiangsu"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-011",
+        "name": "河北医科大学第二医院 神经内科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+86 311 66002999"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hb2h.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "新华区和平西路215号"
+            ],
+            "city": "石家庄市",
+            "district": "新华区",
+            "postalCode": "050000",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Second Hospital of Hebei Medical University (河北医大二院); Gruendungsmitglied der Chinesischen ALS-Arbeitsgruppe (2004); beteiligt am CHALSR; ALS-Patientenversorgung und Forschung in der Provinz Hebei; eines der zehn urspruenglichen Gruendungskrankenhaeuser des nationalen ALS-Netzwerks"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CHALSR (China ALS Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-012",
+        "name": "北京东方丝雨渐冻人罕见病关爱中心",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "http://www.dongfangsiyu.com/"
+          }
+        ],
+        "address": [
+          {
+            "city": "北京市",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Beijing Oriental Silk Rain ALS Rare Disease Care Center (东方丝雨); gegruendet November 2013; Chinas erste national registrierte gemeinnuetzige Organisation fuer ALS-Patienten (渐冻人); Mitglied der International ALS/MND Alliance seit Juni 2015; '4+1'-Modell: Zusammenarbeit von Regierung, Sozialorganisationen, medizinischen Einrichtungen und Unternehmen; Projekte: 'Million Breathing Project' fuer ALS-Patienten, personalisierte Unterstuetzung in Beijing; Herausgabe von Chinas erstem 'Rehabilitations- und Pflegeleitfaden fuer Motoneuron-Erkrankungen' im Auftrag des Chinesischen Behindertenverbandes; Auszeichnung als herausragendes Wohltaetigkeitsprojekt 'Happy China'"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-013",
+        "name": "中国社会福利基金会 渐冻人基金",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.cswef.org/"
+          }
+        ],
+        "address": [
+          {
+            "city": "北京市",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "China Social Welfare Foundation – ALS Fund (渐冻人基金); gegruendet August 2014 gemeinsam von der China Social Welfare Foundation und Beijing Oriental Silk Rain; Schwerpunkte: Wissensverbreitung ueber ALS, Familienbetreuung, psychische Gesundheit, Arzt-Patienten-Kommunikation; hat seit 2014 in Zusammenarbeit mit ueber 70 Krankenhaeusern mehr als 4.000 ALS-Patienten geholfen und ueber 60 Millionen Yuan eingespart; unterstuetzt durch die Chinese Medical Doctors Association (CMDA)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-014",
+        "name": "蔻德罕见病中心",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.cord.org.cn/"
+          }
+        ],
+        "address": [
+          {
+            "city": "上海市",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Chinese Organization for Rare Disorders (CORD, 蔻德罕见病中心); gegruendet 2013 von Kevin Huang; groesste gemeinnuetzige Organisation fuer seltene Erkrankungen in China; vertritt ueber 100 Patientenorganisationen fuer seltene Krankheiten; ALS ist auf Chinas offizieller Nationale Liste seltener Krankheiten aufgefuehrt; Plattform und Dachverband fuer Advocacy, Politikberatung und internationale Zusammenarbeit; foerdert Zugang zu Orphan Drugs und Verbesserung der Diagnostik seltener Krankheiten; jaehrliches China Rare Disease Forum"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cn-015",
+        "name": "中国ALS研究网 – CHALSR",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "http://www.chalsr.net/"
+          }
+        ],
+        "address": [
+          {
+            "city": "北京市",
+            "country": "CN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "China ALS Registry (CHALSR); erstes nationales, multizentrisches, prospektives ALS-Registerprojekt in Festlandchina; rekrutiert Patienten aus 88 repraesentativen Krankenhaeusern in ca. 20 Provinzen, 4 regierungsunmittelbaren Staedten und 4 autonomen Regionen; Ziel: 4.752 ALS-Patienten ueber 3 Jahre; vierteljährliches Follow-up; koordiniert durch die Neurologische Abteilung der Peking University Third Hospital unter Prof. Fan Dongsheng; dient als zentrale Forschungsinfrastruktur fuer klinische ALS-Studien in China; ClinicalTrials.gov ID: NCT04328675"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "PACTALS"
+          }
+        ]
+      }
+    }
+  ]
+}

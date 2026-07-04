@@ -1,0 +1,29 @@
+{$CADDY_SITE_ADDRESS} {
+    encode zstd gzip
+
+    handle_path /api/* {
+        reverse_proxy medplum-server:8103
+    }
+
+    handle_path /vapi/* {
+        reverse_proxy verification-service:3002
+    }
+
+    handle_path /sapi/* {
+        reverse_proxy supplier-proxy:3003
+    }
+
+    # studies-sync admin API (nur für hca-admin)
+    handle_path /sync-api/* {
+        reverse_proxy studies-sync:3004
+    }
+
+    handle /app/* {
+        reverse_proxy {$WEB_UPSTREAM}
+    }
+
+    handle {
+        root * /srv/landing
+        file_server
+    }
+}

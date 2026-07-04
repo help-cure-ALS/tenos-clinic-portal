@@ -1,0 +1,429 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "MX"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-001",
+        "name": "Instituto Nacional de Neurología y Neurocirugía Manuel Velasco Suárez (INNN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 5606 3822"
+          },
+          {
+            "system": "url",
+            "value": "https://www.gob.mx/innn"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Insurgentes Sur 3877"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "14269",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales Referenzzentrum fuer Neurologie und Neurochirurgie in Mexiko. Tertiaerversorgung fuer schwere neurologische Erkrankungen, einschliesslich ALS/ELA. 126 Betten fuer Neurologie, Neurochirurgie und Psychiatrie. Gegruendet 1964. Bietet Diagnostik, Forschung und Ausbildung. Ueberweisungen aus anderen Krankenhaeusern erforderlich."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Secretaría de Salud, Institutos Nacionales de Salud de México"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-002",
+        "name": "Hospital General de México Dr. Eduardo Liceaga",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 2789 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://hgm.salud.gob.mx/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dr. Balmis 148, Colonia Doctores"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "06720",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Oeffentliches Allgemeinkrankenhaus mit Abteilung fuer Neurologie und Neurochirurgie. Bietet multidisziplinaere Betreuung fuer ALS-Patienten. Im Jahr 2024 wurden 20 Patienten mit ALS/ELA behandelt. Riluzol ist verfuegbar. Diagnostik umfasst Elektromyografie und MRT."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Secretaría de Salud"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-003",
+        "name": "Clínica ELA - Instituto de Neurología y Neurocirugía, TecSalud, Hospital Zambrano Hellion",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 81 8888 0682"
+          },
+          {
+            "system": "email",
+            "value": "clinicas.neurociencias@servicios.tecsalud.mx"
+          },
+          {
+            "system": "url",
+            "value": "https://content.tecsalud.mx/clinica-ela"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Batallón San Patricio 112, Col. Real de San Agustín"
+            ],
+            "city": "San Pedro Garza García",
+            "state": "Nuevo León",
+            "postalCode": "66278",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einzige multidisziplinaere ALS-Klinik in Mexiko und Lateinamerika. Gegruendet 2019 (Programmentwicklung ab 2018) am Hospital Zambrano Hellion (TecSalud, Tecnológico de Monterrey). Bietet umfassende Versorgung durch Neurologie, Neuroreha, Pneumologie, Atemtherapie, Gastroenterologie, Ernaehrung, Neuropsychologie und Genetik. Geleitet von Dr. Héctor Ramón Martínez Rodríguez. Sprechzeiten: Mo-Fr 8:00-17:30 Uhr."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "TecSalud, Tecnológico de Monterrey, NEALS (Northeast ALS Consortium)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-004",
+        "name": "Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán (INCMNSZ)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 5487 0900"
+          },
+          {
+            "system": "url",
+            "value": "https://www.incmnsz.mx/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Vasco de Quiroga 15, Belisario Domínguez Sección XVI, Tlalpan"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "14080",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales Forschungsinstitut fuer Medizin und Ernaehrung. Gegruendet 1946. Abteilung fuer Neurologie vorhanden, aber kein spezifisches ALS-Programm dokumentiert. Hoechste Anzahl an Forschern und groesste wissenschaftliche Produktion in Mexiko (ueber 150 Gesundheitsforscher). Hauptsaechlich auf Diabetes, Adipositas und Ernaehrungsstoerungen spezialisiert, aber auch Neurologie im Leistungsspektrum."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Secretaría de Salud, Institutos Nacionales de Salud de México"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-005",
+        "name": "FYADENMAC - Familiares y Amigos de Enfermos de la Neurona Motora A.C.",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 5115 1285"
+          },
+          {
+            "system": "phone",
+            "value": "+52 55 5115 1286"
+          },
+          {
+            "system": "url",
+            "value": "http://www.fyadenmac.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Enrique Farman 164 B, Colonia Aviación Civil"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "15740",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aelteste ALS-Patientenorganisation in Mexiko, gegruendet 1982. Gemeinnuetziger Verein, der ALS/MND-Patienten und deren Familien ganzheitlich unterstuetzt. Bietet neurologische Beratung, Pneumologie, Ernaehrungsberatung, Physio- und Atemtherapie, psychologische und soziale Betreuung. Gegruendet von Ing. Eddy C. Muñoz, der selbst ueber 10 Jahre mit ALS lebte."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FEMEXER (Federación Mexicana de Enfermedades Raras), International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-006",
+        "name": "Apoyo Integral Gila A.C.",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 5292 4700"
+          },
+          {
+            "system": "email",
+            "value": "gilaapoyointegral@aig.org.mx"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ela.org.mx/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Tecamachalco 15-101, Col. Reforma Social"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "11650",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinnuetzige Organisation, die umfassende Unterstuetzung fuer ALS-Patienten und deren Familien bietet. Interventionsmodell im Zuhause der Betroffenen durch ein Palliativversorgungsprogramm mit emotionaler Unterstuetzung, materieller Hilfe und medizinischer Beratung. Betreibt auch ein aerztliches Verzeichnis fuer ELA-Spezialisten in Mexiko auf ela.org.mx."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-mx-007",
+        "name": "Hospital General Dr. Manuel Gea González",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+52 55 4000 3000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitalgea.salud.gob.mx/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calzada de Tlalpan 4800, Belisario Domínguez Sección XVI"
+            ],
+            "city": "Ciudad de México",
+            "state": "CDMX",
+            "postalCode": "14080",
+            "country": "MX"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Oeffentliches Krankenhaus mit Abteilung fuer Neurologie. Im Verzeichnis von Apoyo Integral Gila als Anlaufstelle fuer ALS-Patienten gelistet. Bietet auch Palliativversorgung an. Befindet sich in Tlalpan, nahe dem INNN und INCMNSZ."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Secretaría de Salud"
+          }
+        ]
+      }
+    }
+  ]
+}

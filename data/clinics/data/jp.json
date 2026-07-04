@@ -1,0 +1,1301 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "JP"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-001",
+        "name": "国立精神・神経医療研究センター (NCNP) – ALS外来, 小平市",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 42 341 2711"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ncnp.go.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "4-1-1 小川東町"
+            ],
+            "city": "小平市",
+            "state": "東京都",
+            "postalCode": "187-8551",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "National Center of Neurology and Psychiatry (NCNP); nationales Referenzzentrum für ALS und neurodegenerative Erkrankungen in Japan; ALS-Ambulanz; umfangreiche Grundlagen- und klinische Forschung; iPS-Zell-Forschung; koordiniert nationale klinische Studien; ALS-Nanbyo (Schwer behandelbare Krankheiten) Register"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS (Japanese Consortium for Amyotrophic Lateral Sclerosis clinical studies), Ministry of Health Nanbyo Program"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-002",
+        "name": "東京大学医学部附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 3 3815 5411"
+          },
+          {
+            "system": "url",
+            "value": "https://www.h.u-tokyo.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7-3-1 本郷"
+            ],
+            "city": "文京区",
+            "state": "東京都",
+            "postalCode": "113-8655",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Abteilung des Universitätskrankenhauses Tokyo (東京大学); Wirkungsstätte von Prof. Shoji Tsuji; führende ALS-Forschung; Neurogenetik, iPS-Zell-Technologie, IRUD (Initiative on Rare and Undiagnosed Diseases); Biomarker"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-003",
+        "name": "名古屋大学医学部附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 52 741 2111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.med.nagoya-u.ac.jp/hospital/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "65 鶴舞町"
+            ],
+            "city": "名古屋市昭和区",
+            "state": "愛知県",
+            "postalCode": "466-8560",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Nagoya Universität; Wirkungsstätte von Prof. Gen Sobue, einem der weltweit führenden ALS-Forscher; Forschung zu Motoneuron-Degeneration, TDP-43 und SOD1; Brain Research Institute"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-004",
+        "name": "東北大学病院 神経内科 – ALS外来, 仙台",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 22 717 7000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosp.tohoku.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1-1 星陵町"
+            ],
+            "city": "仙台市青葉区",
+            "state": "宮城県",
+            "postalCode": "980-8574",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Tohoku Universität; Wirkungsstätte von Prof. Masashi Aoki; führendes ALS-Forschungszentrum in Nordostjapan (Tohoku); Forschung zu ALS-Genetik (SOD1, FUS), HGF-Therapie (Hepatocyte Growth Factor) und klinischen Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-005",
+        "name": "大阪大学医学部附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 6 6879 5111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosp.med.osaka-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2-15 山田丘"
+            ],
+            "city": "吹田市",
+            "state": "大阪府",
+            "postalCode": "565-0871",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Osaka Universität; führendes Neurozentrum in der Kansai-Region; klinische Studien und Grundlagenforschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-006",
+        "name": "京都大学医学部附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 75 751 3111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kuhp.kyoto-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "54 河原町通聖護院 川原町"
+            ],
+            "city": "京都市左京区",
+            "state": "京都府",
+            "postalCode": "606-8507",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Kyoto Universität; iPS-Zell-Forschung (CiRA – Center for iPS Cell Research and Application, Nobelpreisträger Prof. Yamanaka); therapeutische Ansätze mit Stammzellen für ALS; unter Leitung von Prof. Ryosuke Takahashi (ehem. Präsident der Japanese Society of Neurology)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-007",
+        "name": "慶應義塾大学病院 神経内科 – ALS外来, 東京",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 3 3353 1211"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosp.keio.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "35 信濃町"
+            ],
+            "city": "新宿区",
+            "state": "東京都",
+            "postalCode": "160-8582",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Keio Universität; klinische Forschung; iPS-basierte Drug-Screening-Plattform für ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-008",
+        "name": "東邦大学医療センター大森病院 神経内科 – ALS総合診療センター, 東京",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 3 3762 4151"
+          },
+          {
+            "system": "url",
+            "value": "https://www.omori.med.toho-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6-11-1 大森西"
+            ],
+            "city": "大田区",
+            "state": "東京都",
+            "postalCode": "143-8541",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Toho University Omori Medical Center; erstes umfassendes multidisziplinäres ALS-Zentrum Japans (ALS総合診療センター, gegründet 2017); Modell für multidisziplinäre ALS-Versorgung in Japan; spezialisiertes Team aus Neurologie, Pneumologie, Rehabilitation, Ernährungsberatung, Sozialarbeit"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-009",
+        "name": "九州大学病院 神経内科 – ALS外来, 福岡",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 92 641 1151"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosp.kyushu-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3-1-1 馬出"
+            ],
+            "city": "福岡市東区",
+            "state": "福岡県",
+            "postalCode": "812-8582",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Kyushu Universität; führendes Neurozentrum in Südjapan (Kyushu); ALS-Forschung und klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-010",
+        "name": "北海道大学病院 神経内科 – ALS外来, 札幌",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 11 716 1161"
+          },
+          {
+            "system": "url",
+            "value": "https://www.huh.hokudai.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "北14条西5丁目"
+            ],
+            "city": "札幌市北区",
+            "state": "北海道",
+            "postalCode": "060-8648",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Hokkaido Universität; Versorgung für Hokkaido (Nordjapan)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-011",
+        "name": "岡山大学病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 86 223 7151"
+          },
+          {
+            "system": "url",
+            "value": "https://www.okayama-u.ac.jp/user/hospital/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2-5-1 鹿田町"
+            ],
+            "city": "岡山市北区",
+            "state": "岡山県",
+            "postalCode": "700-8558",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Okayama Universität; Wirkungsstätte von Prof. Koji Abe; Forschung zu Edaravone (Radicut) – in Japan entwickeltes ALS-Medikament; Forschung zu oxidativem Stress und Neuroprotektion"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-012",
+        "name": "熊本大学病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 96 344 2111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kuh.kumamoto-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1-1-1 本荘"
+            ],
+            "city": "熊本市中央区",
+            "state": "熊本県",
+            "postalCode": "860-8556",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Kumamoto Universität; große ALS-Kohorte (über 475 Patienten 2007-2022); Langzeitforschung zu Edaravone; führendes ALS-Zentrum in Kyushu"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-013",
+        "name": "広島大学病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 82 257 5555"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hiroshima-u.ac.jp/hosp"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1-2-3 霞"
+            ],
+            "city": "広島市南区",
+            "state": "広島県",
+            "postalCode": "734-8551",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Hiroshima Universität; Versorgung für die Chugoku-Region"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-014",
+        "name": "徳島大学病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 88 631 3111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.tokushima-hosp.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2-50-1 蔵本町"
+            ],
+            "city": "徳島市",
+            "state": "徳島県",
+            "postalCode": "770-8503",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Tokushima Universität; historisches ALS-Forschungszentrum; JETALS-Studie (hochdosiertes Mecobalamin/Methylcobalamin); Rozebalamin (Mecobalamin) wurde im September 2024 in Japan als ALS-Medikament zugelassen – weltweite Erste; Versorgung für die Shikoku-Region"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "JaCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-015",
+        "name": "新潟大学医歯学総合病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 25 223 6161"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nuh.niigata-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1-757 旭町通"
+            ],
+            "city": "新潟市中央区",
+            "state": "新潟県",
+            "postalCode": "951-8520",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Niigata Universität; Brain Research Institute; Versorgung für die Chubu-Region (japanische Westküste)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-016",
+        "name": "金沢大学附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 76 265 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hosp.kanazawa-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "13-1 宝町"
+            ],
+            "city": "金沢市",
+            "state": "石川県",
+            "postalCode": "920-8641",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung der Kanazawa Universität; ALS-Diagnostik und -Versorgung für die Hokuriku-Region"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-017",
+        "name": "千葉大学医学部附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 43 222 7171"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ho.chiba-u.ac.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1-8-1 稲毛"
+            ],
+            "city": "千葉市中央区",
+            "state": "千葉県",
+            "postalCode": "260-8677",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Chiba Universität; Versorgung für Chiba und Ostregion von Kanto"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-018",
+        "name": "横浜市立大学附属病院 神経内科 – ALS外来",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 45 787 2800"
+          },
+          {
+            "system": "url",
+            "value": "https://www.yokohama-cu.ac.jp/fukuhp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3-9 福浦"
+            ],
+            "city": "横浜市金沢区",
+            "state": "神奈川県",
+            "postalCode": "236-0004",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz der Yokohama City University; Versorgung für Kanagawa-Präfektur und südliches Kanto"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-019",
+        "name": "東京都立神経病院 – 神経内科, 府中市",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 42 323 5110"
+          },
+          {
+            "system": "url",
+            "value": "https://www.tmhp.jp/shinkeib/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2-6-1 武蔵台"
+            ],
+            "city": "府中市",
+            "state": "東京都",
+            "postalCode": "183-0042",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tokyo Metropolitan Neurological Hospital (東京都立神経病院); spezialisiert auf neurologische Erkrankungen; ALS-Versorgung und Langzeitbetreuung; wichtiges Versorgungszentrum für Tokyo"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-020",
+        "name": "独立行政法人国立病院機構 東京病院 – 神経筋難病センター",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 42 491 2111"
+          },
+          {
+            "system": "url",
+            "value": "https://tokyo.hosp.go.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3-1-1 竹丘"
+            ],
+            "city": "清瀬市",
+            "state": "東京都",
+            "postalCode": "204-8585",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläres Schwer-Behandelbare-Krankheiten-Zentrum (神経筋難病センター); National Hospital Organization (NHO); spezialisiert auf Langzeitversorgung und Beatmung bei ALS; eines der wichtigsten Versorgungszentren für fortgeschrittene ALS in Japan"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-021",
+        "name": "独立行政法人国立病院機構 宮城病院 – 神経筋難病センター, 山元町",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 223 37 1131"
+          },
+          {
+            "system": "url",
+            "value": "https://miyagi.hosp.go.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "山下"
+            ],
+            "city": "亘理郡山元町",
+            "state": "宮城県",
+            "postalCode": "989-2202",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläres Schwer-Behandelbare-Krankheiten-Zentrum; National Hospital Organization (NHO); spezialisiert auf Langzeitversorgung bei ALS; invasive Beatmung (TPPV)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-022",
+        "name": "独立行政法人国立病院機構 山形病院 – ALS治療研究センター",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 23 684 5566"
+          },
+          {
+            "system": "url",
+            "value": "https://yamagata.hosp.go.jp/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2-3-30 行金"
+            ],
+            "city": "山形市",
+            "state": "山形県",
+            "postalCode": "990-0876",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "NHO Yamagata Hospital; ALS治療研究センター (ALS Treatment Research Center); spezialisiert auf ALS-Langzeitversorgung und Beatmungsmanagement; National Hospital Organization"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-jp-023",
+        "name": "日本ALS協会 (JALSA – Japan ALS Association)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+81 3 3234 9155"
+          },
+          {
+            "system": "url",
+            "value": "https://alsjapan.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "九段北1-15-15 瑞鳥ビル"
+            ],
+            "city": "千代田区",
+            "state": "東京都",
+            "postalCode": "102-0073",
+            "country": "JP"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Japanische ALS-Vereinigung (JALSA); nationale Patientenorganisation; Beratung, Information, regionale Chapters (支部) in allen 47 Präfekturen; Forschungsförderung; Advocacy für ALS als Nanbyo (schwer behandelbare Krankheit) im japanischen Gesundheitssystem"
+          }
+        ]
+      }
+    }
+  ]
+}

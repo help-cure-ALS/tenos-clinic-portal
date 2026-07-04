@@ -1,0 +1,839 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "BR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-001",
+        "name": "Setor de Doenças Neuromusculares – Universidade Federal de São Paulo (UNIFESP)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 11 5571-3324"
+          },
+          {
+            "system": "url",
+            "value": "https://www.neurounifesp.com.br/unidades-academicas/ambulatorio-de-doencas-neuromusculares/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Embaú, 67 – Vila Clementino"
+            ],
+            "city": "São Paulo",
+            "state": "SP",
+            "postalCode": "04039-060",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes ALS-Referenzzentrum Brasiliens; Teil der Neurologischen Klinik des Hospital Sao Paulo / UNIFESP; geleitet von Prof. Acary Souza Bulle Oliveira; Schwerpunkt auf neuromuskulaeren Erkrankungen einschliesslich ALS, Myasthenia gravis und Post-Polio-Syndrom; umfangreiche klinische Forschung und Lehre; enge Zusammenarbeit mit ABrELA (Brasilianische ALS-Vereinigung), die ihren Sitz ebenfalls in Vila Clementino hat; Ambulanz montags, mittwochs und freitags von 9:00 bis 15:00 Uhr; oeffentlicher Zugang ueber das SUS-System (Einheitliches Gesundheitssystem); multidisziplinaeres Betreuungsteam fuer ALS-Patienten"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "World Muscle Society, ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-002",
+        "name": "Ambulatório de Doenças Neuromusculares – Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo (HCFMUSP)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 11 2661-0000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hc.fm.usp.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Dr. Enéas de Carvalho Aguiar, 255 – Cerqueira César"
+            ],
+            "city": "São Paulo",
+            "state": "SP",
+            "postalCode": "05403-000",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesster Universitaetsklinik-Komplex Lateinamerikas; die Abteilung fuer Neurologie der Medizinischen Fakultaet der USP verfuegt ueber eine spezialisierte Ambulanz fuer neuromuskulaere Erkrankungen einschliesslich ALS; Prof. Dagoberto Callegaro war langjaeaehriger Leiter der neurologischen Ambulanz und Mitbegruender der ABrELA; Forschung zu Schluckfunktion, Biomarkern und genetischen Grundlagen der ALS in der brasilianischen Bevoelkerung; angebunden an das Instituto de Neurologia der FMUSP; oeffentlicher Zugang ueber SUS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-003",
+        "name": "Ambulatório de Doenças Neuromusculares – Universidade Estadual de Campinas (UNICAMP)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://portal.fcm.unicamp.br/neuromuscular/atendimento/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Vital Brasil, 80 – Cidade Universitária Zeferino Vaz"
+            ],
+            "city": "Campinas",
+            "state": "SP",
+            "postalCode": "13083-888",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes ALS-Forschungszentrum Brasiliens; Teil des Departamento de Neurologia der Faculdade de Ciencias Medicas der UNICAMP; geleitet von Prof. Marcondes Cavalcante Franca Junior; Schwerpunkt auf genetischer Grundlagenforschung zur ALS in der brasilianischen Bevoelkerung und bildgebungsbasierte Biomarker; ueber 250 Publikationen im Bereich neuromuskulaerer Erkrankungen und Neurogenetik; tertiaere Versorgungseinrichtung, ausschliesslich ueber SUS (oeffentliches Gesundheitssystem) zugaenglich; mathematische Modellierung neuronaler Veraenderungen bei ALS-Patienten"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations (Forschungspartner)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-004",
+        "name": "Instituto de Neurologia Deolindo Couto (INDC) – Universidade Federal do Rio de Janeiro (UFRJ)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 21 2295-9794"
+          },
+          {
+            "system": "url",
+            "value": "http://www.indc.ufrj.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Venceslau Brás, 95 – Botafogo, Campus da Praia Vermelha"
+            ],
+            "city": "Rio de Janeiro",
+            "state": "RJ",
+            "postalCode": "22290-140",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Traditionsreiches Neurologie-Institut der UFRJ in Rio de Janeiro; spezialisierte Ambulanz fuer ALS und neuromuskulaere Erkrankungen; Zentrum fuer Untersuchung und Behandlung von Myopathien (seit 1978); diagnostische Einrichtungen fuer Elektroenzephalographie, Elektroneuromyographie und Tomographie; Rehabilitationsdienste in Logopaedie und Physiotherapie; Zugang ueber das oeffentliche Regulierungssystem SISREG; als ABrELA-Referenzzentrum gelistet"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-005",
+        "name": "Hospital das Clínicas da Faculdade de Medicina de Ribeirão Preto – Universidade de São Paulo (HCRP-USP)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 16 3602-2391"
+          },
+          {
+            "system": "url",
+            "value": "https://site.hcrp.usp.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Bandeirantes, 3900 – Campus Universitário, Setor de Neurofisiologia, 2. OG"
+            ],
+            "city": "Ribeirão Preto",
+            "state": "SP",
+            "postalCode": "14048-900",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ELA-Referenzzentrum im Bundesstaat Sao Paulo; Teil der Abteilung fuer Neurowissenschaften und Verhaltenswissenschaften der Medizinischen Fakultaet von Ribeirao Preto (FMRP-USP); bietet ambulante und stationaere neurologische Versorgung sowie Lehre und Forschung; als ABrELA-Referenzzentrum gelistet; Zugang ueber oeffentliches Gesundheitssystem (SUS)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-006",
+        "name": "Serviço de Neurologia – Hospital Universitário Oswaldo Cruz, Universidade de Pernambuco (HUOC-UPE)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 81 3184-1200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.upe.br/uh-huoc"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Arnóbio Marques, 310 – Santo Amaro"
+            ],
+            "city": "Recife",
+            "state": "PE",
+            "postalCode": "50100-130",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum fuer Neurologie im Nordosten Brasiliens; angebunden an die Universidade de Pernambuco; Neurologie-Abteilung mit diagnostischen Einrichtungen einschliesslich Polysomnographie fuer Schlafapnoe-Diagnostik bei neuromuskulaeren Patienten (ca. 30% der neuromuskulaeren Patienten betroffen); als ABrELA-Referenzzentrum gelistet"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-007",
+        "name": "Hospital das Clínicas da UFMG – Serviço de Neurologia",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 31 3307-9300"
+          },
+          {
+            "system": "url",
+            "value": "https://www.gov.br/ebserh/pt-br/hospitais-universitarios/regiao-sudeste/hc-ufmg"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Professor Alfredo Balena, 110 – Área Hospitalar"
+            ],
+            "city": "Belo Horizonte",
+            "state": "MG",
+            "postalCode": "30130-100",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtiges neurologisches Zentrum in Minas Gerais; der Neurologische Dienst des HC-UFMG feierte 2024 sein 60-jaehriges Bestehen; ca. 8.000 ambulante neurologische Konsultationen pro Jahr; Subspezialitaeten umfassen neuromuskulaere Erkrankungen (einschliesslich ALS), Bewegungsstoerungen, Neurokognition, Neuroinfektionen, demyelinisierende Erkrankungen, zerebrovaskulaere Erkrankungen und Epilepsie; Ambulanz Bias Fortes (Alameda Alvaro Celso, 175); angebunden an die Universidade Federal de Minas Gerais"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "EBSERH (Empresa Brasileira de Serviços Hospitalares)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-008",
+        "name": "Serviço de Neurologia – Hospital de Clínicas de Porto Alegre (HCPA), Universidade Federal do Rio Grande do Sul (UFRGS)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 51 3359-8182"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hcpa.edu.br/assistencia-servicos-medicos-neurologia"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Ramiro Barcelos, 2350 – 2. OG, Sala 2040"
+            ],
+            "city": "Porto Alegre",
+            "state": "RS",
+            "postalCode": "90035-903",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes Universitaetskrankenhaus in Suedbrasilien; Neurologischer Dienst in Kooperation mit der Medizinischen Fakultaet der UFRGS; zustaendig fuer Lehre der Neurologie in der Graduierung und Postgraduierung; Ambulanz Montag bis Freitag, 8:00-11:45 und 13:00-16:45; ARELA-RS (Regionale ALS-Vereinigung Rio Grande do Sul) hat ihren Sitz in Porto Alegre"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ARELA-RS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-009",
+        "name": "Ambulatório Docente Assistencial – Escola Bahiana de Medicina e Saúde Pública",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 71 3276-8281"
+          },
+          {
+            "system": "url",
+            "value": "https://www.bahiana.edu.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Dom João VI, 275 – Brotas"
+            ],
+            "city": "Salvador",
+            "state": "BA",
+            "postalCode": "40290-000",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Referenzzentrum im Nordosten Brasiliens; die Escola Bahiana de Medicina bietet ambulante Versorgung fuer Patienten mit neuromuskulaeren Erkrankungen einschliesslich ALS; Ambulanz fuer Palliativmedizin mit Schwerpunkt ALS und andere neurodegenerative Erkrankungen; als ABrELA-Referenzzentrum gelistet"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-010",
+        "name": "ABrELA – Associação Brasileira de Esclerose Lateral Amiotrófica",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 11 5579-2668"
+          },
+          {
+            "system": "phone",
+            "value": "+55 11 5579-4902"
+          },
+          {
+            "system": "email",
+            "value": "abrela@abrela.org.br"
+          },
+          {
+            "system": "url",
+            "value": "https://www.abrela.org.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Botucatu, 395/397 – Vila Clementino"
+            ],
+            "city": "São Paulo",
+            "state": "SP",
+            "postalCode": "04023-061",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigste und aelteste ALS-Patientenorganisation Brasiliens; gegruendet am 13. Maerz 1998; gemeinnuetziger Verein mit Schwerpunkt auf Lebensqualitaet fuer ALS-Patienten; bietet Beratung zu Patientenrechten, Sozialdienst (per Telefon, E-Mail und persoenlich), Hilfe bei der kostenlosen Bereitstellung nicht-invasiver Beatmungsgeraete (BiPAP); organisiert jaehrlich das Brasilianische Symposium zu Motoneuronerkrankungen/ALS; betreut ein Netzwerk regionaler Vereinigungen (ARELAs) in Minas Gerais (seit 2006), Rio Grande do Sul (seit 2005), Santa Catarina (seit 2022) und Rio de Janeiro (seit 2024) nach dem sogenannten Schirm-Modell; Mitglied der International Alliance of ALS/MND Associations; Sitz neben dem UNIFESP-Campus in Vila Clementino, Sao Paulo"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations, ARELAs-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-011",
+        "name": "Associação Pró-Cura da ELA",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 11 2659-7912"
+          },
+          {
+            "system": "phone",
+            "value": "+55 11 97660-8145"
+          },
+          {
+            "system": "email",
+            "value": "contato@procuradaela.org.br"
+          },
+          {
+            "system": "url",
+            "value": "https://procuradaela.org.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Doutor Diogo de Faria, 775 – 11. OG, Sala 114 – Vila Clementino"
+            ],
+            "city": "São Paulo",
+            "state": "SP",
+            "postalCode": "04037-002",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweite grosse ALS-Patientenorganisation Brasiliens; besteht aus Patienten, Familienangehoerigen, Pflegenden und Angehoerigen der Gesundheitsberufe; veroeffentlicht eine umfassende Liste von ALS-Referenzaerzten und -therapeuten in ganz Brasilien (erstmals 2016, aktualisiert 2019) mit interaktiver Landkarte nach Region und Bundesstaat; bietet Unterstuetzung und Beratung fuer ALS-Betroffene; Vertreter in verschiedenen Bundesstaaten Brasiliens; ebenfalls mit Sitz in Vila Clementino, Sao Paulo; Mitglied der International Alliance of ALS/MND Associations"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-012",
+        "name": "Instituto Paulo Gontijo (IPG)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 11 5093-2510"
+          },
+          {
+            "system": "phone",
+            "value": "+55 11 99978-3824"
+          },
+          {
+            "system": "url",
+            "value": "https://ipg.org.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rua Major Prado, 42"
+            ],
+            "city": "São Paulo",
+            "state": "SP",
+            "postalCode": "04517-020",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "OSCIP (Zivilgesellschaftliche Organisation oeffentlichen Interesses); gegruendet 2005; seit ueber 20 Jahren Referenzzentrum fuer Wissen, Forschung und Betreuung bei ALS; Mission umfasst die Entwicklung von Humanisierungsprogrammen, Verbreitung von Informationen zur Verbesserung der Lebensqualitaet von ALS-Betroffenen, Qualifizierung des multidisziplinaeren Versorgungsnetzwerks und Konsolidierung von Investitionen in die Heilungsforschung; fuehrt das Projekt Cuidar (Pflegen) durch; beteiligt an der nationalen epidemiologischen Studie zur ALS in Brasilien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations, Nationales epidemiologisches Netzwerk (LAIS/UFRN)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-013",
+        "name": "ARELA-RS – Associação Regional de Esclerose Lateral Amiotrófica do Rio Grande do Sul",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 51 99614-1469"
+          },
+          {
+            "system": "url",
+            "value": "https://www.arela-rs.org.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Ipiranga, 5311 – Sala 207, Prédio AMRIGS – Jardim Botânico"
+            ],
+            "city": "Porto Alegre",
+            "state": "RS",
+            "postalCode": "90610-001",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Regionale ALS-Vereinigung fuer den Bundesstaat Rio Grande do Sul; gegruendet am 30. Oktober 2005; eine der aeltesten regionalen ALS-Vereinigungen Brasiliens; Teil des ARELA-Netzwerks unter dem Schirm der ABrELA; bietet Informationen, Beratung und Unterstuetzung fuer ALS-Patienten und deren Familien in Suedbrasilien; Sitz im AMRIGS-Gebaeude in Porto Alegre; Kontakt ueber WhatsApp moeglich"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ABrELA / ARELAs-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-br-014",
+        "name": "Rede SARAH de Hospitais de Reabilitação – Hospital Sarah Kubitschek Brasília",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "rehaklinik",
+                "display": "Rehaklinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+55 61 3319-1111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sarah.br/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "SMHS Quadra 501, Bloco A"
+            ],
+            "city": "Brasília",
+            "state": "DF",
+            "postalCode": "70335-901",
+            "country": "BR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Internationales Referenzzentrum fuer Neurorehabilitation; Institution gegruendet 1960, heutiges Gebaeude eingeweiht 1980; das SARAH-Netzwerk umfasst Einheiten in Brasilia, Sao Luis, Salvador, Belo Horizonte, Fortaleza, Macapa und Rio de Janeiro; spezialisiert auf neurologische Rehabilitation einschliesslich Rueckenmarksverletzungen, Hirnverletzungen und neuromuskulaere Erkrankungen; Brasilia verfuegt ueber zwei Einheiten: SARAH Brasilia (vorwiegend stationaer) und das Internationale Zentrum fuer Neurowissenschaften und Rehabilitation SARAH Lago Norte (ausschliesslich ambulant); bietet Physiotherapie und Ergotherapie fuer Patienten mit neurodegenerativen Erkrankungen einschliesslich ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Rede SARAH (eigenes Netzwerk)"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "IL"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-001",
+        "name": "Tel Aviv Sourasky Medical Center (Ichilov) – Department of Neurology / Neuromuscular Diseases Unit",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.tasmc.org.il/en/"
+          },
+          {
+            "system": "url",
+            "value": "https://ichilov-clinic.gov.il/departments/neurology-in-israel/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "6 Weizmann Street"
+            ],
+            "city": "Tel Aviv",
+            "postalCode": "6423906",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesste und aelteste ALS-Klinik Israels (seit >20 Jahren unter Prof. Drory); umfasst EMG-Institut, spezialisierte neurologische Ambulanzen, stationaere Neurologie; multidisziplinaeres ALS-Team; Standort fuer PrimeC-Studie (PARADIGM-Trial) und weitere klinische Studien; affiliiert mit Sackler Faculty of Medicine, Tel Aviv University"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-002",
+        "name": "Hadassah Medical Center – ALS and Motor Neuron Disease Clinic (Ein Kerem Campus)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+972 2 677 7111"
+          },
+          {
+            "system": "phone",
+            "value": "+972 2 584 2111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hadassah.org.il/en/amyotrophic_lateral_sclerosis_(als)/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kiryat Hadassah, Ein Kerem"
+            ],
+            "city": "Jerusalem",
+            "postalCode": "9112002",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dedizierte ALS-Klinik gegruendet 2008 durch Dr. Marc Gotkine; multidisziplinaeres klinisches und Forschungszentrum fuer ALS; Physiotherapie, Atemtherapie, psychologische Betreuung; klinische Studien (u.a. AstroRx Stammzelltherapie); Kooperation mit Weizmann Institute of Science (Mikrobiom-Forschung); Standort fuer Target ALS Global Natural History Study (Genehmigungsphase 2025)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-003",
+        "name": "Sheba Medical Center (Tel Hashomer) – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+972 3 530 5000"
+          },
+          {
+            "system": "phone",
+            "value": "+972 3 530 3030"
+          },
+          {
+            "system": "url",
+            "value": "https://eng.sheba.co.il/The_Department_of_Neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2 Derech Sheba"
+            ],
+            "city": "Ramat Gan (Tel Hashomer)",
+            "postalCode": "52621",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesstes Krankenhaus Israels; 2025 von Newsweek als 8. bestes Krankenhaus weltweit eingestuft; 159 medizinische Abteilungen und Kliniken; Neurologie mit ALS- und Neuromuskulaerer Diagnostik (EMG, Nervenleitgeschwindigkeit); affiliiert mit Sackler School of Medicine, Tel Aviv University"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-004",
+        "name": "Rambam Health Care Campus – Department of Neurology / Neuromuscular Disease Clinic",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+972 4 826 7111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rambam.org.il/en/departmentsandclinics/division_of_internal_medicine/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "HaAliya HaShniya St 8"
+            ],
+            "city": "Haifa",
+            "postalCode": "3109601",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "1.100-Betten-Lehrkrankenhaus; groesstes Krankenhaus in Nordisrael; versorgt >2,5 Mio. Einwohner; Neuromuscular Disease Clinic und Clinical Electrophysiology unter Dr. Shahar Shelly; EMG-Labor (Einzelmuskelfasertest, Sphinkter, Stimmbandmuskulatur, Atemmuskulatur); affiliiert mit Rappaport Faculty of Medicine, Technion"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-005",
+        "name": "Weizmann Institute of Science – Hornstein Lab, Department of Molecular Neuroscience & Molecular Genetics",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+972 8 934 6215"
+          },
+          {
+            "system": "url",
+            "value": "https://www.weizmann.ac.il/molgen/hornstein/home"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Arnold R. Meyer Building, Room 314, Weizmann Institute of Science"
+            ],
+            "city": "Rehovot",
+            "postalCode": "76100",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Grundlagenforschungslabor (keine Patientenversorgung); Erforschung der Rolle von RNA-Dysregulation in der ALS-Pathogenese; multidisziplinaere Ansaetze (Computational Data Science, Machine Learning, Proteomik, Transkriptomik, iPS-Zellen); ENCALS-Mitglied; Biomarker-Forschung (Blut-NfL, isomiRs); internationale Kooperationen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-006",
+        "name": "Soroka University Medical Center – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "http://hospitals.clalit.co.il/hospitals/soroka/en-us/pages/home.aspx"
+          }
+        ],
+        "address": [
+          {
+            "city": "Be'er Sheva",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zentralkrankenhaus der Suedregion Israels (Negev); affiliiert mit Faculty of Health Sciences, Ben-Gurion University of the Negev; Neurologie-Abteilung vorhanden, aber keine dedizierte ALS-Klinik verifiziert; historische ALS-Forschung (Motoneuronerkrankung bei Textilarbeitern, 1989)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-il-007",
+        "name": "IsrALS – The Israeli ALS Research Association",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+972 4 825 2233"
+          },
+          {
+            "system": "email",
+            "value": "info@israls.org.il"
+          },
+          {
+            "system": "url",
+            "value": "https://en.israls.org.il/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "POB 55075"
+            ],
+            "city": "Haifa",
+            "postalCode": "3491275",
+            "country": "IL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet 2004; einzige ALS-spezifische Organisation in Israel; Sitz in Haifa; ca. 600 ALS-Patienten in Israel; Israel hat mit >50% eine der weltweit hoechsten Raten an beatmeten ALS-Patienten (vs. <1% in USA/Kanada/Australien); organisiert Friends for ALS Run, Gala-Events, Global ALS Awareness Day; CEO: Efrat Carmi; Mitglied der International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    }
+  ]
+}

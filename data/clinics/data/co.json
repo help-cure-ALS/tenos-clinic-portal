@@ -1,0 +1,373 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CO"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-001",
+        "name": "Fundación Instituto Neurológico de Colombia (INDEC)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 604 576 6666"
+          },
+          {
+            "system": "phone",
+            "value": "+57 604 322 7545"
+          },
+          {
+            "system": "url",
+            "value": "https://institutoneurologico.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle 55 # 46-36, La Candelaria"
+            ],
+            "city": "Medellín",
+            "state": "Antioquia",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes Neurologisches Fachkrankenhaus in Kolumbien, in Medellín. Spezialisiert auf Neurowissenschaften mit 24-Stunden-Notaufnahme. Ambulante Versorgung in Neurologie, Neurochirurgie, Neuropaediatrie und Neuropsychologie. Zusaetzliche Standorte: Casa Neuropsicología (Cl 54 #46-52, Zentrum Medellín) und Sede Urabá (Cl 103 #97-98, Apartadó)."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-002",
+        "name": "Fundación Santa Fe de Bogotá",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 601 482 4488"
+          },
+          {
+            "system": "url",
+            "value": "https://fundacionsantafedebogota.com/departamentos/neurologia"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrera 7 No. 117-15"
+            ],
+            "city": "Bogotá",
+            "state": "Cundinamarca",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Renommiertes privates Universitaetskrankenhaus in Bogotá mit umfassender Neurologie-Abteilung. Bietet Diagnostik und Behandlung von ALS/ELA und anderen neuromuskulaeren Erkrankungen. Verfuegt ueber Elektromyografie, Neuroradiologie (Diffusions-Tensor-Bildgebung/Traktografie fuer ALS-Diagnostik) und neurologische Intensivstation mit Fruehrehabilitation. Sprechzeiten Neurologie: Mo-Fr 8:00-17:00 Uhr."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-003",
+        "name": "Hospital Universitario San Ignacio (HUSI)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 601 594 6161"
+          },
+          {
+            "system": "url",
+            "value": "https://www.husi.org.co/en/servicios-y-especialidades/especialidades-clinicas/neurologia"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrera 7 No. 40-62"
+            ],
+            "city": "Bogotá",
+            "state": "Cundinamarca",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Universitaetskrankenhaus der Pontificia Universidad Javeriana in Bogotá. Abteilung fuer Neurologie und Neuropaediatrie mit Fachbereich fuer neuromuskulaere Erkrankungen. Bietet Diagnostik und Behandlung neurologischer Erkrankungen einschliesslich ALS. Umfassende Neurowissenschaften-Abteilung."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Pontificia Universidad Javeriana"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-004",
+        "name": "Hospital Universitario Nacional de Colombia (HUN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 601 390 4888"
+          },
+          {
+            "system": "email",
+            "value": "atencionalusuario@hun.edu.co"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hun.edu.co/ecbe-ela"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle 44 # 59-75"
+            ],
+            "city": "Bogotá",
+            "state": "Cundinamarca",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Universitaetskrankenhaus der Universidad Nacional de Colombia mit evidenzbasiertem klinischem Standard fuer ALS (ECBE-ELA). Umfasst Leitlinien fuer Diagnostik, Behandlung, Rehabilitation und Nachsorge erwachsener ALS-Patienten. Multidisziplinaeres Team aus Neurologe, Facharzt fuer Physikalische Medizin und Rehabilitation, Genetik und Pneumologie. Kontrollintervalle maximal drei Monate. Ambulante, stationaere und intensivmedizinische Versorgung."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universidad Nacional de Colombia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-005",
+        "name": "Instituto Roosevelt",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 601 353 4000"
+          },
+          {
+            "system": "phone",
+            "value": "+57 601 353 4016"
+          },
+          {
+            "system": "url",
+            "value": "https://www.institutoroosevelt.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrera 4 Este # 17-50"
+            ],
+            "city": "Bogotá",
+            "state": "Cundinamarca",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Spezialisiertes Rehabilitationszentrum in Bogotá mit interdisziplinaerer Kommission fuer neuromuskulaere Erkrankungen (JENC-IR). Team umfasst Physiatrie, Kinder- und Erwachsenen-Neurologie, Paediatrie, Genetik, Pneumologie, Physiotherapie, Ergotherapie, Psychologie und Neuropsychologie. Betreut paediatrische und erwachsene Patienten mit vermuteten oder bestaetigten neuromuskulaeren Erkrankungen einschliesslich ALS."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-co-006",
+        "name": "Asociación Colombiana de Esclerosis Lateral Amiotrófica (ACELA)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+57 601 736 4992"
+          },
+          {
+            "system": "phone",
+            "value": "+57 320 962 1211"
+          },
+          {
+            "system": "email",
+            "value": "presidencia@acelaweb.org"
+          },
+          {
+            "system": "url",
+            "value": "https://www.acelaweb.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrera 65 # 100-15, Torre 5, Apt. 2101"
+            ],
+            "city": "Bogotá",
+            "state": "Cundinamarca",
+            "country": "CO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Kolumbianische ALS-Patientenorganisation, gemeinnuetzig gegruendet im Mai 2008. Seit Juni 2010 Vollmitglied der International Alliance of ALS/MND Associations. Ziel: Beratung von Patienten, Angehoerigen und Pflegenden fuer bestmoegliche Lebensqualitaet. Bietet Informationen, Vernetzung und strategische Allianzen mit nationalen und internationalen Institutionen. Unterhält ein Verzeichnis von Fachleuten im Gesundheitswesen."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    }
+  ]
+}

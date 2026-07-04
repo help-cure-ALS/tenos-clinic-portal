@@ -1,0 +1,193 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "UY"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-uy-001",
+        "name": "CELAU – Centro de Esclerosis Lateral Amiotrófica del Uruguay, Instituto de Neurología, Hospital de Clínicas Dr. Manuel Quintela",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+598 2487-1515 ext. 2672"
+          },
+          {
+            "system": "email",
+            "value": "neurologia@hc.edu.uy"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hc.edu.uy/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Italia s/n, Piso 1 (CELAU) / Piso 2 Ala Oeste (Clínica Neurológica)"
+            ],
+            "city": "Montevideo",
+            "postalCode": "11600",
+            "country": "UY"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales interdisziplinaeres ALS-Referenzprogramm seit 2014; funktioniert im Instituto de Neurologia des Hospital de Clinicas (Universidad de la Republica); multidisziplinaeres Team aus Neurologie, Rehabilitationsmedizin, Pneumologie, Ernaehrung, Logopaedie und Palliativmedizin-Psychologie; Sprechstunde dienstags um 13:30 Uhr, 1. Stock Hospital de Clinicas; Zugang ueber Ueberweisung des behandelnden Neurologen; Zusammenarbeit mit Fundacion Tenemos ELA Uruguay; Referenz fuer ALS-Diagnostik und Behandlung im gesamten Land"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universidad de la República, Fundación Tenemos ELA Uruguay"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-uy-002",
+        "name": "Fundación Tenemos ELA Uruguay",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+598 98206237"
+          },
+          {
+            "system": "email",
+            "value": "contacto@tenemosela.org.uy"
+          },
+          {
+            "system": "url",
+            "value": "https://tenemosela.org.uy/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Barreiro 3009/303"
+            ],
+            "city": "Montevideo",
+            "country": "UY"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Patientenorganisation, gegruendet 2014; bietet Information, Betreuung, soziale und rechtliche Unterstuetzung fuer ALS-Betroffene und ihre Familien; logistische Unterstuetzung und Verleih von technischen Hilfsmitteln; arbeitet eng mit dem CELAU-Programm am Hospital de Clinicas zusammen; umfassende Betreuung fuer Patienten, Familien und Pflegepersonen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "CELAU, Hospital de Clínicas"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-uy-003",
+        "name": "Clínica Neurológica – Facultad de Medicina, Universidad de la República",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+598 2487-1515 ext. 2672"
+          },
+          {
+            "system": "email",
+            "value": "neurologia@hc.edu.uy"
+          },
+          {
+            "system": "url",
+            "value": "https://www.clinicaneurologica.hc.edu.uy/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Italia s/n, Piso 2, Ala Oeste"
+            ],
+            "city": "Montevideo",
+            "postalCode": "11600",
+            "country": "UY"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Akademische neurologische Klinik der Medizinischen Fakultaet der Universidad de la Republica (UDELAR); Sitz im Hospital de Clinicas, 2. Stock, Westfluegel; Lehre, Forschung und klinische Versorgung; CELAU (ALS-Zentrum) ist organisatorisch Teil dieser Klinik; Aus- und Weiterbildung von Neurologen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universidad de la República, Sociedad de Neurología del Uruguay"
+          }
+        ]
+      }
+    }
+  ]
+}

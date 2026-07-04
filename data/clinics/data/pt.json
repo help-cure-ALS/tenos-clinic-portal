@@ -1,0 +1,327 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "PT"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-001",
+        "name": "Unidade de ELA – Hospital de Santa Maria, Unidade Local de Saúde de Santa Maria (ULS Santa Maria)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 217 805 000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chuln.min-saude.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Professor Egas Moniz"
+            ],
+            "city": "Lisboa",
+            "postalCode": "1649-035",
+            "country": "PT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes und größtes ALS-Zentrum Portugals; geleitet von Prof. Mamede de Carvalho; angegliedert an die Faculdade de Medicina da Universidade de Lisboa; Institut für Molekulare Medizin (IMM); umfangreiche Forschung zu Neurophysiologie und Biomarkern"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-002",
+        "name": "Consulta de ELA – Unidade Local de Saúde de Coimbra (ULS Coimbra)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 239 400 400"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chuc.min-saude.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Praceta Prof. Mota Pinto"
+            ],
+            "city": "Coimbra",
+            "postalCode": "3004-561",
+            "country": "PT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitwichtigstes ALS-Zentrum Portugals; angegliedert an die Universidade de Coimbra; ALS-Sprechstunde mit multidisziplinärem Team"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-003",
+        "name": "Consulta de ELA – Unidade Local de Saúde de Santo António (ULS Santo António), Porto",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 222 077 500"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chporto.min-saude.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Largo do Prof. Abel Salazar"
+            ],
+            "city": "Porto",
+            "postalCode": "4099-001",
+            "country": "PT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für den Norden Portugals; ALS-Sprechstunde"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-004",
+        "name": "Consulta de Doenças Neuromusculares – Unidade Local de Saúde de São João (ULS São João), Porto",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 225 512 100"
+          },
+          {
+            "system": "url",
+            "value": "https://portal-chsj.min-saude.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Alameda Prof. Hernâni Monteiro"
+            ],
+            "city": "Porto",
+            "postalCode": "4200-319",
+            "country": "PT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläre Sprechstunde mit ALS-Expertise; angegliedert an die Faculdade de Medicina da Universidade do Porto"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-005",
+        "name": "Consulta de ELA – Hospital Garcia de Orta, Almada",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 212 940 294"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hgo.min-saude.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Torrado da Silva"
+            ],
+            "city": "Almada",
+            "postalCode": "2805-267",
+            "country": "PT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Sprechstunde; versorgt die Region südlich von Lissabon"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pt-006",
+        "name": "Consulta de Neurologia – Hospital de Braga",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+351 253 027 000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitaldebraga.pt/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sete Fontes, São Victor"
+            ],
+            "city": "Braga",
+            "postalCode": "4710-243",
+            "country": "PT"
+          }
+        ]
+      }
+    }
+  ]
+}

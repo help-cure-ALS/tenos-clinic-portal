@@ -1,0 +1,769 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "SE"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-001",
+        "name": "ALS-teamet – Karolinska Universitetssjukhuset, Stockholm",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 8 123 700 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.karolinska.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Eugeniavägen 3"
+            ],
+            "city": "Solna",
+            "postalCode": "171 76",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes ALS-Zentrum Schwedens; multidisziplinäres ALS-Team; angegliedert an das Karolinska Institutet; Sitz des Schwedischen ALS-Qualitätsregisters (Svenskt Kvalitetsregister för ALS); umfangreiche klinische Forschung und Studienteilnahme; ca. 200 ALS-Patienten in Betreuung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Svenskt Kvalitetsregister för ALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-002",
+        "name": "ALS-mottagningen – Norrlands universitetssjukhus (NUS), Umeå",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 90 785 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionvasterbotten.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Norrlands universitetssjukhus"
+            ],
+            "city": "Umeå",
+            "postalCode": "901 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "International renommiertes ALS-Forschungszentrum; Wirkungsstätte von Prof. Peter M. Andersen, einem der weltweit führenden ALS-Genetiker (SOD1-Forschung); angegliedert an die Umeå Universitet; Schweden hat eine der höchsten ALS-Inzidenzen weltweit, besonders in Nordschweden"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Project MinE"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-003",
+        "name": "ALS-mottagningen – Sahlgrenska Universitetssjukhuset, Göteborg",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 31 342 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sahlgrenska.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Blå Stråket 7"
+            ],
+            "city": "Göteborg",
+            "postalCode": "413 45",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik am größten Krankenhaus Schwedens; angegliedert an die Göteborgs Universitet; multidisziplinäres Team; Biomarker-Forschung (Neurofilament)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-004",
+        "name": "ALS-mottagningen – Akademiska sjukhuset, Uppsala",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 18 611 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.akademiska.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sjukhusvägen 1"
+            ],
+            "city": "Uppsala",
+            "postalCode": "751 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz am Akademiska sjukhuset; angegliedert an Uppsala Universitet; Neurologie-Klinik mit ALS-Expertise"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-005",
+        "name": "ALS-mottagningen – Skånes universitetssjukhus (SUS), Lund/Malmö",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 46 17 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://vard.skane.se/skanes-universitetssjukhus-sus/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Getingevägen 4"
+            ],
+            "city": "Lund",
+            "postalCode": "221 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz für Südschweden (Skåne); angegliedert an Lunds Universitet; Neurologie-Klinik mit ALS-Team"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-006",
+        "name": "ALS-mottagningen – Universitetssjukhuset i Linköping",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 10 103 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionostergotland.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Universitetssjukhuset"
+            ],
+            "city": "Linköping",
+            "postalCode": "581 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz für Region Östergötland; angegliedert an Linköpings Universitet"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-007",
+        "name": "Neurologmottagningen – Universitetssjukhuset Örebro",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 19 602 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionorebrolan.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Södra Grev Rosengatan"
+            ],
+            "city": "Örebro",
+            "postalCode": "701 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Ambulanz mit ALS-Versorgung; angegliedert an Örebro Universitet"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-008",
+        "name": "Neurologkliniken – Sundsvalls sjukhus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 60 18 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rvn.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sjukhusvägen 1"
+            ],
+            "city": "Sundsvall",
+            "postalCode": "856 43",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik für Region Västernorrland; ALS-Diagnostik und -Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-009",
+        "name": "Neurologkliniken – Centralsjukhuset Karlstad",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 54 61 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionvarmland.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rosenborgsgatan 9"
+            ],
+            "city": "Karlstad",
+            "postalCode": "651 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik für Region Värmland; ALS-Diagnostik und -Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-010",
+        "name": "Neurologkliniken – Blekingesjukhuset, Karlskrona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 455 73 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionblekinge.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Lasarettsvägen"
+            ],
+            "city": "Karlskrona",
+            "postalCode": "371 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Ambulanz für Region Blekinge"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-011",
+        "name": "Neurologkliniken – Länssjukhuset Ryhov, Jönköping",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 36 32 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rjl.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sjukhusgatan"
+            ],
+            "city": "Jönköping",
+            "postalCode": "551 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik für Region Jönköping; ALS-Diagnostik und regionale Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-012",
+        "name": "Neurologmottagningen – Västmanlands sjukhus, Västerås",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 21 17 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionvastmanland.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ingång 4"
+            ],
+            "city": "Västerås",
+            "postalCode": "721 89",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Ambulanz für Region Västmanland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-013",
+        "name": "Neurologmottagningen – Skaraborgs sjukhus, Skövde",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 500 43 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vgregion.se/skas"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Lövängsvägen 1"
+            ],
+            "city": "Skövde",
+            "postalCode": "541 85",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Ambulanz für Skaraborg; Västra Götalandsregionen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-se-014",
+        "name": "Neuro Schweden (Neuroförbundet)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+46 8 677 70 10"
+          },
+          {
+            "system": "url",
+            "value": "https://www.neuroforbundet.se/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "S:t Eriksgatan 44"
+            ],
+            "city": "Stockholm",
+            "postalCode": "112 34",
+            "country": "SE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Schwedische Patientenorganisation für neurologische Erkrankungen inkl. ALS; Interessenvertretung, Information und Unterstützung"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "SI"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-si-001",
+        "name": "Center za ALS – Nevrološka klinika, Univerzitetni klinični center Ljubljana (UKC Ljubljana)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+386 1 522 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kclj.si/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Zaloška cesta 2"
+            ],
+            "city": "Ljubljana",
+            "postalCode": "1000",
+            "country": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einziges spezialisiertes ALS-Zentrum Sloweniens; multidisziplinäres ALS-Team an der Neurologischen Klinik des UKC Ljubljana; angegliedert an die Medicinska fakulteta Univerze v Ljubljani; Inštitut za klinično nevrofiziologijo (Institut für Klinische Neurophysiologie); koordiniert ALS-Versorgung und klinische Studien für ganz Slowenien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-si-002",
+        "name": "Oddelek za nevrologijo – Univerzitetni klinični center Maribor (UKC Maribor)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+386 2 321 10 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ukc-mb.si/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ljubljanska ulica 5"
+            ],
+            "city": "Maribor",
+            "postalCode": "2000",
+            "country": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung am UKC Maribor; angegliedert an die Medicinska fakulteta Univerze v Mariboru; ALS-Diagnostik und Überweisung an UKC Ljubljana für spezialisierte Versorgung; zweitgrößtes Krankenhaus Sloweniens"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-si-003",
+        "name": "Društvo distrofikov Slovenije (Muscular Dystrophy Association of Slovenia)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+386 1 47 20 513"
+          },
+          {
+            "system": "url",
+            "value": "https://www.drustvo-distrofikov.si/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Linhartova cesta 1"
+            ],
+            "city": "Ljubljana",
+            "postalCode": "1000",
+            "country": "SI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Slowenische Patientenorganisation für neuromuskuläre Erkrankungen inkl. ALS; Mitglied der International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    }
+  ]
+}

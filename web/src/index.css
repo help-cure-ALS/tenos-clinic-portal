@@ -1,0 +1,40 @@
+/* All @import statements must come first, before any other
+   rules (CSS spec). As soon as any selector or at-rule precedes
+   them, PostCSS throws an error. */
+@import '@mantine/core/styles.css';
+@import '@mantine/notifications/styles.css';
+
+/* Wave UI.8 — workbench tokens. `@hca/mantine-workbench` publishes
+   all generic CSS vars (header height, FilterPanel, DataGrid,
+   MainNav palette etc.) in this file. Vite resolves `node_modules`
+   paths in `@import` via the JS resolver — so the bare-import form
+   works directly here (unlike Moonshot with PostCSS/Tailwind,
+   where we needed a relative path).
+   Plan doc: `hca-mantine-workbench/README.md`, section "Theming". */
+@import '@hca/mantine-workbench/tokens.css';
+
+/* The page scroll lock (UI.x) is temporarily disabled because
+   it caused a white screen. We'll come back to it once a
+   concrete scroll problem shows up. */
+
+/* Wave UI.8 — HCA override: MainNav in HCA purple instead of the
+   workbench default dark palette. Applies project-wide, to all
+   workbench components that read these tokens. */
+:root {
+  /* Sidebar background — a dark, near-black purple tone replacing
+     the lighter `hca-purple-9` (too vivid as a nav background).
+     Sits close to Moonshot's default `#28272d` and harmonizes
+     with the white selected/hover layers. */
+  --mantine-workbench-nav-bg: #1a1320;
+  --mantine-workbench-nav-text: rgba(255, 255, 255, 0.92);
+  --mantine-workbench-nav-text-dimmed: rgba(255, 255, 255, 0.62);
+  --mantine-workbench-nav-hover-bg: rgba(255, 255, 255, 0.10);
+  --mantine-workbench-nav-active-bg: rgba(255, 255, 255, 0.16);
+  --mantine-workbench-nav-border: rgba(255, 255, 255, 0.10);
+
+  /* Wave UI.9 — `--background` is the inverted body token that
+     `<BulkActionBar>` and a few other workbench components expect
+     for their "inverted layer" look (dark bar on a light body →
+     light text on a dark bar). Pattern from Moonshot. */
+  --background: var(--mantine-color-body);
+}

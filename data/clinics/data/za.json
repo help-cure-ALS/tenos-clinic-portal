@@ -1,0 +1,467 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "ZA"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-001",
+        "name": "Division of Neurology, Groote Schuur Hospital – University of Cape Town",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 21 404 3198"
+          },
+          {
+            "system": "url",
+            "value": "https://health.uct.ac.za/department-medicine/division/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "E8 Groote Schuur Hospital, Main Road, Observatory"
+            ],
+            "city": "Cape Town",
+            "state": "Western Cape",
+            "postalCode": "7925",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Abteilung fuer Neurologie am Groote Schuur Hospital, angegliedert an die University of Cape Town (UCT); betreibt eine dedizierte MND/ALS-Klinik unter Dr. Niki Floudiotis; klinische Forschung zu Motoneuronerkrankungen, HIV-assoziierter Neuropathie, Myasthenia gravis, Schlaganfall und Epilepsie; klinische Neurophysiologie; Teil des UCT Neuroscience Institute; Ueberweisungszentrum fuer die Western-Cape-Region"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "UCT Neuroscience Institute, MNDA South Africa"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-002",
+        "name": "Division of Neurology, Tygerberg Hospital – Stellenbosch University",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 21 938 4911"
+          },
+          {
+            "system": "url",
+            "value": "http://www.sun.ac.za/english/faculty/healthsciences/medicine/divisions/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Francie van Zijl Drive, Parow"
+            ],
+            "city": "Cape Town",
+            "state": "Western Cape",
+            "postalCode": "7505",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Abteilung fuer Neurologie an der Stellenbosch University / Tygerberg Hospital; dedizierte multidisziplinaere MND/ALS-Klinik unter Dr. Franclo Henning; neuromuskulaerer Service mit ca. 1100 Patientenbesuchen pro Jahr; Neurophysiologie-Labor; Neurogenetics-Service mit klinischer Genetik und genetischer Beratung; Partner im International Centre for Genomic Medicine in Neuromuscular Diseases (UCL London); fuehrte die erste ALS-Inzidenzstudie in Afrika durch (Western Cape, 2014-2018); Einzugsgebiet ca. 130.000 km2 und 6 Millionen Einwohner"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Centre for Genomic Medicine in Neuromuscular Diseases (UCL), MNDA South Africa"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-003",
+        "name": "MND/ALS Clinic, Chris Hani Baragwanath Academic Hospital – University of the Witwatersrand",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 11 933 8000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.wits.ac.za/clinicalmed/departments/neurosciences/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "26 Chris Hani Road, Diepkloof"
+            ],
+            "city": "Soweto, Johannesburg",
+            "state": "Gauteng",
+            "postalCode": "1864",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dedizierte multidisziplinaere MND/ALS-Klinik, 2014 gegruendet von Assoc. Prof. Andre Mochan; angegliedert an die University of the Witwatersrand (Wits); drittgroesstes Krankenhaus der Welt; Schwerpunkt auf Genomforschung zu ALS bei afrikanischen Patienten; Forschung zur Epidemiologie und Charakterisierung von MND in der schwarzen afrikanischen Bevoelkerung; Joost van der Westhuizen Centre for Neurodegeneration ist hier angesiedelt"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Joost van der Westhuizen Centre for Neurodegeneration, MNDA South Africa"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-004",
+        "name": "Neurology Department, Charlotte Maxeke Johannesburg Academic Hospital – University of the Witwatersrand",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 11 488 4911"
+          },
+          {
+            "system": "url",
+            "value": "https://www.wits.ac.za/clinicalmed/departments/neurosciences/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5 Jubilee Road, Parktown"
+            ],
+            "city": "Johannesburg",
+            "state": "Gauteng",
+            "postalCode": "2196",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung am Charlotte Maxeke Johannesburg Academic Hospital (CMJAH); angegliedert an die University of the Witwatersrand; Teil des Wits-Neurologie-Netzwerks zusammen mit Chris Hani Baragwanath; allgemeine neurologische Versorgung fuer Suedgauteng; Epilepsie- und Bewegungsstoerungskliniken; MND-Patienten werden an die spezialisierte MND-Klinik am Chris Hani Baragwanath ueberwiesen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-005",
+        "name": "Discipline of Neurology, Inkosi Albert Luthuli Central Hospital – University of KwaZulu-Natal",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 31 240 1000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ialch.co.za/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "800 Vusi Mzimela Road, Cato Manor"
+            ],
+            "city": "Durban",
+            "state": "KwaZulu-Natal",
+            "postalCode": "4091",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Abteilung fuer Neurologie am Inkosi Albert Luthuli Central Hospital (IALCH); angegliedert an die University of KwaZulu-Natal (UKZN); tertiaeres/quartaeres Ueberweisungszentrum fuer die gesamte Provinz KwaZulu-Natal; klinischer neurologischer Dienst fuer den Grossraum Durban; keine dedizierte MND-Klinik, aber neurologische Versorgung von MND-Patienten"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-006",
+        "name": "Motor Neurone Disease Association of South Africa (MNDA South Africa)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27 21 531 6130"
+          },
+          {
+            "system": "phone",
+            "value": "+27 83 467 8018"
+          },
+          {
+            "system": "email",
+            "value": "info@mndasouthafrica.org"
+          },
+          {
+            "system": "url",
+            "value": "https://mndasouthafrica.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "P.O. Box 789, Howard Place"
+            ],
+            "city": "Cape Town",
+            "state": "Western Cape",
+            "postalCode": "7450",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einzige nationale Organisation fuer MND/ALS in Suedafrika; gegruendet 1990, registriert als NPO 155-413 seit 2015; finanziert ausschliesslich durch Spenden, Vermaechtnisse und ehrenamtliche Spendenaktionen; kleines Team aus einer Bueroadministratorin und acht regionalen Beratern; bietet individuelle Beratung, Bildungsressourcen, Facharztvermittlung und Hilfsmittelverleih; Buerozeiten Mo-Fr 10:00-12:00; Dr. Franclo Henning ist nationaler Vorsitzender seit 2008"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-007",
+        "name": "Joost van der Westhuizen Centre for Neurodegeneration (JCN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://joost.co.za/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "c/o Chris Hani Baragwanath Academic Hospital, 26 Chris Hani Road, Diepkloof"
+            ],
+            "city": "Soweto, Johannesburg",
+            "state": "Gauteng",
+            "postalCode": "1864",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Virtuelles Forschungsnetzwerk, das globale Zentren und Kliniker vernetzt, um suedafrikanische MND-Forschung zu unterstuetzen; Kernziel: multidisziplinaere Versorgung fuer Patienten mit neurodegenerativen Erkrankungen, zunächst MND; gegruendet im Andenken an Rugby-Legende Joost van der Westhuizen (1971-2017), der 2011 mit MND diagnostiziert wurde; klinischer Beirat mit fuehrenden suedafrikanischen MND-Spezialisten; J9 Foundation als Legacy-Projekt integriert; MND-Klinik am Chris Hani Baragwanath Hospital"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MNDA South Africa, University of the Witwatersrand"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-za-008",
+        "name": "UCT Neuroscience Institute – University of Cape Town",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://neuroscience.uct.ac.za/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Groote Schuur Hospital, Main Road, Observatory"
+            ],
+            "city": "Cape Town",
+            "state": "Western Cape",
+            "postalCode": "7925",
+            "country": "ZA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurowissenschaftsinitiative gegruendet 2015, physisches Neuroscience Institute eroeffnet 2020, erstes seiner Art auf dem afrikanischen Kontinent; Dachorganisation fuer neurowissenschaftliche Forschung an der UCT; Direktor: Prof. Graham Fieggen; Forschungsschwerpunkte u.a. Motoneuronerkrankungen, HIV-assoziierte Neurologie, Schlaganfall, Epilepsie, Demenz und Parkinson; koordiniert interdisziplinaere Forschung und klinische Enquiries"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Groote Schuur Hospital Division of Neurology"
+          }
+        ]
+      }
+    }
+  ]
+}

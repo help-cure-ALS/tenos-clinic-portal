@@ -1,0 +1,272 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "SK"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sk-001",
+        "name": "Centrum pre neuromuskulárne ochorenia – Neurologická klinika SZU a UNB, Nemocnica Ružinov, Bratislava",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+421 2 48 234 603"
+          },
+          {
+            "system": "email",
+            "value": "centrumnmo.ruzinov@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "https://www.unb.sk/centrum-pre-neuromuskularne-ochorenia/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ružinovská 6"
+            ],
+            "city": "Bratislava",
+            "postalCode": "826 06",
+            "country": "SK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Primäres nationales Zentrum für neuromuskuläre Erkrankungen inkl. ALS; gegründet 1995; landesweite Zuständigkeit; Standort im Untergeschoss der Krankenhaus-Poliklinik (Tür 045); Erstvorstellung nur mit Überweisung eines regionalen Neurologen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sk-002",
+        "name": "Neurologická klinika JLF UK a UNM – Univerzitná nemocnica Martin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+421 43 4203 209"
+          },
+          {
+            "system": "url",
+            "value": "https://www.unm.sk/kliniky-oddelenia/neurologicka-klinika-jlf-uk-a-unm"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kollárova 2"
+            ],
+            "city": "Martin",
+            "postalCode": "036 59",
+            "country": "SK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitwichtigstes Zentrum der Slowakei für ALS-Diagnostik; angegliedert an die Jessenius-Medizinische Fakultät der Universität Comenius; Ambulanz für neuromuskuläre Erkrankungen mit quantitativem EMG und Magnetstimulation; aktive ALS-Forschung zu mitochondrialer Dysfunktion"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sk-003",
+        "name": "I. Neurologická klinika LF UK a UNB – Nemocnica Staré Mesto, Bratislava",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.unb.sk/i-neurologicka-klinika-lf-uk-a-unb/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Mickiewiczova 13"
+            ],
+            "city": "Bratislava",
+            "postalCode": "813 69",
+            "country": "SK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Älteste neurologische Klinik der Slowakei; Leiter Prof. MUDr. Peter Turčáni, PhD (Schwerpunkt MS); ALS-Patienten werden primär am Zentrum in Ružinov behandelt"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sk-004",
+        "name": "Neurologická klinika UPJŠ – L. Pasteur Universitná nemocnica, Košice",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.upjs.sk/lekarska-fakulta/en/clinic/neurology/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Košice",
+            "country": "SK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik der Pavol Jozef Šafárik Universität; allgemeine neurologische Versorgung für die Ostslowakei; kein dediziertes ALS-Zentrum"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sk-005",
+        "name": "Organizácia muskulárnych dystrofikov v SR / Belasy motýľ o.z.",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+421 2 43 41 16 86"
+          },
+          {
+            "system": "email",
+            "value": "omd@omdvsr.sk"
+          },
+          {
+            "system": "url",
+            "value": "https://belasymotyl.sk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Mesačná 3407/12"
+            ],
+            "city": "Bratislava",
+            "postalCode": "821 02",
+            "country": "SK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einzige Organisation für neuromuskuläre Erkrankungen in der Slowakei; gegründet 1993; betreut auch ALS-Patienten (keine eigenständige ALS-Patientenorganisation vorhanden); Mitglied von EURORDIS"
+          }
+        ]
+      }
+    }
+  ]
+}

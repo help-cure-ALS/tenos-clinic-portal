@@ -1,0 +1,488 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "NO"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-001",
+        "name": "ALS-teamet – Oslo universitetssykehus (OUS), Ullevål",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 22 11 80 80"
+          },
+          {
+            "system": "url",
+            "value": "https://oslo-universitetssykehus.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kirkeveien 166"
+            ],
+            "city": "Oslo",
+            "postalCode": "0450",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes ALS-Zentrum Norwegens; multidisziplinäres ALS-Team an der Neurologischen Abteilung Ullevål; nationales Referenzzentrum; angegliedert an die Universität Oslo; koordiniert klinische Studien für Norwegen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-002",
+        "name": "ALS-teamet – Haukeland universitetssjukehus, Bergen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 55 97 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://helse-bergen.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Jonas Lies vei 65"
+            ],
+            "city": "Bergen",
+            "postalCode": "5021",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitgrößtes ALS-Zentrum Norwegens; multidisziplinäres Team; angegliedert an die Universitetet i Bergen; Wirkungsstätte von Prof. Ole-Bjørn Tysnes, einem der führenden ALS-Epidemiologen Europas"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-003",
+        "name": "Nevrologisk avdeling – St. Olavs hospital, Trondheim",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 72 57 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://stolav.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Prinsesse Kristinas gate 3"
+            ],
+            "city": "Trondheim",
+            "postalCode": "7030",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung mit ALS-Ambulanz; angegliedert an die NTNU (Norges teknisk-naturvitenskapelige universitet); Versorgung für Midt-Norge"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-004",
+        "name": "Nevrologisk avdeling – Universitetssykehuset Nord-Norge (UNN), Tromsø",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 77 62 60 00"
+          },
+          {
+            "system": "url",
+            "value": "https://unn.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hansine Hansens vei 18"
+            ],
+            "city": "Tromsø",
+            "postalCode": "9019",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Nord-Norge; angegliedert an UiT Norges arktiske universitet; ALS-Diagnostik und -Versorgung für die nördlichste Region des Landes"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-005",
+        "name": "Nevrologisk avdeling – Stavanger universitetssjukehus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 51 51 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://helse-stavanger.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Gerd-Ragna Bloch Thorsens gate 8"
+            ],
+            "city": "Stavanger",
+            "postalCode": "4011",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für die Region Rogaland; ALS-Diagnostik und -Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-006",
+        "name": "Nevrologisk avdeling – Akershus universitetssykehus (Ahus), Lørenskog",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 67 96 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ahus.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sykehusveien 25"
+            ],
+            "city": "Lørenskog",
+            "postalCode": "1478",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; zweitgrößtes Krankenhaus Norwegens nach Einzugsgebiet; ALS-Diagnostik und Überweisung an OUS für spezialisierte Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-007",
+        "name": "Nevrologisk avdeling – Sørlandet sykehus, Kristiansand",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 38 07 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://sshf.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Eg"
+            ],
+            "city": "Kristiansand",
+            "postalCode": "4604",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Sørlandet (Südnorwegen); ALS-Diagnostik und -Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-008",
+        "name": "Nevrologisk avdeling – Nordlandssykehuset, Bodø",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+47 75 53 40 00"
+          },
+          {
+            "system": "url",
+            "value": "https://nordlandssykehuset.no/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Prinsens gate 164"
+            ],
+            "city": "Bodø",
+            "postalCode": "8092",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Nordland; ALS-Diagnostik und regionale Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-no-009",
+        "name": "Stiftelsen ALS Norge",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.als-norge.no/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Oslo",
+            "country": "NO"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Norwegische ALS-Patientenorganisation; Unterstützung, Information und Interessenvertretung für ALS-Betroffene und Angehörige"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1617 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "GB"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-001",
+        "name": "MND Care Centre – King's College Hospital, London",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 20 3299 9000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kch.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Denmark Hill"
+            ],
+            "city": "London",
+            "postalCode": "SE5 9RS",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der größten und forschungsstärksten MND-Zentren weltweit; King's MND Care and Research Centre; beheimatet das Maurice Wohl Clinical Neuroscience Institute; hohes Patientenvolumen; Schwerpunkt Genetik, Epidemiologie, klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-002",
+        "name": "Sheffield Institute for Translational Neuroscience (SITraN) – Royal Hallamshire Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 114 222 2241"
+          },
+          {
+            "system": "url",
+            "value": "https://sitran.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "385a Glossop Road"
+            ],
+            "city": "Sheffield",
+            "postalCode": "S10 2HQ",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Weltweit führendes MND-Forschungsinstitut; dediziertes Gebäude für translationale Neurowissenschaften; starke Bench-to-Bedside-Pipeline; MND Care Centre akkreditiert durch MND Association"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-003",
+        "name": "Oxford MND Care Centre – John Radcliffe Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1865 741 166"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ouh.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Headley Way, Headington"
+            ],
+            "city": "Oxford",
+            "postalCode": "OX3 9DU",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Großes akademisches MND-Zentrum; angegliedert an die University of Oxford; Forschung zu Neuroimaging-Biomarkern, Genetik und klinischen Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-004",
+        "name": "National Hospital for Neurology and Neurosurgery – Queen Square, UCLH London",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 20 3456 7890"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uclh.nhs.uk/our-services/our-hospitals/national-hospital-neurology-and-neurosurgery"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Queen Square"
+            ],
+            "city": "London",
+            "postalCode": "WC1N 3BG",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "UCL Queen Square Institute of Neurology; historisch wichtigstes neurologisches Krankenhaus des UK; MND-Ambulanz; angegliedert an UCL und Francis Crick Institute"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-005",
+        "name": "Anne Rowling Regenerative Neurology Clinic – University of Edinburgh, Edinburgh BioQuarter",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 131 242 1000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ed.ac.uk/clinical-sciences/centre-clinical-brain-sciences/anne-rowling-clinic"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "49 Little France Crescent"
+            ],
+            "city": "Edinburgh",
+            "postalCode": "EH16 4SB",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dedizierte MND-Klinik am Edinburgh BioQuarter (neben, aber nicht innerhalb des Royal Infirmary of Edinburgh); gestiftet von J.K. Rowling; angegliedert an die University of Edinburgh; Euan MacDonald Centre for MND Research; Schwerpunkt Stammzellforschung und translationale Neurowissenschaften"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, MND Association Accredited Centre, MND Scotland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-006",
+        "name": "MND Care Centre – Addenbrooke's Hospital, Cambridge",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1223 245 151"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cuh.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hills Road"
+            ],
+            "city": "Cambridge",
+            "postalCode": "CB2 0QQ",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND Care Centre; Cambridge University Hospitals; angegliedert an University of Cambridge; Forschung zu Biomarkern und Genetik"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-007",
+        "name": "MND Care Centre – The Walton Centre, Liverpool",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 151 525 3611"
+          },
+          {
+            "system": "url",
+            "value": "https://www.thewaltoncentre.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Lower Lane, Fazakerley"
+            ],
+            "city": "Liverpool",
+            "postalCode": "L9 7LJ",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Spezialisiertes neurologisches Zentrum; MND-Ambulanz; das Walton Centre ist Englands einziges dediziertes neurologisches Krankenhaus außerhalb Londons"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-008",
+        "name": "MND Care Centre – Royal Victoria Infirmary, Newcastle",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 191 233 6161"
+          },
+          {
+            "system": "url",
+            "value": "https://www.newcastle-hospitals.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Queen Victoria Road"
+            ],
+            "city": "Newcastle upon Tyne",
+            "postalCode": "NE1 4LP",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-009",
+        "name": "MND Care Centre – Queen Elizabeth Hospital Birmingham",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 121 371 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uhb.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Mindelsohn Way, Edgbaston"
+            ],
+            "city": "Birmingham",
+            "postalCode": "B15 2GW",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-010",
+        "name": "MND Care Centre – St James's University Hospital, Leeds",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 113 243 3144"
+          },
+          {
+            "system": "url",
+            "value": "https://www.leedsth.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Beckett Street"
+            ],
+            "city": "Leeds",
+            "postalCode": "LS9 7TF",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-011",
+        "name": "MND Care Centre – University Hospital of Wales, Cardiff",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 29 2074 7747"
+          },
+          {
+            "system": "url",
+            "value": "https://cavuhb.nhs.wales/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Heath Park"
+            ],
+            "city": "Cardiff",
+            "postalCode": "CF14 4XW",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND Care Centre für Wales; angegliedert an Cardiff University"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-012",
+        "name": "MND Care Centre – Southmead Hospital, Bristol",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 117 950 5050"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nbt.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Southmead Road, Westbury-on-Trym"
+            ],
+            "city": "Bristol",
+            "postalCode": "BS10 5NB",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-013",
+        "name": "MND Care Centre – Derriford Hospital, Plymouth",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1752 202 082"
+          },
+          {
+            "system": "url",
+            "value": "https://www.plymouthhospitals.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Derriford Road"
+            ],
+            "city": "Plymouth",
+            "postalCode": "PL6 8DH",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-014",
+        "name": "MND Care Centre – Queen's Medical Centre, Nottingham",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 115 924 9924"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nuh.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Derby Road"
+            ],
+            "city": "Nottingham",
+            "postalCode": "NG7 2UH",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-015",
+        "name": "MND Care Centre – Salford Royal Hospital, Manchester",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 161 789 7373"
+          },
+          {
+            "system": "url",
+            "value": "https://www.srft.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Stott Lane"
+            ],
+            "city": "Salford",
+            "postalCode": "M6 8HD",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND Care Centre für Greater Manchester; angegliedert an die University of Manchester"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-016",
+        "name": "MND Care Centre – University Hospital Southampton",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 23 8077 7222"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uhs.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Tremona Road"
+            ],
+            "city": "Southampton",
+            "postalCode": "SO16 6YD",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-017",
+        "name": "Sussex MND Care Centre – University Hospitals Sussex NHS Foundation Trust, Brighton",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1273 696 955"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uhsussex.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Eastern Road"
+            ],
+            "city": "Brighton",
+            "postalCode": "BN2 5BE",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "University Hospitals Sussex NHS Foundation Trust (seit April 2021, vormals Brighton and Sussex University Hospitals); angegliedert an Brighton and Sussex Medical School; ehemals Wirkungsstätte von Prof. Nigel Leigh"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-018",
+        "name": "MND Care Centre – Queen Elizabeth University Hospital, Glasgow",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 141 201 1100"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nhsggc.scot/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1345 Govan Road"
+            ],
+            "city": "Glasgow",
+            "postalCode": "G51 4TF",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes MND-Zentrum in Schottlands Westen; angegliedert an die University of Glasgow"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre, MND Scotland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-019",
+        "name": "MND Care Centre – Ninewells Hospital, Dundee",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1382 660 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nhstayside.scot.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ninewells Avenue"
+            ],
+            "city": "Dundee",
+            "postalCode": "DD2 1SY",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Scotland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-020",
+        "name": "MND Care Centre – Aberdeen Royal Infirmary",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1224 681 818"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nhsgrampian.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Foresterhill"
+            ],
+            "city": "Aberdeen",
+            "postalCode": "AB25 2ZN",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Scotland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-021",
+        "name": "MND Care Centre – Royal Victoria Hospital, Belfast",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 28 9024 0503"
+          },
+          {
+            "system": "url",
+            "value": "https://belfasttrust.hscni.net/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "274 Grosvenor Road"
+            ],
+            "city": "Belfast",
+            "postalCode": "BT12 6BA",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Referenzzentrum für Nordirland; angegliedert an Queen's University Belfast"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-022",
+        "name": "MND Care Network – Morriston Hospital, Swansea",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1792 702 222"
+          },
+          {
+            "system": "url",
+            "value": "https://sbuhb.nhs.wales/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Heol Maes Eglwys, Cwmrhydyceirw"
+            ],
+            "city": "Swansea",
+            "postalCode": "SA6 6NL",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Versorgung für West-Wales"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-023",
+        "name": "MND Care Network – Royal Preston Hospital, Preston",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1772 716 565"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lancsteachinghospitals.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sharoe Green Lane, Fulwood"
+            ],
+            "city": "Preston",
+            "postalCode": "PR2 9HT",
+            "country": "GB"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-024",
+        "name": "MND Care Network – Norfolk and Norwich University Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1603 286 286"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nnuh.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Colney Lane"
+            ],
+            "city": "Norwich",
+            "postalCode": "NR4 7UY",
+            "country": "GB"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-025",
+        "name": "MND Care Network – Royal Devon & Exeter Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1392 411 611"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rdehospital.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Barrack Road"
+            ],
+            "city": "Exeter",
+            "postalCode": "EX2 5DW",
+            "country": "GB"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-026",
+        "name": "MND Care Centre – Royal Stoke University Hospital, Stoke-on-Trent",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 1782 715 444"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uhnm.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Newcastle Road"
+            ],
+            "city": "Stoke-on-Trent",
+            "postalCode": "ST4 6QG",
+            "country": "GB"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-027",
+        "name": "MND Care Network – University Hospital Coventry & Warwickshire",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 24 7696 4000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uhcw.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Clifford Bridge Road"
+            ],
+            "city": "Coventry",
+            "postalCode": "CV2 2DX",
+            "country": "GB"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-028",
+        "name": "MND Care Centre – Imperial College Healthcare, London (Charing Cross / Hammersmith)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 20 3311 1234"
+          },
+          {
+            "system": "url",
+            "value": "https://www.imperial.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Fulham Palace Road"
+            ],
+            "city": "London",
+            "postalCode": "W6 8RF",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Ambulanz an Imperial College Healthcare NHS Trust; angegliedert an Imperial College London"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-030",
+        "name": "MND Care and Research Network – St George's Hospital, London",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 20 8672 1255"
+          },
+          {
+            "system": "url",
+            "value": "https://www.stgeorges.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Blackshaw Road, Tooting"
+            ],
+            "city": "London",
+            "postalCode": "SW17 0QT",
+            "country": "GB"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND Care and Research Network; akkreditiert durch die MND Association; Versorgung für South West London und Surrey"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "MND Association Accredited Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gb-029",
+        "name": "MND Care Network – Leicester Royal Infirmary",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+44 116 254 1414"
+          },
+          {
+            "system": "url",
+            "value": "https://www.leicestershospitals.nhs.uk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Infirmary Square"
+            ],
+            "city": "Leicester",
+            "postalCode": "LE1 5WW",
+            "country": "GB"
+          }
+        ]
+      }
+    }
+  ]
+}

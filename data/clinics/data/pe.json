@@ -1,0 +1,274 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "PE"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pe-001",
+        "name": "Instituto Nacional de Ciencias Neurológicas (INCN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+51 1 4117779"
+          },
+          {
+            "system": "url",
+            "value": "https://www.incn.gob.pe/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Jr. Ancash 1271, Barrios Altos"
+            ],
+            "city": "Lima",
+            "postalCode": "15003",
+            "country": "PE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes nationales Neurologie-Institut Perus; oeffentliches Spezialkrankenhaus des Gesundheitsministeriums (MINSA); Abteilung fuer Neurodegenerative Erkrankungen betreut ALS/ELA-Patienten; Neurogenetics Research Centre (gegruendet 1995) ist das einzige Zentrum des Landes fuer neurogenetische Erkrankungen inkl. neuromuskulaerer Stoerungen; bietet Praesenz- und Telemedizin-Termine; ca. 1.200 ELA-Patienten in ganz Peru geschaetzt"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pe-002",
+        "name": "Hospital Nacional Edgardo Rebagliati Martins",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+51 1 2654901"
+          },
+          {
+            "system": "url",
+            "value": "https://www.gob.pe/hospital-nacional-edgardo-rebagliati-martins"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Edgardo Rebagliati 490"
+            ],
+            "city": "Lima",
+            "postalCode": "15072",
+            "country": "PE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesstes Krankenhaus des EsSalud-Sozialversicherungssystems in Peru; Stufe-IV-Krankenhaus in Jesus Maria, Lima; Neurologie-Abteilung behandelt ELA-Patienten; Forschung zu ALS in der Intermediate-Care-Einheit dokumentiert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pe-003",
+        "name": "Hospital Nacional Guillermo Almenara Irigoyen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+51 1 3242983"
+          },
+          {
+            "system": "url",
+            "value": "https://www.gob.pe/hnalmenara"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Grau 800"
+            ],
+            "city": "Lima",
+            "postalCode": "15033",
+            "country": "PE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Grosses EsSalud-Krankenhaus im Stadtteil La Victoria, Lima; Neurologie- und Neurochirurgie-Abteilung (Pavillon 3A-Oeste); behandelt neuromuskulaere und neurodegenerative Erkrankungen einschliesslich ALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pe-004",
+        "name": "Asociación Peruana ELA Perú",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@elaperu.org"
+          },
+          {
+            "system": "url",
+            "value": "https://elaperu.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Jr. Choquehuanca 223, Santa Catalina"
+            ],
+            "city": "Lima",
+            "country": "PE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinnuetzige Patientenorganisation fuer ALS/ELA in Peru; gegruendet von Patienten und Angehoerigen; bietet Orientierung, Begleitung und Unterstuetzung fuer neu diagnostizierte Patienten und Pflegepersonen; Mitglied im internationalen ALS/MND-Netzwerk"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pe-005",
+        "name": "Instituto Peruano de Neurociencias (IPN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://ipn.pe/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bartolomé Herrera 161, Lince"
+            ],
+            "city": "Lima",
+            "country": "PE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Privates Fachzentrum fuer Neurologie und Neurochirurgie; gilt als eines der umfassendsten spezialisierten Neurologie-Zentren Perus mit Weltklasse-Standards; Erfahrung sowohl in der medizinischen Versorgung als auch in der Forschung; behandelt neurodegenerative und neuromuskulaere Erkrankungen"
+          }
+        ]
+      }
+    }
+  ]
+}

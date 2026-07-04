@@ -1,0 +1,439 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "HR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-001",
+        "name": "Klinika za neurologiju – Klinički bolnički centar Zagreb (KBC Zagreb)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 1 238 8888"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kbc-zagreb.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kišpatićeva 12"
+            ],
+            "city": "Zagreb",
+            "postalCode": "10000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Kroatiens; Klinik für Neurologie am KBC Zagreb (Rebro); angegliedert an die Medicinski fakultet Sveučilišta u Zagrebu (Medizinische Fakultät der Universität Zagreb); multidisziplinäres ALS-Team; EMG-Labor und klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-002",
+        "name": "Klinika za neurologiju – Klinički bolnički centar Sestre milosrdnice, Zagreb",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 1 378 7111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kbcsm.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Vinogradska cesta 29"
+            ],
+            "city": "Zagreb",
+            "postalCode": "10000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; zweitgrößtes Neurozentrum in Zagreb; EMG-Diagnostik und neuromuskuläre Sprechstunde"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-003",
+        "name": "Klinika za neurologiju – Klinički bolnički centar Rijeka",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 51 658 111"
+          },
+          {
+            "system": "url",
+            "value": "https://kbc-rijeka.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Krešimirova 42"
+            ],
+            "city": "Rijeka",
+            "postalCode": "51000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Medicinski fakultet Sveučilišta u Rijeci; Versorgung für die Kvarner-Region und Istrien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-004",
+        "name": "Klinika za neurologiju – Klinički bolnički centar Split",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 21 556 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kbsplit.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Spinčićeva 1"
+            ],
+            "city": "Split",
+            "postalCode": "21000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Medicinski fakultet Sveučilišta u Splitu; Versorgung für Dalmatien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-005",
+        "name": "Klinika za neurologiju – Klinički bolnički centar Osijek",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 31 511 511"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kbco.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Josipa Huttlera 4"
+            ],
+            "city": "Osijek",
+            "postalCode": "31000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik; angegliedert an die Medicinski fakultet Sveučilišta J.J. Strossmayera; Versorgung für Slawonien und Ostbosnien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-006",
+        "name": "Odjel za neurologiju – Opća bolnica Zadar",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 23 505 505"
+          },
+          {
+            "system": "url",
+            "value": "https://www.obzadar.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bože Peričića 5"
+            ],
+            "city": "Zadar",
+            "postalCode": "23000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für die Region Zadar und Norddalmatien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-007",
+        "name": "Odjel za neurologiju – Klinička bolnica Dubrava, Zagreb",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+385 1 290 2444"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kbd.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenija Gojka Šuška 6"
+            ],
+            "city": "Zagreb",
+            "postalCode": "10000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; ergänzt die ALS-Versorgung im Großraum Zagreb"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hr-008",
+        "name": "SDDH – Savez društava distrofičara Hrvatske (Allianz der Dystrophie-Gesellschaften Kroatiens)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.sddh.hr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Nova Ves 44"
+            ],
+            "city": "Zagreb",
+            "postalCode": "10000",
+            "country": "HR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Kroatische Dachorganisation für neuromuskuläre Erkrankungen inkl. ALS; gegründet 1970; Interessenvertretung, Beratung und Selbsthilfe"
+          }
+        ]
+      }
+    }
+  ]
+}

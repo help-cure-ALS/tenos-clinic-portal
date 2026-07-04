@@ -1,0 +1,280 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "EE"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ee-001",
+        "name": "Närvikliinik – Tartu Ülikooli Kliinikum (Neurology Clinic, Tartu University Hospital)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen / ALS"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+372 731 9100"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kliinikum.ee/en/clinics-and-services/clinics/neurology-clinic/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "L. Puusepa 8, Korpus H"
+            ],
+            "city": "Tartu",
+            "postalCode": "50406",
+            "country": "EE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes neuromuskuläres Zentrum Estlands; Närvikliinik (Nervenklinik) am Tartu Ülikooli Kliinikum; ERN EURO-NMD Associated National Centre; Leitung: Prof. Pille Taba; Ambulanzen für Kopfschmerz, Epilepsie, Multiple Sklerose, Bewegungsstörungen, Parkinson, Gedächtnisstörungen; ALS-Diagnostik und -Versorgung im Rahmen der neuromuskulären Ambulanz; historische ALS-Forschung: Epidemiologiestudie 1986–1995 (108 Patienten, Inzidenz 1.3–1.98/100.000); affiliiert mit der Universität Tartu, Department of Neurology and Neurosurgery; Eesti Lihasehaigete Selts (Estonian Muscle Disease Society) hat Büro im selben Gebäude (Raum E-111)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ERN EURO-NMD (Associated National Centre)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ee-002",
+        "name": "Neuroloogiakeskus – Lääne-Tallinna Keskhaigla (Neurology Centre, West Tallinn Central Hospital)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+372 650 7397"
+          },
+          {
+            "system": "phone",
+            "value": "+372 650 7301"
+          },
+          {
+            "system": "url",
+            "value": "https://keskhaigla.ee/clinics/neurology-clinic/?lang=en"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Paldiski mnt 68"
+            ],
+            "city": "Tallinn",
+            "postalCode": "10617",
+            "country": "EE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuroloogiakeskus am Lääne-Tallinna Keskhaigla (West Tallinn Central Hospital); umfasst Multiple-Sklerose-Zentrum und Stroke Centre; Dr. Katrin Gross-Paju als Leiterin des Neurologiezentrums – sie hat die wegweisenden MND-Epidemiologiestudien in Estland (1998, 1999) durchgeführt; klinische Expertise in neuromuskulären Erkrankungen inkl. ALS/MND; international anerkannte Forschung in CIDP, hereditäre spastische Paraplegie und Motoneuronerkrankung; Neurologen des LTKH sind regelmäßig als Referenten auf internationalen Konferenzen eingeladen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ee-003",
+        "name": "Neuroloogia – Põhja-Eesti Regionaalhaigla (Neurology, North Estonia Medical Centre)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+372 617 1300"
+          },
+          {
+            "system": "phone",
+            "value": "+372 617 1049"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionaalhaigla.ee/en/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "J. Sütiste tee 19"
+            ],
+            "city": "Tallinn",
+            "postalCode": "13419",
+            "country": "EE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuroloogiakeskus am Põhja-Eesti Regionaalhaigla (North Estonia Medical Centre); Kapazität 36 Betten; Schwerpunkt: Notfallneurologie (Schlaganfall), neurodegenerative Erkrankungen; ALS-Patienten werden im Rahmen der allgemeinen Neurologie versorgt; kein dezidiertes ALS/NMD-Zentrum verifiziert; größtes Krankenhaus in Tallinn und Nordestland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ee-004",
+        "name": "ALS Eesti",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "alseesti@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "https://alseesti.wordpress.com/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Estland",
+            "country": "EE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Estnische ALS-Patientenorganisation; gegründet von Jane Paberit (verstorben März 2019); Informationsplattform für ALS-Patienten und deren Familien in Estland; Website auf Estnisch; ca. 20–25 Neudiagnosen pro Jahr; genaue Postadresse nicht verifiziert; aktueller Betriebsstatus unklar"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ee-005",
+        "name": "Eesti Lihasehaigete Selts (Estonian Muscle Disease Society)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+372 731 8131"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "L. Puusepa 8, Raum E-111"
+            ],
+            "city": "Tartu",
+            "postalCode": "50406",
+            "country": "EE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Estnische Patientenorganisation für Muskelerkrankungen; Büro im Gebäude des Tartu Ülikooli Kliinikum (Raum E-111); umfasst neuromuskuläre Erkrankungen inkl. Motoneuronerkrankungen; gelistet auf der Patientenorganisationsseite der Närvikliinik; keine eigene Website verifiziert; Telefonnummer ist die Hauptnummer des Klinikums"
+          }
+        ]
+      }
+    }
+  ]
+}

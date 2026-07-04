@@ -1,0 +1,598 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "FI"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-001",
+        "name": "ALS-poliklinikka – Helsingin yliopistollinen sairaala (HUS), Helsinki",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 9 4711"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hus.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Haartmaninkatu 4"
+            ],
+            "city": "Helsinki",
+            "postalCode": "00290",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes und führendes ALS-Zentrum Finnlands; multidisziplinäres ALS-Team an der Neurologischen Klinik; angegliedert an die Helsingin yliopisto (Universität Helsinki); ALS-Forschung zu Genetik (C9orf72 – Finnland hat weltweit eine der höchsten C9orf72-Prävalenzen), Biomarkern und Epidemiologie"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Project MinE"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-002",
+        "name": "Neurologian poliklinikka – Turun yliopistollinen keskussairaala (TYKS), Turku",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 2 313 0000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vsshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hämeentie 11"
+            ],
+            "city": "Turku",
+            "postalCode": "20521",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Poliklinik mit ALS-Ambulanz; angegliedert an die Turun yliopisto (Universität Turku); Versorgung für Südwestfinnland (Varsinais-Suomi)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-003",
+        "name": "Neurologian poliklinikka – Tampereen yliopistollinen sairaala (TAYS), Tampere",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 3 311 611"
+          },
+          {
+            "system": "url",
+            "value": "https://www.tays.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Teiskontie 35"
+            ],
+            "city": "Tampere",
+            "postalCode": "33521",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Poliklinik mit ALS-Ambulanz; angegliedert an die Tampereen yliopisto (Universität Tampere); Versorgung für die Region Pirkanmaa"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-004",
+        "name": "Neurologian poliklinikka – Oulun yliopistollinen sairaala (OYS), Oulu",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 8 315 2011"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ppshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kajaanintie 50"
+            ],
+            "city": "Oulu",
+            "postalCode": "90220",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Poliklinik mit ALS-Ambulanz; angegliedert an die Oulun yliopisto (Universität Oulu); Versorgung für Nordfinnland (Pohjois-Pohjanmaa)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-005",
+        "name": "Neurologian poliklinikka – Kuopion yliopistollinen sairaala (KYS), Kuopio",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 17 173 311"
+          },
+          {
+            "system": "url",
+            "value": "https://www.psshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Puijonlaaksontie 2"
+            ],
+            "city": "Kuopio",
+            "postalCode": "70210",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Poliklinik mit ALS-Ambulanz; angegliedert an die Itä-Suomen yliopisto (Universität Ostfinnland); Versorgung für Ostfinnland (Pohjois-Savo)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-006",
+        "name": "Neurologian yksikkö – Seinäjoen keskussairaala",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 6 415 4111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.epshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hanneksenrinne 7"
+            ],
+            "city": "Seinäjoki",
+            "postalCode": "60220",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Einheit am Zentralkrankenhaus Seinäjoki; Versorgung für Etelä-Pohjanmaa (Süd-Österbotten)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-007",
+        "name": "Neurologian yksikkö – Keski-Suomen keskussairaala, Jyväskylä",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 14 269 1811"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ksshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Keskussairaalantie 19"
+            ],
+            "city": "Jyväskylä",
+            "postalCode": "40620",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Einheit am Zentralkrankenhaus Mittelfinnland; ALS-Diagnostik und regionale Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-008",
+        "name": "Neurologian yksikkö – Päijät-Hämeen keskussairaala, Lahti",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 3 819 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.phhyky.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Keskussairaalankatu 7"
+            ],
+            "city": "Lahti",
+            "postalCode": "15850",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Einheit am Zentralkrankenhaus Päijät-Häme; ALS-Diagnostik und regionale Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-009",
+        "name": "Neurologian yksikkö – Vaasan keskussairaala",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 6 213 1111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vaasankeskussairaala.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hietalahdenkatu 2-4"
+            ],
+            "city": "Vaasa",
+            "postalCode": "65130",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Einheit am Zentralkrankenhaus Vaasa; Versorgung für die Region Österbotten (Pohjanmaa)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-010",
+        "name": "Neurologian yksikkö – Lapin keskussairaala, Rovaniemi",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 16 328 2100"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lshp.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ounasrinteentie 22"
+            ],
+            "city": "Rovaniemi",
+            "postalCode": "96440",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Einheit am Zentralkrankenhaus Lappland; nördlichste neurologische Versorgungseinheit Finnlands; Überweisung an OYS Oulu für spezialisierte ALS-Diagnostik"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fi-011",
+        "name": "Lihastautiliitto ry (Finnish Neuromuscular Disorders Association)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+358 9 496 850"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lihastautiliitto.fi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Läntinen Brahenkenttä 2"
+            ],
+            "city": "Helsinki",
+            "postalCode": "00510",
+            "country": "FI"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Finnische Patientenorganisation für neuromuskuläre Erkrankungen inkl. ALS; Beratung, Peer-Support, Hilfsmittelinformation und Forschungsförderung"
+          }
+        ]
+      }
+    }
+  ]
+}

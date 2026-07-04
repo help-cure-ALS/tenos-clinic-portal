@@ -1,0 +1,370 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "RS"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-001",
+        "name": "Клиника за неурологију – Универзитетски клинички центар Србије (УКЦС), Београд",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 11 366 2676"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ukcs.rs/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Др Суботића 6"
+            ],
+            "city": "Београд",
+            "postalCode": "11000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Serbiens; Klinik für Neurologie am Universitätsklinischen Zentrum Serbiens (UKCS); angegliedert an den Medicinski fakultet Univerziteta u Beogradu; multidisziplinäres ALS-Team; EMG-Labor; koordiniert klinische ALS-Studien in Serbien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-002",
+        "name": "Клиника за неурологију – Клинички центар Војводине, Нови Сад",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 21 484 3484"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kcv.rs/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Хајдук Вељкова 1-9"
+            ],
+            "city": "Нови Сад",
+            "postalCode": "21000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Klinischen Zentrum der Vojvodina; angegliedert an den Medicinski fakultet Univerziteta u Novom Sadu; ALS-Diagnostik und -Versorgung für die Vojvodina (Nordserbien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-003",
+        "name": "Клиника за неурологију – Универзитетски клинички центар Ниш",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 18 506 906"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kcnis.rs/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Булевар др Зорана Ђинђића 48"
+            ],
+            "city": "Ниш",
+            "postalCode": "18000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätsklinischen Zentrum Niš; angegliedert an den Medicinski fakultet Univerziteta u Nišu; Versorgung für Südserbien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-004",
+        "name": "Клиника за неурологију – Универзитетски клинички центар Крагујевац",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 34 505 050"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kfrkg.rs/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Змај Јовина 30"
+            ],
+            "city": "Крагујевац",
+            "postalCode": "34000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätsklinischen Zentrum Kragujevac; angegliedert an den Fakultet medicinskih nauka Univerziteta u Kragujevcu; Versorgung für Zentralserbien (Šumadija)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-005",
+        "name": "Клиника за неурологију и психијатрију за децу и омладину – Београд",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 11 265 8355"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Др Суботића 6а"
+            ],
+            "city": "Београд",
+            "postalCode": "11000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Klinik für Neurologie und Psychiatrie für Kinder und Jugendliche; relevant für juvenile ALS-Formen und frühe Motoneuronerkrankungen; angegliedert an den Medicinski fakultet Beograd"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-006",
+        "name": "Општа болница Суботица – Одељење за неурологију",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+381 24 625 055"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Изворска 3"
+            ],
+            "city": "Суботица",
+            "postalCode": "24000",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für den Norden der Vojvodina"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-rs-007",
+        "name": "Удружење оболелих од АЛС Србије (ALS-Vereinigung Serbien)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.als.rs/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Београд",
+            "country": "RS"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Serbische ALS-Patientenvereinigung; Information, Beratung, Selbsthilfe und Interessenvertretung für ALS-Betroffene und Angehörige"
+          }
+        ]
+      }
+    }
+  ]
+}

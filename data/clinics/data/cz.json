@@ -1,0 +1,637 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CZ"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-001",
+        "name": "Centrum pro ALS – Neurologická klinika, Všeobecná fakultní nemocnice (VFN) a 1. LF UK, Praha",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 224 965 512"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vfn.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kateřinská 30"
+            ],
+            "city": "Praha 2",
+            "postalCode": "128 21",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Tschechiens; multidisziplinäres ALS-Team; angegliedert an die 1. Lékařská fakulta, Univerzita Karlova (1. Medizinische Fakultät, Karls-Universität); nationales Referenzzentrum für ALS; koordiniert klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-002",
+        "name": "Neurologická klinika – Thomayerova nemocnice a 3. LF UK, Praha",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 261 083 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ftn.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Vídeňská 800"
+            ],
+            "city": "Praha 4",
+            "postalCode": "140 59",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an die 3. Lékařská fakulta, Univerzita Karlova; Forschung zu ALS und Frontotemporaler Demenz; geleitet von Prof. Robert Rusina"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-003",
+        "name": "Neurologická klinika – Fakultní nemocnice u sv. Anny v Brně (FNUSA) a LF MU",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 543 182 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnusa.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Pekařská 53"
+            ],
+            "city": "Brno",
+            "postalCode": "656 91",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an die Lékařská fakulta Masarykovy univerzity; zweitwichtigstes ALS-Zentrum Tschechiens; multidisziplinäres Team"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-004",
+        "name": "Neurologická klinika – Fakultní nemocnice Brno (FN Brno) a LF MU",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 532 23 11 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnbrno.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Jihlavská 20"
+            ],
+            "city": "Brno",
+            "postalCode": "625 00",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Masarykova univerzita; Neuromuskulární centrum ERN (ERN EURO-NMD-Mitglied); ergänzt die FNUSA bei der ALS-Versorgung in Südmähren"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-005",
+        "name": "Neurologická klinika – Fakultní nemocnice Olomouc a LF UP",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 588 444 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnol.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "I. P. Pavlova 6"
+            ],
+            "city": "Olomouc",
+            "postalCode": "775 20",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; angegliedert an die Lékařská fakulta Univerzity Palackého; Versorgung für die Region Olomouc und Nordmähren"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-006",
+        "name": "Neurologická klinika – Fakultní nemocnice Ostrava",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 597 371 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fno.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "17. listopadu 1790/5"
+            ],
+            "city": "Ostrava-Poruba",
+            "postalCode": "708 52",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Versorgung für die Region Moravskoslezský kraj (Mährisch-Schlesien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-007",
+        "name": "Neurologická klinika – Fakultní nemocnice Plzeň a LF UK v Plzni",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 377 103 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnplzen.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Alej Svobody 80"
+            ],
+            "city": "Plzeň",
+            "postalCode": "304 60",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Lékařská fakulta Univerzity Karlovy v Plzni; Versorgung für Westböhmen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-008",
+        "name": "Neurologická klinika – Fakultní nemocnice Hradec Králové a LF UK v HK",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 495 831 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnhk.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sokolská 581"
+            ],
+            "city": "Hradec Králové",
+            "postalCode": "500 05",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die Lékařská fakulta Univerzity Karlovy v Hradci Králové; Versorgung für Ostböhmen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-009",
+        "name": "Neurologická klinika – Fakultní nemocnice v Motole a 2. LF UK, Praha",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 224 431 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fnmotol.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "V Úvalu 84"
+            ],
+            "city": "Praha 5",
+            "postalCode": "150 06",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; angegliedert an die 2. Lékařská fakulta, Univerzita Karlova; EMG-Labor"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-010",
+        "name": "Neurologické oddělení – Nemocnice České Budějovice",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 387 874 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nemcb.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Boženy Němcové 54"
+            ],
+            "city": "České Budějovice",
+            "postalCode": "370 01",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Südböhmen (Jihočeský kraj)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-011",
+        "name": "Neurologické oddělení – Krajská nemocnice Liberec",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+420 485 311 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nemlib.cz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Husova 357/10"
+            ],
+            "city": "Liberec",
+            "postalCode": "460 63",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Liberecký kraj (Nordböhmen)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-cz-012",
+        "name": "Společnost pro ALS/MND v ČR",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "city": "Praha",
+            "country": "CZ"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tschechische ALS/MND-Gesellschaft; Existenz und Online-Präsenz nicht verifiziert; Patientenorganisation für Information und Beratung"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "KR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-001",
+        "name": "서울대학교병원 신경과 – ALS 클리닉",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 2 2072 2876"
+          },
+          {
+            "system": "url",
+            "value": "http://www.snuh.org/global/en/find/findDeptView.do?hsp_cd=1&dp_code=NR"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "101 대학로"
+            ],
+            "city": "서울특별시",
+            "district": "종로구",
+            "postalCode": "03080",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Seoul National University Hospital (SNUH); spezialisierte ALS-Ambulanz (루게릭병 클리닉); Abteilung für Neurologie weltweit auf Platz 25 laut Newsweek 2025; umfangreiche ALS-Grundlagenforschung und klinische Studien; Neurogenetik, Biomarker-Forschung; National Brain Biobank of Korea; koordiniert nationale multizentrische ALS-Studien; iPS-Zell-Forschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-002",
+        "name": "한양대학교병원 신경과 – ALS센터",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 2 2290 8114"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hyumc.com/eng/departments/departments.do?action=intro&mediofCd=NR"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "222-1 왕십리로"
+            ],
+            "city": "서울특별시",
+            "district": "성동구",
+            "postalCode": "04763",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Hanyang University Medical Center; eines der weltweit führenden ALS-Zentren unter Leitung von Prof. Kim Seung-Hyun; dedizierte MND-Klinik (Motor Neuron Disease Clinic) in der Abteilung für Neurologie; prospektive ALS-Kohorte seit 2008; Zelltherapie-Forschung (Hanyang University Cell Therapy Center, HYCTC); Welt-Klasse-Zusammenarbeit in der akademischen Zelltherapie für Lou-Gehrig-Krankheit; Forschung zu Mikroglia, Neuroinflammation und kognitive Beeinträchtigung bei ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-003",
+        "name": "서울아산병원 신경과",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 2 3010 3442"
+          },
+          {
+            "system": "url",
+            "value": "https://eng.amc.seoul.kr/gb/lang/specialities/departments.do?hpCd=D030"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "88 올림픽로 43길"
+            ],
+            "city": "서울특별시",
+            "district": "송파구",
+            "postalCode": "05505",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Asan Medical Center (AMC); größtes Krankenhaus Südkoreas (ca. 2.700 Betten); Lehrkrankenhaus der University of Ulsan; Neurologie weltweit Platz 8 laut Newsweek 2025, Nr. 1 in Korea; neuromuskuläre Diagnostik und Therapie; neurodegenerative Erkrankungen einschließlich ALS; umfangreiche klinische Forschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-004",
+        "name": "삼성서울병원 신경과",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 2 3410 0200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.samsunghospital.com/en/departments/neurology/doctors.do"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "81 일원로"
+            ],
+            "city": "서울특별시",
+            "district": "강남구",
+            "postalCode": "06351",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Samsung Medical Center; tertiäres Universitätskrankenhaus (ca. 1.980 Betten); Abteilung für Neurologie mit ALS-Behandlung, Multiple Sklerose, neuromuskuläre Erkrankungen, Rückenmarkserkrankungen und periphere Nervenerkrankungen; mehrsprachiger internationaler Patientenservice; 1994 gegründet"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-005",
+        "name": "연세대학교 세브란스병원 신경과",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 2 2228 5800"
+          },
+          {
+            "system": "url",
+            "value": "https://sev.severance.healthcare/sev-en/department/department/neurology.do"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "50-1 연세로"
+            ],
+            "city": "서울특별시",
+            "district": "서대문구",
+            "postalCode": "03722",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Severance Hospital der Yonsei-Universität; eines der ältesten und größten Krankenhäuser Südkoreas (gegründet 1885); Abteilung für Neurologie diagnostiziert und behandelt Erkrankungen des zentralen und peripheren Nervensystems; Neuroscience Center; internationale Gesundheitsversorgung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-006",
+        "name": "인제대학교 부산백병원 신경과",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+82 51 890 6114"
+          },
+          {
+            "system": "url",
+            "value": "https://www.paik.ac.kr/busan/eng/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "75 복지로"
+            ],
+            "city": "부산광역시",
+            "district": "부산진구",
+            "postalCode": "47392",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Inje University Busan Paik Hospital; ehemalige Wirkungsstätte von Prof. Jong-Seok Bae (jetzt Hallym University, Seoul); Forschung zu neuromuskulären Erkrankungen, ALS-Diagnostik und -Management; Standort für ALS-Multicenterstudien in Korea"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Korean ALS/MND Research Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-007",
+        "name": "승일희망요양병원",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "pflegeeinrichtung",
+                "display": "Pflegeeinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.globalgiving.org/donate/103154/seungil-hope-foundation/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "모현읍"
+            ],
+            "city": "용인시",
+            "state": "경기도",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Seungil Hope Nursing Hospital (승일희망요양병원); erstes und einziges Langzeitpflegekrankenhaus in Südkorea, das zu 100% ALS- und schweren neuromuskulären Erkrankungen gewidmet ist; 76 Betten; am 31. März 2025 offiziell eröffnet; gegründet durch die Seungil Hope Foundation (승일희망재단) von Rapper Sean und dem verstorbenen Basketballspieler Park Seung-il (†September 2024); ca. 23,9 Milliarden Won (ca. 16,4 Mio. USD) durch Spenden gesammelt"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-008",
+        "name": "한국ALS협회",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.als-mnd.org/directory/korean-als-association/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "성북리시온 601호, 창경궁로 319-1"
+            ],
+            "city": "서울특별시",
+            "district": "성북구",
+            "postalCode": "02990",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Korean ALS Association (한국ALS협회); eine der drei wichtigsten Patientenorganisationen in Südkorea für ALS; unterstützt Patienten und Familien, fördert Bewusstsein für ALS in der Gesellschaft und beeinflusst Gesundheitspolitik; registriert bei der International Alliance of ALS/MND Associations"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-kr-009",
+        "name": "승일희망재단",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.globalgiving.org/donate/103154/seungil-hope-foundation/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "강남대로 310, 605호"
+            ],
+            "city": "서울특별시",
+            "district": "강남구",
+            "postalCode": "06253",
+            "country": "KR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Seungil Hope Foundation (승일희망재단); 2011 von Rapper Sean und dem ALS-Patienten und Basketballspieler Park Seung-il (†September 2024) gegründet; gemeinnützige Organisation zur Unterstützung von ALS-Patienten; hat ca. 23,9 Milliarden Won gesammelt und das Seungil Hope Nursing Hospital in Yongin gebaut; Sean arbeitet seit 2011 ohne Gehalt für die Stiftung"
+          }
+        ]
+      }
+    }
+  ]
+}

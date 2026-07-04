@@ -1,0 +1,608 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "TR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-001",
+        "name": "Neuromuscular Unit – Istanbul University, Istanbul Faculty of Medicine",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "parmany@istanbul.edu.tr"
+          },
+          {
+            "system": "url",
+            "value": "https://www.itfnoroloji.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sehremini Mahallesi, Millet Caddesi, Istanbul Tip Fakultesi"
+            ],
+            "city": "Istanbul (Fatih/Capa)",
+            "postalCode": "34093",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Erste und groesste neuromuskulaere Abteilung der Tuerkei, gegruendet 1975; Referenzzentrum mit >13.000 registrierten neuromuskulaeren Patienten; ALS-Datenbank mit >800 Patienten; jaehrlich 50-100 neue ALS-Diagnosen; multidisziplinaeres Team (Elektrophysiologe, Physiotherapeut, Pflegefachkraft, Diaetassistent, Pneumologie); ENCALS-Mitglied"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-002",
+        "name": "Hacettepe University Hospital – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+90 312 305 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://hastane.hacettepe.edu.tr/80_en.html"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hacettepe Universitesi Hastaneleri"
+            ],
+            "city": "Ankara (Sihhiye)",
+            "postalCode": "06230",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Renommiertes Universitaetsklinikum; Neurologie-Abteilung mit neuromuskulaerem Labor und ENMG-Labor; ALS-Forschung insbes. Genetik (fALS 20% in tuerkischer Kohorte, Konsanguinitaetsrate 30%)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-003",
+        "name": "Istanbul University-Cerrahpasa – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://cerrahpasa.istanbul.edu.tr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Cerrahpasa Tip Fakultesi"
+            ],
+            "city": "Istanbul (Fatih)",
+            "postalCode": "34098",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Beteiligt an ALS-Genetikstudien (Tunca et al. 2020); Cerrahpasa Medical School ist seit 2018 eigenstaendige Universitaet (Istanbul University-Cerrahpasa); Neurologie-Abteilung mit Forschung zu neuromuskulaeren Erkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-004",
+        "name": "Akdeniz University Hospital – Department of Neurology and Clinical Neurophysiology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+90 242 249 60 00"
+          },
+          {
+            "system": "url",
+            "value": "http://ipd.hastane.akdeniz.edu.tr/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Pinarbasi Mahallesi, Dumlupinar Bulvari, Akdeniz Universitesi Hastanesi"
+            ],
+            "city": "Antalya",
+            "postalCode": "07070",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Epidemiologie-Studien in der Region Antalya (prospektive Studie 2016-2018); NEALS-Mitglied (seit 2022); klinische ALS-Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "NEALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-005",
+        "name": "Koc University School of Medicine – NDAL (Neurodegeneration Research Laboratory)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://ndal.ku.edu.tr/en/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Koc Universitesi, KUTTAM"
+            ],
+            "city": "Istanbul",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurodegeneration Research Laboratory (NDAL), gegruendet an der Koc University; Forschung zu molekularen Mechanismen von ALS und Motoneuronerkrankungen; enge Zusammenarbeit mit neurologischen Abteilungen in der ganzen Tuerkei; Referenzzentrum fuer Diagnostik auf molekularer Ebene; maßgeblich an der Tunca et al. 2020-Studie beteiligt"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-006",
+        "name": "Ege University Hospital – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+90 232 390 38 60"
+          },
+          {
+            "system": "phone",
+            "value": "+90 444 13 43"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ege Universitesi Tip Fakultesi Hastanesi"
+            ],
+            "city": "Izmir (Bornova)",
+            "postalCode": "35100",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Grosse Neurologie-Abteilung mit neuromuskulaerer Kompetenz; keine dedizierte ALS-Klinik verifiziert, aber relevante Neurologie-Ausbildungsstaette und klinische Versorgung in der Region Aegaeis"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-007",
+        "name": "Cukurova University Hospital – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.cu.edu.tr/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Adana",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "NEALS-Mitglied (seit 2022); Forschung zu Motoneuronerkrankungen; Prof. Yakup Sarica (Neurophysiologie, ALS) war hier taetig"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "NEALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-008",
+        "name": "Ankara University Faculty of Medicine – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.medicine.ankara.edu.tr/en/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ankara Universitesi Tip Fakultesi, Ibni Sina Hastanesi"
+            ],
+            "city": "Ankara (Sihhiye)",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aelteste medizinische Fakultaet der Tuerkei (1937); Neurologie-Abteilung mit ALS-Forschungskapazitaet; keine dedizierte ALS-Klinik verifiziert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-009",
+        "name": "Bakırköy Prof. Dr. Mazhar Osman Ruh Sağlığı ve Sinir Hastalıkları Eğitim ve Araştırma Hastanesi – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "city": "Istanbul (Bakirkoy)",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Beitrag zur ALS-Genetik-Studie (Tunca et al. 2020); neurologische Fachklinik in Istanbul"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-010",
+        "name": "ALS-MNH Dernegi (ALS/MND Association Turkey)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+90 212 559 59 19"
+          },
+          {
+            "system": "phone",
+            "value": "+90 212 559 50 55"
+          },
+          {
+            "system": "fax",
+            "value": "+90 212 559 44 84"
+          },
+          {
+            "system": "email",
+            "value": "bilgi@als.org.tr"
+          },
+          {
+            "system": "url",
+            "value": "https://www.als.org.tr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "7-8. Kisim Villalar Karsisi, Afet Yonetim Merkezi Arkasi"
+            ],
+            "city": "Istanbul (Atakoy)",
+            "postalCode": "34158",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet 2001 von Patienten und Angehoerigen; Gemeinnuetzige Organisation ('kamu yararina dernek'); Mitglied der International Alliance of ALS/MND Associations; auch Zweigstelle in Izmir; ca. 8.000-10.000 ALS-Betroffene in der Tuerkei; Mitwirkung an der NEALS-Aufnahme tuerkischer Zentren (2022)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-012",
+        "name": "Sağlık Bilimleri Üniversitesi Antalya Eğitim ve Araştırma Hastanesi – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "city": "Antalya",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "NEALS-Mitglied (seit 2022); eines von drei tuerkischen NEALS-Zentren; autorisierte Aerztin: Assoc. Prof. Dr. Aylin Yaman"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "NEALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tr-011",
+        "name": "Turkish Neurological Society (Turk Noroloji Dernegi, TND)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Fachgesellschaft"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://noroloji.org.tr/en/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Ankara",
+            "country": "TR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fachgesellschaft fuer Neurologie in der Tuerkei; Herausgeber des Turkish Journal of Neurology (tjn.org.tr); hat gemeinsam mit ALS-MNH Dernegi die NEALS-Mitgliedschaft tuerkischer Zentren initiiert"
+          }
+        ]
+      }
+    }
+  ]
+}

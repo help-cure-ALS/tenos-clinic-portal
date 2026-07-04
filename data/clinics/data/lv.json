@@ -1,0 +1,184 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "LV"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lv-001",
+        "name": "Neiroloģijas un neiroķirurģijas klīnika - Rīgas Austrumu klīniskā universitātes slimnīca, klīnika Gaiļezers (Riga East University Hospital, Clinic Gaiļezers)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+371 6700 0610",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "+371 6704 1000",
+            "use": "work"
+          },
+          {
+            "system": "url",
+            "value": "https://aslimnica.lv/en/"
+          },
+          {
+            "system": "url",
+            "value": "https://www.encals.eu/centres/riga-east-university-hospital"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hipokrāta iela 2"
+            ],
+            "city": "Rīga",
+            "postalCode": "LV-1038",
+            "country": "LV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einziges ENCALS-Mitgliedszentrum im gesamten Baltikum (Litauen, Lettland, Estland); Rīgas Austrumu klīniskā universitātes slimnīca ist das größte Mehrkliniken-Universitätskrankenhaus Lettlands; umfasst fünf klinische Zentren: Gaiļezers, Onkologisches Zentrum, Biķernieki, Lettisches Zentrum für Infektionskrankheiten und Tuberkulose-/Lungenkrankheiten-Zentrum; Klinik Gaiļezers beherbergt die Neurologie mit ALS-Diagnostik und -Versorgung; affiliiert mit Rīga Stradiņš University (RSU); bietet EMG, Neurographie, Duplex-Dopplersonographie, CT und MRT; ca. 5.000 Mitarbeiter im Gesamtkrankenhaus"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lv-002",
+        "name": "Reto neiroloģisko slimību centrs - Paula Stradiņa klīniskā universitātes slimnīca (Centre for Rare Neurological Diseases, Pauls Stradiņš Clinical University Hospital)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.stradini.lv/"
+          },
+          {
+            "system": "url",
+            "value": "https://www.stradini.lv/lv/content/reto-neirologisko-slimibu-centrs"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Pilsoņu iela 13"
+            ],
+            "city": "Rīga",
+            "postalCode": "LV-1002",
+            "country": "LV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Reto neiroloģisko slimību centrs (Zentrum für seltene neurologische Erkrankungen) am Paula Stradiņa klīniskā universitātes slimnīca; größte klinische Einrichtung Lettlands, führend in Neurologie/Neurochirurgie; Neuromuscular Disease Clinic mit Datenbanken für Myasthenia gravis u.a.; affiliiert mit Rīga Stradiņš University (RSU) und Universität Lettlands; Forschung zu HINT1-Neuropathie, Myasthenia gravis, spinaler/bulbärer Muskelatrophie; kein ENCALS-Mitglied, aber wichtige Ergänzung zur ALS-Versorgung in Lettland; genaue Telefonnummer der Neurologie nicht verifiziert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-lv-003",
+        "name": "Cilvēkiem ar īpašām vajadzībām biedrība 'Motus Vita' (Association of People with Special Needs Motus Vita)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen / ALS"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "motus.vita@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "https://motusvita.lv/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Maskavas iela 421-18"
+            ],
+            "city": "Rīga",
+            "postalCode": "LV-1063",
+            "country": "LV"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Lettische Patientenorganisation für Menschen mit neuromuskulären Erkrankungen inkl. ALS/MND; gegründet 2009 in Rīga; gemeinnützige Organisation (public benefit status); unterstützt Betroffene und deren Familien; Mitglied bei EURORDIS (European Organisation for Rare Diseases); gelistet auf der Website der International Alliance of ALS/MND Associations (als.eu); einzige identifizierte Patientenorganisation in Lettland, die ALS-Patienten vertritt"
+          }
+        ]
+      }
+    }
+  ]
+}

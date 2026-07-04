@@ -1,0 +1,394 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "BE"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-001",
+        "name": "Neuromusculair Referentiecentrum / ALS-kliniek – UZ Leuven",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 16 34 49 80"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uzleuven.be/nl/neuromusculaire-aandoeningen"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Herestraat 49"
+            ],
+            "city": "Leuven",
+            "postalCode": "3000",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes und führendes ALS-Zentrum Belgiens; angegliedert an KU Leuven und VIB (Flanders Institute for Biotechnology); umfangreiche Grundlagen- und klinische Forschung; hohes Patientenvolumen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, VIB-KU Leuven Center for Brain & Disease Research"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-002",
+        "name": "Centre de Référence Neuromusculaire / Clinique SLA – Hôpital Erasme, ULB Bruxelles",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 2 555 31 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.erasme.ulb.ac.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Route de Lennik 808"
+            ],
+            "city": "Bruxelles",
+            "postalCode": "1070",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes frankophones ALS-Zentrum Belgiens; Centre de Référence Neuromusculaire; angegliedert an die Université Libre de Bruxelles (ULB)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-003",
+        "name": "Centre de Référence Neuromusculaire – CHR Citadelle, Liège",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 4 225 61 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chrcitadelle.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Boulevard du 12ème de Ligne 1"
+            ],
+            "city": "Liège",
+            "postalCode": "4000",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Centre de Référence Neuromusculaire am CHR Citadelle (nicht am CHU de Liège); einziges wallonisches NMRC außerhalb Brüssels; ALS-Diagnostik und multidisziplinäre Betreuung; Zusammenarbeit mit der Université de Liège"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-004",
+        "name": "Neuromusculair Referentiecentrum – UZ Gent",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 9 332 21 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uzgent.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Corneel Heymanslaan 10"
+            ],
+            "city": "Gent",
+            "postalCode": "9000",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläres Referenzzentrum; angegliedert an die Universiteit Gent; ALS-Diagnostik und Versorgung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-005",
+        "name": "Neuromusculair Referentiecentrum – UZ Antwerpen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 3 821 33 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uza.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Drie Eikenstraat 655"
+            ],
+            "city": "Edegem",
+            "postalCode": "2650",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläres Referenzzentrum; angegliedert an die Universiteit Antwerpen und das VIB; Forschung zu hereditären Neuropathien und Motoneuronerkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-006",
+        "name": "Centre de Référence Neuromusculaire – Cliniques Universitaires Saint-Luc, UCLouvain Bruxelles",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 2 764 11 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saintluc.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenue Hippocrate 10"
+            ],
+            "city": "Bruxelles",
+            "postalCode": "1200",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Centre de Référence Neuromusculaire; angegliedert an die UCLouvain; ALS-Diagnostik und Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-be-007",
+        "name": "Neuromusculair Referentiecentrum – UZ Brussel (VUB)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+32 2 477 41 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uzbrussel.be/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Laarbeeklaan 101"
+            ],
+            "city": "Brussel",
+            "postalCode": "1090",
+            "country": "BE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläres Referenzzentrum; angegliedert an die Vrije Universiteit Brussel (VUB); NMRC UZ Brussel-Inkendaal betreibt einen zweiten Standort im Revalidatieziekenhuis Inkendaal (Inkendaalstraat 1, 1602 Vlezenbeek)"
+          }
+        ]
+      }
+    }
+  ]
+}

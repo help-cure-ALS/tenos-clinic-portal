@@ -1,0 +1,11 @@
+{
+  "resourceType": "AccessPolicy",
+  "id": "access-policy-mobile-care",
+  "name": "Mobile Care App",
+  "resource": [
+    { "resourceType": "ResearchStudy", "readonly": true },
+    { "resourceType": "Organization", "readonly": true },
+    { "resourceType": "Practitioner", "readonly": true },
+    { "resourceType": "List", "readonly": true }
+  ]
+}

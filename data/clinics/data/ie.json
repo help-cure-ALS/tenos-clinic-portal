@@ -1,0 +1,655 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "IE"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-001",
+        "name": "National MND/ALS Clinic – Beaumont Hospital, Dublin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 1 809 3000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.beaumont.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Beaumont Road"
+            ],
+            "city": "Dublin 9",
+            "postalCode": "D09 V2N0",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales MND/ALS-Zentrum Irlands; geleitet von Prof. Orla Hardiman; Sitz des Irish ALS/MND Registry (eines der ältesten nationalen ALS-Register weltweit, seit 1995); angegliedert an das Academic Centre on Rare Diseases (ACoRD), Trinity College Dublin; umfangreiche epidemiologische und genetische Forschung (C9orf72, FUS, SOD1); multidisziplinäres Team mit Neurologie, Palliativmedizin, Physiotherapie, Ergotherapie, Logopädie, Diätberatung, Sozialarbeit und Psychologie"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Project MinE, ALS Consortium Ireland, Euro-MOTOR"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-002",
+        "name": "MND Multidisciplinary Clinic – Cork University Hospital (CUH)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 21 492 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cuh.hse.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Wilton"
+            ],
+            "city": "Cork",
+            "postalCode": "T12 DC4A",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Multidisziplinäre MND-Klinik für den Süden Irlands; angegliedert an University College Cork (UCC); Neurologie-Abteilung mit ALS-Expertise"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-003",
+        "name": "MND Clinic – University Hospital Galway",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 91 524 222"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saolta.ie/hospital/university-hospital-galway"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Newcastle Road"
+            ],
+            "city": "Galway",
+            "postalCode": "H91 YR71",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik für den Westen Irlands; angegliedert an NUI Galway; Saolta University Health Care Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-004",
+        "name": "MND Clinic – University Hospital Limerick",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 61 301 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ul.ie/hospitals/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dooradoyle"
+            ],
+            "city": "Limerick",
+            "postalCode": "V94 F858",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik für die Region Mid-West; angegliedert an die University of Limerick; UL Hospitals Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-005",
+        "name": "Neurology Department – St Vincent's University Hospital, Dublin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 1 221 4000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.stvincents.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Elm Park"
+            ],
+            "city": "Dublin 4",
+            "postalCode": "D04 T6F4",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung mit MND-Expertise; angegliedert an University College Dublin (UCD)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-006",
+        "name": "Neurology Department – Tallaght University Hospital (TUH), Dublin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 1 414 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.tuh.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Belgard Square North, Tallaght"
+            ],
+            "city": "Dublin 24",
+            "postalCode": "D24 NR0A",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung mit MND-Expertise; angegliedert an Trinity College Dublin"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-007",
+        "name": "Neurology Department – Mater Misericordiae University Hospital, Dublin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 1 803 2000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mater.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "63 Eccles Street"
+            ],
+            "city": "Dublin 7",
+            "postalCode": "D07 R2WY",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung; MND-Patienten werden betreut und an die Nationalklinik Beaumont überwiesen; angegliedert an University College Dublin (UCD)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-008",
+        "name": "Neurology Department – Waterford University Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 51 848 000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hse.ie/eng/services/list/3/acutehospitals/hospitals/waterford/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dunmore Road"
+            ],
+            "city": "Waterford",
+            "postalCode": "X91 ER88",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung für den Südosten Irlands; MND-Diagnostik und Erstversorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-009",
+        "name": "Neurology Department – Sligo University Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 71 917 1111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saolta.ie/hospital/sligo-university-hospital"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "The Mall"
+            ],
+            "city": "Sligo",
+            "postalCode": "F91 H684",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung für den Nordwesten Irlands; Saolta University Health Care Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-010",
+        "name": "Neurology Department – Letterkenny University Hospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 74 912 5888"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saolta.ie/hospital/letterkenny-university-hospital"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "High Road"
+            ],
+            "city": "Letterkenny",
+            "postalCode": "F92 AE81",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung für Donegal und den äußersten Nordwesten; Saolta University Health Care Group"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-011",
+        "name": "Irish Motor Neurone Disease Association (IMNDA)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+353 1 670 5942"
+          },
+          {
+            "system": "url",
+            "value": "https://www.imnda.ie/"
+          },
+          {
+            "system": "email",
+            "value": "info@imnda.ie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Merchants House, 27-30 Merchant's Quay"
+            ],
+            "city": "Dublin 8",
+            "postalCode": "D08 K3KD",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationale Patientenorganisation; bietet MND-Nurses, Equipment-Verleih, Beratung, Unterstützung und Forschungsförderung; betreibt IMNDA Helpline (1800 403 403); finanziert MND Nurse Specialists die in Krankenhäusern landesweit MND-Patienten betreuen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ie-012",
+        "name": "Research Motor Neuron (RMN) – Trinity Biomedical Sciences Institute, Dublin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.tcd.ie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "152-160 Pearse Street"
+            ],
+            "city": "Dublin 2",
+            "postalCode": "D02 R590",
+            "country": "IE"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Research Motor Neuron (RMN) – ALS-Grundlagenforschung und translationale Forschung am Trinity Biomedical Sciences Institute; Genomik, Biomarker, Neuroimaging und Epidemiologie; eng verknüpft mit dem Beaumont Hospital ALS Centre und FutureNeuro SFI Research Centre (RCSI)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FutureNeuro SFI Centre, ENCALS, Project MinE"
+          }
+        ]
+      }
+    }
+  ]
+}

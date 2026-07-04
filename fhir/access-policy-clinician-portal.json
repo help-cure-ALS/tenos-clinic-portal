@@ -1,0 +1,12 @@
+{
+  "resourceType": "AccessPolicy",
+  "id": "access-policy-clinician-portal",
+  "name": "Clinician Portal",
+  "resource": [
+    { "resourceType": "Organization" },
+    { "resourceType": "Practitioner" },
+    { "resourceType": "PractitionerRole", "readonly": true },
+    { "resourceType": "ResearchStudy" },
+    { "resourceType": "List" }
+  ]
+}

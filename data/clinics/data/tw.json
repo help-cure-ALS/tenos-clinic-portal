@@ -1,0 +1,409 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "TW"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-001",
+        "name": "國立臺灣大學醫學院附設醫院 神經部",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 2 2312 3456"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ntuh.gov.tw/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "中正區常德街1號"
+            ],
+            "city": "臺北市",
+            "district": "中正區",
+            "postalCode": "100229",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "National Taiwan University Hospital (NTUH, 臺大醫院); führendes akademisches Krankenhaus Taiwans; Abteilung für Neurologie mit ALS-Forschung und -Behandlung; Forschung zu neuromuskulären Erkrankungen, Whole-Exome-Sequenzierung, Hautbiopsie-Methoden und Biomarkern bei ALS; Mitbegründer der Taiwan Brain Bank gemeinsam mit der Taiwan Motor Neuron Disease Association; iPS-Zell-Forschung; bedeutende Publikationen zur ALS-Genetik und Bildgebung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Taiwan Motor Neuron Disease Association, Taiwan Brain Bank"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-002",
+        "name": "臺北榮民總醫院 神經醫學中心",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 2 2871 2121"
+          },
+          {
+            "system": "url",
+            "value": "https://wd.vghtpe.gov.tw/vghneuro/Index.action?mlangloc=en_US"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "北投區石牌路二段201號"
+            ],
+            "city": "臺北市",
+            "district": "北投區",
+            "postalCode": "11217",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Taipei Veterans General Hospital (TVGH, 臺北榮總); Neurologisches Institut 1989 als erstes in Taiwan gegründet; Pionierarbeit in Neurokritischer Medizin, neuronaler Regeneration und Reparatur; Abteilung für periphere Nervensystemerkrankungen mit ALS-Schwerpunkt; führende Forschung zu ALS-Genetik, insbesondere TARDBP-Varianten in taiwanesischen ALS-Patienten; systematische genetische Charakterisierung von ALS in der taiwanesischen Bevölkerung; ClinVar-Beiträge zur ALS-Genetik"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Taiwan Motor Neuron Disease Association"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-003",
+        "name": "林口長庚紀念醫院 神經內科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 3 328 1200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cgmh.org.tw/eng"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "桃園市龜山區復興街5號"
+            ],
+            "city": "桃園市",
+            "district": "龜山區",
+            "postalCode": "33305",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Linkou Chang Gung Memorial Hospital (林口長庚); eines der größten medizinischen Zentren Taiwans (ca. 4.000 Betten); Lehrkrankenhaus der Chang Gung University; Abteilung für Neurologie mit Forschung zu neurodegenerativen Erkrankungen; Studien zu NOTCH2NLC GGC-Repeat-Expansionen bei taiwanesischen ALS-Patienten; Neuroscience Research Center; Forschung zu Parkinson, Ataxie und Motoneuronerkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-004",
+        "name": "國立成功大學醫學院附設醫院 神經科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 6 235 3535"
+          },
+          {
+            "system": "url",
+            "value": "https://neuro-med.ncku.edu.tw/?Lang=en"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "北區勝利路138號"
+            ],
+            "city": "臺南市",
+            "district": "北區",
+            "postalCode": "70403",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "National Cheng Kung University Hospital (NCKUH, 成大醫院); einziges nationalen Universität-Lehrkrankenhaus in Südtaiwan; 1.342 Betten; Abteilung für Neurologie seit Ende der 1980er Jahre; Neuralelektrophysiologie, Epilepsie und neurodegenerative Erkrankungen; Forschung zu neuronalen Intranukleären Einschlusskörperchen-Erkrankungen und Motoneuronerkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-005",
+        "name": "臺北醫學大學附設醫院 神經科",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 2 2737 2181"
+          },
+          {
+            "system": "url",
+            "value": "https://english.tmuh.org.tw/Department/12"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "信義區吳興街252號"
+            ],
+            "city": "臺北市",
+            "district": "信義區",
+            "postalCode": "110301",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Taipei Medical University Hospital (TMUH, 臺北醫學大學附設醫院); Abteilung für Neurologie mit Spezialisten für neuromuskuläre Erkrankungen einschließlich ALS; Behandlung von Schlaganfall, Demenz, Parkinson, Epilepsie, neuromuskulären Störungen, Kopfschmerzen und Schlafstörungen; Forschung und Gesundheitsdienste in Neurologie"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-006",
+        "name": "中華民國運動神經元疾病病友協會 (漸凍人協會)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 2 2585 1367"
+          },
+          {
+            "system": "fax",
+            "value": "+886 2 2585 1302"
+          },
+          {
+            "system": "email",
+            "value": "mnda@mnda.org.tw"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mnda.org.tw/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "中山區民族東路2號7樓之1"
+            ],
+            "city": "臺北市",
+            "district": "中山區",
+            "postalCode": "10461",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Taiwan Motor Neuron Disease Association (漸凍人協會, wörtlich: 'Vereinigung der Einfrierpersonen'); 1997 gegründet; einzige dedizierte ALS-Patientenvereinigung Taiwans; Motto: '用愛解凍' (Mit Liebe auftauen); unterstützt seit über 26 Jahren ALS-Familien; fördert medizinische Versorgung, Lebensqualität und Würde; betreibt Taiwans einzige ALS-Website; 21. Juni als Global ALS Day; Mitbegründer der Taiwan Brain Bank gemeinsam mit NTUH; Büro in Kaohsiung (高雄) vorhanden"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tw-007",
+        "name": "中華民國運動神經元疾病病友協會 高雄辦事處",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+886 7 389 6930"
+          },
+          {
+            "system": "fax",
+            "value": "+886 7 398 0380"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "三民區義昌路46號15樓"
+            ],
+            "city": "高雄市",
+            "district": "三民區",
+            "postalCode": "80780",
+            "country": "TW"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Kaohsiung-Büro der Taiwan Motor Neuron Disease Association (漸凍人協會); regionales Büro in Südtaiwan zur Unterstützung von ALS-Patienten und -Familien in der Region Kaohsiung und Südtaiwan"
+          }
+        ]
+      }
+    }
+  ]
+}

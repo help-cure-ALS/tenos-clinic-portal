@@ -1,0 +1,219 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "BG"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-bg-001",
+        "name": "Клиника по нервни болести – УМБАЛ Александровска, Медицински университет София",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+359 2 9230"
+          },
+          {
+            "system": "url",
+            "value": "https://www.alexandrovska.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ул. Св. Георги Софийски 1"
+            ],
+            "city": "София",
+            "postalCode": "1431",
+            "country": "BG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes ALS-Zentrum Bulgariens; Expert Centre for Hereditary Neurologic and Metabolic Disorders (genehmigt Feb. 2016); multidisziplinäres Team; ALS-Genetik-Forschung (PFN1, CHGB, MAPT); ehemaliger ENCALS-PI Dr. Stayko Sarafov 2021 verstorben"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, ERN-EURO-NMD, ERN-RND, TREAT-NMD"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-bg-002",
+        "name": "Клиника по невродегенеративни и периферни нервни заболявания – УМБАЛ Св. Наум, София",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+359 2 9702 300"
+          },
+          {
+            "system": "url",
+            "value": "https://svnaum.com/en/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ул. Любен Русев 1"
+            ],
+            "city": "София",
+            "postalCode": "1113",
+            "country": "BG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitwichtigstes neurologisches Krankenhaus in Sofia; Klinik für neurodegenerative und periphere Nervenerkrankungen; ALS-Diagnostik im Rahmen der allgemeinen Neurologie"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-bg-003",
+        "name": "Катедра по неврология – Медицински университет Пловдив",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+359 32 200 700"
+          },
+          {
+            "system": "url",
+            "value": "https://mu-plovdiv.bg/en/faculties/faculty-of-medicine/departments/department-of-neurology/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "бул. Васил Априлов 15"
+            ],
+            "city": "Пловдив",
+            "postalCode": "4002",
+            "country": "BG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung der Medizinischen Universität Plovdiv; allgemeine Neurologie; keine dedizierte ALS-Ambulanz verifiziert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-bg-004",
+        "name": "Катедра по неврология – УМБАЛ Св. Марина, Медицински университет Варна",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.mu-varna.bg/EN"
+          }
+        ],
+        "address": [
+          {
+            "city": "Варна",
+            "country": "BG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung am UMHAT Sv. Marina; allgemeine Neurologie; keine dedizierte ALS-Ambulanz verifiziert"
+          }
+        ]
+      }
+    }
+  ]
+}

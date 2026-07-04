@@ -1,0 +1,290 @@
+services:
+  postgres:
+    image: postgres:${POSTGRES_VERSION:-16}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-medplum}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-medplum}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  redis:
+    image: redis:${REDIS_VERSION:-7}
+    restart: unless-stopped
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
+    volumes:
+      - redis_data:/data
+    networks:
+      - internal
+
+  medplum-server:
+    image: medplum/medplum-server:${MEDPLUM_SERVER_TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      MEDPLUM_PORT: ${MEDPLUM_PORT:-8103}
+
+      MEDPLUM_BASE_URL: ${MEDPLUM_BASE_URL}
+      MEDPLUM_APP_BASE_URL: ${MEDPLUM_APP_BASE_URL}
+      MEDPLUM_STORAGE_BASE_URL: ${MEDPLUM_STORAGE_BASE_URL}
+      MEDPLUM_ALLOWED_ORIGINS: ${MEDPLUM_ALLOWED_ORIGINS}
+
+      MEDPLUM_DATABASE_HOST: postgres
+      MEDPLUM_DATABASE_PORT: 5432
+      MEDPLUM_DATABASE_DBNAME: ${POSTGRES_DB:-medplum}
+      MEDPLUM_DATABASE_USERNAME: ${POSTGRES_USER:-medplum}
+      MEDPLUM_DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+
+      MEDPLUM_REDIS_HOST: redis
+      MEDPLUM_REDIS_PORT: 6379
+      MEDPLUM_REDIS_PASSWORD: ${REDIS_PASSWORD}
+
+      MEDPLUM_BINARY_STORAGE: ${MEDPLUM_BINARY_STORAGE:-file:/usr/src/medplum/storage}
+
+      MEDPLUM_RECAPTCHA_ENABLED: "false"
+      MEDPLUM_REGISTER_ENABLED: ${MEDPLUM_REGISTER_ENABLED:-true}
+      MEDPLUM_VM_CONTEXT_BOTS_ENABLED: "true"
+      MEDPLUM_DEFAULT_FHIR_QUOTA: "-1"
+
+      MEDPLUM_DEFAULT_SUPER_ADMIN_EMAIL: ${MEDPLUM_ADMIN_EMAIL:-admin@example.com}
+      MEDPLUM_DEFAULT_SUPER_ADMIN_PASSWORD: ${MEDPLUM_ADMIN_PASSWORD}
+    volumes:
+      - binary_data:/usr/src/medplum/storage
+      - ./medplum-entrypoint.js:/usr/src/medplum/entrypoint.js:ro
+    entrypoint: ["node", "entrypoint.js"]
+    networks:
+      - internal
+      - public
+
+  medplum-app:
+    image: medplum/medplum-app:${MEDPLUM_SERVER_TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      - medplum-server
+    ports:
+      - "127.0.0.1:3001:3000"
+    environment:
+      MEDPLUM_BASE_URL: ${MEDPLUM_BASE_URL:-http://localhost:8070/api/}
+    volumes:
+      - ./medplum-app-entrypoint.sh:/docker-entrypoint.sh:ro
+    entrypoint: ["/docker-entrypoint.sh"]
+    networks:
+      - internal
+      - public
+
+  verification-service:
+    build:
+      context: ./verification-service
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - verification-db
+      - medplum-server
+    environment:
+      PORT: "3002"
+      DATABASE_URL: postgres://verification:${VERIFICATION_DB_PASSWORD:-verification}@verification-db:5432/verification
+      MEDPLUM_BASE_URL: http://medplum-server:8103/
+      MEDPLUM_CLIENT_ID: ${VERIFICATION_MEDPLUM_CLIENT_ID:-}
+      MEDPLUM_CLIENT_SECRET: ${VERIFICATION_MEDPLUM_CLIENT_SECRET:-}
+      MEDPLUM_PROJECT_ID: ${MEDPLUM_PROJECT_ID:-}
+      SERVICE_TOKEN: ${VERIFICATION_SERVICE_TOKEN:-change_me_long_random}
+      APP_AUTH_JWT_SECRET: ${VERIFICATION_APP_AUTH_JWT_SECRET:-change_me_long_random_change_me_long}
+      APP_AUTH_JWT_ISSUER: ${VERIFICATION_APP_AUTH_JWT_ISSUER:-verification-service}
+      APP_AUTH_JWT_AUDIENCE: ${VERIFICATION_APP_AUTH_JWT_AUDIENCE:-verification-mobile}
+      APP_AUTH_JWT_TTL_SECONDS: ${VERIFICATION_APP_AUTH_JWT_TTL_SECONDS:-900}
+      APP_AUTH_CHALLENGE_TTL_SECONDS: ${VERIFICATION_APP_AUTH_CHALLENGE_TTL_SECONDS:-60}
+    networks:
+      - internal
+
+  supplier-proxy:
+    build:
+      context: ./supplier-proxy
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - supplier-proxy-db
+      - medplum-server
+    environment:
+      PORT: "3003"
+      DATABASE_URL: postgres://supplier:${SUPPLIER_PROXY_DB_PASSWORD:-supplier}@supplier-proxy-db:5432/supplier_proxy
+      MEDPLUM_BASE_URL: http://medplum-server:8103/
+      MEDPLUM_CLIENT_ID: ${SUPPLIER_MEDPLUM_CLIENT_ID:-}
+      MEDPLUM_CLIENT_SECRET: ${SUPPLIER_MEDPLUM_CLIENT_SECRET:-}
+      SUPPLIER_SERVICE_TOKEN: ${SUPPLIER_SERVICE_TOKEN:-change_me_long_random}
+      APP_AUTH_JWT_SECRET: ${SUPPLIER_APP_AUTH_JWT_SECRET:-change_me_long_random_change_me_long}
+      APP_AUTH_JWT_ISSUER: ${SUPPLIER_APP_AUTH_JWT_ISSUER:-supplier-proxy}
+      APP_AUTH_JWT_AUDIENCE: ${SUPPLIER_APP_AUTH_JWT_AUDIENCE:-supplier-mobile}
+      APP_AUTH_JWT_TTL_SECONDS: ${SUPPLIER_APP_AUTH_JWT_TTL_SECONDS:-900}
+      APP_AUTH_CHALLENGE_TTL_SECONDS: ${SUPPLIER_APP_AUTH_CHALLENGE_TTL_SECONDS:-60}
+      VERIFICATION_SERVICE_URL: ${VERIFICATION_SERVICE_URL:-http://verification-service:3002}
+      VERIFICATION_SERVICE_TOKEN: ${VERIFICATION_SERVICE_TOKEN:-change_me_long_random}
+      LINK_REQUEST_TTL_MINUTES: ${SUPPLIER_LINK_REQUEST_TTL_MINUTES:-30}
+      MAX_PULL: ${SUPPLIER_MAX_PULL:-200}
+      SUPPLIER_PAYLOAD_KEYS_JSON: ${SUPPLIER_PAYLOAD_KEYS_JSON}
+      SUPPLIER_PAYLOAD_ACTIVE_KEY_VERSION: ${SUPPLIER_PAYLOAD_ACTIVE_KEY_VERSION:-1}
+      SUPPLIER_INBOUND_IDEMPOTENCY_HOURS: ${SUPPLIER_INBOUND_IDEMPOTENCY_HOURS:-72}
+      SUPPLIER_DELIVERY_WORKER_INTERVAL_MS: ${SUPPLIER_DELIVERY_WORKER_INTERVAL_MS:-5000}
+      SUPPLIER_DELIVERY_WORKER_BATCH_SIZE: ${SUPPLIER_DELIVERY_WORKER_BATCH_SIZE:-20}
+      SUPPLIER_DELIVERY_RETRY_BASE_MS: ${SUPPLIER_DELIVERY_RETRY_BASE_MS:-60000}
+      SUPPLIER_DELIVERY_RETRY_MAX_MS: ${SUPPLIER_DELIVERY_RETRY_MAX_MS:-21600000}
+    networks:
+      - internal
+      - public
+
+  studies-sync:
+    build:
+      context: ./studies-sync
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - studies-sync-db
+      - medplum-server
+    environment:
+      PORT: "3004"
+      DATABASE_URL: postgres://studies:${STUDIES_SYNC_DB_PASSWORD:-studies}@studies-sync-db:5432/studies_sync
+      MEDPLUM_BASE_URL: http://medplum-server:8103/
+      MEDPLUM_CLIENT_ID: ${STUDIES_MEDPLUM_CLIENT_ID:-}
+      MEDPLUM_CLIENT_SECRET: ${STUDIES_MEDPLUM_CLIENT_SECRET:-}
+      ANTHROPIC_API_KEY: ${STUDIES_ANTHROPIC_API_KEY:-}
+    networks:
+      - internal
+      - public
+
+  studies-sync-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: studies_sync
+      POSTGRES_USER: studies
+      POSTGRES_PASSWORD: ${STUDIES_SYNC_DB_PASSWORD:-studies}
+    volumes:
+      - studies_sync_db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  verification-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: verification
+      POSTGRES_USER: verification
+      POSTGRES_PASSWORD: ${VERIFICATION_DB_PASSWORD:-verification}
+    volumes:
+      - verification_db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  supplier-proxy-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: supplier_proxy
+      POSTGRES_USER: supplier
+      POSTGRES_PASSWORD: ${SUPPLIER_PROXY_DB_PASSWORD:-supplier}
+    volumes:
+      - supplier_proxy_db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  backup:
+    build:
+      context: ./backup
+    profiles:
+      - backup
+    restart: unless-stopped
+    init: true
+    depends_on:
+      - postgres
+      - verification-db
+      - supplier-proxy-db
+      - studies-sync-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-medplum}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-medplum}
+      VERIFICATION_DB_PASSWORD: ${VERIFICATION_DB_PASSWORD:-verification}
+      SUPPLIER_PROXY_DB_PASSWORD: ${SUPPLIER_PROXY_DB_PASSWORD:-supplier}
+      STUDIES_SYNC_DB_PASSWORD: ${STUDIES_SYNC_DB_PASSWORD:-studies}
+
+      RESTIC_REPOSITORY: ${BACKUP_RESTIC_REPOSITORY:-}
+      RESTIC_PASSWORD: ${BACKUP_RESTIC_PASSWORD:-}
+      RESTIC_CACHE_DIR: /cache/restic
+      AWS_ACCESS_KEY_ID: ${BACKUP_S3_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${BACKUP_S3_SECRET_ACCESS_KEY:-}
+      AWS_DEFAULT_REGION: ${BACKUP_S3_REGION:-hel1}
+
+      BACKUP_RESTIC_HOSTNAME: ${BACKUP_RESTIC_HOSTNAME:-hca-care}
+      BACKUP_INTERVAL_SECONDS: ${BACKUP_INTERVAL_SECONDS:-21600}
+      BACKUP_RUN_ON_START: ${BACKUP_RUN_ON_START:-true}
+      BACKUP_RETENTION_DAILY: ${BACKUP_RETENTION_DAILY:-14}
+      BACKUP_RETENTION_WEEKLY: ${BACKUP_RETENTION_WEEKLY:-8}
+      BACKUP_RETENTION_MONTHLY: ${BACKUP_RETENTION_MONTHLY:-3}
+      BACKUP_RUN_CHECK_AFTER_BACKUP: ${BACKUP_RUN_CHECK_AFTER_BACKUP:-false}
+      BACKUP_PING_URL: ${BACKUP_PING_URL:-}
+    volumes:
+      - backup_cache:/cache
+      - binary_data:/data/medplum-binary:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - internal
+      - public
+
+  clinician-web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+      args:
+        VITE_MEDPLUM_URL: ${MEDPLUM_BASE_URL:-/api}
+        VITE_MEDPLUM_CLIENT_ID: ${VITE_MEDPLUM_CLIENT_ID:-}
+        VITE_MEDPLUM_PROJECT_ID: ${MEDPLUM_PROJECT_ID:-}
+        VITE_VERIFICATION_API_URL: /vapi
+        VITE_SUPPLIER_API_URL: /sapi
+    restart: unless-stopped
+    depends_on:
+      - medplum-server
+    networks:
+      - internal
+
+  caddy:
+    image: caddy:${CADDY_VERSION:-2}
+    restart: unless-stopped
+    ports:
+      - "${CADDY_HTTP_PORT:-80}:80"
+      - "${CADDY_HTTPS_PORT:-443}:443"
+      - "${CADDY_HTTPS_PORT:-443}:443/udp"
+    environment:
+      CADDY_SITE_ADDRESS: ${CADDY_SITE_ADDRESS:-:80}
+      WEB_UPSTREAM: clinician-web:80
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./landing:/srv/landing:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - internal
+      - public
+
+networks:
+  internal:
+    internal: true
+  public:
+
+volumes:
+  backup_cache:
+  postgres_data:
+  redis_data:
+  binary_data:
+  caddy_data:
+  caddy_config:
+  verification_db_data:
+  supplier_proxy_db_data:
+  studies_sync_db_data:

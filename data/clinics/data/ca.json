@@ -1,0 +1,1045 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CA"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-001",
+        "name": "ALS Clinical Research Unit – Montreal Neurological Institute-Hospital (The Neuro), McGill University",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 514 398 6644"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mcgill.ca/neuro/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3801 Rue University"
+            ],
+            "city": "Montréal",
+            "state": "QC",
+            "postalCode": "H3A 2B4",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der weltweit führenden ALS-Forschungszentren; ALS Clinical Research Unit unter Leitung von Dr. Angela Genge; angegliedert an das Montreal Neurological Institute-Hospital (The Neuro), McGill University; umfangreiche klinische Studien; multidisziplinäres Team; eines der größten ALS-Patientenvolumen in Kanada"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS), NEALS, ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-002",
+        "name": "ALS Clinic – Sunnybrook Health Sciences Centre, Toronto",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 416 480 6100"
+          },
+          {
+            "system": "url",
+            "value": "https://sunnybrook.ca/clinics/als-clinic/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2075 Bayview Avenue"
+            ],
+            "city": "Toronto",
+            "state": "ON",
+            "postalCode": "M4N 3M5",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größte ALS-Klinik Kanadas; geleitet von Dr. Lorne Zinman (Gründer und erster Vorsitzender von CALS); ca. 300 Neudiagnosen und 750 Patienten in Betreuung pro Jahr; multidisziplinäres Team; Hurvitz Brain Sciences Research Program; angegliedert an die University of Toronto; klinische Studien und Biomarker-Forschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS), NEALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-003",
+        "name": "Motor Neuron Diseases Clinic – London Health Sciences Centre (LHSC), Western University",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 519 685 8500"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lhsc.on.ca/motor-neuron-diseases-clinic"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "339 Windermere Road"
+            ],
+            "city": "London",
+            "state": "ON",
+            "postalCode": "N6A 5A5",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am University Hospital, London Health Sciences Centre; geleitet von Dr. Christen Shoesmith (President-Elect CALS); Wirkungsstätte von Prof. Michael Strong; Robarts Research Institute; Forschung zu TDP-43, RNA-Metabolismus und ALS-FTD"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-004",
+        "name": "ALS/Motor Neuron Diseases Clinic – McMaster University Medical Centre, Hamilton",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 905 521 2100"
+          },
+          {
+            "system": "url",
+            "value": "https://fhs.mcmaster.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1200 Main Street West"
+            ],
+            "city": "Hamilton",
+            "state": "ON",
+            "postalCode": "L8N 3Z5",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS/MND-Klinik am McMaster University Medical Centre; Hamilton Health Sciences; multidisziplinäres Team; Versorgung für die Region Hamilton/Niagara"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-005",
+        "name": "ALS Clinic – The Ottawa Hospital, University of Ottawa",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 613 798 5555"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ottawahospital.on.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1053 Carling Avenue"
+            ],
+            "city": "Ottawa",
+            "state": "ON",
+            "postalCode": "K1Y 4E9",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik am Ottawa Hospital; Eric Poulin Chair for ALS Clinical Research (Dr. Ari Breiner); angegliedert an die University of Ottawa; klinische Studien und Versorgung für Ostontario"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-006",
+        "name": "Neuromuscular Clinic – Providence Care Hospital, Kingston",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 613 544 4900"
+          },
+          {
+            "system": "url",
+            "value": "https://www.providencecare.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "752 King Street West"
+            ],
+            "city": "Kingston",
+            "state": "ON",
+            "postalCode": "K7L 4X3",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläre Klinik; angegliedert an Queen's University; offizieller CALS-Standort"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-007",
+        "name": "CHUM – Centre hospitalier de l'Université de Montréal, Clinique SLA",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 514 890 8000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chumontreal.qc.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1000 Rue Saint-Denis"
+            ],
+            "city": "Montréal",
+            "state": "QC",
+            "postalCode": "H2X 0C1",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "SLA-Klinik am CHUM; angegliedert an die Université de Montréal; ergänzt das MNI/McGill als zweites großes ALS-Zentrum in Montréal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-008",
+        "name": "Clinique des maladies neuromusculaires – CHU de Québec, Hôpital de l'Enfant-Jésus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 418 649 0252"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chudequebec.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1401 18e Rue"
+            ],
+            "city": "Québec",
+            "state": "QC",
+            "postalCode": "G1J 1Z4",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläre Klinik am Hôpital de l'Enfant-Jésus; geleitet von Dr. Nicolas Dupré; angegliedert an die Université Laval; Neurogenetics-Forschung; Versorgung für Québec City und Ostquebec"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-009",
+        "name": "Clinique des maladies neuromusculaires – CHUS Hôpital Fleurimont, Sherbrooke",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 819 346 1110"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ciussse-chus.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "3001 12e Avenue Nord"
+            ],
+            "city": "Sherbrooke",
+            "state": "QC",
+            "postalCode": "J1H 5N4",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neuromuskuläre Klinik am CHUS; angegliedert an die Université de Sherbrooke; Versorgung für die Estrie-Region"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-010",
+        "name": "ALS/Neuromuscular Clinic – Djavad Mowafaghian Centre for Brain Health, UBC, Vancouver",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 604 827 1095"
+          },
+          {
+            "system": "url",
+            "value": "https://neurology.med.ubc.ca/programs/amyotrophic-lateral-sclerosis-program/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2215 Wesbrook Mall"
+            ],
+            "city": "Vancouver",
+            "state": "BC",
+            "postalCode": "V6T 1Z3",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS and Related Disorders (ALSRD) Clinic am Djavad Mowafaghian Centre for Brain Health; angegliedert an die University of British Columbia (UBC); multidisziplinäres Team; Hauptzentrum für ALS in British Columbia"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-011",
+        "name": "ALS Clinic – Victoria General Hospital, Island Health",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 250 727 4212"
+          },
+          {
+            "system": "url",
+            "value": "https://www.islandhealth.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Hospital Way"
+            ],
+            "city": "Victoria",
+            "state": "BC",
+            "postalCode": "V8Z 6R5",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik für Vancouver Island; einzige Klinik in BC außerhalb von Vancouver"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-012",
+        "name": "ALS Clinic – Kaye Edmonton Clinic, University of Alberta",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 780 407 3718"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ualberta.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11400 University Avenue, Level 4"
+            ],
+            "city": "Edmonton",
+            "state": "AB",
+            "postalCode": "T6G 1Z1",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik an der Kaye Edmonton Clinic; Co-Medical Directors Dr. Wendy Johnston und Dr. Sanjay Kalra; MRI-Biomarker-Forschung; multidisziplinäre Versorgung für Nord-Alberta"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-013",
+        "name": "ALS Clinic – South Health Campus, University of Calgary",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 403 956 3468"
+          },
+          {
+            "system": "url",
+            "value": "https://cumming.ucalgary.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "4448 Front Street SE"
+            ],
+            "city": "Calgary",
+            "state": "AB",
+            "postalCode": "T3M 1M4",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik am South Health Campus; geleitet von Dr. Lawrence Korngut; Hotchkiss Brain Institute; Cumming School of Medicine; National PI des Canadian Neuromuscular Disease Registry (CNDR); Versorgung für Süd-Alberta"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Canadian ALS Research Network (CALS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-014",
+        "name": "Motor Neuron Disease Clinic – Deer Lodge Centre, Winnipeg",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 204 831 2583"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2109 Portage Avenue"
+            ],
+            "city": "Winnipeg",
+            "state": "MB",
+            "postalCode": "R3J 0L3",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "MND-Klinik am Deer Lodge Centre; Versorgung für Manitoba"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-015",
+        "name": "ALS Clinic – Saskatoon City Hospital, University of Saskatchewan",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 306 655 8000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "701 Queen Street"
+            ],
+            "city": "Saskatoon",
+            "state": "SK",
+            "postalCode": "S7K 0M7",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik; geleitet von Dr. Kerri Schellenberg; angegliedert an die University of Saskatchewan; Versorgung für Saskatchewan"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-016",
+        "name": "ALS Clinic – QEII Health Sciences Centre, Dalhousie University, Halifax",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 902 473 2700"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1796 Summer Street"
+            ],
+            "city": "Halifax",
+            "state": "NS",
+            "postalCode": "B3H 3A7",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik am QEII Health Sciences Centre; angegliedert an die Dalhousie University; Versorgung für die Atlantikprovinzen (Nova Scotia, New Brunswick, PEI)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-017",
+        "name": "Stan Cassidy Centre for Rehabilitation – Horizon Health Network, Fredericton",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 506 452 5225"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "800 Priestman Street"
+            ],
+            "city": "Fredericton",
+            "state": "NB",
+            "postalCode": "E3B 0C7",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Rehabilitationszentrum mit neuromuskulärer Sprechstunde; ALS-Versorgung für New Brunswick"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-018",
+        "name": "ALS Clinic – Health Sciences Centre, Memorial University, St. John's",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 709 777 6300"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "300 Prince Philip Drive"
+            ],
+            "city": "St. John's",
+            "state": "NL",
+            "postalCode": "A1B 3V6",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Klinik am Health Sciences Centre; angegliedert an die Memorial University of Newfoundland; Versorgung für Newfoundland and Labrador"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ca-019",
+        "name": "ALS Society of Canada / Société canadienne de la SLA",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1 800 267 4257"
+          },
+          {
+            "system": "url",
+            "value": "https://www.als.ca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "300-4211 Yonge Street"
+            ],
+            "city": "Toronto",
+            "state": "ON",
+            "postalCode": "M2P 2A9",
+            "country": "CA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationale ALS-Patientenorganisation Kanadas; Forschungsförderung (ALS Canada Research Program); Patientenunterstützung; Equipment-Programm; Advocacy; provinzielle Chapters landesweit; verwaltet das Canadian ALS Research Network (CALS) mit 23 Zentren"
+          }
+        ]
+      }
+    }
+  ]
+}

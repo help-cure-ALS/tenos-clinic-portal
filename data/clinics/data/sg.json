@@ -1,0 +1,439 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "SG"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-001",
+        "name": "National Neuroscience Institute (NNI) – Tan Tock Seng Hospital Campus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+65 6357 7095"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nni.com.sg/"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nni.com.sg/our-specialties/neurology/neuromuscular-disorders"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11 Jalan Tan Tock Seng"
+            ],
+            "city": "Singapore",
+            "postalCode": "308433",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales und regionales Fachzentrum fuer Erkrankungen des Gehirns, der Wirbelsaeule, der Nerven und Muskeln; Hauptstandort der ALS-Versorgung in Singapur unter Leitung von Dr. Josiah Chai (Programmdirektor fuer Motoneuronerkrankungen und neuromuskulaere Stoerungen); betreibt das SingALS-Register; jaehrlich werden ca. 30-40 neue ALS-Faelle diagnostiziert; multidisziplinaeres ALS-Team mit Neurologie, Physiotherapie, Ergotherapie und Logopaedie; Mitglied des PACTALS-Netzwerks (Pan-Asian Consortium for Treatment and Research in ALS); neuromuskulaeres Labor fuer Elektrodiagnostik; Forschung zu ALS-Staging-Modellen und KI-basierter Prognosestellung; affiliiert mit SingHealth und Duke-NUS Medical School"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-002",
+        "name": "National Neuroscience Institute (NNI) – Singapore General Hospital Campus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+65 6222 3322"
+          },
+          {
+            "system": "email",
+            "value": "appointments@sgh.com.sg"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sgh.com.sg/our-specialties/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Neuroscience Clinic, Level 10, SGH Emergency / NNI Building, 1 Hospital Boulevard"
+            ],
+            "city": "Singapore",
+            "postalCode": "168581",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweiter Hauptstandort des NNI im Singapore General Hospital; Neuroscience Clinic seit Januar 2026 im neuen SGH Emergency / NNI Building (Level 10); Mitbetreuung des SingALS-Registers zusammen mit dem TTSH-Campus; Forschung zu prognostischen Faktoren bei Motoneuronerkrankungen in multiethnischen asiatischen Populationen; Teil des SingHealth Academic Medical Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-003",
+        "name": "Tan Tock Seng Hospital – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+65 6256 6011"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ttsh.com.sg/Patients-and-Visitors/Medical-Services/Neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11 Jalan Tan Tock Seng"
+            ],
+            "city": "Singapore",
+            "postalCode": "308433",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tertiaeres Ueberweisungskrankenhaus in Novena mit 45 klinischen Abteilungen; beherbergt den Hauptcampus des NNI; ALS-Patienten werden im Rahmen der NNI-Neuromuskular-Programme behandelt; neurologische Rehabilitation einschliesslich Ergotherapie fuer neurologische Erkrankungen; Teil des National Healthcare Group (NHG)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-004",
+        "name": "Singapore General Hospital – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+65 6222 3322"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sgh.com.sg/our-specialties/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Outram Road"
+            ],
+            "city": "Singapore",
+            "postalCode": "169608",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesstes und aeltestes Akutkrankenhaus Singapurs; Neurologie-Abteilung arbeitet eng mit dem NNI zusammen; umfassende Behandlung neurodegenerativer Erkrankungen einschliesslich Motoneuronerkrankungen; Beteiligung am SingALS-Register (71 Patienten in der Kohorte); Teil des SingHealth Academic Medical Centre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-005",
+        "name": "National University Hospital (NUH) – Division of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+65 6779 5555"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nuh.com.sg/care-at-nuh/services/medicine/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "5 Lower Kent Ridge Road"
+            ],
+            "city": "Singapore",
+            "postalCode": "119074",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Universitaetskrankenhaus affiliiert mit der National University of Singapore (NUS); neuromuskulaere Klinik mit spezialisierten Aerzten fuer Nerven- und Muskelerkrankungen einschliesslich Motoneuronerkrankungen; Neurodiagnostisches Labor (NDL) fuer Elektrodiagnostik und peripheren Nervenultraschall; Behandlung von Neuropathien, Myopathien, neuromuskulaeren Uebergangsstoerungen und Motoneuronerkrankungen; Teil des National University Health System (NUHS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-006",
+        "name": "National Neuroscience Research Institute Singapore (NNRIS)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.nni.com.sg/research-innovation"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11 Jalan Tan Tock Seng"
+            ],
+            "city": "Singapore",
+            "postalCode": "308433",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinsames Forschungsinstitut von NNI und Duke-NUS Medical School; buendelt Expertise beider Organisationen fuer die Entwicklung von Forschungsprogrammen; ALS-Forschung umfasst KI-basierte Prognosemodelle, Stammzellforschung und Biomarker-Studien; Translational Neuromuscular Medicine Laboratory unter Leitung von Dr. Crystal Yeo (in Zusammenarbeit mit A*STAR IMCB)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-007",
+        "name": "Motor Neurone Disease Association Singapore (MNDa Singapore)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "enquiry@mnda.org.sg"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mnda.org.sg/"
+          },
+          {
+            "system": "url",
+            "value": "https://www.facebook.com/mndasingapore"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Trengganu Street"
+            ],
+            "city": "Singapore",
+            "postalCode": "058455",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Patientenorganisation fuer Motoneuronerkrankungen in Singapur; gegruendet im April 2021 von Patienten und Freiwilligen; mitbegruendet von dem preisgekroenten Nachrichtenmoderator Riz Sunawan (selbst ALS-Patient, †Februar 2023); bietet Unterstuetzung fuer MND-Patienten und Pflegende; eng verbunden mit der NNI MND/ALS Support Group; Mitglied der International Alliance of ALS/MND Associations; registriert als T21SS0069B"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-sg-008",
+        "name": "NNI MND/ALS Support Group",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.nni.com.sg/patient-care/mnd-als-support-group"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "11 Jalan Tan Tock Seng"
+            ],
+            "city": "Singapore",
+            "postalCode": "308433",
+            "country": "SG"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Vom National Neuroscience Institute organisierte Selbsthilfegruppe fuer ALS/MND-Patienten; bietet regelmaessige Treffen, Informationsaustausch und psychosoziale Unterstuetzung; arbeitet eng mit der Motor Neurone Disease Association Singapore zusammen; Teil des NNI-Programms fuer Patientenunterstuetzungsgruppen"
+          }
+        ]
+      }
+    }
+  ]
+}

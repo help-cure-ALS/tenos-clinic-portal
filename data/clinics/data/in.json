@@ -1,0 +1,520 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "IN"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-001",
+        "name": "National Institute of Mental Health and Neurosciences (NIMHANS) – Department of Neurology",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 80 2699 5000"
+          },
+          {
+            "system": "phone",
+            "value": "+91 80 2699 5530"
+          },
+          {
+            "system": "url",
+            "value": "https://www.nimhans.ac.in/departments/neurology"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hosur Road, Lakkasandra, Wilson Garden"
+            ],
+            "city": "Bengaluru",
+            "state": "Karnataka",
+            "postalCode": "560029",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes nationales Zentrum fuer ALS/MND in Indien; als NIMHANS Advanced Center for Neuromuscular Disorders (NACNMD) unter dem Gesundheitsministerium anerkannt; fuehrt das groesste indische MND-Register mit ueber 3500 Faellen seit 1976 unter Leitung von Prof. Atchayaram Nalini; Pionierarbeit in der Palliativversorgung von ALS-Patienten mit Hausbesuchen und psychosozialer Unterstuetzung; umfangreiche Forschung zu Genetik, Biomarkern und Stammzellen bei ALS; ueber 700 indische ALS-Patienten haben Whole-Exome-Sequenzierung erhalten; Kooperationspartner von Target ALS Global Natural History Study; Zusammenarbeit mit UCL (London) im International Centre for Genomic Medicine in Neuromuscular Diseases; Mitglied des PACTALS-Netzwerks; Hindi/Kannada: NIMHANS (Raashtriya Maanasika Swasthya aur Tantrikangyaan Sansthaan)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-002",
+        "name": "All India Institute of Medical Sciences (AIIMS) – Department of Neurology, Neurosciences Centre",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 11 2658 8500"
+          },
+          {
+            "system": "phone",
+            "value": "+91 11 2658 8700"
+          },
+          {
+            "system": "url",
+            "value": "https://www.aiims.edu/index.php/en/component/content/article?id=262"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ansari Nagar"
+            ],
+            "city": "New Delhi",
+            "postalCode": "110029",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Prestigetraechtigstes medizinisches Institut Indiens; Abteilung fuer Neurologie seit den 1960er Jahren; Neurosciences Centre umfasst Neurologie, Neurochirurgie, Neuroanasthesiologie, Neurobiochemie, Neuropathologie, Neuropsychologie und Neuroradiologie; Subspezialisierung in neuromuskulaeren Erkrankungen einschliesslich Motoneuronerkrankungen; Spitzenforschung zu Stammzellen, Epilepsie, neuromuskulaeren Stoerungen und Parkinson; klinische Studien zu innovativen ALS-Therapien; Forschungskooperationen mit internationalen Netzwerken; Hindi: Akhil Bharatiya Ayurvigyaan Sansthan (AIIMS)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-003",
+        "name": "Christian Medical College (CMC) Vellore – Department of Neurological Sciences",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 416 228 1000"
+          },
+          {
+            "system": "phone",
+            "value": "+91 800 033 8855"
+          },
+          {
+            "system": "email",
+            "value": "callcentre@cmcvellore.ac.in"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cmch-vellore.edu/neuro-sciences/"
+          },
+          {
+            "system": "url",
+            "value": "http://neuro.cmcvellore.edu.in/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ida Scudder Road"
+            ],
+            "city": "Vellore",
+            "state": "Tamil Nadu",
+            "postalCode": "632004",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Erste neurologische Abteilung Indiens und Suedasiens, gegruendet 1949 durch Dr. Jacob Chandy; Neurological Sciences umfasst Neurologie, Neurochirurgie, Neurochemie, Neurophysiologie, Neuroanatomie und Neuropathologie unter einem Dach; jaehrlich ca. 40.000 ambulante und 3000 stationaere Patienten; seit den 1980er Jahren bedeutende Forschung zu Motoneuronerkrankungen; neuromuskulaere Klinik gemeinsam mit der Abteilung fuer Physikalische Medizin und Rehabilitation; Forschung zu Knochendichte und Koerperzusammensetzung bei ALS-Patienten; international anerkanntes Zentrum fuer neuromuskulaere Diagnostik"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-004",
+        "name": "Aster CMI Hospital – Centre of Excellence for Neurosciences",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 80 4342 0100"
+          },
+          {
+            "system": "phone",
+            "value": "+91 80 4647 4647"
+          },
+          {
+            "system": "url",
+            "value": "https://www.asterhospitals.in/hospitals/aster-cmi-bangalore/center-of-excellences/neurosciences"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "No. 43/2, New Airport Road, NH 44, Sahakar Nagar, Hebbal"
+            ],
+            "city": "Bengaluru",
+            "state": "Karnataka",
+            "postalCode": "560092",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Privates Multispezialitaetskrankenhaus mit 500 Betten; Centre of Excellence fuer Neurosciences von Times of India als bestes Neuroscience-Krankenhaus in Bangalore ausgezeichnet; multidisziplinaeres Team aus Neurologen und Neurochirurgen; Diagnostik einschliesslich 3-Tesla-MRT, Nervenleitungsstudien (NCS) und Elektromyographie (EMG); Nerven- und Muskelultraschall; Neurorehabilitation durch Physiotherapie, Ergotherapie und Logopaedie; Behandlung neuromuskulaerer Erkrankungen einschliesslich Motoneuronerkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-005",
+        "name": "Indian Academy of Neurology (IAN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 98400 91737"
+          },
+          {
+            "system": "email",
+            "value": "iansecretary@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ianindia.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "A2, Shanthi Apartments, 18, TTK 1st Cross Street, Alwarpet"
+            ],
+            "city": "Chennai",
+            "state": "Tamil Nadu",
+            "postalCode": "600018",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationale Fachgesellschaft fuer Neurologie in Indien; gibt die Annals of Indian Academy of Neurology heraus (peer-reviewed, DOAJ-indexiert); organisiert die jaehrliche IANCON-Konferenz (2025 in Varanasi); foerdert Forschung und Fortbildung im Bereich der Neurologie einschliesslich Motoneuronerkrankungen; Sekretariat unter Dr. U. Meenakshisundaram; Hindi: Bharatiya Tantrikangyaan Academy"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-006",
+        "name": "Dr. Shyama Narang MND Trust",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 98450 33694"
+          },
+          {
+            "system": "url",
+            "value": "https://mndtrust.co.in/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2nd Floor, Khivraj Mansion, Kasturba Road (gegenüber Cubbon Park Police Station)"
+            ],
+            "city": "Bengaluru",
+            "state": "Karnataka",
+            "postalCode": "560001",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Indiens erste dedizierte Organisation zur Unterstuetzung von MND-Patienten; gegruendet 2020 im Gedenken an Dr. Shyama Narang; Partnerschaft mit NIMHANS, IGBG, TIGS und fuehrenden Krankenhaeusern; organisiert jaehrliche MND/ALS-Konferenzen (2. und 3. Konferenz bereits durchgefuehrt); bietet Unterstuetzung fuer Patienten, Pflegende und Familien; Dr. Bhargavi als Chief Administrative Officer; Sitz in Bengaluru"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-007",
+        "name": "Asha Ek Hope Foundation for MND/ALS",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 98197 41333"
+          },
+          {
+            "system": "email",
+            "value": "contact@ashaekhope.com"
+          },
+          {
+            "system": "url",
+            "value": "https://ashaekhope.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "402 Guruprabha Apts, Senapati Bapat Road, Dadar (West)"
+            ],
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "postalCode": "400028",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinnuetzige Organisation zur Unterstuetzung von MND/ALS-Patienten und deren Familien; stellt kostenlos medizinische Geraete wie Beatmungsgeraete und Rollstuehle zur Verfuegung; einziges indisches ALS/MND-Zentrum in der Pan-Asian Association vertreten; zweiter Standort in Navi Mumbai (Plot No. 19, Sector 40, Seawoods); Name bedeutet 'Hoffnung - eine Hoffnung' (Hindi: Asha Ek Hope); Mitglied der International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-008",
+        "name": "Motor Neurone Disease Association of India (MND India)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "mndindiaorg@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "http://www.mndindia.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "c/o MND India"
+            ],
+            "city": "New Delhi",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Von betroffenen Familien gegruendete Vereinigung zur kostenlosen Unterstuetzung von MND/ALS-Patienten; betreibt regionale Kapitel (MND India Delhi, MND India Mumbai u.a.); bietet Information, Beratung und Vernetzung fuer Patienten und Angehoerige; Hindi: Motor Neurone Disease Association of India"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-in-009",
+        "name": "ALS Care and Support Group India",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://alslifemanagement.weebly.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "c/o ALS Life Management India"
+            ],
+            "city": "India",
+            "country": "IN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Seit 2015 bestehende 24/7-Hilfsgemeinschaft fuer ALS-Patienten und Pflegende; basiert auf eigenen Erfahrungen und umfangreicher Recherche; bietet praktische Alltagshilfe, Erfahrungsaustausch und Vernetzung; hat offenen Brief an die indische Regierung zur Verbesserung der ALS-Versorgung verfasst"
+          }
+        ]
+      }
+    }
+  ]
+}

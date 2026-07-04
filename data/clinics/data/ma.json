@@ -1,0 +1,394 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "MA"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-001",
+        "name": "CHU Ibn Rochd – Service de Neurologie (P.30)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 522 48 10 10"
+          },
+          {
+            "system": "email",
+            "value": "direction@chucasa.ma"
+          },
+          {
+            "system": "url",
+            "value": "https://chuibnrochd.ma/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1, rue des Hopitaux, Quartier des Hopitaux, Pavillon 30"
+            ],
+            "city": "Casablanca",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Groesstes Universitaetsklinikum Marokkos (1685 Betten); seit Januar 2019 multidisziplinaere SLA-Sprechstunde (Consultation multidisciplinaire de la SLA); ca. 80 ALS-Patienten in der Kohorte dokumentiert; Durchschnittsalter 58 Jahre, diagnostische Verzoegerung ca. 15 Monate; ENMG-Diagnostik vorhanden; angegliedert an die Faculte de Medecine et de Pharmacie, Universite Hassan II Casablanca"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-002",
+        "name": "CHU Mohammed VI – Service de Neurologie, Hopital Ibn Tofail",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 524 300 629"
+          },
+          {
+            "system": "phone",
+            "value": "+212 529 09 11 11"
+          },
+          {
+            "system": "url",
+            "value": "https://neuromarrakech.com/"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chumarrakech.ma/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue Abdelouahab Derraq, Hopital Ibn Tofail"
+            ],
+            "city": "Marrakech",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Retrospektive Studie ueber 14 Jahre (2002-2015) mit 76 SLA-Patienten; Diagnostik mittels Elektroneuromyographie (ENMG); obere Extremitaet haeufigster Beginn (33%), gefolgt von bulbaer-spinaler Form (28%); Neurologie-Abteilung angegliedert an Universite Cadi Ayyad, Faculte de Medecine Marrakech; WFN World Congress of Neurology 2011 in Marrakesch ausgerichtet"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-003",
+        "name": "CHU Ibn Sina – Hopital des Specialites, Service de Neurologie A et B",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 537 77 57 76"
+          },
+          {
+            "system": "url",
+            "value": "https://churabat.ma/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Hafiane Cherkaoui, Hopital des Specialites ONO"
+            ],
+            "city": "Rabat",
+            "postalCode": "6220",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aelteste neurologische Abteilung Marokkos (gegruendet 1978); Hopital des Specialites 1983 eingeweiht; zwei Neurologie-Dienste (A und B) sowie Neurophysiologie, Neurogenetik und Neuropsychologie; Forschung zu neuromuskulaeren Erkrankungen; angegliedert an Universite Mohammed V, Faculte de Medecine et de Pharmacie Rabat; Studie (Imounan et al. 2015) mit 60 SLA-Patienten ueber 5 Jahre"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-004",
+        "name": "CHU Hassan II – Service de Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 535 61 90 52"
+          },
+          {
+            "system": "email",
+            "value": "contact@chufes.ma"
+          },
+          {
+            "system": "url",
+            "value": "http://www.chu-fes.ma/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "BP 1835, Atlass"
+            ],
+            "city": "Fes",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Universitaetsklinikum mit 5 Krankenhaeusern (Hopital des Specialites, Hopital Mere-Enfant, Hopital d'Oncologie, Hopital Omar Drissi, Hopital Ibn Al Hassan); Neurologie-Dienst mit allgemeiner neurologischer Versorgung einschliesslich neuromuskulaerer Erkrankungen; keine dedizierte SLA-Sprechstunde verifiziert"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-005",
+        "name": "Association Marocaine de Lutte contre les Myopathies (AMM)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 522 99 38 98"
+          },
+          {
+            "system": "phone",
+            "value": "+212 537 75 14 98"
+          },
+          {
+            "system": "email",
+            "value": "amm.org.maroc@gmail.com"
+          },
+          {
+            "system": "url",
+            "value": "http://www.amm-maroc.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "13 Avenue Doukkala, Aviation"
+            ],
+            "city": "Rabat",
+            "postalCode": "10180",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet 1987 unter der Schirmherrschaft von Prinzessin Lalla Hasnaa; wichtigste Patientenorganisation fuer neuromuskulaere Erkrankungen in Marokko (einschliesslich ALS/SLA); Ziele: moralische und logistische Unterstuetzung, Praevention, Screening, Forschungsfoerderung und soziale Integration; Zusammenarbeit mit der franzoesischen AFM (Association Francaise contre les Myopathies); Ausbildungsseminare und Workshops in verschiedenen Regionen Marokkos; bei Orphanet registriert"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "AFM-Telethon (Frankreich); Orphanet"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-006",
+        "name": "Societe Marocaine de Neurologie (SMN)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Fachgesellschaft"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://smneurologie.org/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Rabat",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet 1996; ca. 170 Mitglieder (davon 50 in Weiterbildung), repraesentiert saemtliche praktizierenden Neurologen Marokkos; Dachverband fuer spezialisierte neurologische Gesellschaften (Epilepsie, Neuropsychologie, Bewegungsstoerungen, Neurogenetik); organisiert zwei wissenschaftliche Seminare pro Jahr und zwejaehrlichen nationalen Kongress; assoziiertes institutionelles Mitglied der European Academy of Neurology (EAN); Mitglied der World Federation of Neurology (WFN)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "EAN (assoziiertes Mitglied); WFN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ma-007",
+        "name": "Centre National de Rehabilitation et de Neurosciences (CNRNS)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "rehaklinik",
+                "display": "Rehabilitationsklinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+212 537 77 56 48"
+          },
+          {
+            "system": "phone",
+            "value": "+212 537 77 57 06"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue Mfadel Cherkaoui, c/o Hopital des Specialites CHU Ibn Sina"
+            ],
+            "city": "Rabat",
+            "postalCode": "10112",
+            "country": "MA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum fuer Rehabilitation und Physiotherapie neurologischer Erkrankungen; geschaffen von der Fondation Hassan II pour la Prevention et la Lutte Contre les Maladies du Systeme Nerveux in Zusammenarbeit mit dem Gesundheitsministerium und dem CHU Ibn Sina; relevant fuer die rehabilitative Betreuung von ALS-Patienten"
+          }
+        ]
+      }
+    }
+  ]
+}

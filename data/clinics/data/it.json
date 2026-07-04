@@ -1,0 +1,1004 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "IT"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-001",
+        "name": "Centro SLA – Istituto Auxologico Italiano IRCCS, Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 619111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.auxologico.it/malattia/sclerosi-laterale-amiotrofica-sla"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Piazzale Brescia 20"
+            ],
+            "city": "Milano",
+            "postalCode": "20149",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der führenden ALS-Zentren Italiens und Europas; IRCCS; Biobank für ALS-Forschung; Schwerpunkt genetische ALS (SOD1, C9orf72, FUS, TARDBP); hohes Patientenvolumen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, SLALOM (ALS Lombardia Registry)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-002",
+        "name": "CRESLA – Centro Regionale Esperto per la SLA, AOU Città della Salute e della Scienza di Torino (Molinette)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 011 6335439"
+          },
+          {
+            "system": "url",
+            "value": "https://www.cittadellasalute.to.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Cherasco 15"
+            ],
+            "city": "Torino",
+            "postalCode": "10126",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Betreibt das PARALS-Register (seit 1995), eines der weltweit wichtigsten populationsbasierten ALS-Register; ca. 300+ aktive Patienten; wohl das wichtigste ALS-Epidemiologie-Zentrum Europas"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS (Gründungsmitglied), PARALS, ITALSGEN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-003",
+        "name": "Fondazione IRCCS Istituto Neurologico Carlo Besta, Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 23941"
+          },
+          {
+            "system": "url",
+            "value": "https://www.istituto-besta.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Celoria 11"
+            ],
+            "city": "Milano",
+            "postalCode": "20133",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "IRCCS; Italiens führendes neurologisches Forschungskrankenhaus; stark in Neuroimaging und Neurophysiologie der ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "SLALOM"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-004",
+        "name": "IRCCS Istituto di Ricerche Farmacologiche Mario Negri, Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschungsinstitut",
+                "display": "Forschungsinstitut"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 39014"
+          },
+          {
+            "system": "url",
+            "value": "https://www.marionegri.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Mario Negri 2"
+            ],
+            "city": "Milano",
+            "postalCode": "20156",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Primär präklinische/translationale Forschung, KEIN direktes Patientenzentrum; SOD1-Mausmodelle, Neuroinflammation, Biomarker-Entdeckung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-005",
+        "name": "Centro Clinico NEMO Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 91433600"
+          },
+          {
+            "system": "email",
+            "value": "info@centronemo.it"
+          },
+          {
+            "system": "url",
+            "value": "https://www.centronemo.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Piazza Ospedale Maggiore 3, presso Ospedale Niguarda"
+            ],
+            "city": "Milano",
+            "postalCode": "20162",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "NEuroMuscular Omnicentre; multidisziplinäres Team-basiertes Versorgungsmodell; gegründet von AISLA, UILDM und Fondazione Telethon; Best-Practice-Beispiel für integrierte ALS-Versorgung in Europa"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-006",
+        "name": "Centro Clinico NEMO Roma",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 06 30156701"
+          },
+          {
+            "system": "url",
+            "value": "https://www.centronemo.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Largo Agostino Gemelli 8, presso Policlinico Gemelli IRCCS"
+            ],
+            "city": "Roma",
+            "postalCode": "00168",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "NEMO-Standort Rom; multidisziplinäre ALS-Versorgung; beim Policlinico Gemelli angesiedelt"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-007",
+        "name": "Centro Clinico NEMO Trento",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.centronemo.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ospedale Villa Rosa, Pergine Valsugana"
+            ],
+            "city": "Pergine Valsugana",
+            "postalCode": "38057",
+            "country": "IT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-009",
+        "name": "Centro Clinico NEMO Ancona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.centronemo.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Presso Ospedali Riuniti di Ancona"
+            ],
+            "city": "Ancona",
+            "postalCode": "60126",
+            "country": "IT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-010",
+        "name": "Centro per le Malattie del Motoneurone – Università di Padova",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 049 8213600"
+          },
+          {
+            "system": "url",
+            "value": "https://www.aopd.veneto.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Giustiniani 5"
+            ],
+            "city": "Padova",
+            "postalCode": "35128",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ENCALS-Mitglied; aktive klinische Studien; starke Elektrophysiologie; Forschung zu Kennedy-Krankheit (SBMA)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-011",
+        "name": "Centro SLA – Policlinico Umberto I, Sapienza Università di Roma",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 06 49914131"
+          },
+          {
+            "system": "url",
+            "value": "https://www.policlinicoumberto1.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Viale dell'Università 30"
+            ],
+            "city": "Roma",
+            "postalCode": "00185",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Starke neurophysiologische Tradition; TMS-Studien als diagnostischer/prognostischer Biomarker"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-012",
+        "name": "IRCCS Istituto delle Scienze Neurologiche di Bologna – Ospedale Bellaria",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 051 4966111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.isnb.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Altura 3"
+            ],
+            "city": "Bologna",
+            "postalCode": "40139",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "IRCCS; klinische Studien; ALS-Genetik und phänotypische Charakterisierung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-013",
+        "name": "Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico, Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 55031"
+          },
+          {
+            "system": "url",
+            "value": "https://www.policlinico.mi.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Francesco Sforza 35"
+            ],
+            "city": "Milano",
+            "postalCode": "20122",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Aktiv in Gen- und Stammzelltherapie-Forschung für Motoneuronerkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-014",
+        "name": "Centro SLA – AOU Federico II, Napoli",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 081 7462670"
+          },
+          {
+            "system": "url",
+            "value": "https://www.policlinico.unina.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Sergio Pansini 5"
+            ],
+            "city": "Napoli",
+            "postalCode": "80131",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Süditalien (Kampanien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-015",
+        "name": "IRCCS Ospedale Policlinico San Martino, Genova",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 010 5551"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ospedalesanmartino.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Largo Rosanna Benzi 10"
+            ],
+            "city": "Genova",
+            "postalCode": "16132",
+            "country": "IT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-016",
+        "name": "Clinica Neurologica – AOU Pisana, Università di Pisa",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 050 992440"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ao-pisa.toscana.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Roma 67"
+            ],
+            "city": "Pisa",
+            "postalCode": "56126",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Forschung zu oxidativem Stress und mitochondrialer Dysfunktion bei ALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-017",
+        "name": "SOD Neurologia 1 – AOU Careggi, Università di Firenze",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 055 7947571"
+          },
+          {
+            "system": "url",
+            "value": "https://www.aou-careggi.toscana.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Largo Brambilla 3"
+            ],
+            "city": "Firenze",
+            "postalCode": "50134",
+            "country": "IT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-018",
+        "name": "UOC Neurologia – Policlinico di Bari, Università di Bari",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 080 5592332"
+          },
+          {
+            "system": "url",
+            "value": "https://www.policlinico.ba.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Piazza Giulio Cesare 11"
+            ],
+            "city": "Bari",
+            "postalCode": "70124",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Süditalien (Apulien); Forschung zu kognitiv-behavioraler Beteiligung bei ALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-019",
+        "name": "IRCCS Ospedale San Raffaele, Milano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 02 26431"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hsr.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Olgettina 60"
+            ],
+            "city": "Milano",
+            "postalCode": "20132",
+            "country": "IT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "IRCCS; stark in Neuroimaging (MRI-basierte Biomarker); Gen- und Stammzelltherapie-Forschung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-it-020",
+        "name": "Clinica Neurologica – ASST Spedali Civili di Brescia",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+39 030 39951"
+          },
+          {
+            "system": "url",
+            "value": "https://www.asst-spedalicivili.it"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Piazzale Spedali Civili 1"
+            ],
+            "city": "Brescia",
+            "postalCode": "25123",
+            "country": "IT"
+          }
+        ]
+      }
+    }
+  ]
+}

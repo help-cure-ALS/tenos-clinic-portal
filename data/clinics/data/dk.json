@@ -1,0 +1,553 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "DK"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-001",
+        "name": "ALS-teamet – Rigshospitalet, København",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 35 45 35 45"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rigshospitalet.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Blegdamsvej 9"
+            ],
+            "city": "København Ø",
+            "postalCode": "2100",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales ALS-Referenzzentrum Dänemarks; multidisziplinäres ALS-Team an der Neurologischen Klinik; höchst spezialisierte Funktion (højt specialiseret funktion) für ALS; angegliedert an die Københavns Universitet; koordiniert dänische klinische Studien; Dänisches ALS-Register"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Dansk ALS-register"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-002",
+        "name": "Bispebjerg Hospital – Neurologisk afdeling, København",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 38 63 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.bispebjerghospital.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Bispebjerg Bakke 23"
+            ],
+            "city": "København NV",
+            "postalCode": "2400",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung mit MND-Klinik; Teil der Region Hovedstaden; ergänzt das Rigshospitalet bei der ALS-Versorgung im Großraum Kopenhagen; aktive Teilnahme an klinischen Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-003",
+        "name": "ALS-teamet – Aarhus Universitetshospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 78 45 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.auh.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Palle Juul-Jensens Boulevard 165"
+            ],
+            "city": "Aarhus N",
+            "postalCode": "8200",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitgrößtes ALS-Zentrum Dänemarks; multidisziplinäres Team; angegliedert an die Aarhus Universitet; højt specialiseret funktion für ALS in Region Midtjylland"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-004",
+        "name": "Neurologisk afdeling – Odense Universitetshospital (OUH)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 66 11 33 33"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ouh.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "J.B. Winsløws Vej 4"
+            ],
+            "city": "Odense C",
+            "postalCode": "5000",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung mit ALS-Ambulanz; angegliedert an die Syddansk Universitet; Versorgung für Region Syddanmark und Fyn"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-005",
+        "name": "Neurologisk afdeling – Aalborg Universitetshospital",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 97 66 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://aalborguh.rn.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hobrovej 18-22"
+            ],
+            "city": "Aalborg",
+            "postalCode": "9000",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung mit ALS-Ambulanz; angegliedert an die Aalborg Universitet; Versorgung für Region Nordjylland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-006",
+        "name": "Neurologisk afdeling – Sjællands Universitetshospital, Roskilde",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 47 32 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.regionsjaelland.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Sygehusvej 10"
+            ],
+            "city": "Roskilde",
+            "postalCode": "4000",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Region Sjælland; ALS-Diagnostik und Überweisung an Rigshospitalet"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-007",
+        "name": "Neurologisk afdeling – Sydvestjysk Sygehus, Esbjerg",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 79 18 20 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.sydvestjysksygehus.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Finsensgade 35"
+            ],
+            "city": "Esbjerg",
+            "postalCode": "6700",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Südwestjütland; ALS-Diagnostik und regionale Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-008",
+        "name": "Neurologisk afdeling – Hospitalsenheden Vest, Holstebro/Herning",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 78 43 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vest.rm.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Lægårdvej 12"
+            ],
+            "city": "Holstebro",
+            "postalCode": "7500",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung für Westjütland; Region Midtjylland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-009",
+        "name": "Muskelsvindsfonden (Danish Muscular Dystrophy Foundation)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 89 48 22 22"
+          },
+          {
+            "system": "url",
+            "value": "https://www.muskelsvindfonden.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kongsvang Allé 23"
+            ],
+            "city": "Aarhus C",
+            "postalCode": "8000",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dänische Patientenorganisation für neuromuskuläre Erkrankungen inkl. ALS; betreibt das Rehabilitationszentrum Musholm; Beratung, Hilfsmittel und Forschungsförderung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-dk-010",
+        "name": "RehabiliteringsCenter for Muskelsvind (RCFM), Aarhus",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+45 89 48 22 22"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rcfm.dk/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kongsvang Allé 23"
+            ],
+            "city": "Aarhus C",
+            "postalCode": "8000",
+            "country": "DK"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales Rehabilitationszentrum für neuromuskuläre Erkrankungen; bietet spezialisierte Rehabilitation, Beratung und Hilfsmittelversorgung für ALS-Patienten; von der Muskelsvindsfonden betrieben; nationales Wissenszentrum"
+          }
+        ]
+      }
+    }
+  ]
+}

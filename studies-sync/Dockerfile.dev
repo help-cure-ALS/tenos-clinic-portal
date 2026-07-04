@@ -1,0 +1,19 @@
+# Dev-Image für studies-sync — installiert dev-deps (tsx, typescript,
+# @types/*) und startet den Watch-Mode. Sources werden per Volume-Mount
+# aus der docker-compose.override.yml eingehängt, sodass Code-Änderungen
+# ohne Rebuild greifen (tsx watch startet den Prozess neu bei Änderung).
+
+FROM node:20-alpine
+WORKDIR /app
+
+COPY package.json package-lock.json* ./
+
+# Volle Installation inklusive dev-deps.
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+# Sources und Migrations kommen per Volume-Mount aus der override.yml.
+# Kein COPY hier — sonst gäbe es einen Snapshot-Layer, der bei Mount
+# überdeckt werden würde und beim ersten Start Verwirrung stiften kann.
+
+EXPOSE 3004
+CMD ["npm", "run", "dev"]

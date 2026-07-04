@@ -1,0 +1,533 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "GR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-001",
+        "name": "Μονάδα ALS – Α΄ Νευρολογική Κλινική, Αιγινήτειο Νοσοκομείο, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών (ΕΚΠΑ)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 210 728 9200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ekpa.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Λεωφόρος Βασιλίσσης Σοφίας 72-74"
+            ],
+            "city": "Αθήνα",
+            "postalCode": "115 28",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Griechenlands; ALS-Einheit an der 1. Neurologischen Klinik des Eginition-Krankenhauses; angegliedert an die Nationale und Kapodistrias-Universität Athen (EKPA); multidisziplinäres ALS-Team; klinische Studien und Neurophysiologie-Forschung; Mitglied von ERN-EURO-NMD"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-002",
+        "name": "Β΄ Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Αττικόν, ΕΚΠΑ, Αθήνα",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 210 583 1000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.attikonhospital.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ρίμινι 1, Χαϊδάρι"
+            ],
+            "city": "Αθήνα",
+            "postalCode": "124 62",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "2. Neurologische Klinik der EKPA am Attikon-Universitätskrankenhaus; ALS-Ambulanz und EMG-Labor; neurodegenerative Erkrankungen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-003",
+        "name": "Β΄ Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο ΑΧΕΠΑ, Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης (ΑΠΘ)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2310 993 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ahepa.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Στίλπωνος Κυριακίδη 1"
+            ],
+            "city": "Θεσσαλονίκη",
+            "postalCode": "546 36",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitwichtigstes ALS-Zentrum Griechenlands; 2. Neurologische Klinik am AHEPA-Universitätskrankenhaus; angegliedert an die Aristoteles-Universität Thessaloniki (ΑΠΘ); ALS-Ambulanz und Neurophysiologie; MDA Hellas betreibt hier eine neuromuskuläre Einheit"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-004",
+        "name": "Α΄ Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Θεσσαλονίκης (ΠΓΝΘ), ΑΠΘ",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2310 994 000"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Περιφερειακή Οδός"
+            ],
+            "city": "Θεσσαλονίκη",
+            "postalCode": "570 10",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "1. Neurologische Klinik am Universitätskrankenhaus Thessaloniki; ALS-Diagnostik und Neurophysiologie"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-005",
+        "name": "Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Πατρών",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2610 999 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.upatras.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ρίο"
+            ],
+            "city": "Πάτρα",
+            "postalCode": "265 04",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; Μονάδα Νευρομυϊκών Νοσημάτων (Unit of Neuromuscular Diseases); angegliedert an das Πανεπιστήμιο Πατρών (Universität Patras); seit 2019 anerkanntes Zentrum für seltene neuromuskuläre Erkrankungen; Versorgung für die Peloponnes und Westgriechenland"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-006",
+        "name": "Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Ιωαννίνων",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2651 099 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uoi.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Λεωφόρος Σταύρου Νιάρχου"
+            ],
+            "city": "Ιωάννινα",
+            "postalCode": "455 00",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätskrankenhaus Ioannina; Versorgung für Epirus und Nordwestgriechenland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-007",
+        "name": "Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Λάρισας",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2413 502 000"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uth.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Βιόπολις, Μεζούρλο"
+            ],
+            "city": "Λάρισα",
+            "postalCode": "411 10",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätskrankenhaus Larissa; angegliedert an das Πανεπιστήμιο Θεσσαλίας (Universität Thessalien); Versorgung für Thessalien"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-008",
+        "name": "Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Ηρακλείου (ΠΑΓΝΗ), Κρήτη",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 2810 392 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.pagni.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Βούτες"
+            ],
+            "city": "Ηράκλειο",
+            "postalCode": "711 10",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätskrankenhaus Heraklion; angegliedert an das Πανεπιστήμιο Κρήτης (Universität Kreta); Versorgung für Kreta"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-009",
+        "name": "Νευρολογική Κλινική – Πανεπιστημιακό Γενικό Νοσοκομείο Αλεξανδρούπολης",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+30 25510 76 111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.duth.gr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Δραγάνα"
+            ],
+            "city": "Αλεξανδρούπολη",
+            "postalCode": "681 00",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik am Universitätskrankenhaus Alexandroupoli; angegliedert an das Δημοκρίτειο Πανεπιστήμιο Θράκης; Versorgung für Thrakien (Nordostgriechenland)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-gr-010",
+        "name": "MDA Hellas – Ένωση Ασθενών με Νευρομυϊκές Παθήσεις (Muscular Dystrophy Association Hellas)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://mdahellas.gr/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Αθήνα",
+            "country": "GR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Griechische Patientenorganisation für neuromuskuläre Erkrankungen inkl. ALS; betreibt multidisziplinäre neuromuskuläre Einheiten an Krankenhäusern in Athen, Thessaloniki und Patras; gegründet 2000"
+          }
+        ]
+      }
+    }
+  ]
+}

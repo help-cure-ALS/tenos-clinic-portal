@@ -1,0 +1,464 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "AR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-001",
+        "name": "Clínica de ELA – FLENI (Fundación para la Lucha contra las Enfermedades Neurológicas de la Infancia), Sede Belgrano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 5777-3200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fleni.org.ar/especialidades/neurologia/clinica-de-ela/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Montañeses 2325"
+            ],
+            "city": "Buenos Aires",
+            "postalCode": "C1428AQK",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Fuehrendes ALS-Zentrum Argentiniens und einzigartig im Land; multidisziplinaeres Team aus Neurologen, Pneumologen, Ernaehrungsberatern, Psychiatern, Physiotherapeuten, Logopaedie und Ergotherapie; aktive Teilnahme an internationalen klinischen Forschungsprotokollen; Zusammenarbeit mit der Klinik fuer Assistive Technologien; Leitung: Dr. Fabio Barroso, Koordinatoren: Dr. Alejandro Koehler und Dr. Lucas Alessandro"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Internationale klinische Studien, Alianza Internacional de ELA"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-002",
+        "name": "FLENI – Sede Escobar, Centro de Rehabilitación",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "rehaklinik",
+                "display": "Rehaklinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 5777-3200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fleni.org.ar/info-pacientes/sede-escobar/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ruta 9 Km 53"
+            ],
+            "city": "Escobar",
+            "state": "Buenos Aires",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Rehabilitationszentrum mit 86 Betten; periodische interdisziplinaere Evaluierung von ALS-Patienten; Centro de Imagenes Moleculares (CIM) mit PET-CT und Zyklotron; Laboratorios de Investigaciones Aplicadas a las Neurociencias (LIAN); ambulante Rehabilitationsprogramme fuer ELA-Patienten"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FLENI-Netzwerk"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-003",
+        "name": "Clínica de Enfermedad de Motoneurona – Hospital José María Ramos Mejía",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 4127-0200"
+          },
+          {
+            "system": "url",
+            "value": "http://www.neuroramosmejia.com.ar/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "General Urquiza 609"
+            ],
+            "city": "Buenos Aires",
+            "postalCode": "C1221ADC",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Oeffentliches Krankenhaus mit interdisziplinaerer Arbeitsgruppe fuer Diagnose, Behandlung und Nachsorge von ALS; Team: Neurologen (Dr. Gabriel Rodriguez, Dr. Leonardo Gonzalez, Dr. Natalia Bohorquez), Pneumologen, Psychiater, Logopaedinnen, Ernaehrungsberaterinnen; klinische Forschungsstudien; Konsultation donnerstags 8:00–15:40"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Red de Hospitales Públicos de Buenos Aires"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-004",
+        "name": "Servicio de Neurología – Hospital Italiano de Buenos Aires",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 4959-0200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitalitaliano.org.ar/hiba/es/sitio/neurologia"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Gascón 450"
+            ],
+            "city": "Buenos Aires",
+            "postalCode": "C1181ACH",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Einer der vollstaendigsten Neurologie-Dienste des Landes; Referenzzentrum fuer Erkrankungen des zentralen und peripheren Nervensystems; universitaeres Lehrkrankenhaus; Behandlung neuromuskulaerer Erkrankungen einschliesslich ALS"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": ""
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-005",
+        "name": "Unidad de Enfermedades Neuromusculares – Fundación Favaloro",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaere Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 4378-1200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fundacionfavaloro.org/enfermedades-neuromusculares/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Solís 461"
+            ],
+            "city": "Buenos Aires",
+            "postalCode": "C1078AAI",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum fuer neuromuskulaere Erkrankungen in Argentinien; Teil des Instituto de Neurociencias der Fundacion Favaloro; interdisziplinaeres Team aus Neurologen, Neuropaediatern, Physiotherapeuten und Psychologen; Behandlung von Motoneuron-Erkrankungen (ALS), peripheren Neuropathien, Myasthenia gravis; aktive Forschung mit internationalen Zentren"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Internationale Forschungskooperationen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-006",
+        "name": "Equipo Interdisciplinario de ELA – Hospital Nacional Profesor Alejandro Posadas",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 4469-9200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.argentina.gob.ar/salud/hospital-nacional-posadas/esclerosis-lateral-amiotrofica-ela"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Av. Presidente Illia s/n"
+            ],
+            "city": "El Palomar",
+            "state": "Buenos Aires",
+            "postalCode": "1684",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales oeffentliches Krankenhaus mit interdisziplinaerer ALS-Betreuung; Team aus Neurologen fuer neuromuskulaere Erkrankungen, Pneumologen, Gastroenterologen, Ernaehrungsberater, Endoskopie, Psychologie, Physiatrie, Ergotherapie und Logopaedie; Gewinner des oeffentlichen Wettbewerbs fuer Sozialforschung ueber ALS (Ministerium fuer Wissenschaft und Esteban-Bullrich-Stiftung); Neurologie-Termine per WhatsApp +54 11 5809-3700"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Red de Hospitales Nacionales"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-007",
+        "name": "Asociación ELA Argentina – Centro de Afectados por la Esclerosis Lateral Amiotrófica",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+54 11 4334-4844"
+          },
+          {
+            "system": "phone",
+            "value": "+54 11 4343-2706"
+          },
+          {
+            "system": "email",
+            "value": "info@asociacionela.org.ar"
+          },
+          {
+            "system": "url",
+            "value": "http://asociacionela.org.ar/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Belgrano 687, Piso 8, Oficina 33"
+            ],
+            "city": "Buenos Aires",
+            "postalCode": "C1092AAG",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gemeinnuetzige Patientenorganisation, gegruendet von Patienten und Familienangehoerigen; acht Programme und ueber 40 Projekte: Versorgungseinheiten, Sozialunterstuetzung, Freiwilligenarbeit, Ausbildung, Forschung und Verteidigung von Rechten; nationale Netzwerke mit Vertretungen und Freiwilligen in allen Provinzen; Rechtsberatung fuer umfassende Krankenversicherung; Zugang zu Edaravone-Behandlung; Vollmitglied der Internationalen Allianz der ALS-Vereinigungen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "International Alliance of ALS/MND Associations"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ar-008",
+        "name": "Fundación Esteban Bullrich",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://fundacionestebanbullrich.org/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Buenos Aires",
+            "country": "AR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Gegruendet von der Familie des ehemaligen Senators Esteban Bullrich (ALS-Diagnose 2021); hat 726 Familien begleitet und 4.251 Gesundheitsfachkraefte geschult; betreibt das nationale Patientenregister RegistELA mit 858 registrierten Patienten; organisiert Forschungswettbewerbe gemeinsam mit dem argentinischen Ministerium fuer Wissenschaft und Technologie; Ziel: Verbesserung der Lebensqualitaet von ALS-Patienten und Foerderung der Forschung"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,794 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-08",
+    "source": "manual-research",
+    "country": "AT"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-001",
+        "name": "Spezialambulanz für Motoneuronerkrankungen – AKH Wien / MedUni Wien",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 1 40400 31240"
+          },
+          {
+            "system": "url",
+            "value": "https://neurologie.meduniwien.ac.at/informationen-fuer-patientinnen/ambulanz-fuer-neuromuskulaere-erkrankungen/spezialambulanz-fuer-motoneuronerkrankungen/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Währinger Gürtel 18-20, Neurologie Leitstelle 6A"
+            ],
+            "city": "Wien",
+            "postalCode": "1090",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Österreichs primäres und spezialisiertestes ALS-Zentrum; ENCALS-Mitglied"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-002",
+        "name": "Neuromuskuläre Spezialambulanz – Klinik Favoriten Wien",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 1 60191 2050"
+          },
+          {
+            "system": "url",
+            "value": "https://klinik-favoriten.gesundheitsverbund.at/leistung/neurologische-ambulanz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Kundratstraße 3"
+            ],
+            "city": "Wien",
+            "postalCode": "1100",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-003",
+        "name": "Spezialambulanz Neuromuskuläre Erkrankungen – Klinik Donaustadt Wien",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 1 28802 4250"
+          },
+          {
+            "system": "url",
+            "value": "https://klinik-donaustadt.gesundheitsverbund.at/leistung/neurologische-ambulanz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Langobardenstraße 122, Bettenhaus 3, 1. Stock"
+            ],
+            "city": "Wien",
+            "postalCode": "1220",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-004",
+        "name": "Neuromuskuläre Ambulanz – Krankenhaus der Barmherzigen Brüder Wien",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 1 21121 3240"
+          },
+          {
+            "system": "url",
+            "value": "https://www.barmherzige-brueder.at/portal/wien/medizinpflege/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Johannes-von-Gott-Platz 1"
+            ],
+            "city": "Wien",
+            "postalCode": "1020",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-005",
+        "name": "Sprechstunde Neuromuskuläre Erkrankungen – Universitätsklinik für Neurologie Innsbruck",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 512 504 23886"
+          },
+          {
+            "system": "email",
+            "value": "lki.ne.nma@tirol-kliniken.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.i-med.ac.at/neurologie/patienten/ambulanzen/neuromusk-erkrankungen.html"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Anichstraße 35"
+            ],
+            "city": "Innsbruck",
+            "postalCode": "6020",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweitwichtigstes ALS-Zentrum Österreichs; ERN EURO-NMD-Mitglied; ca. 500 ambulante Patienten/Jahr"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ERN EURO-NMD"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-006",
+        "name": "ALS-Netzwerk Tirol – Tiroler Hospiz-Gemeinschaft",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 810 96 98 78"
+          },
+          {
+            "system": "email",
+            "value": "office@hospiz-tirol.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospiz-tirol.at/begleitung/als-netzwerk"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Milser Straße 23"
+            ],
+            "city": "Hall in Tirol",
+            "postalCode": "6060",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Palliatives ALS-Netzwerk; bietet mobile Palliativbetreuung, Tageshospiz, Sozialarbeit, psychologische Unterstützung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-007",
+        "name": "Ambulanz für Neuromuskuläre Erkrankungen – Universitätsklinik Salzburg (CDK)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 5 7255 34602"
+          },
+          {
+            "system": "email",
+            "value": "cdk-zentralambulanz@salk.at"
+          },
+          {
+            "system": "url",
+            "value": "https://salk.at/campus-cdk/neuromuskulaere-ambulanz"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Ignaz-Harrer-Straße 79, Gebäude 7"
+            ],
+            "city": "Salzburg",
+            "postalCode": "5020",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Listet ALS explizit als behandelte Erkrankung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-008",
+        "name": "Sprechstunde Neuromuskuläre Erkrankungen – Kepler Universitätsklinikum Linz",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 5 7680 83 6830"
+          },
+          {
+            "system": "email",
+            "value": "neuroambulanz@kepleruniklinikum.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kepleruniklinikum.at/kliniken-einrichtungen/neurologie/ambulanzen/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Krankenhausstraße 9"
+            ],
+            "city": "Linz",
+            "postalCode": "4021",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-009",
+        "name": "Ambulanz für Neuromuskuläre Erkrankungen – Ordensklinikum Linz Barmherzige Brüder",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 732 7897 25300"
+          },
+          {
+            "system": "email",
+            "value": "neuro@bblinz.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.barmherzige-brueder.at/portal/linz/medizinpflege/neurologie/ambulanzen"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Seilerstätte 2, 5. Stock"
+            ],
+            "city": "Linz",
+            "postalCode": "4021",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Deckt explizit Motoneuronerkrankungen (ALS) ab"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-010",
+        "name": "Universitätsklinik für Neurologie – LKH-Univ. Klinikum Graz",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 316 385 12426"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uniklinikumgraz.at/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Auenbruggerplatz 22"
+            ],
+            "city": "Graz",
+            "postalCode": "8036",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für die gesamte Steiermark und Südösterreich"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-011",
+        "name": "Spezialambulanz für Neuromuskuläre Erkrankungen – Klinikum Klagenfurt",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 463 538 31703"
+          },
+          {
+            "system": "email",
+            "value": "neurologie.klagenfurt@kabeg.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.klinikum-klagenfurt.at/abteilungen-ambulanzen/medizinische-abteilungen/neurologie/ambulanzen/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Feschnigstraße 11"
+            ],
+            "city": "Klagenfurt",
+            "postalCode": "9020",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-012",
+        "name": "Klinische Abteilung für Neurologie – Universitätsklinikum St. Pölten",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 2622 9004 13061"
+          },
+          {
+            "system": "url",
+            "value": "https://stpoelten.lknoe.at/fuer-patienten/klinische-abteilungen/neurologie/informationen"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Dunantplatz 1"
+            ],
+            "city": "St. Pölten",
+            "postalCode": "3100",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-013",
+        "name": "Klinische Abteilung für Neurologie – Landesklinikum Wiener Neustadt",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 2622 9004 13105"
+          },
+          {
+            "system": "url",
+            "value": "https://wienerneustadt.lknoe.at/fuer-patienten/abteilungen/neurologie/informationen"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Corvinusring 3-5"
+            ],
+            "city": "Wiener Neustadt",
+            "postalCode": "2700",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-014",
+        "name": "Abteilung für Neurologie – LKH Villach",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 4242 208 62332"
+          },
+          {
+            "system": "email",
+            "value": "neurologie.villach@kabeg.at"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lkh-vil.or.at/abteilungen-institute/medizinische-abteilungen/neurologie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Nikolaigasse 43"
+            ],
+            "city": "Villach",
+            "postalCode": "9500",
+            "country": "AT"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-at-015",
+        "name": "Abteilung für Neurologie – LKH Rankweil",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+43 5522 403 4620"
+          },
+          {
+            "system": "url",
+            "value": "https://www.landeskrankenhaus.at/leistungsangebot/fuer-patienten/medizinische-fachbereiche/lkh-rankweil/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Valdunastraße 16"
+            ],
+            "city": "Rankweil",
+            "postalCode": "6830",
+            "country": "AT"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Keine eigene neuromuskuläre Ambulanz; ALS-Patienten werden nach Innsbruck überwiesen"
+          }
+        ]
+      }
+    }
+  ]
+}

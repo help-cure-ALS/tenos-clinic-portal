@@ -1,0 +1,1506 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "ES"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-001",
+        "name": "Unidad de ELA – Hospital Universitario La Paz / Carlos III, Madrid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 914 53 25 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.comunidad.madrid/hospital/lapaz/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle Sinesio Delgado 10"
+            ],
+            "city": "Madrid",
+            "postalCode": "28029",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Historisch wichtigstes ALS-Zentrum Spaniens; ALS-Einheit physisch am Hospital Carlos III (seit 2013 administrativ Teil von La Paz); gegründet von Dr. Jesús Mora; FUNDELA (Fundación Española para el Fomento de la Investigación de la ELA) ist angegliedert; multidisziplinäres Team"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, FUNDELA"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-002",
+        "name": "Unitat Funcional de Motoneurona – Hospital Universitari de Bellvitge, Barcelona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 932 60 75 00"
+          },
+          {
+            "system": "url",
+            "value": "https://bellvitgehospital.cat/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrer de la Feixa Llarga s/n"
+            ],
+            "city": "L'Hospitalet de Llobregat",
+            "postalCode": "08907",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der führenden ALS-Zentren Kataloniens; multidisziplinäre Motoneuron-Einheit; aktive klinische Studien; hohes Patientenvolumen"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-003",
+        "name": "Unidad de ELA – Hospital Universitario 12 de Octubre, Madrid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 913 90 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.comunidad.madrid/hospital/12octubre/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida de Córdoba s/n"
+            ],
+            "city": "Madrid",
+            "postalCode": "28041",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Großes ALS-Referenzzentrum in Madrid; einzige ALS-Einheit Spaniens mit eigenem Forschungslabor; aktive klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-004",
+        "name": "Unidad de ELA – Hospital Universitario Virgen del Rocío, Sevilla",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 955 01 20 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitalvirgendelrocio.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Manuel Siurot s/n"
+            ],
+            "city": "Sevilla",
+            "postalCode": "41013",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Andalusien; multidisziplinäre ALS-Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-005",
+        "name": "Unidad de ELA – Hospital Universitari i Politècnic La Fe, València",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 961 24 40 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospital-lafe.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Fernando Abril Martorell 106"
+            ],
+            "city": "València",
+            "postalCode": "46026",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für die Comunitat Valenciana; klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-006",
+        "name": "Unidad de ELA – Hospital del Mar, Barcelona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 932 48 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.parcdesalutmar.cat/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Passeig Marítim de la Barceloneta 25-29"
+            ],
+            "city": "Barcelona",
+            "postalCode": "08003",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Zweites großes ALS-Zentrum in Barcelona; Forschung am IMIM (Hospital del Mar Medical Research Institute)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-007",
+        "name": "Unidad de ELA – Hospital Clínic de Barcelona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 932 27 54 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.clinicbarcelona.org/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrer de Villarroel 170"
+            ],
+            "city": "Barcelona",
+            "postalCode": "08036",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-008",
+        "name": "Unidad de ELA – Hospital Universitario de Santiago de Compostela (CHUS)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 981 95 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://xxisantiago.sergas.gal/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rúa da Choupana s/n"
+            ],
+            "city": "Santiago de Compostela",
+            "postalCode": "15706",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Galicien; ALS-Forschung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-009",
+        "name": "Unidad de ELA – Hospital Universitario Donostia, San Sebastián",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 943 00 70 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.osakidetza.euskadi.eus/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Begiristain Doktorea Pasealekua s/n"
+            ],
+            "city": "Donostia-San Sebastián",
+            "postalCode": "20014",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für das Baskenland"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-010",
+        "name": "Unidad de ELA – Hospital Regional Universitario de Málaga",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 951 29 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitalregionaldemalaga.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Carlos Haya s/n"
+            ],
+            "city": "Málaga",
+            "postalCode": "29010",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-011",
+        "name": "Unidad de ELA – Hospital Universitario Marqués de Valdecilla, Santander",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 942 20 25 20"
+          },
+          {
+            "system": "url",
+            "value": "https://www.humv.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Valdecilla 25"
+            ],
+            "city": "Santander",
+            "postalCode": "39008",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-012",
+        "name": "Unidad de ELA – Hospital Universitario Virgen de las Nieves, Granada",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 958 02 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitaluvn.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida de las Fuerzas Armadas 2"
+            ],
+            "city": "Granada",
+            "postalCode": "18014",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-013",
+        "name": "Unidad de ELA – Hospital Universitario Central de Asturias (HUCA), Oviedo",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 985 10 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.astursalud.es/en/categories/hospitals-and-health-centres"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida de Roma s/n"
+            ],
+            "city": "Oviedo",
+            "postalCode": "33011",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-014",
+        "name": "Unidad de ELA – Hospital Universitario de Canarias, Tenerife",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 922 67 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www3.gobiernodecanarias.org/sanidad/scs/huc/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carretera Ofra s/n, La Cuesta"
+            ],
+            "city": "San Cristóbal de La Laguna",
+            "postalCode": "38320",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für die Kanarischen Inseln"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-015",
+        "name": "Unidad de ELA – Hospital Clínico San Carlos, Madrid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 913 30 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.comunidad.madrid/hospital/clinicosancarlos/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle del Prof. Martín Lagos s/n"
+            ],
+            "city": "Madrid",
+            "postalCode": "28040",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-016",
+        "name": "Unidad de ELA – Hospital Universitario Ramón y Cajal, Madrid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 913 36 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.comunidad.madrid/hospital/ramonycajal/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carretera de Colmenar Viejo km. 9,100"
+            ],
+            "city": "Madrid",
+            "postalCode": "28034",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-017",
+        "name": "Unidad de ELA – Hospital Universitario Gregorio Marañón, Madrid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 915 86 80 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.comunidad.madrid/hospital/gregoriomaranon/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle del Doctor Esquerdo 46"
+            ],
+            "city": "Madrid",
+            "postalCode": "28007",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-018",
+        "name": "Unitat de ELA – Hospital de la Santa Creu i Sant Pau, Barcelona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 935 56 56 56"
+          },
+          {
+            "system": "url",
+            "value": "https://www.santpau.cat/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carrer de Sant Quintí 89"
+            ],
+            "city": "Barcelona",
+            "postalCode": "08041",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz innerhalb des Instituts für Neurowissenschaften; Forschung am IIB Sant Pau"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-019",
+        "name": "Unidad de ELA – Hospital Clínico Universitario Lozano Blesa, Zaragoza",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 976 76 57 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hcuz.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida San Juan Bosco 15"
+            ],
+            "city": "Zaragoza",
+            "postalCode": "50009",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Aragón; angegliedert an die Universidad de Zaragoza"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-020",
+        "name": "Unidad de ELA – Hospital Clínico Universitario Virgen de la Arrixaca, Murcia",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 968 36 99 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.murciasalud.es/hospital-arrixaca"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carretera Madrid-Cartagena s/n, El Palmar"
+            ],
+            "city": "Murcia",
+            "postalCode": "30120",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für die Región de Murcia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-021",
+        "name": "Unidad de ELA – Hospital Universitario Cruces, Barakaldo (Bilbao)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 946 00 60 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.osakidetza.euskadi.eus/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Plaza de Cruces s/n"
+            ],
+            "city": "Barakaldo",
+            "postalCode": "48903",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Bizkaia; größtes Krankenhaus des Baskenlandes"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-022",
+        "name": "Unidad de ELA – Complejo Hospitalario de Navarra, Pamplona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 848 42 22 22"
+          },
+          {
+            "system": "url",
+            "value": "https://www.navarra.es/es/web/salud/hospitales/complejo-hospitalario"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Calle Irunlarrea 3"
+            ],
+            "city": "Pamplona",
+            "postalCode": "31008",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Navarra"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-023",
+        "name": "Unidad de ELA – Hospital Universitario Son Espases, Palma de Mallorca",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 871 20 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hospitalsonespases.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Carretera de Valldemossa 79"
+            ],
+            "city": "Palma de Mallorca",
+            "postalCode": "07120",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für die Balearen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-024",
+        "name": "Unidad de ELA – Hospital Universitario de Salamanca",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 923 29 11 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saludcastillayleon.es/CHSalamanca/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Paseo de San Vicente 58-182"
+            ],
+            "city": "Salamanca",
+            "postalCode": "37007",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-025",
+        "name": "Unidad de ELA – Hospital Clínico Universitario de Valladolid",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 983 42 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.saludcastillayleon.es/CHValladolid/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Ramón y Cajal 3"
+            ],
+            "city": "Valladolid",
+            "postalCode": "47003",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-026",
+        "name": "Unidad de ELA – Hospital Universitario Reina Sofía, Córdoba",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 957 01 00 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.juntadeandalucia.es/servicioandaluzdesalud/hrs3/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Menéndez Pidal s/n"
+            ],
+            "city": "Córdoba",
+            "postalCode": "14004",
+            "country": "ES"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-027",
+        "name": "Unidad de ELA – Hospital Insular de Gran Canaria, Las Palmas",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 928 44 40 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www3.gobiernodecanarias.org/sanidad/scs/chuimi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida Marítima del Sur s/n"
+            ],
+            "city": "Las Palmas de Gran Canaria",
+            "postalCode": "35016",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Gran Canaria und die östlichen Kanarischen Inseln"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-028",
+        "name": "Unidad de ELA – Hospital Universitario Infanta Cristina, Badajoz",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 924 21 81 00"
+          },
+          {
+            "system": "url",
+            "value": "https://saludextremadura.ses.es/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenida de Elvas s/n"
+            ],
+            "city": "Badajoz",
+            "postalCode": "06080",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Referenzzentrum für Extremadura"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-es-029",
+        "name": "Unitat de Malalties del Neurona Motora – Hospital Universitari Vall d'Hebron, Barcelona",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+34 934 89 30 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.vallhebron.com/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Passeig de la Vall d'Hebron 119-129"
+            ],
+            "city": "Barcelona",
+            "postalCode": "08035",
+            "country": "ES"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der größten Krankenhäuser Spaniens; Neuromuskuläre Einheit innerhalb der Neurologie-Abteilung mit über 20 Jahren ALS-Erfahrung; Mitglied von ERN-EURO-NMD; aktive klinische Studien"
+          }
+        ]
+      }
+    }
+  ]
+}

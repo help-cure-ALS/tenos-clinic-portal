@@ -1,0 +1,158 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "UA"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ua-001",
+        "name": "Кафедра неврології – Національний медичний університет імені О.О. Богомольця, Київ",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://nmuofficial.com/en/zagalni-vidomosti/kafedri/kafedra-nevrologiyi/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "бульвар Тараса Шевченка 13"
+            ],
+            "city": "Київ",
+            "postalCode": "01601",
+            "country": "UA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik der Bogomolets-Universität; gegründet 1903; Leiterin Prof. Mariia Prokopiv; ALS-Versorgung im Rahmen der allgemeinen Neurologie; kein dediziertes ALS-Zentrum; kriegsbedingte Einschränkungen seit 2022"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ua-002",
+        "name": "Інститут неврології, психіатрії та наркології НАМН України, Харків",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+380 57 725 5880"
+          },
+          {
+            "system": "url",
+            "value": "https://inpn.org.ua/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "вул. Академіка Павлова 46"
+            ],
+            "city": "Харків",
+            "postalCode": "61000",
+            "country": "UA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Ältestes psychoneurologisches Forschungsinstitut der Ukraine (gegr. 1922); 137 wissenschaftliche Mitarbeiter; kein spezifisches ALS-Programm verifiziert; Charkiw ist seit 2022 stark vom Krieg betroffen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ua-003",
+        "name": "Кафедра неврології – Тернопільський національний медичний університет",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.tdmu.edu.ua/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Тернопіль",
+            "country": "UA"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit aktiver MND-Forschung; Dr. Maryna Salii publizierte 2025 zu atypischen Formen der Motoneuronerkrankung; eine der wenigen ukrainischen Institutionen mit rezenter ALS-spezifischer Forschung"
+          }
+        ]
+      }
+    }
+  ]
+}

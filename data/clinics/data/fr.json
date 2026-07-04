@@ -1,0 +1,1091 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "FR"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-001",
+        "name": "Centre de Référence SLA – Hôpital Pitié-Salpêtrière, AP-HP",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 1 42 16 24 71"
+          },
+          {
+            "system": "url",
+            "value": "https://pitiesalpetriere.aphp.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "47-83 Boulevard de l'Hôpital"
+            ],
+            "city": "Paris",
+            "postalCode": "75013",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes SLA-Zentrum Frankreichs; CRMR constitutif; betreut ca. 2500 Patienten; angegliedert an das Institut du Cerveau (ICM) und Sorbonne Université"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN, ENCALS, TRICALS, ACT4ALS-MND"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-002",
+        "name": "Centre SLA – Hôpital Neurologique Pierre Wertheimer, HCL Lyon",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 72 11 80 67"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-lyon.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "59 Boulevard Pinel"
+            ],
+            "city": "Bron",
+            "postalCode": "69677",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "CRMR constitutif (seit 2023); multidisziplinäres SLA-Team; angegliedert an die Université Claude Bernard Lyon 1"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN, ENCALS, Réseau SLA Rhône-Alpes"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-003",
+        "name": "Centre de Référence SLA – Hôpital de la Timone, AP-HM Marseille",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 91 38 59 28"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ap-hm.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "264 Rue Saint-Pierre"
+            ],
+            "city": "Marseille",
+            "postalCode": "13005",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN, EURO-NMD"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-004",
+        "name": "Centre SLA – Hôpital Roger Salengro, CHU de Lille",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 3 20 44 67 52"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-lille.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue Émile Laine"
+            ],
+            "city": "Lille",
+            "postalCode": "59037",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-005",
+        "name": "Centre SLA – Hôpital Gui de Chauliac, CHU de Montpellier",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 67 33 72 46"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-montpellier.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "80 Avenue Augustin Fliche"
+            ],
+            "city": "Montpellier",
+            "postalCode": "34295",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Pr William Camu ist einer der international bekanntesten französischen ALS-Spezialisten; aktive klinische Studien"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN, ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-006",
+        "name": "Centre SLA – Hôpital Bretonneau, CHRU de Tours",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 47 47 37 23"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-tours.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2 Boulevard Tonnellé"
+            ],
+            "city": "Tours",
+            "postalCode": "37044",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "CRMR Coordonnateur; Pr Corcia ist führend in der ALS-Epidemiologie in Frankreich; wichtiger Beitrag zum französischen ALS-Register"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN (CRMR Coordonnateur), ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-007",
+        "name": "Centre SLA – Hôpital Dupuytren, CHU de Limoges",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 5 55 05 65 59"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-limoges.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2 Avenue Martin Luther King"
+            ],
+            "city": "Limoges",
+            "postalCode": "87042",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "CRMR constitutif; Pr Couratier ist Coordinateur national de la filière FILSLAN; Mitbegründer des französischen ALS-Epidemiologie-Registers (FRALim)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN (Coordinateur national), ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-008",
+        "name": "Centre SLA – Hôpital Pasteur 2, CHU de Nice",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 92 03 55 06"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-nice.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "30 Voie Romaine"
+            ],
+            "city": "Nice",
+            "postalCode": "06000",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-009",
+        "name": "Centre SLA – Hôpital Pellegrin, CHU de Bordeaux",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 5 56 79 55 20"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-bordeaux.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Place Amélie Raba-Léon"
+            ],
+            "city": "Bordeaux",
+            "postalCode": "33076",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-010",
+        "name": "Centre SLA – Hôpital de Hautepierre, CHU de Strasbourg",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 3 88 12 85 49"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chru-strasbourg.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Avenue Molière"
+            ],
+            "city": "Strasbourg",
+            "postalCode": "67098",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-011",
+        "name": "Centre SLA – Hôpital Pierre-Paul Riquet, CHU de Toulouse",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 5 61 77 94 81"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-toulouse.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Place du Docteur Baylac"
+            ],
+            "city": "Toulouse",
+            "postalCode": "31059",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-012",
+        "name": "Centre SLA – CHU d'Angers",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-reference",
+                "display": "Centre de Référence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 41 35 46 14"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-angers.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "4 Rue Larrey"
+            ],
+            "city": "Angers",
+            "postalCode": "49933",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-013",
+        "name": "Centre SLA – Hôpital Gabriel Montpied, CHU de Clermont-Ferrand",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 73 75 22 01"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-clermontferrand.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "58 Rue Montalembert"
+            ],
+            "city": "Clermont-Ferrand",
+            "postalCode": "63003",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-014",
+        "name": "Centre SLA – Hôpital Pontchaillou, CHU de Rennes",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 99 28 42 93"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-rennes.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "2 Rue Henri Le Guilloux"
+            ],
+            "city": "Rennes",
+            "postalCode": "35033",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-015",
+        "name": "Centre SLA – CHU de Nantes",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 40 08 36 05"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-nantes.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Place Alexis-Ricordeau"
+            ],
+            "city": "Nantes",
+            "postalCode": "44093",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-016",
+        "name": "Centre SLA – Hôpital Charles Nicolle, CHU de Rouen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 32 88 87 40"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-rouen.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1 Rue de Germont"
+            ],
+            "city": "Rouen",
+            "postalCode": "76031",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-017",
+        "name": "Centre SLA – CHU de Dijon",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 3 80 29 37 53"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-dijon.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "14 Rue Paul Gaffarel"
+            ],
+            "city": "Dijon",
+            "postalCode": "21079",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-018",
+        "name": "Centre SLA – CHU de Caen Normandie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 2 31 06 46 24"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-caen.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Avenue de la Côte de Nacre"
+            ],
+            "city": "Caen",
+            "postalCode": "14033",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-019",
+        "name": "Centre SLA – CHRU de Nancy",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 3 83 85 16 79"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chru-nancy.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "29 Avenue du Maréchal de Lattre de Tassigny"
+            ],
+            "city": "Nancy",
+            "postalCode": "54035",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-fr-020",
+        "name": "Centre SLA – CHU Grenoble Alpes",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "centre-de-competence",
+                "display": "Centre de Compétence"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+33 4 76 76 57 90"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chu-grenoble.fr/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Boulevard de la Chantourne"
+            ],
+            "city": "La Tronche",
+            "postalCode": "38700",
+            "country": "FR"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "FILSLAN"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "TN"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tn-001",
+        "name": "CHU Razi – Service de Neurologie / مستشفى الرازي",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+216 70 162 200"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1, Rue des Orangers"
+            ],
+            "city": "La Manouba",
+            "postalCode": "2010",
+            "country": "TN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wichtigstes ALS/SLA-Referenzzentrum Tunesiens. Die Neurologie-Abteilung unter Prof. Riadh Gouider betreut seit 2003 eine grosse tunesische ALS-Kohorte (ueber 210 Patienten). Hier wurde die erste genetische Mutationsanalyse (SOD1, C9orf72, TARDBP, FUS, ALS2) an einer grossen afrikanischen ALS-Kohorte durchgefuehrt. Haeufigste Mutation: TARDBP (9,4%). Tunesische Kohorte zeigt langsameren Verlauf und bessere Prognose als westliche Vergleichsgruppen. Auch Teilnehmer an der TROPALS-Studie (ALS in Afrika). Beherbergt das Centre d'Investigation Clinique 'Neurosciences et Sante Mentale' (LR18SP03)."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universite Tunis El Manar – Faculte de Medecine de Tunis; TROPALS-Netzwerk (pan-afrikanische ALS-Studie); World Federation of Neurology"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tn-002",
+        "name": "Institut National de Neurologie Mongi Ben Hamida / المعهد القومي للأعصاب منجي بن حميدة",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskulaer"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+216 71 572 053"
+          },
+          {
+            "system": "fax",
+            "value": "+216 71 570 070"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue de la Faculte de Medecine, La Rabta"
+            ],
+            "city": "Tunis",
+            "postalCode": "1007",
+            "country": "TN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales Neurologie-Institut, 1973 von Prof. Mongi Ben Hamida gegruendet und 2012 nach ihm benannt. Historisch bedeutsam fuer die ALS-Forschung: Ben Hamida und sein Nachfolger Faycal Hentati beschrieben 1984/1990 drei Formen der juvenilen ALS und identifizierten den ALS2-Genort (Chromosom 2q33) in einer grossen konsanguinen tunesischen Familie. Das Alsin-Gen wurde hier mitentdeckt. Heute Schwerpunkt auf neuromuskulaere Erkrankungen, Parkinson-Genetik (LRRK2) und Charcot-Marie-Tooth. Einzige interventionelle Neuroradiologie-Einheit im Maghreb (seit 2018)."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universite Tunis El Manar; ROR-ID: 02mqbx112; Sheikh Hamdan Award fuer medizinische Wissenschaften"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tn-003",
+        "name": "CHU Habib Bourguiba – Service de Neurologie, Sfax",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+216 74 106 047"
+          },
+          {
+            "system": "phone",
+            "value": "+216 74 106 049"
+          },
+          {
+            "system": "fax",
+            "value": "+216 74 463 530"
+          },
+          {
+            "system": "url",
+            "value": "http://www.medecinesfax.org/fra/pages/118/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue El-Ferdaous"
+            ],
+            "city": "Sfax",
+            "postalCode": "3029",
+            "country": "TN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologie-Abteilung des groessten Universitaetsklinikums in Suedtunesien unter Leitung von Prof. Chokri Mhiri. Forschungsschwerpunkte: hereditaere neurodegenerative Erkrankungen, hereditaere spastische Paraplegie (HSP), Charcot-Marie-Tooth. Beteiligung an genetischen Studien zu neuromuskulaeren Erkrankungen in konsanguinen tunesischen Familien. Keine spezifische ALS-Sprechstunde bekannt, aber allgemeine neurologische Versorgung von ALS-Patienten im Sueden des Landes."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "Universite de Sfax – Faculte de Medecine de Sfax; MENACTRIMS (Multiple Sclerosis Network)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tn-004",
+        "name": "Hôpital Charles Nicolle – Service de Neurologie / مستشفى شارل نيكول",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+216 71 262 740"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Boulevard du 9 Avril 1938, Bab Saadoun"
+            ],
+            "city": "Tunis",
+            "postalCode": "1006",
+            "country": "TN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Eines der groessten und aeltesten Universitaetskliniken Tunesiens mit allgemeiner Neurologie-Abteilung. Keine spezialisierte ALS-Sprechstunde bekannt, aber neurologische Grundversorgung einschliesslich Motoneuron-Erkrankungen. Das nahe gelegene Institut National de Neurologie (org-tn-002) ist die spezialisierte Einrichtung fuer neuromuskulaere Erkrankungen in diesem Stadtteil von Tunis."
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-tn-005",
+        "name": "Association Tunisienne de Neurologie (ATN) / الجمعية التونسية لطب الأعصاب",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Organisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+216 93 179 678"
+          },
+          {
+            "system": "fax",
+            "value": "+216 71 601 300"
+          },
+          {
+            "system": "email",
+            "value": "stneuro@gnet.tn"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Appartement N°C07, 1er étage, Immeuble C, Résidence Tunis Carthage, Avenue 14 Janvier, Route régionale N°21"
+            ],
+            "city": "Ariana",
+            "postalCode": "2083",
+            "country": "TN"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tunesische Fachgesellschaft fuer Neurologie, seit 2014 unter dem Vorsitz von Prof. Riadh Gouider. Mitglied der World Federation of Neurology (WFN) und der Pan-Arab Union of Neurological Societies (PAUNS). Organisierte den 19. PAUNS-Kongress 2025 in Hammamet. Keine spezifische ALS-Patientenorganisation in Tunesien bekannt – die STN ist der wichtigste Ansprechpartner fuer neurologische Erkrankungen einschliesslich ALS/SLA auf nationaler Ebene."
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "World Federation of Neurology (WFN); Pan-Arab Union of Neurological Societies (PAUNS); Federation Maghrebine de Neurologie"
+          }
+        ]
+      }
+    }
+  ]
+}

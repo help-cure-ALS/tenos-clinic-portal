@@ -1,0 +1,787 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "CH"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-001",
+        "name": "Muskelzentrum / ALS Clinic – HOCH Health Ostschweiz St. Gallen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 71 494 35 81"
+          },
+          {
+            "system": "email",
+            "value": "muskel-als@h-och.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.h-och.ch/muskelzentrum-als-clinic/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rorschacher Strasse 95, Haus 33A"
+            ],
+            "city": "St. Gallen",
+            "postalCode": "9007",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Größtes ALS-Referenzzentrum der Schweiz; betreut ca. 200 ALS-Patienten; kosek-anerkannt; gegründet 2006"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-002",
+        "name": "Neuromuskuläres Zentrum – Universitätsspital Zürich",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 44 255 55 20"
+          },
+          {
+            "system": "email",
+            "value": "muskel@usz.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.usz.ch/fachbereich/neurologie/angebot/neuromuskulaeres-zentrum-neurologie/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Frauenklinikstrasse 26"
+            ],
+            "city": "Zürich",
+            "postalCode": "8091",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Spezialklinik; hat das ALS Registry Switzerland initiiert"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-003",
+        "name": "Neuromuskuläres Zentrum – Universitätsspital Basel",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 61 328 67 48"
+          },
+          {
+            "system": "email",
+            "value": "nmz@usb.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.unispital-basel.ch/en/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Petersgraben 4"
+            ],
+            "city": "Basel",
+            "postalCode": "4031",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Wöchentliche ALS-Ambulanz; multiprofessionelles Team; nationales neuromuskuläres Referenzzentrum (kosek)"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-004",
+        "name": "REHAB Basel – Klinik für Neurorehabilitation und Paraplegiologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "rehaklinik",
+                "display": "Rehabilitationsklinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 61 325 00 00"
+          },
+          {
+            "system": "email",
+            "value": "rehab@rehab.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rehab.ch"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Im Burgfelderhof 40"
+            ],
+            "city": "Basel",
+            "postalCode": "4055",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-005",
+        "name": "Neuromuskuläres Zentrum – Inselspital Bern",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 31 632 30 98"
+          },
+          {
+            "system": "email",
+            "value": "muskel@insel.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://neurologie.insel.ch/de/unser-angebot/neuromuskulaeres-zentrum"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rosenbühlgasse 25"
+            ],
+            "city": "Bern",
+            "postalCode": "3010",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "kosek-anerkanntes Referenzzentrum seit Dez. 2021; nimmt am ALS Registry Switzerland teil"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-006",
+        "name": "Centre SLA (CeSLA) – HUG Genève",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 22 372 52 83"
+          },
+          {
+            "system": "email",
+            "value": "centresla@hug.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.hug.ch/neurologie/centre-sla"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue Gabrielle-Perret-Gentil 4, Bâtiment Stern, 2. OG"
+            ],
+            "city": "Genève",
+            "postalCode": "1205",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Dediziertes ALS-Zentrum; multidisziplinäres Team; CeSLApp mobile Applikation"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-007",
+        "name": "Unité nerf-muscle – CHUV Lausanne",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 21 314 11 90"
+          },
+          {
+            "system": "url",
+            "value": "https://www.chuv.ch/fr/neurologie/nlg-home/patients-et-familles/nos-unites/unite-nerf-muscle"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rue du Bugnon 46"
+            ],
+            "city": "Lausanne",
+            "postalCode": "1011",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "kosek-Referenzzentrum; Diagnostik und Therapie von Motoneuronerkrankungen (ALS/SLA)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-008",
+        "name": "Centro Myosuisse Ticino – EOC Lugano",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 91 811 66 68"
+          },
+          {
+            "system": "email",
+            "value": "myosuisse.ticino@eoc.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.eoc.ch/specialita/neurologia-e-neurochirurgia/neurologia/myosuisse-ticino.html"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Via Tesserete 46"
+            ],
+            "city": "Lugano",
+            "postalCode": "6903",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nimmt am ALS Registry Switzerland teil; Teil des Myosuisse-Netzwerks seit 2007"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-009",
+        "name": "Neuromuskuläre Sprechstunde – Luzerner Kantonsspital (LUKS)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 41 205 51 49"
+          },
+          {
+            "system": "email",
+            "value": "neurozentrum.luzern@luks.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.luks.ch/standorte/standort-luzern/klinik-fuer-neurologie-und-neurorehabilitation/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Spitalstrasse, Neurozentrum Haus 10"
+            ],
+            "city": "Luzern",
+            "postalCode": "6000",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Tofersen-Behandlung für SOD1-assoziierte ALS; nimmt am ALS Registry Switzerland teil"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-010",
+        "name": "Neuromuskuläre Sprechstunde – Kantonsspital Winterthur",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 52 266 45 61"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ksw.ch/fachabteilungen/neurologie/wie-wir-behandeln/sprechstunden/neuromuskulaere-sprechstunde/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Brauerstrasse 15"
+            ],
+            "city": "Winterthur",
+            "postalCode": "8401",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-011",
+        "name": "Neuromuskuläre Sprechstunde – Kantonsspital Aarau",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 62 838 66 08"
+          },
+          {
+            "system": "email",
+            "value": "neurologie@ksa.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ksa.ch/de/gruppe/angebot/unsere-spezialsprechstunden-1176"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Tellstrasse 25"
+            ],
+            "city": "Aarau",
+            "postalCode": "5001",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-012",
+        "name": "Neuromuskuläre Sprechstunde – Kantonsspital Graubünden Chur",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 81 256 78 41"
+          },
+          {
+            "system": "email",
+            "value": "neurologie@ksgr.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ksgr.ch/neurologie"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Loestrasse 170"
+            ],
+            "city": "Chur",
+            "postalCode": "7000",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-013",
+        "name": "Kliniken Valens – Neurorehabilitationszentrum",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "rehaklinik",
+                "display": "Rehabilitationsklinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 81 303 11 11"
+          },
+          {
+            "system": "email",
+            "value": "info.valens@kliniken-valens.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.kliniken-valens.ch/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Taminaplatz 1"
+            ],
+            "city": "Valens",
+            "postalCode": "7317",
+            "country": "CH"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-ch-014",
+        "name": "Rückenwind Plus AG – Spezialpflege für ALS",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "pflegeeinrichtung",
+                "display": "Pflegeeinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+41 56 265 01 76"
+          },
+          {
+            "system": "email",
+            "value": "info@rueckenwindplus.ch"
+          },
+          {
+            "system": "url",
+            "value": "https://www.rueckenwindplus.ch/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Quellenstrasse 5"
+            ],
+            "city": "Bad Zurzach",
+            "postalCode": "5330",
+            "country": "CH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Spezialisierte Pflegeeinrichtung (kein Diagnosezentrum); stationäre Spezialpflege (1 Woche bis 3 Monate) für ALS-Patienten; erstes Pflegefachteam für ALS in einem Pflegeheim in der Schweiz"
+          }
+        ]
+      }
+    }
+  ]
+}

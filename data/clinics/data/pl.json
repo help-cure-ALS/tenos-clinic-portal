@@ -1,0 +1,916 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "PL"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-001",
+        "name": "Klinika Neurologii – Warszawski Uniwersytet Medyczny, Szpital Kliniczny Banacha",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 22 599 28 57"
+          },
+          {
+            "system": "url",
+            "value": "https://neurologia.wum.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Banacha 1a"
+            ],
+            "city": "Warszawa",
+            "postalCode": "02-097",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Polens; ALS-Team geleitet von Prof. Magdalena Kuźma-Kozakiewicz (Klinikdirektorin: Prof. Anna Kostera-Pruszczyk); multidisziplinäres ALS-Team; angegliedert an die Warszawski Uniwersytet Medyczny (WUM); koordiniert polnische ALS-Forschung und klinische Studien; Polnisches ALS-Register"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS, Polish ALS Registry"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-002",
+        "name": "Klinika Neurologii – Uniwersytet Medyczny im. K. Marcinkowskiego w Poznaniu",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 61 869 15 83"
+          },
+          {
+            "system": "url",
+            "value": "https://neurologia.ump.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Przybyszewskiego 49"
+            ],
+            "city": "Poznań",
+            "postalCode": "60-355",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an den Uniwersytet Medyczny in Poznań; multidisziplinäre ALS-Versorgung für Wielkopolska"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-003",
+        "name": "Klinika Neurologii – Uniwersytet Jagielloński, Szpital Uniwersytecki w Krakowie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 12 424 86 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.su.krakow.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Jakubowskiego 2"
+            ],
+            "city": "Kraków",
+            "postalCode": "30-688",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an die Uniwersytet Jagielloński, Collegium Medicum; ALS-Diagnostik und multidisziplinäre Versorgung für Małopolska"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-004",
+        "name": "Klinika Neurologii – Gdański Uniwersytet Medyczny (GUMed)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 58 349 23 00"
+          },
+          {
+            "system": "url",
+            "value": "https://gumed.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Dębinki 7"
+            ],
+            "city": "Gdańsk",
+            "postalCode": "80-952",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an den Gdański Uniwersytet Medyczny; Versorgung für Pomorze (Pommern)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-005",
+        "name": "Klinika Neurologii – Uniwersytet Medyczny w Łodzi",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 42 677 67 70"
+          },
+          {
+            "system": "url",
+            "value": "https://umed.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Kopcińskiego 22"
+            ],
+            "city": "Łódź",
+            "postalCode": "90-153",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; Univerzytet Medyczny w Łodzi; EMG-Diagnostik und ALS-Versorgung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-006",
+        "name": "Klinika Neurologii – Uniwersytet Medyczny im. Piastów Śląskich we Wrocławiu",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 71 734 31 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.umw.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Borowska 213"
+            ],
+            "city": "Wrocław",
+            "postalCode": "50-556",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; angegliedert an den Uniwersytet Medyczny we Wrocławiu; ALS-Diagnostik und -Versorgung für Dolny Śląsk (Niederschlesien)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-007",
+        "name": "Klinika Neurologii – Śląski Uniwersytet Medyczny, Katowice",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 32 789 46 01"
+          },
+          {
+            "system": "url",
+            "value": "https://sum.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Medyków 14"
+            ],
+            "city": "Katowice",
+            "postalCode": "40-752",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; Śląski Uniwersytet Medyczny; Versorgung für das oberschlesische Industriegebiet (GOP)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-008",
+        "name": "Klinika Neurologii – Uniwersytet Medyczny w Lublinie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 81 724 47 20"
+          },
+          {
+            "system": "url",
+            "value": "https://www.umlub.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Jaczewskiego 8"
+            ],
+            "city": "Lublin",
+            "postalCode": "20-954",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Uniwersytet Medyczny w Lublinie; Versorgung für Ostpolen"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-009",
+        "name": "Klinika Neurologii – Uniwersytet Medyczny w Białymstoku",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 85 831 83 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.umb.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. M. Skłodowskiej-Curie 24a"
+            ],
+            "city": "Białystok",
+            "postalCode": "15-276",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Uniwersytet Medyczny w Białymstoku; Versorgung für Podlasie (Nordostpolen)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-010",
+        "name": "Klinika Neurologii – Pomorski Uniwersytet Medyczny, Szczecin",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 91 466 13 30"
+          },
+          {
+            "system": "url",
+            "value": "https://www.pum.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Unii Lubelskiej 1"
+            ],
+            "city": "Szczecin",
+            "postalCode": "71-252",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Pomorski Uniwersytet Medyczny; Versorgung für Zachodniopomorskie (Westpommern)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-011",
+        "name": "Klinika Neurologii – Uniwersytet Warmińsko-Mazurski w Olsztynie (UWM), Collegium Medicum",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 89 524 53 56"
+          },
+          {
+            "system": "url",
+            "value": "https://www.uwm.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Al. Warszawska 30"
+            ],
+            "city": "Olsztyn",
+            "postalCode": "10-082",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Versorgung für Warmińsko-Mazurskie (Ermland-Masuren)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-012",
+        "name": "Oddział Neurologii – Szpital Uniwersytecki nr 2 im. J. Biziela, Bydgoszcz",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 52 365 50 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.biziel.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Ujejskiego 75"
+            ],
+            "city": "Bydgoszcz",
+            "postalCode": "85-168",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; angegliedert an die Collegium Medicum, Uniwersytet Mikołaja Kopernika; Versorgung für Kujawsko-Pomorskie"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-013",
+        "name": "Klinika Neurologii – Uniwersytet Rzeszowski, Kliniczny Szpital Wojewódzki nr 2",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 17 866 40 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.ur.edu.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Lwowska 60"
+            ],
+            "city": "Rzeszów",
+            "postalCode": "35-301",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Diagnostik; Versorgung für Podkarpackie (Karpatenvorland)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-014",
+        "name": "Oddział Neurologii – Wielospecjalistyczny Szpital Wojewódzki, Kielce",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 41 367 13 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.wszzkielce.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Grunwaldzka 45"
+            ],
+            "city": "Kielce",
+            "postalCode": "25-736",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Świętokrzyskie"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-015",
+        "name": "Oddział Neurologii – Szpital Uniwersytecki im. K. Marcinkowskiego, Zielona Góra",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 68 329 60 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.szpital.zgora.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Zyty 26"
+            ],
+            "city": "Zielona Góra",
+            "postalCode": "65-046",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; angegliedert an das Collegium Medicum der Uniwersytet Zielonogórski; Versorgung für Lubuskie (Lebuser Land)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-016",
+        "name": "Instytut Medycyny Doświadczalnej i Klinicznej im. M. Mossakowskiego PAN, Warszawa",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "forschung",
+                "display": "Forschungseinrichtung"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+48 22 608 65 00"
+          },
+          {
+            "system": "url",
+            "value": "https://www.imdik.pan.pl/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "ul. Adolfa Pawińskiego 5"
+            ],
+            "city": "Warszawa",
+            "postalCode": "02-106",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Forschungsinstitut der Polnischen Akademie der Wissenschaften (PAN); Grundlagenforschung zu neurodegenerativen Erkrankungen inkl. ALS; Tiermodelle und translationale Forschung"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-pl-017",
+        "name": "Stowarzyszenie Dignitas Dolentium",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.mnd.pl/"
+          }
+        ],
+        "address": [
+          {
+            "city": "Warszawa",
+            "country": "PL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Polnische ALS-Patientenorganisation; Information, Beratung und Interessenvertretung für ALS-Betroffene und Angehörige"
+          }
+        ]
+      }
+    }
+  ]
+}

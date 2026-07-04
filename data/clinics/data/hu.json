@@ -1,0 +1,535 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "HU"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-001",
+        "name": "ALS Ambulancia – Neurológiai Klinika, Semmelweis Egyetem, Budapest",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 1 210 0337"
+          },
+          {
+            "system": "url",
+            "value": "https://semmelweis.hu/neurologia/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Balassa u. 6"
+            ],
+            "city": "Budapest",
+            "postalCode": "1083",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Führendes ALS-Zentrum Ungarns; multidisziplinäre ALS-Ambulanz an der Neurologischen Klinik; angegliedert an die Semmelweis Egyetem (Semmelweis Universität); koordiniert klinische ALS-Studien in Ungarn; EMG-Labor und Biomarker-Forschung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-002",
+        "name": "ALS Ambulancia – Neurológiai Klinika, Szegedi Tudományegyetem (SZTE), Szeged",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 62 545 351"
+          },
+          {
+            "system": "url",
+            "value": "https://www.u-szeged.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Semmelweis u. 6"
+            ],
+            "city": "Szeged",
+            "postalCode": "6725",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "ALS-Ambulanz an der Neurologischen Klinik; angegliedert an die Szegedi Tudományegyetem; wichtiges ALS-Forschungszentrum; Forschung zu Neurodegeneration und mitochondrialer Dysfunktion; geleitet von Prof. Klivényi"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-003",
+        "name": "Neurológiai Klinika – Debreceni Egyetem, Debrecen",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 52 255 255"
+          },
+          {
+            "system": "url",
+            "value": "https://unideb.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Móricz Zsigmond krt. 22"
+            ],
+            "city": "Debrecen",
+            "postalCode": "4032",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; Debreceni Egyetem Általános Orvostudományi Kar; Versorgung für Ostungarn (Hajdú-Bihar, Szabolcs-Szatmár-Bereg)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-004",
+        "name": "Neurológiai Klinika – Pécsi Tudományegyetem (PTE), Pécs",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 72 535 900"
+          },
+          {
+            "system": "url",
+            "value": "https://aok.pte.hu/hu/egyseg/6"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Rét u. 2"
+            ],
+            "city": "Pécs",
+            "postalCode": "7623",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Klinik mit ALS-Ambulanz; Pécsi Tudományegyetem Általános Orvostudományi Kar; Versorgung für Südwestungarn (Baranya, Tolna, Somogy)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-005",
+        "name": "Idegsebészeti és Neurointervenciós Klinika – Semmelweis Egyetem (ehemals OKITI), Budapest",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "klinik",
+                "display": "Klinik"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 1 489 5200"
+          },
+          {
+            "system": "url",
+            "value": "https://semmelweis.hu/amerikaiut/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Amerikai út 57"
+            ],
+            "city": "Budapest",
+            "postalCode": "1145",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Ehemals OKITI (Országos Klinikai Idegtudományi Intézet), 2021 in OMIII fusioniert, 2024 Neurochirurgie/Neurointervention in Semmelweis Egyetem integriert; EMG-Labor; ALS-Diagnostik"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-006",
+        "name": "Neurológiai Osztály – Markusovszky Egyetemi Oktatókórház, Szombathely",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 94 311 542"
+          },
+          {
+            "system": "url",
+            "value": "https://www.markusovszky.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Markusovszky Lajos u. 5"
+            ],
+            "city": "Szombathely",
+            "postalCode": "9700",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Westungarn (Vas megye)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-007",
+        "name": "Neurológiai Osztály – Borsod-Abaúj-Zemplén Megyei Kórház, Miskolc",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 46 515 200"
+          },
+          {
+            "system": "url",
+            "value": "https://www.bazmkorhaz.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Szentpéteri kapu 72-76"
+            ],
+            "city": "Miskolc",
+            "postalCode": "3526",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Nordostungarn (Borsod-Abaúj-Zemplén megye)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-008",
+        "name": "Neurológiai Osztály – Fejér Megyei Szent György Egyetemi Oktató Kórház, Székesfehérvár",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 22 535 500"
+          },
+          {
+            "system": "url",
+            "value": "https://www.fmkorhaz.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Seregélyesi út 3"
+            ],
+            "city": "Székesfehérvár",
+            "postalCode": "8000",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Zentraltransdanubien (Fejér megye)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-009",
+        "name": "Neurológiai Osztály – Petz Aladár Egyetemi Oktató Kórház, Győr",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "ambulanz",
+                "display": "Ambulanz"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neurologie",
+                "display": "Neurologie"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+36 96 418 244"
+          },
+          {
+            "system": "url",
+            "value": "https://www.pfrkorhaz.hu/"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Vasvári Pál u. 2-4"
+            ],
+            "city": "Győr",
+            "postalCode": "9024",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Neurologische Abteilung; Versorgung für Nordwestungarn (Győr-Moson-Sopron megye)"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-hu-010",
+        "name": "Magyar Izombetegségekkel Élők Egyesülete (MIBE)",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "organisation",
+                "display": "Patientenorganisation"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "address": [
+          {
+            "city": "Budapest",
+            "country": "HU"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Ungarische Vereinigung für Menschen mit Muskelerkrankungen; Existenz und Online-Präsenz nicht verifiziert; Beratung und Interessenvertretung für neuromuskuläre Patienten"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-02-14",
+    "source": "manual-research",
+    "country": "NL"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-001",
+        "name": "ALS Centrum Nederland – UMC Utrecht",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 88 75 555 55"
+          },
+          {
+            "system": "url",
+            "value": "https://www.als-centrum.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Heidelberglaan 100"
+            ],
+            "city": "Utrecht",
+            "postalCode": "3584 CX",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Nationales Expertisezentrum und Koordinierungsstelle für ALS-Versorgung und -Forschung in den Niederlanden; betreut das nationale ALS-Patientenregister; ca. 500+ neue ALS-Patienten/Jahr im NL-Netzwerk"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ENCALS, Project MinE, TRICALS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-002",
+        "name": "Amsterdam UMC – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "als",
+                "display": "ALS-Spezialisierung"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 20 566 9111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.amsterdamumc.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Meibergdreef 9"
+            ],
+            "city": "Amsterdam",
+            "postalCode": "1105 AZ",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Mitgründer des ALS Centrum Nederland (zusammen mit UMC Utrecht); Expertise in neuromuskulären Erkrankungen; Forschung zu ALS-FTD-Überlappung"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-003",
+        "name": "Radboudumc – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 24 361 11 11"
+          },
+          {
+            "system": "url",
+            "value": "https://www.radboudumc.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Geert Grooteplein Zuid 10"
+            ],
+            "city": "Nijmegen",
+            "postalCode": "6525 GA",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Teil des ALS Centrum Nederland-Netzwerks; Donders Institute für Neuroimaging-Forschung angegliedert"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-004",
+        "name": "Erasmus MC – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 10 704 0704"
+          },
+          {
+            "system": "url",
+            "value": "https://www.erasmusmc.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Doctor Molewaterplein 40"
+            ],
+            "city": "Rotterdam",
+            "postalCode": "3015 GD",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Teil des ALS Centrum Nederland-Netzwerks; neuromuskuläre Expertise innerhalb der Neurologie"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-005",
+        "name": "UMCG – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 50 361 6161"
+          },
+          {
+            "system": "url",
+            "value": "https://www.umcg.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Hanzeplein 1"
+            ],
+            "city": "Groningen",
+            "postalCode": "9713 GZ",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Teil des ALS Centrum Nederland-Netzwerks; versorgt den Norden der Niederlande"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-006",
+        "name": "LUMC – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 71 526 9111"
+          },
+          {
+            "system": "url",
+            "value": "https://www.lumc.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Albinusdreef 2"
+            ],
+            "city": "Leiden",
+            "postalCode": "2333 ZA",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Teil des ALS Centrum Nederland-Netzwerks; neuromuskuläre Expertise"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Organization",
+        "id": "org-nl-007",
+        "name": "Maastricht UMC+ – Afdeling Neurologie",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/facility-type",
+                "code": "zentrum",
+                "display": "Zentrum"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://help-cure-als.org/specialty",
+                "code": "neuromuskulaer",
+                "display": "Neuromuskuläre Erkrankungen"
+              }
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 43 387 6543"
+          },
+          {
+            "system": "url",
+            "value": "https://www.mumc.nl"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "P. Debyelaan 25"
+            ],
+            "city": "Maastricht",
+            "postalCode": "6229 HX",
+            "country": "NL"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://help-cure-als.org/ext/notes",
+            "valueString": "Teil des ALS Centrum Nederland-Netzwerks; versorgt die Region Süd-Limburg"
+          },
+          {
+            "url": "http://help-cure-als.org/ext/network",
+            "valueString": "ALS Centrum Nederland"
+          }
+        ]
+      }
+    }
+  ]
+}
