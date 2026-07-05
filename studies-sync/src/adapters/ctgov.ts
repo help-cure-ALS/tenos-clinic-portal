@@ -8,6 +8,7 @@
  */
 
 import type { TrialDetails } from "./types";
+import { toIso2 } from "../countries";
 
 export const CTGOV_BASE = "https://clinicaltrials.gov/api/v2";
 
@@ -225,7 +226,9 @@ export async function fetchTrial(nctId: string): Promise<TrialDetails> {
                 facility: l.facility,
                 city: l.city,
                 state: l.state,
-                country: l.country,
+                // CTgov delivers English country names — normalize to
+                // ISO 3166-1 alpha-2 (app country filter compares codes).
+                country: l.country ? toIso2(l.country) : l.country,
                 status: l.status,
             }))
             .filter((l) => l.country || l.city || l.facility),
@@ -233,7 +236,8 @@ export async function fetchTrial(nctId: string): Promise<TrialDetails> {
             new Set(
                 (contactLoc.locations ?? [])
                     .map((l) => l.country)
-                    .filter((c): c is string => Boolean(c)),
+                    .filter((c): c is string => Boolean(c))
+                    .map(toIso2),
             ),
         ),
         contact: central

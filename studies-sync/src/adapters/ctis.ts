@@ -22,6 +22,7 @@
  */
 
 import type { TrialDetails, TrialLocation, NativeTranslation } from "./types";
+import { toIso2 } from "../countries";
 
 const CTIS_BASE = "https://euclinicaltrials.eu/ctis-public-api";
 
@@ -366,10 +367,12 @@ export async function fetchTrial(ctNumber: string): Promise<TrialDetails> {
         for (const s of p2.trialSites ?? []) {
             const org = s.organisationAddressInfo?.organisation;
             const addr = s.organisationAddressInfo?.address;
+            const rawCountry = addr?.country?.name ?? country;
             locations.push({
                 facility: org?.name,
                 city: addr?.city,
-                country: addr?.country?.name ?? country,
+                // Normalize to ISO 3166-1 alpha-2 (app filter compares codes)
+                country: rawCountry ? toIso2(rawCountry) : rawCountry,
                 status: org?.organisationLocationStatus,
             });
         }
@@ -377,7 +380,7 @@ export async function fetchTrial(ctNumber: string): Promise<TrialDetails> {
 
     // Countries: merged from MSCs and explicit site countries
     const countrySet = new Set<string>();
-    for (const m of msc) if (m.mscName) countrySet.add(m.mscName);
+    for (const m of msc) if (m.mscName) countrySet.add(toIso2(m.mscName));
     for (const l of locations) if (l.country) countrySet.add(l.country);
     const countries = Array.from(countrySet);
 
