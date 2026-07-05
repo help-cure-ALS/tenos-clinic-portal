@@ -77,7 +77,7 @@ export function VerificationsPage() {
   const sort = useGridSort<PendingRequest>({
     mode: 'client',
     rows: filteredRequests,
-    initial: { columnId: 'created_at', direction: 'desc' },
+    initial: { sortBy: 'created_at', sortDir: 'desc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'code':

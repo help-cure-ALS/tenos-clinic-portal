@@ -97,7 +97,7 @@ export function StudiesPage() {
   const sort = useGridSort<ResearchStudy>({
     mode: 'client',
     rows: filteredStudies,
-    initial: { columnId: 'title', direction: 'asc' },
+    initial: { sortBy: 'title', sortDir: 'asc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'title':

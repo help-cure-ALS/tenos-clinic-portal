@@ -49,7 +49,7 @@ export function TokensPage() {
   const sort = useGridSort<VerificationTokenResponse>({
     mode: 'client',
     rows: filteredTokens,
-    initial: { columnId: 'issued_at', direction: 'desc' },
+    initial: { sortBy: 'issued_at', sortDir: 'desc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'token_id':

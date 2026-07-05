@@ -93,7 +93,7 @@ export function ClinicStudiesPage() {
   const sort = useGridSort<ResearchStudy>({
     mode: 'client',
     rows: filteredAssigned,
-    initial: { columnId: 'title', direction: 'asc' },
+    initial: { sortBy: 'title', sortDir: 'asc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'title':
@@ -224,7 +224,7 @@ export function ClinicStudiesPage() {
   const drawerSort = useGridSort<ResearchStudy>({
     mode: 'client',
     rows: drawerStudies,
-    initial: { columnId: 'title', direction: 'asc' },
+    initial: { sortBy: 'title', sortDir: 'asc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'title':

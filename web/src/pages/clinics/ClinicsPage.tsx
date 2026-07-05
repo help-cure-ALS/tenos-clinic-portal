@@ -75,7 +75,7 @@ export function ClinicsPage() {
   const sort = useGridSort<Organization>({
     mode: 'client',
     rows: filteredClinics,
-    initial: { columnId: 'name', direction: 'asc' },
+    initial: { sortBy: 'name', sortDir: 'asc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'name':

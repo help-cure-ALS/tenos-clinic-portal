@@ -66,7 +66,7 @@ export function UsersPage() {
   const sort = useGridSort<ClinicUser>({
     mode: 'client',
     rows: filteredUsers,
-    initial: { columnId: 'last_name', direction: 'asc' },
+    initial: { sortBy: 'last_name', sortDir: 'asc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'last_name':
