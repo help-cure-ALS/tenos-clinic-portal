@@ -76,8 +76,12 @@
       z-index: 0;
     }
 
-    /* Stacking context for all content above the vignette overlay. */
-    .splash > * {
+    /* Stacking context for all content above the vignette overlay.
+       Must NOT match the background video: this rule has the same
+       specificity as .splash-video but comes later, so it would
+       override the video's `position: absolute` — the video then
+       becomes a grid item and wrecks the whole layout. */
+    .splash > *:not(.splash-video) {
       position: relative;
       z-index: 1;
     }
