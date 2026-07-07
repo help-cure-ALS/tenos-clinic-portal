@@ -5,7 +5,7 @@
     "": {
       "name": "als-med-web",
       "dependencies": {
-        "@hca/mantine-workbench": "github:help-cure-ALS/hca-mantine-workbench#v0.1.1",
+        "@hca/mantine-workbench": "github:help-cure-ALS/hca-mantine-workbench#v0.1.2",
         "@mantine/core": "^9.1.0",
         "@mantine/form": "^9.1.0",
         "@mantine/hooks": "^9.1.0",
@@ -164,7 +164,7 @@
 
     "@floating-ui/utils": ["@floating-ui/utils@0.2.11", "", {}, "sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg=="],
 
-    "@hca/mantine-workbench": ["@hca/mantine-workbench@github:help-cure-ALS/hca-mantine-workbench#b1552aa", { "peerDependencies": { "@mantine/core": "^9.0.0", "@mantine/hooks": "^9.0.0", "lucide-react": "^1.0.0", "react": "^18.0.0 || ^19.0.0", "react-dom": "^18.0.0 || ^19.0.0", "react-resizable-panels": "^4.0.0" } }, "help-cure-ALS-hca-mantine-workbench-b1552aa"],
+    "@hca/mantine-workbench": ["@hca/mantine-workbench@github:help-cure-ALS/hca-mantine-workbench#8a8748b", { "peerDependencies": { "@mantine/core": "^9.0.0", "@mantine/hooks": "^9.0.0", "lucide-react": "^1.0.0", "react": "^18.0.0 || ^19.0.0", "react-dom": "^18.0.0 || ^19.0.0", "react-resizable-panels": "^4.0.0" } }, "help-cure-ALS-hca-mantine-workbench-8a8748b"],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 

@@ -17,6 +17,37 @@ export const AUTH_HERO_BG = `url(${BASE}auth-hero.jpg) center / cover no-repeat,
 const LOGO_SRC = `${BASE}hca-logo.svg`;
 
 /**
+ * Full-bleed background video for the hero panel. Absolutely
+ * positioned inside a `position: relative` parent; muted + playsInline
+ * so mobile browsers allow autoplay. The still image serves as poster
+ * while loading and whenever autoplay is blocked (e.g. iOS low-power
+ * mode), so the panel never shows an empty background.
+ */
+export function HeroVideo() {
+  return (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      poster={`${BASE}auth-hero.jpg`}
+      aria-hidden="true"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        zIndex: 0,
+        pointerEvents: 'none',
+      }}
+    >
+      <source src={`${BASE}hero.mp4`} type="video/mp4" />
+    </video>
+  );
+}
+
+/**
  * Content of the hero panel: logo top-left, tagline + footer mark
  * bottom-left, everything as an overlay on the hero background.
  */
@@ -25,15 +56,23 @@ export function BrandedHero() {
   return (
     <Stack
       justify="space-between"
-      style={{ height: '100%', padding: '2.5rem', position: 'relative' }}
+      style={{
+        height: '100%',
+        padding: '2.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
+      {/* Background video (image poster as fallback) */}
+      <HeroVideo />
+
       {/* Logo top-left */}
-      <Anchor href="/" style={{ display: 'inline-block' }}>
+      <Anchor href="/" style={{ display: 'inline-block', position: 'relative', zIndex: 1 }}>
         <img src={LOGO_SRC} alt="help cure ALS" style={{ height: 32 }} />
       </Anchor>
 
       {/* Tagline + Footer-Mark bottom-left */}
-      <Box style={{ maxWidth: 460 }}>
+      <Box style={{ maxWidth: 460, position: 'relative', zIndex: 1 }}>
         <Text
           fw={700}
           c="white"

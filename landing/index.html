@@ -44,6 +44,20 @@
       padding: 2.5rem;
     }
 
+    /* Full-bleed background video. Sits above the CSS background
+       image (which doubles as the loading/autoplay-blocked fallback
+       via the poster) and below the vignette overlay — ::after paints
+       after child elements, so no extra z-index is needed. */
+    .splash-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+    }
+
     /* Light vignette overlay so the white text stays reliably
        readable on the mountain image, regardless of the region. */
     .splash::after {
@@ -189,6 +203,22 @@
 </head>
 <body>
   <main class="splash">
+    <!-- Background video — served by the React app under /app/*
+         (same origin, like the auth-hero image). Muted + playsinline
+         so mobile browsers allow autoplay; the still image acts as
+         poster while loading or when autoplay is blocked. -->
+    <video
+      class="splash-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/app/auth-hero.jpg"
+      aria-hidden="true"
+    >
+      <source src="/app/hero.mp4" type="video/mp4">
+    </video>
+
     <!-- Top-left: logo (not linked) -->
     <div class="brand" aria-label="help cure ALS">
       <img src="logo.svg" alt="help cure ALS">
