@@ -190,7 +190,11 @@ interface CtisSearchResponse {
  * the CTgov search. The full record comes from `fetchTrial(ctNumber)`.
  */
 export async function searchTrials(opts: SearchOptions): Promise<SearchResult> {
-    const limit = Math.min(Math.max(opts.maxResults ?? 500, 1), 5000);
+    // No cap unless explicitly requested (smoke tests) — same fix as
+    // in the CTgov adapter. Page guard bounds at 50 × 50 = 2,500.
+    const limit = opts.maxResults
+        ? Math.min(Math.max(opts.maxResults, 1), 5000)
+        : Number.POSITIVE_INFINITY;
     const PAGE_SIZE = 50;
 
     const hits: SearchHit[] = [];
@@ -227,7 +231,8 @@ export async function searchTrials(opts: SearchOptions): Promise<SearchResult> {
         page += 1;
     }
 
-    return { hits: hits.slice(0, limit), total: total || hits.length };
+    const capped = Number.isFinite(limit) ? hits.slice(0, limit) : hits;
+    return { hits: capped, total: total || capped.length };
 }
 
 // ─── Detail-Retrieve ────────────────────────────────────────────────

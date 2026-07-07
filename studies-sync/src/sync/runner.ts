@@ -252,11 +252,15 @@ export async function runSync(
                     { condition, hits: search.hits.length, total: search.total },
                     "[sync] CTgov search complete",
                 );
-                counters.ctgovFetched += search.hits.length;
+                // Count unique studies only — conditions like "ALS" and
+                // "Motor Neuron Disease" overlap almost completely, and
+                // summing raw hits made the ∑ in the admin UI look like
+                // the same studies were loaded twice.
+                const newHits = search.hits.filter((h) => !ctgovSeen.has(h.nct_id));
+                counters.ctgovFetched += newHits.length;
 
                 let handledInLoop = 0;
-                for (const hit of search.hits) {
-                    if (ctgovSeen.has(hit.nct_id)) continue;
+                for (const hit of newHits) {
                     if (perRegistryLimit && ctgovSeen.size >= perRegistryLimit) break;
                     ctgovSeen.add(hit.nct_id);
                     await sleep(CTGOV_SLEEP_MS);
@@ -303,23 +307,27 @@ export async function runSync(
                     { condition, hits: search.hits.length, total: search.total },
                     "[sync] CTIS search complete",
                 );
-                counters.ctisFetched += search.hits.length;
+                // Count unique CTIS studies only, and leave out trials
+                // already covered by a CTgov record in this run (EUCT
+                // bound as secondary identifier) — the CTgov phase is
+                // complete at this point, so ctgovEuctSeen is final.
+                const newHits = search.hits.filter((h) => {
+                    if (ctisSeen.has(h.ctNumber)) return false;
+                    if (ctgovEuctSeen.has(h.ctNumber)) {
+                        // Mark as seen so a second condition does not
+                        // count the same skip again.
+                        ctisSeen.add(h.ctNumber);
+                        ctisSkippedAsDupe++;
+                        return false;
+                    }
+                    return true;
+                });
+                counters.ctisFetched += newHits.length;
 
                 let handledInLoop = 0;
-                for (const hit of search.hits) {
-                    if (ctisSeen.has(hit.ctNumber)) continue;
+                for (const hit of newHits) {
                     if (perRegistryLimit && ctisSeen.size >= perRegistryLimit) break;
                     ctisSeen.add(hit.ctNumber);
-
-                    // Dedupe: if this CT number is already attached to
-                    // a CTgov trial as a secondary identifier (just
-                    // written in this session), we can skip the CTIS
-                    // fetch entirely.
-                    if (ctgovEuctSeen.has(hit.ctNumber)) {
-                        ctisSkippedAsDupe++;
-                        counters.ctisFetched = Math.max(0, counters.ctisFetched - 1);
-                        continue;
-                    }
 
                     await sleep(CTIS_SLEEP_MS);
                     try {

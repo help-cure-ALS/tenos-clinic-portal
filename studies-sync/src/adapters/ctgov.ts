@@ -42,7 +42,14 @@ export interface SearchResult {
  * narrow fields; the full record is fetched by `fetchTrial(nct_id)`.
  */
 export async function searchTrials(opts: SearchOptions): Promise<SearchResult> {
-    const limit = Math.min(Math.max(opts.maxResults ?? 1000, 1), 5000);
+    // No cap unless explicitly requested (smoke tests). The old
+    // default of 1000 silently truncated conditions with more hits
+    // (e.g. "Motor Neuron Disease": ~1360 studies — 360 were never
+    // synced). The page guard below still bounds a runaway query at
+    // 50 × 200 = 10,000 studies.
+    const limit = opts.maxResults
+        ? Math.min(Math.max(opts.maxResults, 1), 5000)
+        : Number.POSITIVE_INFINITY;
     const PAGE_SIZE = 200;
 
     const baseParams = new URLSearchParams({
@@ -106,7 +113,8 @@ export async function searchTrials(opts: SearchOptions): Promise<SearchResult> {
         pageToken = data.nextPageToken;
     }
 
-    return { hits: allHits.slice(0, limit), total: total || allHits.length };
+    const hits = Number.isFinite(limit) ? allHits.slice(0, limit) : allHits;
+    return { hits, total: total || hits.length };
 }
 
 /**
