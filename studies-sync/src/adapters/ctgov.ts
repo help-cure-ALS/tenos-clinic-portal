@@ -59,12 +59,16 @@ export async function searchTrials(opts: SearchOptions): Promise<SearchResult> {
         countTotal: "true",
         fields: ["NCTId", "BriefTitle", "OverallStatus", "LastUpdatePostDate"].join("|"),
     });
-    // CTgov v2 takes range filters in the format "YYYY-MM-DD,MAX" for an
-    // open upper bound. That way only trials are returned whose
-    // `lastUpdatePostDate` has been updated since `lastUpdateFrom` —
-    // delta sync.
+    // Delta sync: only trials whose `lastUpdatePostDate` is on/after
+    // `lastUpdateFrom`. There is no dedicated filter parameter for
+    // this in the v2 API (a bare `filter.lastUpdatePostDate` returns
+    // HTTP 400) — the supported form is the Essie expression syntax
+    // via `filter.advanced` with an open upper bound: RANGE[date,MAX].
     if (opts.lastUpdateFrom) {
-        baseParams.set("filter.lastUpdatePostDate", `${opts.lastUpdateFrom},MAX`);
+        baseParams.set(
+            "filter.advanced",
+            `AREA[LastUpdatePostDate]RANGE[${opts.lastUpdateFrom},MAX]`,
+        );
     }
 
     type Page = {
