@@ -4,7 +4,7 @@ Goal: a developer can fully verify outbound and inbound once against real endpoi
 
 ## Prerequisites
 
-- Running Care server at `https://care.tenos.app/sapi`
+- Running Care server at `https://clinic.tenos.app/sapi`
 - Available:
   - `supplier_org_token` (Supplier API access)
   - `integration_id` (contract)
@@ -18,7 +18,7 @@ Optional for tests:
 ## A) Health and Basic Checks
 
 ```bash
-curl -i "https://care.tenos.app/sapi/healthz"
+curl -i "https://clinic.tenos.app/sapi/healthz"
 ```
 
 Expected: `200 {"ok":true}`
@@ -33,7 +33,7 @@ Before a new contract can be created, the app needs a valid
 The proxy itself checks this proof via the existing verification status endpoint:
 
 ```bash
-curl -i "https://care.tenos.app/vapi/verify/tokens/<verification_token_id>/status" \
+curl -i "https://clinic.tenos.app/vapi/verify/tokens/<verification_token_id>/status" \
   -H "X-Service-Token: <verification_service_token>"
 ```
 
@@ -50,7 +50,7 @@ Without a valid status, the following linking routes must fail:
 ### 1. Push from the integration
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-exchange/<integration_id>/push" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-exchange/<integration_id>/push" \
   -H "Authorization: Bearer <integration_token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -79,7 +79,7 @@ A `POST` must arrive at the supplier endpoint with:
 ### 1. Send a proposal (global endpoint)
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-exchange/proposals" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-exchange/proposals" \
   -H "Authorization: Bearer <supplier_org_token>" \
   -H "Idempotency-Key: test-$(date +%s)" \
   -H "Content-Type: application/json" \
@@ -112,7 +112,7 @@ Expected:
 ### 3. Pull via the integration
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-exchange/<integration_id>/pull" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-exchange/<integration_id>/pull" \
   -H "Authorization: Bearer <integration_token>"
 ```
 
@@ -125,7 +125,7 @@ Expected:
 ## D) Decision Test
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-exchange/<integration_id>/proposals/sup-001/decision" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-exchange/<integration_id>/proposals/sup-001/decision" \
   -H "Authorization: Bearer <integration_token>" \
   -H "Content-Type: application/json" \
   -d '{"decision":"accepted"}'
@@ -141,7 +141,7 @@ Expected:
 ### Direct link to a care organization
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-links/care-org" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-links/care-org" \
   -H "Authorization: Bearer <app_device_jwt>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -170,7 +170,7 @@ Expected:
 ### Accept a partner request
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-links/partner-app/accept" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-links/partner-app/accept" \
   -H "Authorization: Bearer <app_device_jwt>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -210,7 +210,7 @@ Expected:
 If a job is `failed_manual`:
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/admin/deliveries/<delivery_id>/replay" \
+curl -i "https://clinic.tenos.app/sapi/v1/admin/deliveries/<delivery_id>/replay" \
   -H "Authorization: Bearer <hca_admin_token>" \
   -X POST
 ```

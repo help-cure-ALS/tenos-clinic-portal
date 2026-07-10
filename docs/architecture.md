@@ -1,9 +1,9 @@
-# Architecture — TENOS Care Backend
+# Architecture — TENOS Clinic Backend
 
 ## Overview
 
 ```
-                        care.tenos.app
+                        clinic.tenos.app
                              │
                          ┌───┴───┐
                          │ Caddy │  (auto-HTTPS, reverse proxy)

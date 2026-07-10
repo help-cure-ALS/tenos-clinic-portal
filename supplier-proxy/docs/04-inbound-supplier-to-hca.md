@@ -98,7 +98,7 @@ Note: In the deduplicated case, no `contract_id` is currently returned.
 ## Example `curl`
 
 ```bash
-curl -i "https://care.tenos.app/sapi/v1/provider-exchange/proposals" \
+curl -i "https://clinic.tenos.app/sapi/v1/provider-exchange/proposals" \
   -H "Authorization: Bearer <SUPPLIER_ORG_TOKEN>" \
   -H "Idempotency-Key: sup-$(date +%s)" \
   -H "Content-Type: application/json" \

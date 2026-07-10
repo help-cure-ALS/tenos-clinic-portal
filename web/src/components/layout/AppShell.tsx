@@ -416,7 +416,7 @@ function ExpandedHeader({ onCollapse }: { onCollapse: () => void }) {
           textOverflow: 'ellipsis',
         }}
       >
-        TENOS Care Portal
+        TENOS Clinic Portal
       </Text>
       <MainNavHeaderButton
         icon={<PanelLeftClose size={16} />}

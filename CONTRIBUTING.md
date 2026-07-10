@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve the TENOS Care-Backend.
+Thank you for helping improve the TENOS Clinic Backend.
 
 ## Ground Rules
 

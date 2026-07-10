@@ -1,4 +1,4 @@
-# TENOS Care-Backend
+# TENOS Clinic Backend
 
 A non-profit project by [help cure ALS e.V.](https://help-cure-als.org/), building [TENOS](https://tenos.app/) — supporting people with ALS and advancing ALS research.
 
@@ -331,9 +331,9 @@ EXPO_PUBLIC_SUPPLIER_PROXY_URL=http://localhost:8070/sapi
 For production, replace URLs accordingly:
 
 ```
-EXPO_PUBLIC_CARE_BASE_URL=https://care.tenos.app/api/
-EXPO_PUBLIC_VERIFICATION_URL=https://care.tenos.app/vapi
-EXPO_PUBLIC_SUPPLIER_PROXY_URL=https://care.tenos.app/sapi
+EXPO_PUBLIC_CARE_BASE_URL=https://clinic.tenos.app/api/
+EXPO_PUBLIC_VERIFICATION_URL=https://clinic.tenos.app/vapi
+EXPO_PUBLIC_SUPPLIER_PROXY_URL=https://clinic.tenos.app/sapi
 ```
 
 Supplier runtime quick checks:
@@ -383,14 +383,14 @@ cp .env.example .env
 Edit `.env` — change all `<strong random>` to real secrets:
 
 ```
-CADDY_SITE_ADDRESS=care.tenos.app
+CADDY_SITE_ADDRESS=clinic.tenos.app
 CADDY_HTTP_PORT=80
 CADDY_HTTPS_PORT=443
 
-MEDPLUM_BASE_URL=https://care.tenos.app/api/
+MEDPLUM_BASE_URL=https://clinic.tenos.app/api/
 MEDPLUM_APP_BASE_URL=http://localhost:3001/
-MEDPLUM_STORAGE_BASE_URL=https://care.tenos.app/api/storage/
-MEDPLUM_ALLOWED_ORIGINS=https://care.tenos.app,http://localhost:3001
+MEDPLUM_STORAGE_BASE_URL=https://clinic.tenos.app/api/storage/
+MEDPLUM_ALLOWED_ORIGINS=https://clinic.tenos.app,http://localhost:3001
 
 MEDPLUM_REGISTER_ENABLED=true
 
@@ -422,7 +422,7 @@ SUPPLIER_APP_AUTH_JWT_ISSUER=supplier-proxy
 SUPPLIER_APP_AUTH_JWT_AUDIENCE=supplier-mobile
 SUPPLIER_APP_AUTH_JWT_TTL_SECONDS=900
 SUPPLIER_APP_AUTH_CHALLENGE_TTL_SECONDS=60
-VERIFICATION_SERVICE_URL=https://care.tenos.app/vapi
+VERIFICATION_SERVICE_URL=https://clinic.tenos.app/vapi
 SUPPLIER_LINK_REQUEST_TTL_MINUTES=30
 SUPPLIER_MAX_PULL=200
 SUPPLIER_PAYLOAD_KEYS_JSON={"1":"<base64-32-byte-key>"}
@@ -450,10 +450,10 @@ docker compose -f docker-compose.yml up -d --build
 Run these checks after every deploy/restart. Treat this as a release gate.
 
 ```bash
-curl -i https://care.tenos.app/api/healthcheck
-curl -i https://care.tenos.app/vapi/healthz
-curl -i https://care.tenos.app/sapi/healthz
-curl -i https://care.tenos.app/sync-api/healthz
+curl -i https://clinic.tenos.app/api/healthcheck
+curl -i https://clinic.tenos.app/vapi/healthz
+curl -i https://clinic.tenos.app/sapi/healthz
+curl -i https://clinic.tenos.app/sync-api/healthz
 ```
 
 Expected:
@@ -479,16 +479,16 @@ After adding the IDs to `.env`, restart:
 docker compose -f docker-compose.yml up -d
 ```
 
-The portal is now live at `https://care.tenos.app/app/login`.
+The portal is now live at `https://clinic.tenos.app/app/login`.
 
 #### Configure Mobile App (production)
 
 Follow [step l)](#l-configure-mobile-app) from the dev setup, but use production URLs in `hca-mobile-app/.env`:
 
 ```
-EXPO_PUBLIC_CARE_BASE_URL=https://care.tenos.app/api/
-EXPO_PUBLIC_VERIFICATION_URL=https://care.tenos.app/vapi
-EXPO_PUBLIC_SUPPLIER_PROXY_URL=https://care.tenos.app/sapi
+EXPO_PUBLIC_CARE_BASE_URL=https://clinic.tenos.app/api/
+EXPO_PUBLIC_VERIFICATION_URL=https://clinic.tenos.app/vapi
+EXPO_PUBLIC_SUPPLIER_PROXY_URL=https://clinic.tenos.app/sapi
 ```
 
 ### 3 (alt). Restore from backup
@@ -553,13 +553,13 @@ docker compose logs --tail=120 supplier-proxy
 Then verify:
 
 ```bash
-curl --resolve care.tenos.app:443:127.0.0.1 -k -i https://care.tenos.app/sapi/healthz
+curl --resolve clinic.tenos.app:443:127.0.0.1 -k -i https://clinic.tenos.app/sapi/healthz
 ```
 
 ### Production curl notes
 
 - In production, `localhost:8070` is often not exposed.
-- Prefer domain checks (`https://care.tenos.app/...`) or local SNI check via `--resolve`.
+- Prefer domain checks (`https://clinic.tenos.app/...`) or local SNI check via `--resolve`.
 
 ### IDs — where they come from
 

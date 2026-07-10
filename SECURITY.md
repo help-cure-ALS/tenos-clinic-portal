@@ -1,6 +1,6 @@
 # Security Policy
 
-The TENOS Care-Backend handles medical and health-related data for people with ALS. Please report suspected vulnerabilities privately.
+The TENOS Clinic Backend handles medical and health-related data for people with ALS. Please report suspected vulnerabilities privately.
 
 ## Reporting a Vulnerability
 

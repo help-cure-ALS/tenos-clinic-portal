@@ -1,4 +1,4 @@
-# AGENTS.md — TENOS Care-Backend
+# AGENTS.md — TENOS Clinic Backend
 
 ## What is the Care-Backend?
 
@@ -10,7 +10,7 @@ The Care-Backend is a multi-service monorepo providing three core functions:
 
 All services run behind a Caddy reverse proxy and share one Medplum FHIR instance.
 
-**Domain:** `care.tenos.app`
+**Domain:** `clinic.tenos.app`
 **Organisation:** [help cure ALS e.V.](https://help-cure-als.org/)
 
 ## Before you do ANYTHING
@@ -69,11 +69,11 @@ All services run behind a Caddy reverse proxy and share one Medplum FHIR instanc
 
 #### Service routing (Caddy) — do NOT change
 ```
-care.tenos.app/vapi/*   → Verification Service (port 3002)
-care.tenos.app/sapi/*   → Supplier Proxy (port 3003)
-care.tenos.app/api/*    → Medplum Server (port 8103)
-care.tenos.app/app/*    → Web Portal (WEB_UPSTREAM)
-care.tenos.app/*        → Landing page (static)
+clinic.tenos.app/vapi/*   → Verification Service (port 3002)
+clinic.tenos.app/sapi/*   → Supplier Proxy (port 3003)
+clinic.tenos.app/api/*    → Medplum Server (port 8103)
+clinic.tenos.app/app/*    → Web Portal (WEB_UPSTREAM)
+clinic.tenos.app/*        → Landing page (static)
 ```
 
 **Note:** `/app/*` is the web-portal route, not `/*`. The `/*` catch-all is the (static) landing page.
