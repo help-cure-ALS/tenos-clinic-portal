@@ -23,19 +23,15 @@
       background: #0a0a0a;
     }
 
-    /* The background image comes from the React app: Caddy proxies
-       /app/* to Vite, and Vite serves public/ under the app prefix.
-       So /app/auth-hero.jpg lives on the same origin as the landing
-       page. */
     .splash {
       position: relative;
       width: 100%;
       min-height: 100vh;
-      /* Image as the top layer, dark brand tint as fallback color
-         underneath — prevents white flashes while the image loads and
-         fills any gaps. Value identical to AUTH_HERO_BG in
+      /* Plain dark background under the video — shown while it loads
+         or when autoplay is blocked. No poster image by design. Value
+         identical to AUTH_HERO_BG in
          web/src/components/layout/BrandedAuthHero.tsx. */
-      background: url('/app/auth-hero.jpg') center / cover no-repeat, #1a1021;
+      background: rgb(33 32 33);
       display: grid;
       grid-template-rows: auto 1fr auto;
       /* 2.5rem all around — exactly like BrandedAuthHero.tsx
@@ -44,10 +40,10 @@
       padding: 2.5rem;
     }
 
-    /* Full-bleed background video. Sits above the CSS background
-       image (which doubles as the loading/autoplay-blocked fallback
-       via the poster) and below the vignette overlay — ::after paints
-       after child elements, so no extra z-index is needed. */
+    /* Full-bleed background video. Sits above the splash background
+       color (the loading/autoplay-blocked fallback) and below the
+       vignette overlay — ::after paints after child elements, so no
+       extra z-index is needed. */
     .splash-video {
       position: absolute;
       inset: 0;
@@ -208,20 +204,43 @@
 <body>
   <main class="splash">
     <!-- Background video — served by the React app under /app/*
-         (same origin, like the auth-hero image). Muted + playsinline
-         so mobile browsers allow autoplay; the still image acts as
-         poster while loading or when autoplay is blocked. -->
+         (same origin). Muted + playsinline so mobile browsers allow
+         autoplay; while loading or when autoplay is blocked, the dark
+         splash background color shows through (no poster by design). -->
     <video
       class="splash-video"
       autoplay
       muted
       loop
       playsinline
-      poster="/app/auth-hero.jpg"
       aria-hidden="true"
     >
       <source src="/app/hero.mp4" type="video/mp4">
     </video>
+    <script>
+      // Mobile autoplay fallback: some browsers reject autoplay even
+      // with muted+playsinline (iOS low-power mode, data saver). Kick
+      // playback off explicitly and retry once on the first touch or
+      // click — a user gesture lifts the restriction. Until playback
+      // starts, the dark splash background color covers the panel.
+      (function () {
+        var v = document.querySelector('.splash-video');
+        if (!v) return;
+        v.muted = true; // belt and braces before play()
+        function tryPlay() {
+          var p = v.play();
+          if (p && p.catch) p.catch(function () { /* poster stays */ });
+        }
+        tryPlay();
+        function onGesture() {
+          if (v.paused) tryPlay();
+          window.removeEventListener('touchend', onGesture);
+          window.removeEventListener('click', onGesture);
+        }
+        window.addEventListener('touchend', onGesture, { passive: true });
+        window.addEventListener('click', onGesture);
+      })();
+    </script>
 
     <!-- Top-left: logo (not linked) -->
     <div class="brand" aria-label="help cure ALS">
