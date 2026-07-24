@@ -93,6 +93,45 @@ export async function revokeToken(tokenId: string): Promise<void> {
 }
 
 // ============================================================
+// Research project application endpoints
+// ============================================================
+
+export interface PendingProjectApplication {
+  id: string;
+  code: string;
+  clinic_id: string;
+  research_project_id: string;
+  project_title: string;
+  share_history: boolean;
+  created_at: string;
+  expires_at: string;
+}
+
+export async function getPendingProjectApplications(): Promise<PendingProjectApplication[]> {
+  const res = await apiFetch('/project-applications/pending');
+  if (!res.ok) throw new Error(await parseError(res, 'Failed to fetch pending project applications'));
+  const data = await res.json();
+  return data.applications ?? [];
+}
+
+export async function confirmProjectApplication(code: string): Promise<{ ok: true; grant_id: string }> {
+  const res = await apiFetch(`/project-applications/${code}/confirm`, {
+    method: 'POST',
+    body: JSON.stringify({}),
+  });
+  if (!res.ok) throw new Error(await parseError(res, 'Confirmation failed'));
+  return res.json();
+}
+
+export async function rejectProjectApplication(code: string): Promise<void> {
+  const res = await apiFetch(`/project-applications/${code}/reject`, {
+    method: 'POST',
+    body: JSON.stringify({}),
+  });
+  if (!res.ok) throw new Error(await parseError(res, 'Rejection failed'));
+}
+
+// ============================================================
 // Admin endpoints
 // ============================================================
 

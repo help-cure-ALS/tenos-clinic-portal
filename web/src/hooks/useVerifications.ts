@@ -9,6 +9,9 @@ import {
   rejectVerification,
   getVerificationTokens,
   revokeToken,
+  getPendingProjectApplications,
+  confirmProjectApplication,
+  rejectProjectApplication,
 } from '../lib/api';
 import type { PendingRequest, VerificationTokenResponse } from '../lib/api';
 import { useAuthStore } from '../stores/auth';
@@ -53,6 +56,39 @@ export function useRejectVerification() {
     mutationFn: (code: string) => rejectVerification(code),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['verifications'] });
+    },
+  });
+}
+
+export function useProjectApplications() {
+  const { isAuthenticated } = useAuthStore();
+
+  return useQuery({
+    queryKey: ['project-applications', 'pending'],
+    queryFn: getPendingProjectApplications,
+    enabled: isAuthenticated,
+    refetchInterval: 5000,
+  });
+}
+
+export function useApproveProjectApplication() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (code: string) => confirmProjectApplication(code),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['project-applications'] });
+    },
+  });
+}
+
+export function useRejectProjectApplication() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (code: string) => rejectProjectApplication(code),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['project-applications'] });
     },
   });
 }

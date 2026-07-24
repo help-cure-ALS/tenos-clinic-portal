@@ -110,8 +110,12 @@
     "approve": "Approve",
     "reject": "Reject",
     "approveConfirm": "Verifying ALS diagnosis for code {{code}}. Please select the ICD-10 diagnosis code.",
+    "approveProjectConfirm": "Confirm project participation for {{code}}. The patient will then take part in the project's data collection.",
     "rejectConfirm": "Reject verification request for code {{code}}? The patient will need to create a new request.",
     "diagnosisCode": "Diagnosis Code",
+    "type": "Type",
+    "typeDiagnosis": "Diagnosis",
+    "typeProject": "Project",
     "noPending": "No pending verification requests",
     "noPendingDesc": "New requests will appear here when patients request verification",
     "searchPlaceholder": "Search by code…"

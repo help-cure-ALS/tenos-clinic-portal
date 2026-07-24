@@ -110,8 +110,12 @@
     "approve": "Genehmigen",
     "reject": "Ablehnen",
     "approveConfirm": "ALS-Diagnose für Code {{code}} bestätigen. Bitte wählen Sie den ICD-10 Diagnoseschlüssel.",
+    "approveProjectConfirm": "Projektteilnahme für {{code}} bestätigen. Der Patient nimmt danach an der Datenerhebung des Projekts teil.",
     "rejectConfirm": "Verifizierungsanfrage für Code {{code}} ablehnen? Der Patient muss eine neue Anfrage stellen.",
     "diagnosisCode": "Diagnoseschlüssel",
+    "type": "Typ",
+    "typeDiagnosis": "Diagnose",
+    "typeProject": "Projekt",
     "noPending": "Keine ausstehenden Verifizierungsanfragen",
     "noPendingDesc": "Neue Anfragen erscheinen hier, wenn Patienten eine Verifizierung anfordern",
     "searchPlaceholder": "Nach Code suchen…"

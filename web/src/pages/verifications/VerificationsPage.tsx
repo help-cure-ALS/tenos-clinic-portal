@@ -8,6 +8,7 @@ import {
   Center,
   ThemeIcon,
   Loader,
+  Group,
 } from '@mantine/core';
 import { modals } from '@mantine/modals';
 import { Check, ShieldCheck, X } from 'lucide-react';
@@ -26,11 +27,15 @@ import {
   useVerifications,
   useApproveVerification,
   useRejectVerification,
+  useProjectApplications,
+  useApproveProjectApplication,
+  useRejectProjectApplication,
 } from '../../hooks/useVerifications';
-import type { PendingRequest } from '../../lib/api';
 
 // Wave UI.12 (2026-05-20) — VerificationsPage on Workbench.
 // Pattern identical to TokensPage/UsersPage/ClinicStudiesPage.
+// Extended 2026-07: research project applications share the pending list
+// (same code-confirm flow as the diagnosis verification).
 
 const ALS_DIAGNOSIS_CODES = [
   {
@@ -56,32 +61,75 @@ const ALS_DIAGNOSIS_CODES = [
   },
 ];
 
+type PendingRow = {
+  id: string;
+  kind: 'diagnosis' | 'project';
+  code: string;
+  created_at: string;
+  expires_at: string;
+  projectTitle?: string;
+  shareHistory?: boolean;
+};
+
 export function VerificationsPage() {
   const { t } = useTranslation();
-  const { data: requests = [], isLoading } = useVerifications();
+  const { data: requests = [], isLoading: verificationsLoading } = useVerifications();
+  const { data: applications = [], isLoading: applicationsLoading } = useProjectApplications();
   const approveVerification = useApproveVerification();
   const rejectVerification = useRejectVerification();
+  const approveApplication = useApproveProjectApplication();
+  const rejectApplication = useRejectProjectApplication();
   const [selectedDiagnosis, setSelectedDiagnosis] = useState(
     ALS_DIAGNOSIS_CODES[0].value
+  );
+
+  const isLoading = verificationsLoading || applicationsLoading;
+
+  const rows = useMemo<PendingRow[]>(
+    () => [
+      ...requests.map((r) => ({
+        id: `diagnosis:${r.id}`,
+        kind: 'diagnosis' as const,
+        code: r.code,
+        created_at: r.created_at,
+        expires_at: r.expires_at,
+      })),
+      ...applications.map((a) => ({
+        id: `project:${a.id}`,
+        kind: 'project' as const,
+        code: a.code,
+        created_at: a.created_at,
+        expires_at: a.expires_at,
+        projectTitle: a.project_title,
+        shareHistory: a.share_history,
+      })),
+    ],
+    [requests, applications]
   );
 
   // ─── Search + Sort + Selection ─────────────────────────
   const [query, setQuery] = useState('');
 
-  const filteredRequests = useMemo(() => {
+  const filteredRows = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return requests;
-    return requests.filter((r) => r.code.toLowerCase().includes(q));
-  }, [requests, query]);
+    if (!q) return rows;
+    return rows.filter(
+      (r) =>
+        r.code.toLowerCase().includes(q) ||
+        (r.projectTitle ?? '').toLowerCase().includes(q)
+    );
+  }, [rows, query]);
 
-  const sort = useGridSort<PendingRequest>({
+  const sort = useGridSort<PendingRow>({
     mode: 'client',
-    rows: filteredRequests,
+    rows: filteredRows,
     initial: { sortBy: 'created_at', sortDir: 'desc' },
     getValue: (row, columnId) => {
       switch (columnId) {
         case 'code':
           return row.code;
+        case 'type':
+          return row.kind;
         case 'created_at':
           return row.created_at ? new Date(row.created_at) : null;
         case 'expires_at':
@@ -103,19 +151,28 @@ export function VerificationsPage() {
     return () => window.removeEventListener('keydown', onKey);
   }, [selection]);
 
-  const selectedRequests = useMemo(
-    () => requests.filter((r) => selection.value.has(r.id)),
-    [requests, selection.value]
+  const selectedRows = useMemo(
+    () => rows.filter((r) => selection.value.has(r.id)),
+    [rows, selection.value]
+  );
+
+  const selectedDiagnosisRows = useMemo(
+    () => selectedRows.filter((r) => r.kind === 'diagnosis'),
+    [selectedRows]
+  );
+  const selectedProjectRows = useMemo(
+    () => selectedRows.filter((r) => r.kind === 'project'),
+    [selectedRows]
   );
 
   // ─── Columns ──────────────────────────────────────────
-  const columns: Column<PendingRequest>[] = useMemo(
+  const columns: Column<PendingRow>[] = useMemo(
     () => [
       {
         id: 'code',
         header: t('verifications.code'),
         sortable: true,
-        minWidth: 160,
+        minWidth: 140,
         cell: (r) => (
           <Text ff="monospace" fw={600} c="hca-purple">
             {r.code}
@@ -123,10 +180,25 @@ export function VerificationsPage() {
         ),
       },
       {
-        id: 'request_id',
-        header: t('verifications.requestId'),
-        width: 180,
-        cell: (r) => <Text fz="sm">{r.id}</Text>,
+        id: 'type',
+        header: t('verifications.type'),
+        sortable: true,
+        minWidth: 220,
+        cell: (r) =>
+          r.kind === 'diagnosis' ? (
+            <Badge variant="light" color="orange">
+              {t('verifications.typeDiagnosis')}
+            </Badge>
+          ) : (
+            <Group gap="xs" wrap="nowrap">
+              <Badge variant="light" color="hca-purple">
+                {t('verifications.typeProject')}
+              </Badge>
+              <Text fz="sm" truncate title={r.projectTitle}>
+                {r.projectTitle}
+              </Text>
+            </Group>
+          ),
       },
       {
         id: 'created_at',
@@ -178,20 +250,35 @@ export function VerificationsPage() {
 
   // ─── Handlers ────────────────────────────────────────
   const openApproveModal = () => {
-    const codes = selectedRequests.map((r) => r.code).join(', ');
+    const diagnosisCodes = selectedDiagnosisRows.map((r) => r.code).join(', ');
+    const projectSummaries = selectedProjectRows
+      .map((r) => `${r.code} (${r.projectTitle})`)
+      .join(', ');
+
     modals.openConfirmModal({
       title: t('verifications.approve'),
       children: (
         <Stack gap="sm">
-          <Text size="sm">
-            {t('verifications.approveConfirm', { code: codes })}
-          </Text>
-          <Select
-            label={t('verifications.diagnosisCode')}
-            data={ALS_DIAGNOSIS_CODES}
-            value={selectedDiagnosis}
-            onChange={(v) => v && setSelectedDiagnosis(v)}
-          />
+          {selectedDiagnosisRows.length > 0 && (
+            <>
+              <Text size="sm">
+                {t('verifications.approveConfirm', { code: diagnosisCodes })}
+              </Text>
+              <Select
+                label={t('verifications.diagnosisCode')}
+                data={ALS_DIAGNOSIS_CODES}
+                value={selectedDiagnosis}
+                onChange={(v) => v && setSelectedDiagnosis(v)}
+              />
+            </>
+          )}
+          {selectedProjectRows.length > 0 && (
+            <Text size="sm">
+              {t('verifications.approveProjectConfirm', {
+                code: projectSummaries,
+              })}
+            </Text>
+          )}
         </Stack>
       ),
       labels: {
@@ -200,26 +287,29 @@ export function VerificationsPage() {
       },
       confirmProps: { color: 'green' },
       onConfirm: () => {
-        const diag = ALS_DIAGNOSIS_CODES.find(
-          (d) => d.value === selectedDiagnosis
-        )!;
-        selectedRequests.forEach((r) =>
-          approveVerification.mutate({
-            code: r.code,
-            diagnosis: {
-              system: diag.system,
-              code: diag.code,
-              display: diag.display,
-            },
-          })
-        );
+        if (selectedDiagnosisRows.length > 0) {
+          const diag = ALS_DIAGNOSIS_CODES.find(
+            (d) => d.value === selectedDiagnosis
+          )!;
+          selectedDiagnosisRows.forEach((r) =>
+            approveVerification.mutate({
+              code: r.code,
+              diagnosis: {
+                system: diag.system,
+                code: diag.code,
+                display: diag.display,
+              },
+            })
+          );
+        }
+        selectedProjectRows.forEach((r) => approveApplication.mutate(r.code));
         selection.clear();
       },
     });
   };
 
   const openRejectModal = () => {
-    const codes = selectedRequests.map((r) => r.code).join(', ');
+    const codes = selectedRows.map((r) => r.code).join(', ');
     modals.openConfirmModal({
       title: t('verifications.reject'),
       children: (
@@ -233,7 +323,8 @@ export function VerificationsPage() {
       },
       confirmProps: { color: 'red' },
       onConfirm: () => {
-        selectedRequests.forEach((r) => rejectVerification.mutate(r.code));
+        selectedDiagnosisRows.forEach((r) => rejectVerification.mutate(r.code));
+        selectedProjectRows.forEach((r) => rejectApplication.mutate(r.code));
         selection.clear();
       },
     });
@@ -255,7 +346,7 @@ export function VerificationsPage() {
         subtitle={t('verifications.subtitle')}
       />
 
-      {requests.length === 0 ? (
+      {rows.length === 0 ? (
         <Center style={{ flex: 1, minHeight: 0 }}>
           <Stack align="center" gap="sm" maw={360}>
             <ThemeIcon variant="light" size="xl" color="gray" radius="xl">
@@ -280,7 +371,7 @@ export function VerificationsPage() {
           />
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
-            <DataGrid<PendingRequest>
+            <DataGrid<PendingRow>
               columns={columns}
               data={sort.sortedData}
               getRowId={(row) => row.id}

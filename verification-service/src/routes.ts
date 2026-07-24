@@ -42,6 +42,8 @@ import {
     deleteClinicUser,
     updatePractitionerName,
     createClinicUser,
+    listClinicPortalClinics,
+    listClinicPortalStudies,
 } from "./medplum";
 
 // ---------------------------------------------------------------------------
@@ -81,6 +83,26 @@ const RequestVerificationAppSchema = RequestVerificationSchema.pick({ clinic_id:
 const AppIssueSchema = RequestVerificationSchema.pick({ device_id: true }).extend({
     challenge_id: z.string().uuid(),
     signature_b64: z.string().min(8),
+});
+
+const ListStudiesQuerySchema = z.object({
+    q: z.string().trim().max(200).optional().default(""),
+    limit: z.coerce.number().int().min(1).max(100).optional().default(50),
+});
+
+const ListClinicsQuerySchema = z.object({
+    q: z.string().trim().max(200).optional().default(""),
+    limit: z.coerce.number().int().min(1).max(100).optional().default(50),
+    activeOnly: z.enum(["true", "false"]).optional().default("true"),
+});
+
+const CreateProjectApplicationSchema = z.object({
+    research_project_id: z.string().uuid(),
+    project_title: z.string().trim().min(1).max(255),
+    clinic_id: z.string().trim().min(1).max(255),
+    verification_token_id: z.string().uuid(),
+    anonymous_research_id: z.string().uuid(),
+    share_history: z.boolean().default(false),
 });
 
 // ---------------------------------------------------------------------------
@@ -220,6 +242,27 @@ async function expireOldRequestsUsing(queryable: Queryable, log: FastifyRequest[
     } catch (err) {
         log.error({ err }, "Failed to expire old verification requests");
     }
+}
+
+/** Mark expired pending project applications. */
+async function expireOldProjectApplications(log: FastifyRequest["log"]): Promise<void> {
+    await expireOldProjectApplicationsUsing(pool, log);
+}
+
+async function expireOldProjectApplicationsUsing(queryable: Queryable, log: FastifyRequest["log"]): Promise<void> {
+    try {
+        await queryable.query(
+            `UPDATE project_applications SET status = 'expired'
+             WHERE status = 'pending' AND expires_at < now()`,
+        );
+    } catch (err) {
+        log.error({ err }, "Failed to expire old project applications");
+    }
+}
+
+function isPendingProjectApplicationConstraintViolation(err: unknown): boolean {
+    const e = err as { code?: string; constraint?: string } | undefined;
+    return e?.code === "23505" && e?.constraint === "uq_pa_pending_clinic_code";
 }
 
 /**
@@ -1231,6 +1274,457 @@ export async function routes(app: FastifyInstance) {
                 req.log.error({ err }, "Failed to check token status");
                 return reply.code(500).send({ error: "check_failed" });
             }
+        },
+    );
+
+    /**
+     * GET /research/studies — List Clinic Portal studies for Research project links.
+     * Called by the research server with the existing service-token bridge.
+     */
+    app.get("/research/studies", async (req: FastifyRequest, reply: FastifyReply) => {
+        if (!requireServiceToken(req, reply)) return;
+
+        const parsed = ListStudiesQuerySchema.safeParse(req.query);
+        if (!parsed.success) {
+            return reply.code(400).send({ error: "invalid_query", details: parsed.error.flatten() });
+        }
+
+        try {
+            const studies = await listClinicPortalStudies(parsed.data.q, parsed.data.limit);
+            return { studies };
+        } catch (err) {
+            req.log.error({ err }, "Failed to list clinic portal studies");
+            return reply.code(500).send({ error: "list_studies_failed" });
+        }
+    });
+
+    /**
+     * GET /research/clinics — List Clinic Portal clinics for Research project grants.
+     * Called by the research server with the existing service-token bridge.
+     */
+    app.get("/research/clinics", async (req: FastifyRequest, reply: FastifyReply) => {
+        if (!requireServiceToken(req, reply)) return;
+
+        const parsed = ListClinicsQuerySchema.safeParse(req.query);
+        if (!parsed.success) {
+            return reply.code(400).send({ error: "invalid_query", details: parsed.error.flatten() });
+        }
+
+        try {
+            const clinics = await listClinicPortalClinics(
+                parsed.data.q,
+                parsed.data.limit,
+                parsed.data.activeOnly !== "false",
+            );
+            return { clinics };
+        } catch (err) {
+            req.log.error({ err }, "Failed to list clinic portal clinics");
+            return reply.code(500).send({ error: "list_clinics_failed" });
+        }
+    });
+
+    // =======================================================================
+    // Research project applications & grants
+    //
+    // A patient applies for a closed research data collection project in the
+    // app. The research server creates an application here (service token).
+    // The clinician confirms the 6-digit code in the Clinic Portal — same
+    // pattern as the diagnosis verification. Confirmation creates a project
+    // grant. The research server checks grant status on every donation.
+    // =======================================================================
+
+    /**
+     * POST /research/project-applications — Create a project application.
+     * Called by the research server (X-Service-Token). Returns the 6-digit code.
+     */
+    app.post(
+        "/research/project-applications",
+        { config: { rateLimit: { max: 60, timeWindow: "1 minute" } } },
+        async (req: FastifyRequest, reply: FastifyReply) => {
+            if (!requireServiceToken(req, reply)) return;
+
+            const parsed = CreateProjectApplicationSchema.safeParse(req.body);
+            if (!parsed.success) {
+                return reply.code(400).send({ error: "invalid_request", details: parsed.error.flatten() });
+            }
+
+            const data = parsed.data;
+
+            // The verification token must be valid and belong to the given clinic.
+            let tokenStatus;
+            try {
+                tokenStatus = await getVerificationTokenStatus(data.verification_token_id);
+            } catch (err) {
+                req.log.error({ err }, "Failed to check verification token for project application");
+                return reply.code(502).send({ error: "token_check_failed" });
+            }
+            if (!tokenStatus || tokenStatus.status !== "valid") {
+                return reply.code(403).send({ error: "invalid_verification_token" });
+            }
+            if (tokenStatus.clinicId !== data.clinic_id) {
+                return reply.code(403).send({ error: "token_clinic_mismatch" });
+            }
+
+            // An active grant means the patient already participates.
+            const existingGrant = await pool.query(
+                `SELECT id, status
+                 FROM project_grants
+                 WHERE research_project_id = $1
+                   AND verification_token_id = $2
+                 LIMIT 1`,
+                [data.research_project_id, data.verification_token_id],
+            );
+            if (existingGrant.rows[0]?.status === "active") {
+                return reply.code(409).send({ error: "already_granted" });
+            }
+
+            await expireOldProjectApplications(req.log);
+
+            const expiresAt = new Date(Date.now() + CODE_TTL_SECONDS * 1000).toISOString();
+
+            for (let attempt = 0; attempt < MAX_CODE_GENERATION_ATTEMPTS; attempt++) {
+                const code = generateCode();
+                try {
+                    const result = await pool.query(
+                        `INSERT INTO project_applications (
+                             code, clinic_id, research_project_id, project_title,
+                             verification_token_id, anonymous_research_id, share_history, expires_at
+                         )
+                         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+                         RETURNING id`,
+                        [
+                            code,
+                            data.clinic_id,
+                            data.research_project_id,
+                            data.project_title,
+                            data.verification_token_id,
+                            data.anonymous_research_id,
+                            data.share_history,
+                            expiresAt,
+                        ],
+                    );
+                    return { application_id: result.rows[0].id, code, expires_at: expiresAt };
+                } catch (err) {
+                    if (!isPendingProjectApplicationConstraintViolation(err)) {
+                        throw err;
+                    }
+                }
+            }
+
+            req.log.warn({ clinic_id: data.clinic_id }, "Could not generate unique project application code");
+            return reply.code(503).send({ error: "code_generation_failed" });
+        },
+    );
+
+    /**
+     * GET /research/project-applications/:id/status — Poll application status.
+     * Called by the research server (X-Service-Token) on behalf of the app.
+     */
+    app.get(
+        "/research/project-applications/:id/status",
+        async (req: FastifyRequest<{ Params: { id: string } }>, reply: FastifyReply) => {
+            if (!requireServiceToken(req, reply)) return;
+
+            if (!UUID_RE.test(req.params.id)) {
+                return reply.code(404).send({ error: "not_found" });
+            }
+
+            await expireOldProjectApplications(req.log);
+
+            const result = await pool.query(
+                `SELECT status, grant_id, research_project_id
+                 FROM project_applications
+                 WHERE id = $1`,
+                [req.params.id],
+            );
+
+            if ((result.rowCount ?? 0) === 0) {
+                return reply.code(404).send({ error: "not_found" });
+            }
+
+            const row = result.rows[0];
+            const response: Record<string, unknown> = {
+                status: row.status,
+                research_project_id: row.research_project_id,
+            };
+            if (row.status === "confirmed") {
+                response.grant_id = row.grant_id;
+            }
+            return response;
+        },
+    );
+
+    /**
+     * GET /research/project-grants/:projectId/:tokenId/status — Grant check.
+     * Called by the research server on every project-scoped donation.
+     */
+    app.get(
+        "/research/project-grants/:projectId/:tokenId/status",
+        async (
+            req: FastifyRequest<{ Params: { projectId: string; tokenId: string } }>,
+            reply: FastifyReply,
+        ) => {
+            if (!requireServiceToken(req, reply)) return;
+
+            if (!UUID_RE.test(req.params.projectId)) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+
+            const result = await pool.query(
+                `SELECT status, share_history, anonymous_research_id
+                 FROM project_grants
+                 WHERE research_project_id = $1
+                   AND verification_token_id = $2
+                 LIMIT 1`,
+                [req.params.projectId, req.params.tokenId],
+            );
+
+            if ((result.rowCount ?? 0) === 0) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+
+            const row = result.rows[0];
+            return {
+                status: row.status,
+                share_history: row.share_history,
+                anonymous_research_id: row.anonymous_research_id,
+            };
+        },
+    );
+
+    /**
+     * GET /project-applications/pending — List pending project applications.
+     * Clinician endpoint, scoped to the clinician's clinic.
+     */
+    app.get("/project-applications/pending", async (req: FastifyRequest, reply: FastifyReply) => {
+        const identity = await requireClinician(req, reply);
+        if (!identity) return;
+        if (!ensureClinicianScopedAccess(identity, reply)) return;
+        if (!ensureCanVerify(identity, reply)) return;
+
+        await expireOldProjectApplications(req.log);
+
+        const scope = clinicScope(identity);
+        const result = await pool.query(
+            `SELECT id, code, clinic_id, research_project_id, project_title,
+                    share_history, created_at, expires_at
+             FROM project_applications
+             WHERE status = 'pending' AND expires_at > now() ${scope.clause}
+             ORDER BY created_at DESC`,
+            scope.params,
+        );
+
+        return { applications: result.rows };
+    });
+
+    /**
+     * POST /project-applications/:code/confirm — Confirm a project application.
+     * Creates a project grant and marks the application as confirmed.
+     */
+    app.post(
+        "/project-applications/:code/confirm",
+        { config: { rateLimit: { max: 40, timeWindow: "1 minute" } } },
+        async (req: FastifyRequest<{ Params: { code: string } }>, reply: FastifyReply) => {
+            const identity = await requireClinician(req, reply);
+            if (!identity) return;
+            if (!ensureClinicianScopedAccess(identity, reply)) return;
+            if (!ensureCanVerify(identity, reply)) return;
+
+            const { code } = req.params;
+            const client = await pool.connect();
+            try {
+                await client.query("begin");
+                await expireOldProjectApplicationsUsing(client, req.log);
+
+                const scope = clinicScope(identity);
+                const findResult = await client.query(
+                    `SELECT id, clinic_id, research_project_id, project_title,
+                            verification_token_id, anonymous_research_id, share_history
+                     FROM project_applications
+                     WHERE code = $${scope.params.length + 1}
+                       AND status = 'pending'
+                       AND expires_at > now()
+                       ${scope.clause}
+                     ORDER BY created_at DESC
+                     FOR UPDATE`,
+                    [...scope.params, code],
+                );
+
+                if ((findResult.rowCount ?? 0) === 0) {
+                    await client.query("rollback");
+                    return reply.code(404).send({ error: "code_not_found" });
+                }
+                if ((findResult.rowCount ?? 0) > 1) {
+                    await client.query("rollback");
+                    req.log.warn({ code, matches: findResult.rowCount }, "Ambiguous project application code");
+                    return reply.code(409).send({ error: "ambiguous_code" });
+                }
+
+                const application = findResult.rows[0];
+
+                // Upsert the grant: reactivate if a revoked grant exists.
+                const grantResult = await client.query(
+                    `INSERT INTO project_grants (
+                         research_project_id, verification_token_id, anonymous_research_id,
+                         clinic_id, share_history, status, granted_by, granted_at, updated_at
+                     )
+                     VALUES ($1, $2, $3, $4, $5, 'active', $6, now(), now())
+                     ON CONFLICT (research_project_id, verification_token_id) DO UPDATE
+                     SET status = 'active',
+                         share_history = EXCLUDED.share_history,
+                         granted_by = EXCLUDED.granted_by,
+                         granted_at = now(),
+                         revoked_at = NULL,
+                         updated_at = now()
+                     RETURNING id`,
+                    [
+                        application.research_project_id,
+                        application.verification_token_id,
+                        application.anonymous_research_id,
+                        application.clinic_id,
+                        application.share_history,
+                        identity.practitionerId,
+                    ],
+                );
+
+                await client.query(
+                    `UPDATE project_applications
+                     SET status = 'confirmed', grant_id = $2, resolved_at = now()
+                     WHERE id = $1`,
+                    [application.id, grantResult.rows[0].id],
+                );
+
+                await client.query("commit");
+                return { ok: true, grant_id: grantResult.rows[0].id };
+            } catch (err) {
+                await client.query("rollback").catch(() => { });
+                req.log.error({ err, code }, "project-applications/confirm failed");
+                return reply.code(500).send({ error: "confirm_failed" });
+            } finally {
+                client.release();
+            }
+        },
+    );
+
+    /**
+     * POST /project-applications/:code/reject — Reject a project application.
+     */
+    app.post(
+        "/project-applications/:code/reject",
+        { config: { rateLimit: { max: 40, timeWindow: "1 minute" } } },
+        async (req: FastifyRequest<{ Params: { code: string } }>, reply: FastifyReply) => {
+            const identity = await requireClinician(req, reply);
+            if (!identity) return;
+            if (!ensureClinicianScopedAccess(identity, reply)) return;
+            if (!ensureCanVerify(identity, reply)) return;
+
+            const { code } = req.params;
+            const client = await pool.connect();
+            try {
+                await client.query("begin");
+                await expireOldProjectApplicationsUsing(client, req.log);
+
+                const scope = clinicScope(identity);
+                const findResult = await client.query(
+                    `SELECT id
+                     FROM project_applications
+                     WHERE code = $${scope.params.length + 1}
+                       AND status = 'pending'
+                       AND expires_at > now()
+                       ${scope.clause}
+                     ORDER BY created_at DESC
+                     FOR UPDATE`,
+                    [...scope.params, code],
+                );
+
+                if ((findResult.rowCount ?? 0) === 0) {
+                    await client.query("rollback");
+                    return reply.code(404).send({ error: "code_not_found" });
+                }
+                if ((findResult.rowCount ?? 0) > 1) {
+                    await client.query("rollback");
+                    return reply.code(409).send({ error: "ambiguous_code" });
+                }
+
+                await client.query(
+                    `UPDATE project_applications
+                     SET status = 'rejected', resolved_at = now()
+                     WHERE id = $1`,
+                    [findResult.rows[0].id],
+                );
+                await client.query("commit");
+                return { ok: true };
+            } catch (err) {
+                await client.query("rollback").catch(() => { });
+                req.log.error({ err, code }, "project-applications/reject failed");
+                return reply.code(500).send({ error: "reject_failed" });
+            } finally {
+                client.release();
+            }
+        },
+    );
+
+    /**
+     * GET /project-grants — List project grants for the clinician's clinic.
+     */
+    app.get("/project-grants", async (req: FastifyRequest, reply: FastifyReply) => {
+        const identity = await requireClinician(req, reply);
+        if (!identity) return;
+        if (!ensureClinicianScopedAccess(identity, reply)) return;
+
+        const scope = clinicScope(identity);
+        const result = await pool.query(
+            `SELECT id, research_project_id, clinic_id, share_history,
+                    status, granted_at, revoked_at
+             FROM project_grants
+             WHERE true ${scope.clause}
+             ORDER BY granted_at DESC
+             LIMIT 200`,
+            scope.params,
+        );
+
+        return { grants: result.rows };
+    });
+
+    /**
+     * POST /project-grants/:grantId/revoke — Revoke a project grant.
+     * Clinicians can only revoke grants of their own clinic.
+     */
+    app.post(
+        "/project-grants/:grantId/revoke",
+        async (req: FastifyRequest<{ Params: { grantId: string } }>, reply: FastifyReply) => {
+            const identity = await requireClinician(req, reply);
+            if (!identity) return;
+            if (!ensureClinicianScopedAccess(identity, reply)) return;
+
+            if (!UUID_RE.test(req.params.grantId)) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+
+            const grantResult = await pool.query(
+                `SELECT clinic_id, status
+                 FROM project_grants
+                 WHERE id = $1
+                 LIMIT 1`,
+                [req.params.grantId],
+            );
+
+            if ((grantResult.rowCount ?? 0) === 0) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+
+            if (!identity.isHcaAdmin && grantResult.rows[0].clinic_id !== identity.organizationId) {
+                return reply.code(403).send({ error: "not_your_grant" });
+            }
+
+            await pool.query(
+                `UPDATE project_grants
+                 SET status = 'revoked', revoked_at = now(), updated_at = now()
+                 WHERE id = $1`,
+                [req.params.grantId],
+            );
+
+            return { ok: true, status: "revoked" };
         },
     );
 }

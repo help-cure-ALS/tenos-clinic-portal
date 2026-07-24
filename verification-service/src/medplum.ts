@@ -14,7 +14,7 @@
  */
 
 import { MedplumClient } from "@medplum/core";
-import type { Bundle } from "@medplum/fhirtypes";
+import type { Bundle, Organization, ResearchStudy } from "@medplum/fhirtypes";
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -247,6 +247,173 @@ export async function getOrganizationName(organizationId: string): Promise<strin
         console.error(`[medplum] Failed to read Organization name for ${organizationId}:`, err);
         return "Unknown Clinic";
     }
+}
+
+export interface ClinicPortalStudyOption {
+    id: string;
+    title: string;
+    registrySystem: string | null;
+    registryId: string | null;
+    sponsor: string | null;
+    externalUrl: string | null;
+}
+
+export interface ClinicPortalClinicOption {
+    id: string;
+    name: string;
+    address: string | null;
+    city: string | null;
+    country: string | null;
+    phone: string | null;
+    email: string | null;
+    verificationEnabled: boolean;
+}
+
+export async function listClinicPortalStudies(query: string, limit: number): Promise<ClinicPortalStudyOption[]> {
+    const client = await getServiceClient();
+    const normalizedQuery = query.trim().toLowerCase();
+    const results: ClinicPortalStudyOption[] = [];
+    const pageSize = 500;
+
+    for (let offset = 0; offset < 20000 && results.length < limit; offset += pageSize) {
+        const bundle: Bundle = await client.search("ResearchStudy", {
+            _sort: "-date",
+            _count: String(pageSize),
+            _offset: String(offset),
+        });
+        const studies = (bundle.entry ?? [])
+            .map((entry) => entry.resource)
+            .filter((resource): resource is ResearchStudy => resource?.resourceType === "ResearchStudy");
+
+        for (const study of studies) {
+            const option = studyToOption(study);
+            if (!option) continue;
+            if (normalizedQuery && !studyMatches(option, normalizedQuery)) continue;
+            results.push(option);
+            if (results.length >= limit) break;
+        }
+
+        if (studies.length < pageSize) break;
+    }
+
+    return results;
+}
+
+export async function listClinicPortalClinics(
+    query: string,
+    limit: number,
+    activeOnly: boolean,
+): Promise<ClinicPortalClinicOption[]> {
+    const client = await getServiceClient();
+    const normalizedQuery = query.trim().toLowerCase();
+    const results: ClinicPortalClinicOption[] = [];
+    const pageSize = 500;
+
+    for (let offset = 0; offset < 20000 && results.length < limit; offset += pageSize) {
+        const params: Record<string, string> = {
+            _sort: "name",
+            _count: String(pageSize),
+            _offset: String(offset),
+        };
+        if (activeOnly) {
+            params._tag = `${VERIFICATION_TAG.system}|${VERIFICATION_TAG.code}`;
+        }
+
+        const bundle: Bundle = await client.search("Organization", params);
+        const clinics = (bundle.entry ?? [])
+            .map((entry) => entry.resource)
+            .filter((resource): resource is Organization => resource?.resourceType === "Organization");
+
+        for (const clinic of clinics) {
+            const option = clinicToOption(clinic);
+            if (!option) continue;
+            if (normalizedQuery && !clinicMatches(option, normalizedQuery)) continue;
+            results.push(option);
+            if (results.length >= limit) break;
+        }
+
+        if (clinics.length < pageSize) break;
+    }
+
+    return results;
+}
+
+function studyToOption(study: ResearchStudy): ClinicPortalStudyOption | null {
+    if (!study.id || !study.title) return null;
+
+    const preferredIdentifier =
+        study.identifier?.find((id) => id.system === "https://clinicaltrials.gov" && id.value)
+        ?? study.identifier?.find((id) => id.system === "https://euclinicaltrials.eu" && id.value)
+        ?? study.identifier?.find((id) => id.value);
+
+    const sponsorRef = typeof study.sponsor?.reference === "string" ? study.sponsor.reference : "";
+    const sponsorOrg = sponsorRef.startsWith("#")
+        ? study.contained?.find(
+            (resource): resource is { resourceType: "Organization"; id?: string; name?: string } =>
+                resource.resourceType === "Organization" && resource.id === sponsorRef.slice(1),
+        )
+        : undefined;
+
+    const relatedArtifact = study.relatedArtifact?.find(
+        (artifact) => String(artifact.type) === "url" && typeof artifact.url === "string",
+    );
+
+    return {
+        id: study.id,
+        title: study.title,
+        registrySystem: preferredIdentifier?.system ?? null,
+        registryId: preferredIdentifier?.value ?? null,
+        sponsor: sponsorOrg?.name ?? null,
+        externalUrl: relatedArtifact?.url ?? null,
+    };
+}
+
+function studyMatches(study: ClinicPortalStudyOption, query: string): boolean {
+    return [
+        study.title,
+        study.registryId,
+        study.registrySystem,
+        study.sponsor,
+    ].some((value) => value?.toLowerCase().includes(query));
+}
+
+function clinicToOption(clinic: Organization): ClinicPortalClinicOption | null {
+    if (!clinic.id || !clinic.name) return null;
+
+    const address = clinic.address?.[0];
+    const addressParts = [
+        address?.line?.join(", "),
+        address?.postalCode,
+        address?.city,
+    ].filter(Boolean);
+    const phone = clinic.telecom?.find((telecom) => telecom.system === "phone")?.value ?? null;
+    const email = clinic.telecom?.find((telecom) => telecom.system === "email")?.value ?? null;
+    const verificationEnabled = !!clinic.meta?.tag?.some(
+        (tag) => tag.system === VERIFICATION_TAG.system && tag.code === VERIFICATION_TAG.code,
+    );
+
+    return {
+        id: clinic.id,
+        name: clinic.name,
+        address: addressParts.length > 0 ? addressParts.join(", ") : null,
+        city: address?.city ?? null,
+        country: address?.country ?? null,
+        phone,
+        email,
+        verificationEnabled,
+    };
+}
+
+function clinicMatches(clinic: ClinicPortalClinicOption, query: string): boolean {
+    return [
+        clinic.id,
+        clinic.name,
+        clinic.address,
+        clinic.city,
+        clinic.country,
+        clinic.phone,
+        clinic.email,
+    ].some((value) => value?.toLowerCase().includes(query));
 }
 
 // ---------------------------------------------------------------------------
