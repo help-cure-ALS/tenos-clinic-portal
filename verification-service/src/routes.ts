@@ -1350,7 +1350,9 @@ export async function routes(app: FastifyInstance) {
 
             const data = parsed.data;
 
-            // The verification token must be valid and belong to the given clinic.
+            // The verification token must be valid. It may come from a different
+            // clinic than the one chosen for the application: the token proves
+            // the diagnosis, the chosen clinic confirms participation in person.
             let tokenStatus;
             try {
                 tokenStatus = await getVerificationTokenStatus(data.verification_token_id);
@@ -1360,9 +1362,6 @@ export async function routes(app: FastifyInstance) {
             }
             if (!tokenStatus || tokenStatus.status !== "valid") {
                 return reply.code(403).send({ error: "invalid_verification_token" });
-            }
-            if (tokenStatus.clinicId !== data.clinic_id) {
-                return reply.code(403).send({ error: "token_clinic_mismatch" });
             }
 
             // An active grant means the patient already participates.
