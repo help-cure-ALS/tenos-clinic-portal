@@ -103,6 +103,9 @@ const CreateProjectApplicationSchema = z.object({
     verification_token_id: z.string().uuid(),
     anonymous_research_id: z.string().uuid(),
     share_history: z.boolean().default(false),
+    /** Privacy policy consent proof (content version + display language) */
+    accepted_policy_version: z.number().int().min(0).optional(),
+    accepted_locale: z.string().trim().min(2).max(10).optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -1387,9 +1390,10 @@ export async function routes(app: FastifyInstance) {
                     const result = await pool.query(
                         `INSERT INTO project_applications (
                              code, clinic_id, research_project_id, project_title,
-                             verification_token_id, anonymous_research_id, share_history, expires_at
+                             verification_token_id, anonymous_research_id, share_history,
+                             accepted_policy_version, accepted_locale, expires_at
                          )
-                         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+                         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
                          RETURNING id`,
                         [
                             code,
@@ -1399,6 +1403,8 @@ export async function routes(app: FastifyInstance) {
                             data.verification_token_id,
                             data.anonymous_research_id,
                             data.share_history,
+                            data.accepted_policy_version ?? null,
+                            data.accepted_locale ?? null,
                             expiresAt,
                         ],
                     );
@@ -1538,7 +1544,8 @@ export async function routes(app: FastifyInstance) {
                 const scope = clinicScope(identity);
                 const findResult = await client.query(
                     `SELECT id, clinic_id, research_project_id, project_title,
-                            verification_token_id, anonymous_research_id, share_history
+                            verification_token_id, anonymous_research_id, share_history,
+                            accepted_policy_version, accepted_locale
                      FROM project_applications
                      WHERE code = $${scope.params.length + 1}
                        AND status = 'pending'
@@ -1565,12 +1572,15 @@ export async function routes(app: FastifyInstance) {
                 const grantResult = await client.query(
                     `INSERT INTO project_grants (
                          research_project_id, verification_token_id, anonymous_research_id,
-                         clinic_id, share_history, status, granted_by, granted_at, updated_at
+                         clinic_id, share_history, accepted_policy_version, accepted_locale,
+                         status, granted_by, granted_at, updated_at
                      )
-                     VALUES ($1, $2, $3, $4, $5, 'active', $6, now(), now())
+                     VALUES ($1, $2, $3, $4, $5, $6, $7, 'active', $8, now(), now())
                      ON CONFLICT (research_project_id, verification_token_id) DO UPDATE
                      SET status = 'active',
                          share_history = EXCLUDED.share_history,
+                         accepted_policy_version = EXCLUDED.accepted_policy_version,
+                         accepted_locale = EXCLUDED.accepted_locale,
                          granted_by = EXCLUDED.granted_by,
                          granted_at = now(),
                          revoked_at = NULL,
@@ -1582,6 +1592,8 @@ export async function routes(app: FastifyInstance) {
                         application.anonymous_research_id,
                         application.clinic_id,
                         application.share_history,
+                        application.accepted_policy_version ?? null,
+                        application.accepted_locale ?? null,
                         identity.practitionerId,
                     ],
                 );
