@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hca/mantine-workbench": "github:help-cure-ALS/hca-mantine-workbench#v0.1.3",
+    "@hca/mantine-workbench": "github:help-cure-ALS/hca-mantine-workbench#v0.1.4",
     "@mantine/core": "^9.1.0",
     "@mantine/form": "^9.1.0",
     "@mantine/hooks": "^9.1.0",
