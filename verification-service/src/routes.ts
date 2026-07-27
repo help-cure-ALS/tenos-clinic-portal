@@ -1686,7 +1686,7 @@ export async function routes(app: FastifyInstance) {
         const scope = clinicScope(identity);
         const result = await pool.query(
             `SELECT id, research_project_id, clinic_id, share_history,
-                    status, granted_at, revoked_at
+                    status, granted_at, revoked_at, revoked_reason
              FROM project_grants
              WHERE true ${scope.clause}
              ORDER BY granted_at DESC
@@ -1730,12 +1730,109 @@ export async function routes(app: FastifyInstance) {
 
             await pool.query(
                 `UPDATE project_grants
-                 SET status = 'revoked', revoked_at = now(), updated_at = now()
+                 SET status = 'revoked', revoked_at = now(),
+                     revoked_reason = 'clinician', updated_at = now()
                  WHERE id = $1`,
                 [req.params.grantId],
             );
 
             return { ok: true, status: "revoked" };
+        },
+    );
+
+    /**
+     * POST /research/project-grants/:grantId/withdraw — Patient withdraws
+     * from a project (consent withdrawal). Called by the research server on
+     * behalf of the app; legitimized by the anonymous research id, which
+     * only the patient's device can produce.
+     */
+    app.post<{ Params: { grantId: string }; Body: { anonymous_research_id?: string } }>(
+        "/research/project-grants/:grantId/withdraw",
+        { config: { rateLimit: { max: 40, timeWindow: "1 minute" } } },
+        async (req, reply) => {
+            if (!requireServiceToken(req, reply)) return;
+
+            if (!UUID_RE.test(req.params.grantId)) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+            const anonymousResearchId = req.body?.anonymous_research_id;
+            if (!anonymousResearchId || !UUID_RE.test(anonymousResearchId)) {
+                return reply.code(400).send({ error: "invalid_request" });
+            }
+
+            const grantResult = await pool.query(
+                `SELECT anonymous_research_id, status
+                 FROM project_grants
+                 WHERE id = $1
+                 LIMIT 1`,
+                [req.params.grantId],
+            );
+
+            if ((grantResult.rowCount ?? 0) === 0) {
+                return reply.code(404).send({ error: "grant_not_found" });
+            }
+            if (grantResult.rows[0].anonymous_research_id !== anonymousResearchId) {
+                return reply.code(403).send({ error: "not_your_grant" });
+            }
+
+            // Idempotent: withdrawing an already revoked grant is fine.
+            if (grantResult.rows[0].status !== "revoked") {
+                await pool.query(
+                    `UPDATE project_grants
+                     SET status = 'revoked', revoked_at = now(),
+                         revoked_reason = 'patient_withdrawal', updated_at = now()
+                     WHERE id = $1`,
+                    [req.params.grantId],
+                );
+            }
+
+            return { ok: true, status: "revoked" };
+        },
+    );
+
+    /**
+     * GET /research/project-grants/summary/:projectId — Aggregate
+     * participation numbers for a project. Called by the research server
+     * for the Research Portal. Aggregates only — no per-patient data
+     * leaves the clinic side.
+     */
+    app.get<{ Params: { projectId: string } }>(
+        "/research/project-grants/summary/:projectId",
+        async (req, reply) => {
+            if (!requireServiceToken(req, reply)) return;
+
+            if (!UUID_RE.test(req.params.projectId)) {
+                return reply.code(404).send({ error: "project_not_found" });
+            }
+
+            const [grants, applications] = await Promise.all([
+                pool.query(
+                    `SELECT status, count(*)::int AS count
+                     FROM project_grants
+                     WHERE research_project_id = $1
+                     GROUP BY status`,
+                    [req.params.projectId],
+                ),
+                pool.query(
+                    `SELECT count(*)::int AS count
+                     FROM project_applications
+                     WHERE research_project_id = $1
+                       AND status = 'pending'
+                       AND expires_at > now()`,
+                    [req.params.projectId],
+                ),
+            ]);
+
+            const byStatus: Record<string, number> = {};
+            for (const row of grants.rows) {
+                byStatus[row.status] = row.count;
+            }
+
+            return {
+                pending_applications: applications.rows[0]?.count ?? 0,
+                active: byStatus.active ?? 0,
+                revoked: byStatus.revoked ?? 0,
+            };
         },
     );
 }
