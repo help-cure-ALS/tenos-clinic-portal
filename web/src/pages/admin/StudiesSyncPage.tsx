@@ -514,6 +514,7 @@ export function StudiesSyncPage() {
                   <Table.Th>{t('studiesSync.col.ctgov')}</Table.Th>
                   <Table.Th>{t('studiesSync.col.ctis')}</Table.Th>
                   <Table.Th>{t('studiesSync.col.translated')}</Table.Th>
+                  <Table.Th>{t('studiesSync.col.extracted')}</Table.Th>
                   <Table.Th>{t('studiesSync.col.error')}</Table.Th>
                 </Table.Tr>
               </Table.Thead>
@@ -548,6 +549,14 @@ export function StudiesSyncPage() {
                         {r.translationErrors > 0 && (
                           <Text component="span" c="red" size="xs" ml={4}>
                             ({r.translationErrors} err)
+                          </Text>
+                        )}
+                      </Table.Td>
+                      <Table.Td>
+                        {r.extractedCount}
+                        {r.extractionErrors > 0 && (
+                          <Text component="span" c="red" size="xs" ml={4}>
+                            ({r.extractionErrors} err)
                           </Text>
                         )}
                       </Table.Td>

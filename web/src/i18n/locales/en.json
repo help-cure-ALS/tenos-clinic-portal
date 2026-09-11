@@ -595,7 +595,8 @@
       "ctgov": "CTgov",
       "ctis": "CTIS",
       "translated": "Translated",
-      "error": "Error"
+      "error": "Error",
+      "extracted": "Criteria"
     }
   }
 }
