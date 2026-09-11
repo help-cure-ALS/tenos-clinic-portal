@@ -340,7 +340,7 @@ export function buildEligibilityExtension(
     };
 }
 
-function upsertExtension(extensions: Extension[], next: Extension | null, url: string): Extension[] {
+export function upsertExtension(extensions: Extension[], next: Extension | null, url: string): Extension[] {
     const filtered = extensions.filter((e) => e.url !== url);
     return next ? [...filtered, next] : filtered;
 }

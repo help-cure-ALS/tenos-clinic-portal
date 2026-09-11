@@ -28,6 +28,7 @@ import {
   updateSyncConfig,
   triggerSyncRun,
   triggerTranslationBackfill,
+  triggerExtractionBackfill,
   listSyncRuns,
   resetStudies,
   type StudiesSyncConfig,
@@ -84,6 +85,7 @@ export function StudiesSyncPage() {
   const [resetting, setResetting] = useState(false);
 
   const [translationBackfilling, setTranslationBackfilling] = useState(false);
+  const [extractionBackfilling, setExtractionBackfilling] = useState(false);
   const [
     backfillPromptOpened,
     { open: openBackfillPrompt, close: closeBackfillPrompt },
@@ -134,6 +136,26 @@ export function StudiesSyncPage() {
       });
     } finally {
       setTranslationBackfilling(false);
+    }
+  };
+
+  const handleExtractionBackfill = async () => {
+    setExtractionBackfilling(true);
+    try {
+      await triggerExtractionBackfill();
+      notifications.show({
+        color: 'teal',
+        title: t('studiesSync.extractionBackfillStarted'),
+        message: t('studiesSync.extractionBackfillStartedMessage'),
+      });
+    } catch (err) {
+      notifications.show({
+        color: 'red',
+        title: t('studiesSync.extractionBackfillFailed'),
+        message: err instanceof Error ? err.message : String(err),
+      });
+    } finally {
+      setExtractionBackfilling(false);
     }
   };
 
@@ -455,6 +477,27 @@ export function StudiesSyncPage() {
               loading={translationBackfilling}
             >
               {t('studiesSync.backfillNow')}
+            </Button>
+          </Group>
+
+          <Divider />
+
+          <Group justify="space-between" align="center">
+            <div>
+              <Text fw={600} size="sm">
+                {t('studiesSync.extractionBackfill')}
+              </Text>
+              <Text size="sm" c="dimmed">
+                {t('studiesSync.extractionBackfillHint')}
+              </Text>
+            </div>
+            <Button
+              variant="light"
+              color="hca-purple"
+              onClick={handleExtractionBackfill}
+              loading={extractionBackfilling}
+            >
+              {t('studiesSync.extractionBackfillNow')}
             </Button>
           </Group>
         </Stack>

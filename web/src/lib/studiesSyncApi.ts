@@ -99,6 +99,21 @@ export async function triggerTranslationBackfill(): Promise<void> {
   }
 }
 
+/**
+ * Starts the criteria extraction backfill: re-resolves the structured
+ * eligibility criteria of all existing studies from the cache and the
+ * model — no CTgov/CTIS traffic.
+ */
+export async function triggerExtractionBackfill(): Promise<void> {
+  const res = await apiFetch('/admin/extraction-backfill', {
+    method: 'POST',
+    body: '{}',
+  });
+  if (!res.ok && res.status !== 202) {
+    throw new Error(await parseError(res, 'Failed to trigger extraction backfill'));
+  }
+}
+
 export async function triggerSyncRun(
   options: { forceFullScan?: boolean } = {},
 ): Promise<void> {

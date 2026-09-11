@@ -599,6 +599,12 @@
       "translated": "Übersetzt",
       "error": "Fehler",
       "extracted": "Kriterien"
-    }
+    },
+    "extractionBackfill": "Strukturierte Kriterien nachziehen",
+    "extractionBackfillHint": "Ermittelt die strukturierten Eignungskriterien aller vorhandenen Studien neu. Kein CTgov/CTIS-Traffic, LLM-Aufrufe nur für Kriterien, die noch nicht im Cache sind.",
+    "extractionBackfillNow": "Kriterien nachziehen",
+    "extractionBackfillStarted": "Kriterien-Backfill gestartet",
+    "extractionBackfillStartedMessage": "Läuft im Hintergrund. Fortschritt und Ergebnis stehen im Service-Log.",
+    "extractionBackfillFailed": "Kriterien-Backfill fehlgeschlagen"
   }
 }

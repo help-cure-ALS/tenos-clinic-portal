@@ -599,6 +599,12 @@
       "translated": "Translated",
       "error": "Error",
       "extracted": "Criteria"
-    }
+    },
+    "extractionBackfill": "Backfill structured criteria",
+    "extractionBackfillHint": "Re-resolves the structured eligibility criteria of all existing studies. No CTgov/CTIS traffic, LLM calls only for criteria not yet in the cache.",
+    "extractionBackfillNow": "Backfill criteria",
+    "extractionBackfillStarted": "Criteria backfill started",
+    "extractionBackfillStartedMessage": "Runs in the background. Progress and results appear in the service log.",
+    "extractionBackfillFailed": "Criteria backfill failed"
   }
 }

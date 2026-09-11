@@ -28,6 +28,7 @@ import { resetRunTimestamps } from "./config";
 import { isRunActive as isSyncRunActive } from "./runs";
 import { removeStudiesFromClinicLists, clearAllClinicStudyLists } from "./clinic-cleanup";
 import { runTranslationBackfill } from "./sync/translation-backfill";
+import { runExtractionBackfill, isExtractionBackfillRunning } from "./sync/extraction-backfill";
 import { pool } from "./db";
 import {
     buildStructuredMap,
@@ -289,6 +290,38 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
                 })
                 .catch((err) => {
                     app.log.error({ err }, "[translation-backfill] failed");
+                });
+
+            reply.code(202).send({ status: "started" });
+        },
+    );
+
+    // ── Criteria extraction backfill ───────────────────────────────
+    //
+    // Runs ONLY against Medplum, no CTgov/CTIS traffic. Re-resolves
+    // the structured criteria of every existing study from override →
+    // cache → LLM; only genuine cache misses (including stale "no
+    // match" entries of older prompt versions) cost model calls.
+    // Fire-and-forget like the translation backfill.
+
+    app.post(
+        "/admin/extraction-backfill",
+        { config: { rateLimit: { max: 2, timeWindow: "1 minute" } } },
+        async (req, reply) => {
+            const identity = await requireAdmin(req, reply);
+            if (!identity) return;
+
+            if (isExtractionBackfillRunning()) {
+                reply.code(409).send({ error: "backfill_already_active" });
+                return;
+            }
+
+            void runExtractionBackfill(app.log)
+                .then((result) => {
+                    app.log.info({ result }, "[extraction-backfill] completed");
+                })
+                .catch((err) => {
+                    app.log.error({ err }, "[extraction-backfill] failed");
                 });
 
             reply.code(202).send({ status: "started" });
