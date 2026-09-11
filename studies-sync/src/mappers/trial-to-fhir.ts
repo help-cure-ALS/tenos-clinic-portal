@@ -106,7 +106,7 @@ function toCategory(trial: TrialDetails): ResearchStudy["category"] {
  * "Inclusion Criteria:" and "Exclusion Criteria:" and then pull each
  * line starting with a bullet marker as its own criterion.
  */
-function parseEligibilityCriteria(
+export function parseEligibilityCriteria(
     raw: string | undefined,
 ): Array<{ type: "inclusion" | "exclusion"; description: string }> {
     if (!raw) return [];

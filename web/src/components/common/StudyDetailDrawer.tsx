@@ -14,6 +14,7 @@ import {
 } from '@mantine/core';
 import type { ResearchStudy } from '@medplum/fhirtypes';
 import { useStudyText, getAvailableLocales } from '../../hooks/useStudyText';
+import { StudyCriteriaEditor } from './StudyCriteriaEditor';
 
 const STATUS_COLOR: Record<string, string> = {
   active: 'green',
@@ -57,11 +58,14 @@ export function StudyDetailDrawer({
   opened,
   onClose,
   isOpenForApplications,
+  criteriaEditable,
 }: {
   study: ResearchStudy | null;
   opened: boolean;
   onClose: () => void;
   isOpenForApplications?: boolean;
+  /** hca-admin view: show + edit the structured matching criteria */
+  criteriaEditable?: boolean;
 }) {
   const { t, i18n } = useTranslation();
 
@@ -329,6 +333,15 @@ export function StudyDetailDrawer({
                 )}
               </>
             )}
+          </>
+        )}
+
+        {criteriaEditable && study.id && (
+          <>
+            <Divider />
+            <LabelValue label={t('studies.criteriaEditor.title')}>
+              <StudyCriteriaEditor studyId={study.id} />
+            </LabelValue>
           </>
         )}
 

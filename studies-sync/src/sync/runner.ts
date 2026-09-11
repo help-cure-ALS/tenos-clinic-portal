@@ -31,6 +31,7 @@ import * as Ctis from "../adapters/ctis";
 import type { TrialDetails } from "../adapters/types";
 import { computeTrialHash, computeTranslatableHash } from "./hasher";
 import { mapTrialToResearchStudy } from "../mappers/trial-to-fhir";
+import { applyStructuredCriteria } from "../extraction/apply";
 import { translateStudy } from "../translate/translator";
 import { loadExcludeSet, isExcluded } from "../excludes";
 import type { ResearchStudy, Extension } from "@medplum/fhirtypes";
@@ -128,6 +129,8 @@ export async function runSync(
         ctisUnchanged: 0,
         translatedCount: 0,
         translationErrors: 0,
+        extractedCount: 0,
+        extractionErrors: 0,
     };
 
     try {
@@ -198,13 +201,14 @@ export async function runSync(
                 return;
             }
 
-            let wasUpserted: UpsertResult;
+            let upsert: UpsertOutcome;
             try {
-                wasUpserted = await upsertTrial(log, trial, opts.dryRun ?? false);
+                upsert = await upsertTrial(log, trial, opts.dryRun ?? false);
             } catch (err) {
                 log.warn({ nct: trial.nct_id, err }, "[sync] upsert failed, skipping");
                 return;
             }
+            const wasUpserted = upsert.result;
 
             if (wasUpserted === "upserted") {
                 if (trial.registry === "ctgov") counters.ctgovUpserted++;
@@ -218,6 +222,25 @@ export async function runSync(
             // `unchanged` — the existing record has the EUCT as well.
             if (trial.registry === "ctgov" && trial.alternate_registry_id) {
                 ctgovEuctSeen.add(trial.alternate_registry_id);
+            }
+
+            // Structured criteria extraction — BEFORE translation, because
+            // both update the resource and the translator re-reads it.
+            // Cache hits make this LLM-free; errors are non-fatal, the
+            // study is simply labeled neutrally in the app.
+            if (upsert.resource) {
+                try {
+                    const { llmExtracted } = await applyStructuredCriteria(
+                        log,
+                        trial,
+                        upsert.resource,
+                        { dryRun: opts.dryRun ?? false },
+                    );
+                    counters.extractedCount += llmExtracted;
+                } catch (err) {
+                    log.warn({ nct: trial.nct_id, err }, "[sync] criteria extraction failed");
+                    counters.extractionErrors++;
+                }
             }
 
             if (canTranslate) {
@@ -380,11 +403,17 @@ export async function runSync(
 
 type UpsertResult = "upserted" | "unchanged";
 
+interface UpsertOutcome {
+    result: UpsertResult;
+    /** The persisted resource (with id), or null in dry runs. */
+    resource: ResearchStudy | null;
+}
+
 async function upsertTrial(
     log: FastifyBaseLogger,
     trial: TrialDetails,
     dryRun: boolean,
-): Promise<UpsertResult> {
+): Promise<UpsertOutcome> {
     const client = await getServiceClient();
     const primarySystem = trial.registry === "ctgov" ? CTGOV_IDENT_SYSTEM : CTIS_IDENT_SYSTEM;
     const alternateSystem = trial.registry === "ctgov" ? CTIS_IDENT_SYSTEM : CTGOV_IDENT_SYSTEM;
@@ -404,7 +433,7 @@ async function upsertTrial(
 
     if (existing) {
         const existingHash = readExtensionString(existing.extension, `${EXT_BASE}/source-hash`);
-        if (existingHash === newHash) return "unchanged";
+        if (existingHash === newHash) return { result: "unchanged", resource: existing };
     }
 
     const { resource: mapped } = mapTrialToResearchStudy(trial);
@@ -441,7 +470,7 @@ async function upsertTrial(
 
     if (dryRun) {
         log.info({ nct: trial.nct_id, action: existing ? "update" : "create" }, "[sync] dry-run");
-        return "upserted";
+        return { result: "upserted", resource: null };
     }
 
     // Medplum in standard mode does not accept client-assigned IDs
@@ -456,12 +485,12 @@ async function upsertTrial(
     // very rare case.
     if (existing?.id) {
         mapped.id = existing.id;
-        await client.updateResource(mapped);
-    } else {
-        const { id: _drop, ...toCreate } = mapped;
-        await client.createResource(toCreate as ResearchStudy);
+        const updated = await client.updateResource(mapped);
+        return { result: "upserted", resource: updated };
     }
-    return "upserted";
+    const { id: _drop, ...toCreate } = mapped;
+    const created = await client.createResource(toCreate as ResearchStudy);
+    return { result: "upserted", resource: created };
 }
 
 async function findExisting(system: string, value: string): Promise<ResearchStudy | null> {

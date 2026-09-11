@@ -13,6 +13,8 @@ export interface RunCounters {
     ctisUnchanged: number;
     translatedCount: number;
     translationErrors: number;
+    extractedCount: number;
+    extractionErrors: number;
 }
 
 export interface RunRecord extends RunCounters {
@@ -40,6 +42,8 @@ interface DbRow {
     ctis_unchanged: number;
     translated_count: number;
     translation_errors: number;
+    extracted_count: number;
+    extraction_errors: number;
     error_message: string | null;
 }
 
@@ -59,6 +63,8 @@ function rowToRun(r: DbRow): RunRecord {
         ctisUnchanged: r.ctis_unchanged,
         translatedCount: r.translated_count,
         translationErrors: r.translation_errors,
+        extractedCount: r.extracted_count,
+        extractionErrors: r.extraction_errors,
         errorMessage: r.error_message,
     };
 }
@@ -89,6 +95,8 @@ export async function updateCounters(runId: string, counters: Partial<RunCounter
         ctisUnchanged: "ctis_unchanged",
         translatedCount: "translated_count",
         translationErrors: "translation_errors",
+        extractedCount: "extracted_count",
+        extractionErrors: "extraction_errors",
     };
 
     for (const [k, v] of Object.entries(counters)) {
@@ -124,7 +132,8 @@ export async function listRuns(limit = 50): Promise<RunRecord[]> {
         `SELECT id, triggered_by, triggered_by_user_id, started_at, finished_at,
                 status, ctgov_fetched, ctgov_upserted, ctgov_unchanged,
                 ctis_fetched, ctis_upserted, ctis_unchanged,
-                translated_count, translation_errors, error_message
+                translated_count, translation_errors,
+                extracted_count, extraction_errors, error_message
          FROM studies_sync_runs
          ORDER BY started_at DESC
          LIMIT $1`,

@@ -28,6 +28,18 @@ import { resetRunTimestamps } from "./config";
 import { isRunActive as isSyncRunActive } from "./runs";
 import { removeStudiesFromClinicLists, clearAllClinicStudyLists } from "./clinic-cleanup";
 import { runTranslationBackfill } from "./sync/translation-backfill";
+import { pool } from "./db";
+import {
+    buildStructuredMap,
+    criterionLinesOf,
+    reapplyStructuredToStudy,
+    studyIdentityOf,
+    STRUCTURED_BASE_EXT_URL,
+    MATCHING_VERSION_EXT_URL,
+} from "./extraction/apply";
+import { criterionTextHash } from "./extraction/extractor";
+import { validateStructuredCriterion } from "./extraction/catalog";
+import type { ResearchStudy } from "@medplum/fhirtypes";
 
 async function requireAdmin(req: FastifyRequest, reply: FastifyReply): Promise<AdminIdentity | null> {
     const auth = req.headers.authorization;
@@ -363,6 +375,202 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
             });
         },
     );
+
+    // ── Structured eligibility criteria (study matching) ───────────
+    //
+    // Read + override the machine-readable form per criterion. The
+    // structured form is what the mobile app matches against; overrides
+    // always win over the LLM extraction and survive nightly runs
+    // (until the registry changes the criterion text itself).
+
+    const criteriaQuerySchema = z.object({
+        studyId: z.string().min(1),
+    });
+
+    const overrideBodySchema = z.object({
+        studyId: z.string().min(1),
+        text_hash: z.string().regex(/^[0-9a-f]{64}$/),
+        /** null = force "no structured form"; object = corrected form */
+        structured: z.unknown().nullable(),
+    });
+
+    const overrideDeleteSchema = z.object({
+        studyId: z.string().min(1),
+        text_hash: z.string().regex(/^[0-9a-f]{64}$/),
+    });
+
+    async function loadStudy(studyId: string): Promise<ResearchStudy | null> {
+        const client = await getServiceClient();
+        try {
+            return await client.readResource("ResearchStudy", studyId);
+        } catch {
+            return null;
+        }
+    }
+
+    app.get("/admin/studies/criteria", async (req, reply) => {
+        const identity = await requireAdmin(req, reply);
+        if (!identity) return;
+
+        const parsed = criteriaQuerySchema.safeParse(req.query ?? {});
+        if (!parsed.success) {
+            reply.code(400).send({ error: "invalid_query", details: parsed.error.issues });
+            return;
+        }
+
+        const study = await loadStudy(parsed.data.studyId);
+        if (!study) {
+            reply.code(404).send({ error: "study_not_found" });
+            return;
+        }
+        const studyIdentity = studyIdentityOf(study);
+        if (!studyIdentity) {
+            reply.code(422).send({ error: "study_has_no_registry_identifier" });
+            return;
+        }
+
+        const lines = criterionLinesOf(study);
+        const { byHash } = await buildStructuredMap(
+            req.log,
+            studyIdentity.registry,
+            studyIdentity.registryId,
+            lines,
+            false,
+        );
+
+        const baseRaw = study.extension?.find((e) => e.url === STRUCTURED_BASE_EXT_URL)?.valueString;
+        const matchingVersion = study.extension?.find((e) => e.url === MATCHING_VERSION_EXT_URL)?.valueString;
+        let base: unknown[] = [];
+        try {
+            base = baseRaw ? JSON.parse(baseRaw) : [];
+        } catch {
+            base = [];
+        }
+
+        return {
+            registry: studyIdentity.registry,
+            registryId: studyIdentity.registryId,
+            matchingVersion: matchingVersion ?? null,
+            base,
+            criteria: lines.map((line) => {
+                const hash = criterionTextHash(line.kind, line.text);
+                const resolved = byHash.get(hash);
+                return {
+                    text_hash: hash,
+                    kind: line.kind,
+                    text: line.text,
+                    structured: resolved?.structured ?? null,
+                    confidence: resolved?.confidence ?? null,
+                    source: resolved?.source ?? null,
+                };
+            }),
+        };
+    });
+
+    app.put("/admin/studies/criteria/override", async (req, reply) => {
+        const identity = await requireAdmin(req, reply);
+        if (!identity) return;
+
+        const parsed = overrideBodySchema.safeParse(req.body);
+        if (!parsed.success) {
+            reply.code(400).send({ error: "invalid_body", details: parsed.error.issues });
+            return;
+        }
+
+        const study = await loadStudy(parsed.data.studyId);
+        if (!study) {
+            reply.code(404).send({ error: "study_not_found" });
+            return;
+        }
+        const studyIdentity = studyIdentityOf(study);
+        if (!studyIdentity) {
+            reply.code(422).send({ error: "study_has_no_registry_identifier" });
+            return;
+        }
+
+        // The hash must belong to one of the study's current criterion
+        // lines — overrides for vanished texts are pointless and would
+        // only rot in the table.
+        const lines = criterionLinesOf(study);
+        const line = lines.find((l) => criterionTextHash(l.kind, l.text) === parsed.data.text_hash);
+        if (!line) {
+            reply.code(404).send({ error: "criterion_not_found" });
+            return;
+        }
+
+        // structured must be null or a valid catalog form. The section
+        // of the override is fixed by the criterion line it corrects.
+        let structuredJson: string | null = null;
+        if (parsed.data.structured !== null) {
+            if (typeof parsed.data.structured !== "object" || Array.isArray(parsed.data.structured)) {
+                reply.code(422).send({ error: "invalid_structured_criterion" });
+                return;
+            }
+            const validated = validateStructuredCriterion({
+                ...(parsed.data.structured as Record<string, unknown>),
+                kind: line.kind,
+            });
+            if (!validated) {
+                reply.code(422).send({ error: "invalid_structured_criterion" });
+                return;
+            }
+            structuredJson = JSON.stringify(validated);
+        }
+
+        await pool.query(
+            `INSERT INTO criterion_overrides
+             (registry, registry_id, text_hash, criterion_text, structured, updated_by, updated_at)
+             VALUES ($1, $2, $3, $4, $5, $6, now())
+             ON CONFLICT (registry, registry_id, text_hash) DO UPDATE
+             SET structured = EXCLUDED.structured,
+                 updated_by = EXCLUDED.updated_by,
+                 updated_at = now()`,
+            [
+                studyIdentity.registry,
+                studyIdentity.registryId,
+                parsed.data.text_hash,
+                line.text,
+                structuredJson,
+                identity.practitionerId,
+            ],
+        );
+
+        // Publish immediately — the app should see the correction
+        // without waiting for the nightly run.
+        const changed = await reapplyStructuredToStudy(req.log, study);
+        return { ok: true, republished: changed };
+    });
+
+    app.delete("/admin/studies/criteria/override", async (req, reply) => {
+        const identity = await requireAdmin(req, reply);
+        if (!identity) return;
+
+        const parsed = overrideDeleteSchema.safeParse(req.body);
+        if (!parsed.success) {
+            reply.code(400).send({ error: "invalid_body", details: parsed.error.issues });
+            return;
+        }
+
+        const study = await loadStudy(parsed.data.studyId);
+        if (!study) {
+            reply.code(404).send({ error: "study_not_found" });
+            return;
+        }
+        const studyIdentity = studyIdentityOf(study);
+        if (!studyIdentity) {
+            reply.code(422).send({ error: "study_has_no_registry_identifier" });
+            return;
+        }
+
+        const res = await pool.query(
+            `DELETE FROM criterion_overrides
+             WHERE registry = $1 AND registry_id = $2 AND text_hash = $3`,
+            [studyIdentity.registry, studyIdentity.registryId, parsed.data.text_hash],
+        );
+
+        const changed = await reapplyStructuredToStudy(req.log, study);
+        return { ok: true, removed: res.rowCount ?? 0, republished: changed };
+    });
 
     // ── Health ─────────────────────────────────────────────────────
 

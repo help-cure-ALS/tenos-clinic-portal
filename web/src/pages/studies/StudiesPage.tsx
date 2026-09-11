@@ -306,6 +306,7 @@ export function StudiesPage() {
       )}
 
       <StudyDetailDrawer
+        criteriaEditable
         study={detailStudy}
         opened={!!detailStudy}
         onClose={() => setDetailStudy(null)}

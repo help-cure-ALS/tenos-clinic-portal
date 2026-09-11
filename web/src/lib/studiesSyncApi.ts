@@ -29,6 +29,8 @@ export interface StudiesSyncRun {
   ctisUnchanged: number;
   translatedCount: number;
   translationErrors: number;
+  extractedCount: number;
+  extractionErrors: number;
   errorMessage: string | null;
 }
 
@@ -177,6 +179,62 @@ export async function resetStudies(): Promise<ResetResult> {
   if (res.status === 409) throw new Error('sync_running');
   if (!res.ok) throw new Error(await parseError(res, 'Failed to reset studies'));
   return (await res.json()) as ResetResult;
+}
+
+// ── Structured eligibility criteria (study matching) ──────────────
+
+export interface StructuredCriterion {
+  id: string;
+  kind: 'inclusion' | 'exclusion';
+  min?: number;
+  max?: number;
+  op?: 'requires' | 'excludes';
+  value?: string;
+}
+
+export interface StudyCriterion {
+  text_hash: string;
+  kind: 'inclusion' | 'exclusion';
+  text: string;
+  structured: StructuredCriterion | null;
+  confidence: number | null;
+  source: 'override' | 'extraction' | null;
+}
+
+export interface StudyCriteriaResult {
+  registry: string;
+  registryId: string;
+  matchingVersion: string | null;
+  base: StructuredCriterion[];
+  criteria: StudyCriterion[];
+}
+
+export async function getStudyCriteria(studyId: string): Promise<StudyCriteriaResult> {
+  const res = await apiFetch(`/admin/studies/criteria?studyId=${encodeURIComponent(studyId)}`);
+  if (!res.ok) throw new Error(await parseError(res, 'Failed to load criteria'));
+  return (await res.json()) as StudyCriteriaResult;
+}
+
+/** structured = null forces "no structured form" for this criterion. */
+export async function saveCriterionOverride(
+  studyId: string,
+  textHash: string,
+  structured: Omit<StructuredCriterion, 'kind'> | null,
+): Promise<void> {
+  const res = await apiFetch('/admin/studies/criteria/override', {
+    method: 'PUT',
+    body: JSON.stringify({ studyId, text_hash: textHash, structured }),
+  });
+  if (!res.ok) throw new Error(await parseError(res, 'Failed to save override'));
+}
+
+/** Removes the override — the criterion falls back to the extraction. */
+export async function removeCriterionOverride(studyId: string, textHash: string): Promise<void> {
+  const res = await apiFetch('/admin/studies/criteria/override', {
+    method: 'DELETE',
+    body: JSON.stringify({ studyId, text_hash: textHash }),
+  });
+  if (!res.ok) throw new Error(await parseError(res, 'Failed to remove override'));
 }
 
 export async function excludeStudies(
