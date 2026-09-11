@@ -18,7 +18,7 @@ import {
 } from "./catalog";
 
 export const EXTRACTION_MODEL = "claude-haiku-4-5-20251001";
-export const PROMPT_VERSION = 2;
+export const PROMPT_VERSION = 3;
 export const CONFIDENCE_THRESHOLD = 0.75;
 
 /** catalog + prompt version — stale studies get re-extracted. */
@@ -88,7 +88,18 @@ RULES (non-negotiable):
 2. One object per line that maps to EXACTLY ONE catalog id with EXACTLY ONE clear requirement: { "line": <number>, "id": ..., "confidence": 0.0-1.0, ... }.
 3. OMIT lines that do not map to the catalog, combine several conditions with OR/AND, or are ambiguous. At most ONE object per line. Omitting is always correct; guessing is never correct.
 4. Convert units: weeks/years to months for time_since_* (1 year = 12 months), percent values as plain numbers.
-5. confidence reflects how certain the mapping AND the values are. Use below 0.75 whenever you had to interpret.`;
+5. confidence reflects how certain the mapping AND the values are. Use below 0.75 whenever you had to interpret.
+6. A line that merely PERMITS something or attaches a condition to it imposes no requirement — omit it. "Riluzole is allowed if on a stable dose" and "If taking riluzole, dose must be stable" require nothing.
+7. Alternatives that together cover ALL values of an id impose no requirement — omit them. "Familial or sporadic ALS" restricts nobody.
+8. Map only what the line actually requires of the patient. A catalog term inside a different condition does not count: "hypersensitivity to riluzole" is about hypersensitivity, not medication use.
+9. ALSFRS-R subscores or domain scores are NOT alsfrs_r_total, and a bulbar SUBSCORE threshold is NOT an onset_region requirement — omit both.
+
+EXAMPLES:
+- "≥18 years of age." → { "line": n, "id": "age", "min": 18, "confidence": 0.99 }
+- "Exclusion: FVC below 50% of predicted" → { "line": n, "id": "fvc_percent", "min": 50, "confidence": 0.95 }
+- "Familial or sporadic ALS" → omit (rule 7)
+- "Hypersensitivity to riluzole" → omit (rule 8)
+- "ALSFRS-R bulbar subscore ≥ 9" → omit (rule 9)`;
 
 function buildUserPrompt(lines: CriterionLine[]): string {
     const numbered = lines

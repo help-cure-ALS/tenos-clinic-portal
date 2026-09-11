@@ -233,11 +233,12 @@ export async function buildStructuredMap(
 
         const cached = cache.get(hash);
         if (cached) {
-            const structured = parseStoredStructured(cached.structured);
-            // A cached MATCH stays valid. A cached "no match" from an
-            // older prompt version may be an artifact of a since-fixed
-            // extraction bug — treat it as a miss and re-ask the model.
-            if (structured || cached.prompt_version >= PROMPT_VERSION) {
+            // Cache entries are only trusted at the current prompt
+            // version — matches AND no-matches. A prompt revision
+            // exists precisely because earlier output was wrong in
+            // both directions, so everything is re-asked once.
+            if (cached.prompt_version >= PROMPT_VERSION) {
+                const structured = parseStoredStructured(cached.structured);
                 byHash.set(hash, {
                     structured,
                     confidence: cached.confidence,
