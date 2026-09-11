@@ -30,6 +30,7 @@ import {
 import {
     MATCHING_VERSION,
     EXTRACTION_MODEL,
+    PROMPT_VERSION,
     criterionTextHash,
     extractCriteria,
     isExtractionConfigured,
@@ -100,12 +101,13 @@ interface CacheRow {
     text_hash: string;
     structured: unknown;
     confidence: number | null;
+    prompt_version: number;
 }
 
 async function loadCachedExtractions(hashes: string[]): Promise<Map<string, CacheRow>> {
     if (hashes.length === 0) return new Map();
     const { rows } = await pool.query<CacheRow>(
-        `SELECT text_hash, structured, confidence
+        `SELECT text_hash, structured, confidence, prompt_version
          FROM criterion_extractions
          WHERE text_hash = ANY($1) AND catalog_version = $2`,
         [hashes, CATALOG_VERSION],
@@ -121,10 +123,11 @@ async function storeExtraction(
 ): Promise<void> {
     await pool.query(
         `INSERT INTO criterion_extractions
-         (text_hash, catalog_version, kind, criterion_text, structured, confidence, model)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
+         (text_hash, catalog_version, prompt_version, kind, criterion_text, structured, confidence, model)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
          ON CONFLICT (text_hash) DO UPDATE
          SET catalog_version = EXCLUDED.catalog_version,
+             prompt_version = EXCLUDED.prompt_version,
              structured = EXCLUDED.structured,
              confidence = EXCLUDED.confidence,
              model = EXCLUDED.model,
@@ -132,6 +135,7 @@ async function storeExtraction(
         [
             hash,
             CATALOG_VERSION,
+            PROMPT_VERSION,
             line.kind,
             line.text.trim().replace(/\s+/g, " "),
             structured ? JSON.stringify(structured) : null,
@@ -183,6 +187,12 @@ export interface BuildStructuredMapResult {
      * must not mark the study as fully extracted when this is > 0.
      */
     llmErrors: number;
+    /**
+     * True when cache misses existed but the LLM was not asked
+     * (extraction not configured). Same rule as llmErrors: the study
+     * must not be marked as fully extracted.
+     */
+    llmSkipped: boolean;
 }
 
 /**
@@ -224,12 +234,17 @@ export async function buildStructuredMap(
         const cached = cache.get(hash);
         if (cached) {
             const structured = parseStoredStructured(cached.structured);
-            byHash.set(hash, {
-                structured,
-                confidence: cached.confidence,
-                source: structured ? "extraction" : null,
-            });
-            return;
+            // A cached MATCH stays valid. A cached "no match" from an
+            // older prompt version may be an artifact of a since-fixed
+            // extraction bug — treat it as a miss and re-ask the model.
+            if (structured || cached.prompt_version >= PROMPT_VERSION) {
+                byHash.set(hash, {
+                    structured,
+                    confidence: cached.confidence,
+                    source: structured ? "extraction" : null,
+                });
+                return;
+            }
         }
 
         missSeen.add(hash);
@@ -238,6 +253,7 @@ export async function buildStructuredMap(
 
     let llmExtracted = 0;
     let llmErrors = 0;
+    let llmSkipped = false;
     if (missIndexes.length > 0 && allowLlm && isExtractionConfigured()) {
         // Chunked: very long criteria lists would otherwise truncate the
         // JSON output (max_tokens) and fail the whole study every night.
@@ -287,11 +303,15 @@ export async function buildStructuredMap(
             }
         }
         if (allowLlm && !isExtractionConfigured()) {
-            log.debug({ registryId }, "[extraction] skipped — ANTHROPIC_API_KEY not set");
+            llmSkipped = true;
+            log.warn(
+                { registryId, misses: missIndexes.length },
+                "[extraction] skipped — ANTHROPIC_API_KEY not set",
+            );
         }
     }
 
-    return { byHash, llmExtracted, llmErrors };
+    return { byHash, llmExtracted, llmErrors, llmSkipped };
 }
 
 // ─── Extension building ───────────────────────────────────────────
@@ -338,7 +358,7 @@ export async function applyStructuredCriteria(
     const parsed = parseEligibilityCriteria(trial.eligibility?.criteria);
     const lines: CriterionLine[] = parsed.map((c) => ({ kind: c.type, text: c.description }));
 
-    const { byHash, llmExtracted, llmErrors } = await buildStructuredMap(
+    const { byHash, llmExtracted, llmErrors, llmSkipped } = await buildStructuredMap(
         log,
         trial.registry,
         trial.nct_id,
@@ -364,10 +384,11 @@ export async function applyStructuredCriteria(
     extensions = upsertExtension(extensions, eligibilityExt, ELIGIBILITY_EXT_URL);
     extensions = upsertExtension(extensions, baseExt, STRUCTURED_BASE_EXT_URL);
     // matching-version marks the study as fully extracted. With failed
-    // chunks we keep whatever version was there before (usually none),
-    // so the portal shows "pending" and the next run retries the
-    // uncached lines instead of considering the study done.
-    if (llmErrors === 0) {
+    // chunks or a skipped LLM (no API key) we keep whatever version was
+    // there before (usually none), so the portal shows "pending" and
+    // the next run retries the uncached lines instead of considering
+    // the study done.
+    if (llmErrors === 0 && !llmSkipped) {
         extensions = upsertExtension(
             extensions,
             { url: MATCHING_VERSION_EXT_URL, valueString: MATCHING_VERSION },
