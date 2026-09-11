@@ -178,10 +178,19 @@ export function StudyCriteriaEditor({ studyId }: { studyId: string }) {
 
   const editEntry = edit && edit.id !== NONE ? CATALOG[edit.id] : undefined;
 
+  // matchingVersion is only written once the extraction step has
+  // fully processed this study — null means "not yet run", an older
+  // version means "extracted with an outdated catalog/prompt, will be
+  // redone". Neither must look like "extracted, no match".
+  const notYetExtracted = data.matchingVersion !== data.currentMatchingVersion;
+
   return (
     <Stack gap="xs">
       <Text size="xs" c="dimmed">{t('studies.criteriaEditor.hint')}</Text>
       {error && <Alert color="red">{error}</Alert>}
+      {notYetExtracted && (
+        <Alert color="blue">{t('studies.criteriaEditor.notYetExtracted')}</Alert>
+      )}
 
       {data.base.length > 0 && (
         <Group gap={6}>
@@ -244,6 +253,8 @@ export function StudyCriteriaEditor({ studyId }: { studyId: string }) {
               <Group gap={6}>
                 {criterion.structured ? (
                   <Badge variant="light" color="blue">{summarize(t, criterion.structured)}</Badge>
+                ) : notYetExtracted ? (
+                  <Badge variant="light" color="gray">{t('studies.criteriaEditor.pending')}</Badge>
                 ) : (
                   <Badge variant="light" color="gray">{t('studies.criteriaEditor.notMatched')}</Badge>
                 )}

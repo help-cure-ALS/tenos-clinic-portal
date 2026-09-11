@@ -410,7 +410,9 @@
         "peg": "PEG",
         "riluzole": "Riluzol",
         "edaravone": "Edaravon"
-      }
+      },
+      "notYetExtracted": "Die automatische Extraktion ist für diese Studie noch nicht gelaufen. Sie läuft beim nächsten Sync mit — für den gesamten Bestand einmalig den Voll-Sync starten (Seite Studien-Sync).",
+      "pending": "Ausstehend"
     }
   },
   "users": {

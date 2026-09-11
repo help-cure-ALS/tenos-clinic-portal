@@ -18,7 +18,7 @@ import {
 } from "./catalog";
 
 export const EXTRACTION_MODEL = "claude-haiku-4-5-20251001";
-export const PROMPT_VERSION = 1;
+export const PROMPT_VERSION = 2;
 export const CONFIDENCE_THRESHOLD = 0.75;
 
 /** catalog + prompt version — stale studies get re-extracted. */
@@ -84,7 +84,7 @@ OUTPUT SEMANTICS (critical): the structured form always expresses the ELIGIBILIT
 - choice: { "op": "requires"|"excludes", "value": "..." } — the patient must have / must not have the value to be eligible. "Exclusion: tracheostomy" becomes { "id": "ventilation", "op": "excludes", "value": "tracheostomy" }.
 
 RULES (non-negotiable):
-1. Output ONLY a JSON array, no commentary, no code fences.
+1. Output ONLY the JSON array. No markdown fences, no rationale, no explanation, no text before or after the array. Your entire response must start with [ and end with ].
 2. One object per line that maps to EXACTLY ONE catalog id with EXACTLY ONE clear requirement: { "line": <number>, "id": ..., "confidence": 0.0-1.0, ... }.
 3. OMIT lines that do not map to the catalog, combine several conditions with OR/AND, or are ambiguous. At most ONE object per line. Omitting is always correct; guessing is never correct.
 4. Convert units: weeks/years to months for time_since_* (1 year = 12 months), percent values as plain numbers.
@@ -95,6 +95,60 @@ function buildUserPrompt(lines: CriterionLine[]): string {
         .map((l, i) => `${i + 1}. [${l.kind}] ${l.text.trim().replace(/\s+/g, " ")}`)
         .join("\n");
     return `Criterion lines:\n${numbered}`;
+}
+
+/**
+ * Pulls the first parseable JSON array out of a model response. Models
+ * occasionally wrap the array in code fences or surround it with prose
+ * despite instructions — the scanner tolerates both by bracket-matching
+ * (string- and escape-aware) from each '[' candidate until one parses.
+ * A '[' inside leading prose (e.g. "[Analysis]") therefore does not
+ * hide the real array behind it. Returns null when no parseable array
+ * exists (e.g. truncated output).
+ */
+export function extractJsonArray(text: string): unknown[] | null {
+    for (let start = text.indexOf("["); start !== -1; start = text.indexOf("[", start + 1)) {
+        let depth = 0;
+        let inString = false;
+        let escaped = false;
+        let closed = -1;
+        for (let i = start; i < text.length; i++) {
+            const ch = text[i];
+            if (inString) {
+                if (escaped) escaped = false;
+                else if (ch === "\\") escaped = true;
+                else if (ch === '"') inString = false;
+                continue;
+            }
+            if (ch === '"') inString = true;
+            else if (ch === "[") depth++;
+            else if (ch === "]") {
+                depth--;
+                if (depth === 0) {
+                    closed = i;
+                    break;
+                }
+            }
+        }
+        if (closed === -1) continue;
+        try {
+            const parsed = JSON.parse(text.slice(start, closed + 1));
+            if (Array.isArray(parsed)) return parsed;
+        } catch {
+            // Candidate was balanced but not JSON — try the next '['.
+        }
+    }
+    return null;
+}
+
+/** number | numeric string → finite number, else undefined. */
+export function toFiniteNumber(raw: unknown): number | undefined {
+    if (typeof raw === "number") return Number.isFinite(raw) ? raw : undefined;
+    if (typeof raw === "string" && raw.trim() !== "") {
+        const n = Number(raw);
+        return Number.isFinite(n) ? n : undefined;
+    }
+    return undefined;
 }
 
 /**
@@ -116,31 +170,21 @@ export async function extractCriteria(lines: CriterionLine[]): Promise<Extractio
     const text = response.content
         .filter((p) => p.type === "text")
         .map((p) => (p.type === "text" ? p.text : ""))
-        .join("")
-        .trim()
-        // Defensive: strip code fences if the model adds them anyway
-        .replace(/^```(?:json)?/i, "")
-        .replace(/```$/, "")
-        .trim();
+        .join("");
 
-    let parsed: unknown;
-    try {
-        parsed = JSON.parse(text);
-    } catch {
-        throw new Error(`Extraction output is not valid JSON: ${text.slice(0, 200)}`);
-    }
-    if (!Array.isArray(parsed)) {
-        throw new Error("Extraction output is not a JSON array");
+    const parsed = extractJsonArray(text);
+    if (parsed === null) {
+        throw new Error(`Extraction output contains no valid JSON array: ${text.slice(0, 200)}`);
     }
 
     const results: ExtractionResult[] = lines.map(() => ({ structured: null, confidence: null }));
 
     for (const item of parsed as Array<Record<string, unknown>>) {
-        const lineNo = typeof item?.line === "number" ? item.line : NaN;
+        const lineNo = toFiniteNumber(item?.line) ?? NaN;
         if (!Number.isInteger(lineNo) || lineNo < 1 || lineNo > lines.length) continue;
         const index = lineNo - 1;
 
-        const confidence = typeof item.confidence === "number" ? item.confidence : 0;
+        const confidence = toFiniteNumber(item.confidence) ?? 0;
         if (confidence < CONFIDENCE_THRESHOLD) continue;
 
         const structured = validateStructuredCriterion({

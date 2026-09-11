@@ -37,7 +37,7 @@ import {
     STRUCTURED_BASE_EXT_URL,
     MATCHING_VERSION_EXT_URL,
 } from "./extraction/apply";
-import { criterionTextHash } from "./extraction/extractor";
+import { criterionTextHash, MATCHING_VERSION } from "./extraction/extractor";
 import { validateStructuredCriterion } from "./extraction/catalog";
 import type { ResearchStudy } from "@medplum/fhirtypes";
 
@@ -451,6 +451,7 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
             registry: studyIdentity.registry,
             registryId: studyIdentity.registryId,
             matchingVersion: matchingVersion ?? null,
+            currentMatchingVersion: MATCHING_VERSION,
             base,
             criteria: lines.map((line) => {
                 const hash = criterionTextHash(line.kind, line.text);

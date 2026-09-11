@@ -230,13 +230,14 @@ export async function runSync(
             // study is simply labeled neutrally in the app.
             if (upsert.resource) {
                 try {
-                    const { llmExtracted } = await applyStructuredCriteria(
+                    const { llmExtracted, llmErrors } = await applyStructuredCriteria(
                         log,
                         trial,
                         upsert.resource,
                         { dryRun: opts.dryRun ?? false },
                     );
                     counters.extractedCount += llmExtracted;
+                    counters.extractionErrors += llmErrors;
                 } catch (err) {
                     log.warn({ nct: trial.nct_id, err }, "[sync] criteria extraction failed");
                     counters.extractionErrors++;

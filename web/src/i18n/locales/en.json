@@ -410,7 +410,9 @@
         "peg": "PEG",
         "riluzole": "riluzole",
         "edaravone": "edaravone"
-      }
+      },
+      "notYetExtracted": "Automatic extraction has not run for this study yet. It runs with the next sync — for the whole existing set, start the full sync once (Studies Sync page).",
+      "pending": "Pending"
     }
   },
   "users": {

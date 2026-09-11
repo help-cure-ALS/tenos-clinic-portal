@@ -205,6 +205,8 @@ export interface StudyCriteriaResult {
   registry: string;
   registryId: string;
   matchingVersion: string | null;
+  /** Catalog+prompt version the server extracts with right now. */
+  currentMatchingVersion: string;
   base: StructuredCriterion[];
   criteria: StudyCriterion[];
 }

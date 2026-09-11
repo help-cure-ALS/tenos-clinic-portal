@@ -177,6 +177,12 @@ export interface BuildStructuredMapResult {
     byHash: Map<string, ResolvedCriterion>;
     /** Number of criteria freshly extracted by the LLM in this call. */
     llmExtracted: number;
+    /**
+     * Number of LLM chunk calls that failed (transport/parse). Failed
+     * lines are NOT cached and get retried on the next run — callers
+     * must not mark the study as fully extracted when this is > 0.
+     */
+    llmErrors: number;
 }
 
 /**
@@ -199,10 +205,11 @@ export async function buildStructuredMap(
 
     const byHash = new Map<string, ResolvedCriterion>();
     const missIndexes: number[] = [];
+    const missSeen = new Set<string>();
 
     lines.forEach((line, i) => {
         const hash = hashes[i];
-        if (byHash.has(hash)) return;
+        if (byHash.has(hash) || missSeen.has(hash)) return;
 
         const override = overrides.get(hash);
         if (override) {
@@ -225,10 +232,12 @@ export async function buildStructuredMap(
             return;
         }
 
+        missSeen.add(hash);
         missIndexes.push(i);
     });
 
     let llmExtracted = 0;
+    let llmErrors = 0;
     if (missIndexes.length > 0 && allowLlm && isExtractionConfigured()) {
         // Chunked: very long criteria lists would otherwise truncate the
         // JSON output (max_tokens) and fail the whole study every night.
@@ -236,7 +245,24 @@ export async function buildStructuredMap(
         for (let start = 0; start < missIndexes.length; start += CHUNK) {
             const chunkIndexes = missIndexes.slice(start, start + CHUNK);
             const missLines = chunkIndexes.map((i) => lines[i]);
-            const results = await extractCriteria(missLines);
+
+            let results;
+            try {
+                results = await extractCriteria(missLines);
+            } catch (err) {
+                // One bad chunk must not discard the other chunks of
+                // this study. Failed lines stay uncached (retried on
+                // the next run) and resolve to "no structured form".
+                llmErrors++;
+                log.warn({ registryId, lines: missLines.length, err }, "[extraction] chunk failed");
+                for (const i of chunkIndexes) {
+                    if (!byHash.has(hashes[i])) {
+                        byHash.set(hashes[i], { structured: null, confidence: null, source: null });
+                    }
+                }
+                continue;
+            }
+
             for (let j = 0; j < missLines.length; j++) {
                 const i = chunkIndexes[j];
                 const hash = hashes[i];
@@ -265,7 +291,7 @@ export async function buildStructuredMap(
         }
     }
 
-    return { byHash, llmExtracted };
+    return { byHash, llmExtracted, llmErrors };
 }
 
 // ─── Extension building ───────────────────────────────────────────
@@ -308,11 +334,11 @@ export async function applyStructuredCriteria(
     trial: TrialDetails,
     resource: ResearchStudy,
     options: { dryRun: boolean },
-): Promise<{ llmExtracted: number }> {
+): Promise<{ llmExtracted: number; llmErrors: number }> {
     const parsed = parseEligibilityCriteria(trial.eligibility?.criteria);
     const lines: CriterionLine[] = parsed.map((c) => ({ kind: c.type, text: c.description }));
 
-    const { byHash, llmExtracted } = await buildStructuredMap(
+    const { byHash, llmExtracted, llmErrors } = await buildStructuredMap(
         log,
         trial.registry,
         trial.nct_id,
@@ -325,7 +351,6 @@ export async function applyStructuredCriteria(
     const baseExt: Extension | null = baseCriteria.length > 0
         ? { url: STRUCTURED_BASE_EXT_URL, valueString: JSON.stringify(baseCriteria) }
         : null;
-    const versionExt: Extension = { url: MATCHING_VERSION_EXT_URL, valueString: MATCHING_VERSION };
 
     let extensions = resource.extension ?? [];
     const before = JSON.stringify(
@@ -338,7 +363,17 @@ export async function applyStructuredCriteria(
 
     extensions = upsertExtension(extensions, eligibilityExt, ELIGIBILITY_EXT_URL);
     extensions = upsertExtension(extensions, baseExt, STRUCTURED_BASE_EXT_URL);
-    extensions = upsertExtension(extensions, versionExt, MATCHING_VERSION_EXT_URL);
+    // matching-version marks the study as fully extracted. With failed
+    // chunks we keep whatever version was there before (usually none),
+    // so the portal shows "pending" and the next run retries the
+    // uncached lines instead of considering the study done.
+    if (llmErrors === 0) {
+        extensions = upsertExtension(
+            extensions,
+            { url: MATCHING_VERSION_EXT_URL, valueString: MATCHING_VERSION },
+            MATCHING_VERSION_EXT_URL,
+        );
+    }
 
     const after = JSON.stringify(
         extensions.filter((e) =>
@@ -349,12 +384,12 @@ export async function applyStructuredCriteria(
     );
 
     if (before === after || options.dryRun || !resource.id) {
-        return { llmExtracted };
+        return { llmExtracted, llmErrors };
     }
 
     const client = await getServiceClient();
     await client.updateResource({ ...resource, extension: extensions });
-    return { llmExtracted };
+    return { llmExtracted, llmErrors };
 }
 
 // ─── Re-apply from the resource itself (admin override routes) ────

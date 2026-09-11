@@ -106,8 +106,17 @@ export function validateStructuredCriterion(raw: unknown): StructuredCriterion |
     const kind: CriterionKind = c.kind === "exclusion" ? "exclusion" : "inclusion";
 
     if (entry.shape === "numeric") {
-        const min = typeof c.min === "number" && Number.isFinite(c.min) ? c.min : undefined;
-        const max = typeof c.max === "number" && Number.isFinite(c.max) ? c.max : undefined;
+        let min = toNumber(c.min);
+        let max = toNumber(c.max);
+        // Normalize a common model deviation: { op: "min"|"max", value: n }
+        // instead of { min: n } / { max: n }.
+        if (min === undefined && max === undefined) {
+            const value = toNumber(c.value);
+            if (value !== undefined) {
+                if (c.op === "min") min = value;
+                else if (c.op === "max") max = value;
+            }
+        }
         if (min === undefined && max === undefined) return null;
         if (min !== undefined && (min < entry.min || min > entry.max)) return null;
         if (max !== undefined && (max < entry.min || max > entry.max)) return null;
@@ -115,8 +124,27 @@ export function validateStructuredCriterion(raw: unknown): StructuredCriterion |
         return { id, kind, ...(min !== undefined ? { min } : {}), ...(max !== undefined ? { max } : {}) };
     }
 
-    const op = c.op === "excludes" ? "excludes" : c.op === "requires" ? "requires" : null;
+    const op = normalizeOp(c.op);
     const value = typeof c.value === "string" ? c.value.toLowerCase().trim() : "";
     if (!op || !entry.values.includes(value)) return null;
     return { id, kind, op, value };
+}
+
+/** number | numeric string → finite number, else undefined. */
+function toNumber(raw: unknown): number | undefined {
+    if (typeof raw === "number") return Number.isFinite(raw) ? raw : undefined;
+    if (typeof raw === "string" && raw.trim() !== "") {
+        const n = Number(raw);
+        return Number.isFinite(n) ? n : undefined;
+    }
+    return undefined;
+}
+
+/** Tolerates the common tense/number variants the model emits. */
+function normalizeOp(raw: unknown): "requires" | "excludes" | null {
+    if (typeof raw !== "string") return null;
+    const op = raw.toLowerCase().trim();
+    if (op === "requires" || op === "require" || op === "required") return "requires";
+    if (op === "excludes" || op === "exclude" || op === "excluded") return "excludes";
+    return null;
 }
