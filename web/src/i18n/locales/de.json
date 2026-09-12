@@ -703,6 +703,13 @@
     "categoryIdInvalid": "Nur a-z, 0-9 und Bindestriche, 2-40 Zeichen.",
     "categoryDeleteBlocked": "Wird noch von Artikeln verwendet.",
     "fieldHideReadDays": "Nach dem Lesen ausblenden (Tage, optional)",
-    "fieldHideReadDaysHint": "Der Artikel verschwindet beim Leser n Tage nachdem er geöffnet wurde. Leer = bleibt sichtbar."
+    "fieldHideReadDaysHint": "Der Artikel verschwindet beim Leser n Tage nachdem er geöffnet wurde. Leer = bleibt sichtbar.",
+    "fieldPinned": "Anpinnen",
+    "fieldPinnedHint": "Angepinnte Artikel stehen in der App immer ganz oben.",
+    "fieldRoles": "Rollen",
+    "fieldRolesHint": "Leer = alle Rollen sehen den Artikel.",
+    "rolePatient": "Patient",
+    "roleCaregiver": "Angehörige/Caregiver",
+    "roleDoctor": "Arzt"
   }
 }

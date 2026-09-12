@@ -11,6 +11,7 @@ const STUDIES_SYNC_API_URL = import.meta.env.VITE_STUDIES_SYNC_API_URL || '/sync
 
 export type ArticleStatus = 'draft' | 'publishing' | 'public' | 'archived';
 export type AlsfrsScale = 'total' | 'bulbar' | 'fine_motor' | 'gross_motor' | 'respiratory';
+export type ArticleRole = 'patient' | 'caregiver' | 'doctor';
 
 export interface ContentCategory {
   id: string;
@@ -36,6 +37,8 @@ export interface ContentArticle {
   has_image: boolean;
   image_content_type: string | null;
   countries: string[];
+  roles: ArticleRole[];
+  pinned: boolean;
   phase_min_months: number | null;
   phase_max_months: number | null;
   alsfrs_scale: AlsfrsScale | null;
@@ -61,6 +64,8 @@ export interface ArticleInput {
   body_html: string;
   link_url: string | null;
   countries: string[];
+  roles: ArticleRole[];
+  pinned: boolean;
   phase_min_months: number | null;
   phase_max_months: number | null;
   alsfrs_scale: AlsfrsScale | null;

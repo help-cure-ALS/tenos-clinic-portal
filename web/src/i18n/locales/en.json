@@ -703,6 +703,13 @@
     "categoryIdInvalid": "Only a-z, 0-9 and hyphens, 2-40 characters.",
     "categoryDeleteBlocked": "Still used by articles.",
     "fieldHideReadDays": "Hide after reading (days, optional)",
-    "fieldHideReadDaysHint": "The article disappears for the reader n days after opening it. Empty = stays visible."
+    "fieldHideReadDaysHint": "The article disappears for the reader n days after opening it. Empty = stays visible.",
+    "fieldPinned": "Pin article",
+    "fieldPinnedHint": "Pinned articles always appear at the top in the app.",
+    "fieldRoles": "Roles",
+    "fieldRolesHint": "Empty = all roles see the article.",
+    "rolePatient": "Patient",
+    "roleCaregiver": "Caregiver",
+    "roleDoctor": "Doctor"
   }
 }

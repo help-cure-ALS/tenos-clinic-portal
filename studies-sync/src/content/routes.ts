@@ -55,6 +55,8 @@ const articleSchema = z.object({
     body_html: z.string().max(40000).default(""),
     link_url: z.string().url().max(500).nullable().default(null),
     countries: z.array(z.string().regex(/^[A-Z]{2}$/)).max(60).default([]),
+    roles: z.array(z.enum(["patient", "caregiver", "doctor"])).max(3).default([]),
+    pinned: z.boolean().default(false),
     phase_min_months: z.number().int().min(0).max(600).nullable().default(null),
     phase_max_months: z.number().int().min(0).max(600).nullable().default(null),
     alsfrs_scale: z.enum(["total", "bulbar", "fine_motor", "gross_motor", "respiratory"]).nullable().default(null),

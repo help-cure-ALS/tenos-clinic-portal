@@ -48,6 +48,7 @@ function buildArticleResource(
     if (article.hide_read_after_days !== null) {
         extensions.push(ext("content-hide-read-days", { valueInteger: article.hide_read_after_days }));
     }
+    if (article.pinned) extensions.push(ext("content-pinned", { valueBoolean: true }));
 
     if (article.teaser) extensions.push(ext("teaser", { valueString: article.teaser }));
     if (article.body_html) extensions.push(ext("body", { valueString: article.body_html }));
@@ -83,6 +84,7 @@ function buildArticleResource(
     extensions.push(ext("content-targeting", {
         valueString: JSON.stringify({
             countries: article.countries,
+            roles: article.roles,
             phase_min_months: article.phase_min_months,
             phase_max_months: article.phase_max_months,
             alsfrs: article.alsfrs_scale

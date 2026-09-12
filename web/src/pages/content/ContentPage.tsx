@@ -42,7 +42,7 @@ import {
   Tooltip,
 } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
-import { Newspaper, Plus, Tags, Trash2 } from 'lucide-react';
+import { Newspaper, Pin, Plus, Tags, Trash2 } from 'lucide-react';
 import {
   PageHeader,
   DataGrid,
@@ -69,6 +69,7 @@ import {
   updateContentArticle,
   type AlsfrsScale,
   type ArticleInput,
+  type ArticleRole,
   type ArticleStatus,
   type ContentArticle,
   type ContentCategory,
@@ -101,6 +102,8 @@ interface FormState {
   body_html: string;
   link_url: string;
   countries: string[];
+  roles: ArticleRole[];
+  pinned: boolean;
   phase_min: number | '';
   phase_max: number | '';
   alsfrs_scale: AlsfrsScale | '';
@@ -123,6 +126,8 @@ function emptyForm(lang: string, firstCategory: string): FormState {
     body_html: '',
     link_url: '',
     countries: [],
+    roles: [],
+    pinned: false,
     phase_min: '',
     phase_max: '',
     alsfrs_scale: '',
@@ -145,6 +150,8 @@ function formFromArticle(a: ContentArticle): FormState {
     body_html: a.body_html,
     link_url: a.link_url ?? '',
     countries: a.countries,
+    roles: a.roles,
+    pinned: a.pinned,
     phase_min: a.phase_min_months ?? '',
     phase_max: a.phase_max_months ?? '',
     alsfrs_scale: a.alsfrs_scale ?? '',
@@ -169,6 +176,8 @@ function toInput(f: FormState): ArticleInput {
     body_html: f.body_html,
     link_url: f.link_url.trim() === '' ? null : f.link_url.trim(),
     countries: f.countries,
+    roles: f.roles,
+    pinned: f.pinned,
     phase_min_months: f.phase_min === '' ? null : f.phase_min,
     phase_max_months: f.phase_max === '' ? null : f.phase_max,
     alsfrs_scale: f.alsfrs_scale === '' || f.alsfrs_value === '' ? null : f.alsfrs_scale,
@@ -267,7 +276,12 @@ export function ContentPage() {
         header: t('content.colTitle'),
         sortable: true,
         minWidth: 280,
-        cell: (a) => <Text fz="sm" fw={500}>{a.title}</Text>,
+        cell: (a) => (
+          <Group gap={6} wrap="nowrap">
+            {a.pinned && <Pin size={14} style={{ flexShrink: 0, opacity: 0.6 }} />}
+            <Text fz="sm" fw={500}>{a.title}</Text>
+          </Group>
+        ),
       },
       {
         id: 'category',
@@ -707,6 +721,13 @@ export function ContentPage() {
             required
           />
 
+          <Switch
+            label={t('content.fieldPinned')}
+            description={t('content.fieldPinnedHint')}
+            checked={form.pinned}
+            onChange={(e) => setForm({ ...form, pinned: e.currentTarget.checked })}
+          />
+
           {/* Visibility window */}
           <Group grow>
             <TextInput
@@ -749,6 +770,19 @@ export function ContentPage() {
             value={form.countries}
             onChange={(countries) => setForm({ ...form, countries })}
             searchable
+            clearable
+          />
+
+          <MultiSelect
+            label={t('content.fieldRoles')}
+            description={t('content.fieldRolesHint')}
+            data={[
+              { value: 'patient', label: t('content.rolePatient') },
+              { value: 'caregiver', label: t('content.roleCaregiver') },
+              { value: 'doctor', label: t('content.roleDoctor') },
+            ]}
+            value={form.roles}
+            onChange={(roles) => setForm({ ...form, roles: roles as ArticleRole[] })}
             clearable
           />
 
