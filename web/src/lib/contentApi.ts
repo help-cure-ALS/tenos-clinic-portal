@@ -44,6 +44,7 @@ export interface ContentArticle {
   article_date: string;
   starts_at: string | null;
   ends_at: string | null;
+  hide_read_after_days: number | null;
   translations: Record<string, { title: string; teaser: string; body: string }>;
   medplum_id: string | null;
   published_at: string | null;
@@ -68,6 +69,7 @@ export interface ArticleInput {
   article_date: string;
   starts_at: string | null;
   ends_at: string | null;
+  hide_read_after_days: number | null;
 }
 
 async function apiFetch(path: string, options: RequestInit = {}): Promise<Response> {

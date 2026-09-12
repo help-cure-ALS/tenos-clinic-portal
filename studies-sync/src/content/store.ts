@@ -49,6 +49,7 @@ export interface ContentArticle {
     article_date: string;
     starts_at: string | null;
     ends_at: string | null;
+    hide_read_after_days: number | null;
     translations: ArticleTranslations;
     translated_hash: string | null;
     medplum_id: string | null;
@@ -68,6 +69,7 @@ const LIST_COLUMNS = `
     countries, phase_min_months, phase_max_months,
     alsfrs_scale, alsfrs_min, alsfrs_max,
     article_date::text, starts_at::text, ends_at::text,
+    hide_read_after_days,
     translations, translated_hash,
     medplum_id, binary_id, published_at, publish_error, created_by, created_at, updated_at`;
 
@@ -155,6 +157,7 @@ export async function getArticle(id: string): Promise<ContentArticle | null> {
                 countries, phase_min_months, phase_max_months,
                 alsfrs_scale, alsfrs_min, alsfrs_max,
                 article_date::text, starts_at::text, ends_at::text,
+                hide_read_after_days,
                 translations, translated_hash,
                 medplum_id, binary_id, published_at, publish_error, created_by, created_at, updated_at
          FROM content_articles WHERE id = $1`,
@@ -183,6 +186,7 @@ export interface ArticleInput {
     article_date: string;
     starts_at: string | null;
     ends_at: string | null;
+    hide_read_after_days: number | null;
 }
 
 export async function createArticle(input: ArticleInput, createdBy: string | null): Promise<string> {
@@ -191,8 +195,8 @@ export async function createArticle(input: ArticleInput, createdBy: string | nul
          (source, clinic_id, clinic_name, category_id, original_lang, translate,
           title, teaser, body_html, link_url, countries,
           phase_min_months, phase_max_months, alsfrs_scale, alsfrs_min, alsfrs_max,
-          article_date, starts_at, ends_at, created_by)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20)
+          article_date, starts_at, ends_at, hide_read_after_days, created_by)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21)
          RETURNING id`,
         [
             input.source, input.clinic_id, input.clinic_name, input.category_id,
@@ -200,7 +204,8 @@ export async function createArticle(input: ArticleInput, createdBy: string | nul
             input.title, input.teaser, input.body_html, input.link_url, input.countries,
             input.phase_min_months, input.phase_max_months,
             input.alsfrs_scale, input.alsfrs_min, input.alsfrs_max,
-            input.article_date, input.starts_at, input.ends_at, createdBy,
+            input.article_date, input.starts_at, input.ends_at,
+            input.hide_read_after_days, createdBy,
         ],
     );
     return rows[0].id;
@@ -213,7 +218,8 @@ export async function updateArticle(id: string, input: ArticleInput): Promise<vo
             title = $5, teaser = $6, body_html = $7, link_url = $8, countries = $9,
             phase_min_months = $10, phase_max_months = $11,
             alsfrs_scale = $12, alsfrs_min = $13, alsfrs_max = $14,
-            article_date = $15, starts_at = $16, ends_at = $17, updated_at = now()
+            article_date = $15, starts_at = $16, ends_at = $17,
+            hide_read_after_days = $18, updated_at = now()
          WHERE id = $1`,
         [
             id, input.category_id, input.original_lang, input.translate,
@@ -221,6 +227,7 @@ export async function updateArticle(id: string, input: ArticleInput): Promise<vo
             input.phase_min_months, input.phase_max_months,
             input.alsfrs_scale, input.alsfrs_min, input.alsfrs_max,
             input.article_date, input.starts_at, input.ends_at,
+            input.hide_read_after_days,
         ],
     );
 }

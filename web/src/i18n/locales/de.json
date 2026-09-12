@@ -701,6 +701,8 @@
     "categoryLabelHint": "Wird automatisch in alle App-Sprachen übersetzt.",
     "categoryIdHint": "Kleinbuchstaben, Zahlen, Bindestriche. Nicht mehr änderbar.",
     "categoryIdInvalid": "Nur a-z, 0-9 und Bindestriche, 2-40 Zeichen.",
-    "categoryDeleteBlocked": "Wird noch von Artikeln verwendet."
+    "categoryDeleteBlocked": "Wird noch von Artikeln verwendet.",
+    "fieldHideReadDays": "Nach dem Lesen ausblenden (Tage, optional)",
+    "fieldHideReadDaysHint": "Der Artikel verschwindet beim Leser n Tage nachdem er geöffnet wurde. Leer = bleibt sichtbar."
   }
 }

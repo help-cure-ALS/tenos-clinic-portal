@@ -45,6 +45,9 @@ function buildArticleResource(
 
     if (article.starts_at) extensions.push(ext("content-starts-at", { valueDate: article.starts_at }));
     if (article.ends_at) extensions.push(ext("content-ends-at", { valueDate: article.ends_at }));
+    if (article.hide_read_after_days !== null) {
+        extensions.push(ext("content-hide-read-days", { valueInteger: article.hide_read_after_days }));
+    }
 
     if (article.teaser) extensions.push(ext("teaser", { valueString: article.teaser }));
     if (article.body_html) extensions.push(ext("body", { valueString: article.body_html }));

@@ -63,6 +63,7 @@ const articleSchema = z.object({
     article_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     starts_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable().default(null),
     ends_at: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable().default(null),
+    hide_read_after_days: z.number().int().min(1).max(365).nullable().default(null),
 });
 
 const imageSchema = z.object({

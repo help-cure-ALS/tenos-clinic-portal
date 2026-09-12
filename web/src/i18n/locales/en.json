@@ -701,6 +701,8 @@
     "categoryLabelHint": "Translated into all app languages automatically.",
     "categoryIdHint": "Lowercase letters, digits, hyphens. Cannot be changed later.",
     "categoryIdInvalid": "Only a-z, 0-9 and hyphens, 2-40 characters.",
-    "categoryDeleteBlocked": "Still used by articles."
+    "categoryDeleteBlocked": "Still used by articles.",
+    "fieldHideReadDays": "Hide after reading (days, optional)",
+    "fieldHideReadDaysHint": "The article disappears for the reader n days after opening it. Empty = stays visible."
   }
 }

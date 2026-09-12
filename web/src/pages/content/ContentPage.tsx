@@ -110,6 +110,7 @@ interface FormState {
   article_date: string;
   starts_at: string;
   ends_at: string;
+  hide_read_days: number | '';
 }
 
 function emptyForm(lang: string, firstCategory: string): FormState {
@@ -130,6 +131,7 @@ function emptyForm(lang: string, firstCategory: string): FormState {
     article_date: new Date().toISOString().slice(0, 10),
     starts_at: '',
     ends_at: '',
+    hide_read_days: '',
   };
 }
 
@@ -153,6 +155,7 @@ function formFromArticle(a: ContentArticle): FormState {
     article_date: a.article_date,
     starts_at: a.starts_at ?? '',
     ends_at: a.ends_at ?? '',
+    hide_read_days: a.hide_read_after_days ?? '',
   };
 }
 
@@ -174,6 +177,7 @@ function toInput(f: FormState): ArticleInput {
     article_date: f.article_date,
     starts_at: f.starts_at === '' ? null : f.starts_at,
     ends_at: f.ends_at === '' ? null : f.ends_at,
+    hide_read_after_days: f.hide_read_days === '' ? null : f.hide_read_days,
   };
 }
 
@@ -724,6 +728,15 @@ export function ContentPage() {
               )}
             />
           </Group>
+
+          <NumberInput
+            label={t('content.fieldHideReadDays')}
+            description={t('content.fieldHideReadDaysHint')}
+            min={1}
+            max={365}
+            value={form.hide_read_days}
+            onChange={(v) => setForm({ ...form, hide_read_days: typeof v === 'number' ? v : '' })}
+          />
 
           {/* Targeting */}
           <Title order={5}>{t('content.targeting')}</Title>
