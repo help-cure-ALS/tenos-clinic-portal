@@ -32,6 +32,7 @@ import type { TrialDetails } from "../adapters/types";
 import { computeTrialHash, computeTranslatableHash } from "./hasher";
 import { mapTrialToResearchStudy } from "../mappers/trial-to-fhir";
 import { applyStructuredCriteria } from "../extraction/apply";
+import { sweepExpiredArticles } from "../content/publish";
 import { translateStudy } from "../translate/translator";
 import { loadExcludeSet, isExcluded } from "../excludes";
 import type { ResearchStudy, Extension } from "@medplum/fhirtypes";
@@ -387,6 +388,13 @@ export async function runSync(
         }
         if (excludedCount > 0) {
             log.info({ excludedCount }, "[sync] trials skipped due to exclude-list");
+        }
+
+        // Content hygiene: expired public articles leave the care server.
+        try {
+            await sweepExpiredArticles(log);
+        } catch (err) {
+            log.warn({ err }, "[sync] content sweep failed");
         }
 
         await markRunFinished(runId, "success", null);

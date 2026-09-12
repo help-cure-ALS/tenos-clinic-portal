@@ -39,6 +39,7 @@ import {
     MATCHING_VERSION_EXT_URL,
 } from "./extraction/apply";
 import { criterionTextHash, MATCHING_VERSION } from "./extraction/extractor";
+import { registerContentRoutes } from "./content/routes";
 import { validateStructuredCriterion } from "./extraction/catalog";
 import type { ResearchStudy } from "@medplum/fhirtypes";
 
@@ -605,6 +606,10 @@ export async function registerRoutes(app: FastifyInstance): Promise<void> {
         const changed = await reapplyStructuredToStudy(req.log, study);
         return { ok: true, removed: res.rowCount ?? 0, republished: changed };
     });
+
+    // ── Editorial content ──────────────────────────────────────────
+
+    await registerContentRoutes(app);
 
     // ── Health ─────────────────────────────────────────────────────
 

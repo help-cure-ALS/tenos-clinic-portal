@@ -35,6 +35,7 @@ import {
   User,
   Users,
 } from 'lucide-react';
+import { Newspaper } from 'lucide-react';
 import {
   MainNav,
   MainNavHeaderButton,
@@ -164,6 +165,13 @@ export function AppShellLayout() {
       roles: ['clinic-admin'],
       sectionKey: 'organization',
     },
+    {
+      to: '/content',
+      labelKey: 'nav.content',
+      icon: Newspaper,
+      roles: ['clinic-admin'],
+      sectionKey: 'organization',
+    },
 
     // Directory — HCA admin, read-heavy: who/what is in the system
     {
@@ -214,6 +222,13 @@ export function AppShellLayout() {
       to: '/studies-sync',
       labelKey: 'nav.studiesSync',
       icon: FlaskRound,
+      roles: ['hca-admin'],
+      sectionKey: 'configuration',
+    },
+    {
+      to: '/content',
+      labelKey: 'nav.content',
+      icon: Newspaper,
       roles: ['hca-admin'],
       sectionKey: 'configuration',
     },

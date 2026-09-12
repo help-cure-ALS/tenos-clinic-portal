@@ -19,6 +19,7 @@ import { SuppliersPage } from './pages/suppliers/SuppliersPage';
 import { SupplierDetailPage } from './pages/suppliers/SupplierDetailPage';
 import { SupplierWorkflowPoliciesPage } from './pages/suppliers/SupplierWorkflowPoliciesPage';
 import { StudiesSyncPage } from './pages/admin/StudiesSyncPage';
+import { ContentPage } from './pages/content/ContentPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -99,6 +100,12 @@ export function App() {
             <Route path="/supplier-workflow-policies" element={
               <ProtectedRoute allowedRoles={['hca-admin']}>
                 <SupplierWorkflowPoliciesPage />
+              </ProtectedRoute>
+            } />
+
+            <Route path="/content" element={
+              <ProtectedRoute allowedRoles={['hca-admin', 'clinic-admin']}>
+                <ContentPage />
               </ProtectedRoute>
             } />
 

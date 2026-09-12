@@ -40,6 +40,7 @@ RULES (non-negotiable):
 3. Use neutral, professional clinical language appropriate for a patient-facing app.
 4. Preserve medical terminology precisely (e.g., ICD codes, drug names, study identifiers).
 5. Preserve line breaks and list markers exactly as in the source.
+6. If the source contains HTML markup, keep every tag and attribute exactly as-is and translate only the text content.
 6. Do NOT translate proper nouns like sponsor names, city names, or trial identifiers (NCT/EU-CT numbers).
 7. Output the translated text only — no "Here is the translation:" prefix, no quotation marks around the result.
 8. Target language: ${language} (ISO-639-1: ${targetLanguage.toLowerCase()}).`;

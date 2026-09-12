@@ -3,6 +3,7 @@
    them, PostCSS throws an error. */
 @import '@mantine/core/styles.css';
 @import '@mantine/notifications/styles.css';
+@import '@mantine/tiptap/styles.css';
 
 /* Wave UI.8 — workbench tokens. `@hca/mantine-workbench` publishes
    all generic CSS vars (header height, FilterPanel, DataGrid,

@@ -34,13 +34,14 @@ export async function translateText(
     targetLanguage: string,
     field: string,
     sourceText: string,
+    maxTokens: number = 2048,
 ): Promise<string> {
     if (!sourceText || sourceText.trim().length === 0) return "";
 
     const c = getClient();
     const response = await c.messages.create({
         model: TRANSLATION_MODEL,
-        max_tokens: 2048,
+        max_tokens: maxTokens,
         system: buildSystemPrompt(targetLanguage),
         messages: [{ role: "user", content: buildUserPrompt(field, sourceText) }],
     });

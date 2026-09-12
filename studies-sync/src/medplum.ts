@@ -113,3 +113,84 @@ export async function validateAdminToken(accessToken: string): Promise<AdminIden
         isHcaAdmin: true,
     };
 }
+
+// ─── Editor guard (content routes) ────────────────────────────────
+//
+// Content is edited by hca admins (global articles) AND clinic staff
+// (their own articles). Clinic membership is resolved via the
+// PractitionerRole -> Organization binding, same pattern as
+// supplier-proxy.
+
+export interface EditorIdentity {
+    practitionerId: string | null;
+    isHcaAdmin: boolean;
+    /** Clinic (Organization id) the practitioner belongs to, if any. */
+    organizationId: string | null;
+}
+
+async function resolveOrganizationId(practitionerId: string): Promise<string | null> {
+    const client = await getServiceClient();
+    const bundle = await client.search("PractitionerRole", {
+        practitioner: `Practitioner/${practitionerId}`,
+        _count: "1",
+    });
+    const role = bundle.entry?.[0]?.resource as Record<string, unknown> | undefined;
+    const organization = role?.organization as Record<string, unknown> | undefined;
+    const ref = typeof organization?.reference === "string" ? organization.reference : "";
+    return parseReference(ref, "Organization");
+}
+
+/**
+ * Validates a Medplum access token for the content routes. Returns an
+ * identity for hca admins OR practitioners with a clinic binding;
+ * everyone else gets null.
+ */
+export async function validateEditorToken(accessToken: string): Promise<EditorIdentity | null> {
+    let authMeData: unknown;
+    try {
+        const res = await fetch(`${MEDPLUM_BASE_URL}auth/me`, {
+            headers: { Authorization: `Bearer ${accessToken}` },
+        });
+        if (!res.ok) return null;
+        authMeData = await res.json();
+    } catch (err) {
+        console.error("[studies-medplum] Failed to call /auth/me:", err);
+        return null;
+    }
+
+    const me = authMeData as Record<string, unknown>;
+    const profile = me.profile as Record<string, unknown> | undefined;
+    let practitionerId: string | null = null;
+    const profileRef = profile?.reference;
+    if (typeof profileRef === "string") {
+        practitionerId = parseReference(profileRef, "Practitioner");
+    } else if (profile?.resourceType === "Practitioner" && typeof profile?.id === "string") {
+        practitionerId = profile.id;
+    }
+
+    const isHcaAdmin = extractIsHcaAdmin(authMeData);
+    let organizationId: string | null = null;
+    if (!isHcaAdmin) {
+        if (!practitionerId) return null;
+        try {
+            organizationId = await resolveOrganizationId(practitionerId);
+        } catch (err) {
+            console.error("[studies-medplum] Failed to resolve PractitionerRole:", err);
+            return null;
+        }
+        if (!organizationId) return null;
+    }
+
+    return { practitionerId, isHcaAdmin, organizationId };
+}
+
+/** Display name of a clinic Organization, for article bookkeeping. */
+export async function getOrganizationName(organizationId: string): Promise<string | null> {
+    const client = await getServiceClient();
+    try {
+        const org = await client.readResource("Organization", organizationId);
+        return org.name ?? null;
+    } catch {
+        return null;
+    }
+}
