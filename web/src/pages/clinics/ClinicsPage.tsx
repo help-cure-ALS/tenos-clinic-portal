@@ -31,6 +31,8 @@ import {
   useRowSelection,
   type Column,
 } from '@hca/mantine-workbench';
+import { useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsControl } from '../../components/common/SavedViewsControl';
 
 import { useClinics } from '../../hooks/useClinics';
 import { medplum } from '../../lib/medplum';
@@ -62,7 +64,8 @@ export function ClinicsPage() {
   const [creating, setCreating] = useState(false);
 
   // ─── Suche + Sort ──────────────────────────────────────
-  const [query, setQuery] = useState('');
+  const vs = useViewState('clinics');
+  const [query, setQuery] = useViewQuery(vs);
 
   const filteredClinics = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -87,6 +90,7 @@ export function ClinicsPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   const selection = useRowSelection();
 
@@ -334,15 +338,15 @@ export function ClinicsPage() {
         </Center>
       ) : (
         <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('clinics.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+          <Group mx="md" wrap="nowrap" justify="space-between">
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('clinics.searchPlaceholder')}
+              style={{ maxWidth: 360, flex: 1 }}
+            />
+            <SavedViewsControl vs={vs} />
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<Organization>
@@ -350,7 +354,7 @@ export function ClinicsPage() {
               data={sort.sortedData}
               getRowId={(row) => row.id ?? ''}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
               onRowClick={(row) => navigate(`/clinics/${row.id}`)}

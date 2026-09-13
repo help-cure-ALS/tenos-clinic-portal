@@ -10,6 +10,7 @@ import {
   ThemeIcon,
   Button,
   Tooltip,
+  Group,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { modals } from '@mantine/modals';
@@ -26,6 +27,8 @@ import {
 } from '@hca/mantine-workbench';
 
 import { useAuthStore } from '../../stores/auth';
+import { useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsControl } from '../../components/common/SavedViewsControl';
 import {
   useClinicUsers,
   useUpdateUserPermissions,
@@ -50,8 +53,9 @@ export function UsersPage() {
     useDisclosure(false);
   const [detailUser, setDetailUser] = useState<ClinicUser | null>(null);
 
-  // ─── Search + Sort + Selection ─────────────────────────
-  const [query, setQuery] = useState('');
+  // ─── Search + Sort + Selection (backed by the saved view) ──
+  const vs = useViewState('users');
+  const [query, setQuery] = useViewQuery(vs);
 
   const filteredUsers = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -82,6 +86,7 @@ export function UsersPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   const selection = useRowSelection();
 
@@ -245,15 +250,15 @@ export function UsersPage() {
         </Center>
       ) : (
         <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('users.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+          <Group mx="md" wrap="nowrap" justify="space-between">
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('users.searchPlaceholder')}
+              style={{ maxWidth: 360, flex: 1 }}
+            />
+            <SavedViewsControl vs={vs} />
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<ClinicUser>
@@ -261,7 +266,7 @@ export function UsersPage() {
               data={sort.sortedData}
               getRowId={(row) => row.practitionerId}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
               onRowClick={(row) => setDetailUser(row)}

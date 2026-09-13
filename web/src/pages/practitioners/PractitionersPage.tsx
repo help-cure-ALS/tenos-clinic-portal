@@ -11,23 +11,32 @@ import {
   Modal,
   Select,
   ThemeIcon,
+  ActionIcon,
+  Tooltip,
+  Indicator,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { modals } from '@mantine/modals';
 import { notifications } from '@mantine/notifications';
-import { Pencil, Plus, Stethoscope, Trash2 } from 'lucide-react';
+import { Pencil, Plus, Stethoscope, Trash2, Filter as FilterIcon } from 'lucide-react';
 import { useQueryClient } from '@tanstack/react-query';
 import {
   PageHeader,
   DataGrid,
+  DataGridLayout,
+  FilterPanel,
+  usePanelRef,
   SearchInput,
   BulkActionBar,
   BulkPill,
   useGridSort,
   useRowSelection,
   type Column,
+  type FilterPanelSection,
 } from '@hca/mantine-workbench';
+import { filterMatches, useViewFilterSelection, useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsPanel } from '../../components/common/SavedViewsPanel';
 
 import {
   usePractitioners,
@@ -75,19 +84,72 @@ export function PractitionersPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
 
   // ─── Suche + Sort + Selection ─────────────────────────
-  const [query, setQuery] = useState('');
+  const vs = useViewState('practitioners');
+  const [query, setQuery] = useViewQuery(vs);
+  const { selection: filterSelection, setSelection: setFilterSelection } =
+    useViewFilterSelection(vs);
+
+  // Panel toggle (evidencespace pattern): button in the toolbar,
+  // collapsed state persisted per page, applied via the panel ref.
+  const filterPanelRef = usePanelRef();
+  const [filterCollapsed, setFilterCollapsed] = useLocalStorage<boolean>({
+    key: 'tenos-portal:practitioners:filter-collapsed',
+    defaultValue: false,
+  });
+  useEffect(() => {
+    const panel = filterPanelRef.current;
+    if (!panel) return;
+    if (filterCollapsed) panel.collapse();
+    else panel.expand();
+  }, [filterCollapsed, filterPanelRef]);
+
+  // Badge on the filter toggle — active VALUES, same arithmetic as
+  // the panel's reset pill.
+  const activeFilterCount = useMemo(
+    () => Array.from(filterSelection.values()).reduce((sum, set) => sum + set.size, 0),
+    [filterSelection],
+  );
 
   const filteredPractitioners = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return practitioners;
-    return practitioners.filter(
-      (p) =>
+    return practitioners.filter((p) => {
+      if (!filterMatches(filterSelection, 'qualification', p.qualification)) return false;
+      if (!filterMatches(filterSelection, 'clinic', p.clinicId)) return false;
+      if (!filterMatches(filterSelection, 'country', p.country)) return false;
+      if (!q) return true;
+      return (
         p.name.toLowerCase().includes(q) ||
         p.clinicName.toLowerCase().includes(q) ||
         p.qualification.toLowerCase().includes(q) ||
         p.country.toLowerCase().includes(q)
-    );
-  }, [practitioners, query]);
+      );
+    });
+  }, [practitioners, filterSelection, query]);
+
+  const filterSections = useMemo<FilterPanelSection[]>(() => {
+    const countBy = (fn: (p: PractitionerRow) => string) => {
+      const m = new Map<string, number>();
+      for (const p of practitioners) {
+        const key = fn(p);
+        if (key) m.set(key, (m.get(key) ?? 0) + 1);
+      }
+      return m;
+    };
+    const qualificationCounts = countBy((p) => p.qualification);
+    const clinicCounts = countBy((p) => p.clinicId);
+    const countryCounts = countBy((p) => p.country);
+    const clinicLabel = (id: string) =>
+      practitioners.find((p) => p.clinicId === id)?.clinicName ?? id;
+    const toItems = (m: Map<string, number>, label: (k: string) => string) =>
+      [...m.entries()]
+        .map(([key, count]) => ({ key, label: label(key), count }))
+        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+    return [
+      { key: 'qualification', title: t('practitioners.qualification'), mode: 'multi', items: toItems(qualificationCounts, (k) => k) },
+      { key: 'clinic', title: t('practitioners.clinic'), mode: 'multi', items: toItems(clinicCounts, clinicLabel) },
+      { key: 'country', title: t('practitioners.country'), mode: 'multi', items: toItems(countryCounts, (k) => k) },
+    ];
+  }, [practitioners, t]);
 
   const sort = useGridSort<PractitionerRow>({
     mode: 'client',
@@ -110,6 +172,7 @@ export function PractitionersPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   const selection = useRowSelection();
 
@@ -364,7 +427,9 @@ export function PractitionersPage() {
   }
 
   return (
-    <Stack gap="lg" h="100%" style={{ minHeight: 0 }}>
+    <Stack gap={0} h="100%" style={{ minHeight: 0 }}>
+      {practitioners.length === 0 ? (
+        <>
       <PageHeader
         title={t('practitioners.title')}
         subtitle={t('practitioners.subtitle')}
@@ -378,8 +443,6 @@ export function PractitionersPage() {
           </Button>
         }
       />
-
-      {practitioners.length === 0 ? (
         <Center style={{ flex: 1, minHeight: 0 }}>
           <Stack align="center" gap="sm" maw={360}>
             <ThemeIcon variant="light" size="xl" color="gray" radius="xl">
@@ -391,17 +454,69 @@ export function PractitionersPage() {
             </Text>
           </Stack>
         </Center>
+        </>
       ) : (
-        <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('practitioners.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+        <div style={{ flex: 1, minHeight: 0 }}>
+        <DataGridLayout
+          pageKey="practitioners"
+          filterPanelRef={filterPanelRef}
+          onFilterCollapsedChange={setFilterCollapsed}
+          filterPanel={
+            <FilterPanel
+              sections={filterSections}
+              selection={filterSelection}
+              onChange={setFilterSelection}
+              storageKey="practitioners"
+              topSlot={<SavedViewsPanel vs={vs} />}
+              title={t('filters.title')}
+              resetLabel={t('filters.reset')}
+            />
+          }
+          mainContent={
+        <Stack gap="md" h="100%" style={{ minHeight: 0, overflow: 'hidden' }}>
+      <PageHeader
+        title={t('practitioners.title')}
+        subtitle={t('practitioners.subtitle')}
+        actions={
+          <Button
+            leftSection={<Plus size={16} />}
+            color="hca-purple"
+            onClick={openCreateModal}
+          >
+            {t('practitioners.add')}
+          </Button>
+        }
+      />
+          <Group mx="md" wrap="nowrap" gap="md">
+            <Indicator
+              label={String(activeFilterCount)}
+              size={16}
+              disabled={activeFilterCount === 0}
+              color="dark"
+              offset={2}
+            >
+              <Tooltip label={filterCollapsed ? t('filters.show') : t('filters.hide')} withArrow>
+                <ActionIcon
+                  variant={filterCollapsed ? 'default' : 'filled'}
+                  color="gray"
+                  size="lg"
+                  onClick={() => setFilterCollapsed((c) => !c)}
+                  aria-pressed={!filterCollapsed}
+                >
+                  <FilterIcon size={16} />
+                </ActionIcon>
+              </Tooltip>
+            </Indicator>
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('practitioners.searchPlaceholder')}
+              style={{ flex: 1 }}
+            />
+            <Text fz="sm" c="dimmed" style={{ whiteSpace: 'nowrap' }}>
+              {filteredPractitioners.length} / {practitioners.length}
+            </Text>
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<PractitionerRow>
@@ -409,7 +524,7 @@ export function PractitionersPage() {
               data={sort.sortedData}
               getRowId={(row) => row.id}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
             />
@@ -446,7 +561,10 @@ export function PractitionersPage() {
               </BulkPill>
             </BulkActionBar>
           )}
-        </>
+        </Stack>
+          }
+        />
+        </div>
       )}
 
       <Modal

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Stack,
@@ -7,6 +7,7 @@ import {
   Center,
   ThemeIcon,
   Loader,
+  Group,
 } from '@mantine/core';
 import { modals } from '@mantine/modals';
 import { Award, X } from 'lucide-react';
@@ -20,6 +21,8 @@ import {
   useRowSelection,
   type Column,
 } from '@hca/mantine-workbench';
+import { useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsControl } from '../../components/common/SavedViewsControl';
 
 import { useVerificationTokens, useRevokeToken } from '../../hooks/useVerifications';
 import type { VerificationTokenResponse } from '../../lib/api';
@@ -36,7 +39,8 @@ export function TokensPage() {
   const revokeToken = useRevokeToken();
 
   // ─── Search + sort + selection ────────────────────────
-  const [query, setQuery] = useState('');
+  const vs = useViewState('tokens');
+  const [query, setQuery] = useViewQuery(vs);
 
   // The filter is applied BEFORE the sort so sortedData always
   // reflects the visible subset. Case-insensitive match on tokenId.
@@ -63,6 +67,7 @@ export function TokensPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   const selection = useRowSelection();
 
@@ -196,15 +201,15 @@ export function TokensPage() {
         </Center>
       ) : (
         <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('tokens.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+          <Group mx="md" wrap="nowrap" justify="space-between">
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('tokens.searchPlaceholder')}
+              style={{ maxWidth: 360, flex: 1 }}
+            />
+            <SavedViewsControl vs={vs} />
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<VerificationTokenResponse>
@@ -212,7 +217,7 @@ export function TokensPage() {
               data={sort.sortedData}
               getRowId={(row) => row.tokenId}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
             />

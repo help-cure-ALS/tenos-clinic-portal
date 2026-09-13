@@ -80,7 +80,8 @@
     "language": "Language",
     "collapseSidebar": "Collapse sidebar",
     "expandSidebar": "Expand sidebar",
-    "content": "Editorial"
+    "content": "Editorial",
+    "settings": "Settings"
   },
   "dashboard": {
     "welcome": "Welcome back, {{name}}",
@@ -710,6 +711,75 @@
     "fieldRolesHint": "Empty = all roles see the article.",
     "rolePatient": "Patient",
     "roleCaregiver": "Caregiver",
-    "roleDoctor": "Doctor"
+    "roleDoctor": "Doctor",
+    "viewGrid": "Table",
+    "viewCards": "Cards",
+    "viewBoard": "Board",
+    "groupNone": "No grouping",
+    "groupStatus": "By status",
+    "groupCategory": "By category",
+    "groupSource": "By source"
+  },
+  "views": {
+    "title": "Saved views",
+    "default": "Default",
+    "unsaved": "Unsaved view",
+    "none": "No saved views",
+    "saveCurrent": "Save current view...",
+    "updateParent": "Update view \"{{name}}\"",
+    "saveTitle": "Save view",
+    "nameLabel": "Name",
+    "defaultLabel": "Use as default view",
+    "renameTitle": "Rename view",
+    "setDefault": "Set as default",
+    "rename": "Rename",
+    "delete": "Delete",
+    "error": "Could not save view",
+    "sectionTitle": "Views",
+    "updateWithCurrent": "Update with current filters",
+    "removeDefault": "Remove default"
+  },
+  "filters": {
+    "title": "Filters",
+    "reset": "Reset ({count})",
+    "show": "Show filters",
+    "hide": "Hide filters"
+  },
+  "settings": {
+    "title": "Settings",
+    "groupAdministration": "Administration",
+    "groupSystem": "System",
+    "mailServer": "Mail server"
+  },
+  "mail": {
+    "subtitle": "SMTP configuration and email templates for portal mail.",
+    "configured": "Configured",
+    "notConfigured": "Not configured",
+    "smtpSection": "SMTP server",
+    "host": "Host",
+    "port": "Port",
+    "secure": "TLS (SMTPS)",
+    "username": "Username",
+    "password": "Password",
+    "passwordStored": "(stored)",
+    "fromEmail": "From address",
+    "fromName": "From name",
+    "replyTo": "Reply-to address",
+    "portalBaseUrl": "Portal base URL",
+    "portalBaseUrlHint": "Used for links in mails, e.g. the invitation link.",
+    "saved": "Mail settings saved",
+    "saveFailed": "Saving failed",
+    "testSection": "Test mail",
+    "testRecipient": "Recipient",
+    "sendTest": "Send test mail",
+    "testSent": "Test mail sent",
+    "testFailed": "Test mail failed",
+    "templateSection": "Template: invitation",
+    "templateHint": "HTML with placeholders: {clinic}, {role}, {invite_link}, {expires_at}. Sent automatically when inviting with an email address.",
+    "templateSubject": "Subject",
+    "templateBody": "Body (HTML)",
+    "saveTemplate": "Save template",
+    "templateSaved": "Template saved",
+    "resetTemplate": "Reset to default"
   }
 }

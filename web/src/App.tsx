@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { AppShellLayout } from './components/layout/AppShell';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
@@ -20,6 +20,8 @@ import { SupplierDetailPage } from './pages/suppliers/SupplierDetailPage';
 import { SupplierWorkflowPoliciesPage } from './pages/suppliers/SupplierWorkflowPoliciesPage';
 import { StudiesSyncPage } from './pages/admin/StudiesSyncPage';
 import { ContentPage } from './pages/content/ContentPage';
+import { SettingsLayout } from './pages/settings/SettingsLayout';
+import { MailServerPage } from './pages/settings/MailServerPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -79,11 +81,31 @@ export function App() {
               </ProtectedRoute>
             } />
 
-            <Route path="/studies-sync" element={
-              <ProtectedRoute allowedRoles={['hca-admin']}>
-                <StudiesSyncPage />
-              </ProtectedRoute>
-            } />
+            {/* Settings area — grouped sub-navigation; the previous
+                stand-alone routes redirect so old links keep working. */}
+            <Route path="/settings" element={<SettingsLayout />}>
+              <Route path="users" element={
+                <ProtectedRoute allowedRoles={['clinic-admin']}>
+                  <UsersPage />
+                </ProtectedRoute>
+              } />
+              <Route path="supplier-policies" element={
+                <ProtectedRoute allowedRoles={['hca-admin']}>
+                  <SupplierWorkflowPoliciesPage />
+                </ProtectedRoute>
+              } />
+              <Route path="studies-sync" element={
+                <ProtectedRoute allowedRoles={['hca-admin']}>
+                  <StudiesSyncPage />
+                </ProtectedRoute>
+              } />
+              <Route path="mail-server" element={
+                <ProtectedRoute allowedRoles={['hca-admin']}>
+                  <MailServerPage />
+                </ProtectedRoute>
+              } />
+            </Route>
+            <Route path="/studies-sync" element={<Navigate to="/settings/studies-sync" replace />} />
 
             <Route path="/suppliers" element={
               <ProtectedRoute allowedRoles={['hca-admin']}>
@@ -97,11 +119,7 @@ export function App() {
               </ProtectedRoute>
             } />
 
-            <Route path="/supplier-workflow-policies" element={
-              <ProtectedRoute allowedRoles={['hca-admin']}>
-                <SupplierWorkflowPoliciesPage />
-              </ProtectedRoute>
-            } />
+            <Route path="/supplier-workflow-policies" element={<Navigate to="/settings/supplier-policies" replace />} />
 
             <Route path="/content" element={
               <ProtectedRoute allowedRoles={['hca-admin', 'clinic-admin']}>
@@ -109,11 +127,7 @@ export function App() {
               </ProtectedRoute>
             } />
 
-            <Route path="/users" element={
-              <ProtectedRoute allowedRoles={['clinic-admin']}>
-                <UsersPage />
-              </ProtectedRoute>
-            } />
+            <Route path="/users" element={<Navigate to="/settings/users" replace />} />
 
             <Route path="/clinic-studies" element={
               <ProtectedRoute allowedRoles={['clinic-admin']}>

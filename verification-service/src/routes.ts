@@ -25,7 +25,23 @@ import {
     ToggleVerificationSchema,
     UpdatePermissionsSchema,
     UpdateUserNameSchema,
+    CreateSavedViewSchema,
+    UpdateSavedViewSchema,
+    SmtpSettingsSchema,
+    MailTemplatesPatchSchema,
+    TestMailSchema,
 } from "./types";
+import {
+    DEFAULT_MAIL_TEMPLATES,
+    getPortalMailSettings,
+    isMailConfigured,
+    renderMailTemplate,
+    saveMailTemplates,
+    saveSmtpSettings,
+    sendMail,
+    type MailTemplates,
+    type SmtpSettings,
+} from "./mail";
 import {
     type ClinicianIdentity,
     validateClinicianToken,
@@ -996,8 +1012,36 @@ export async function routes(app: FastifyInstance) {
              VALUES ($1, $2, $3, $4, $5) RETURNING *`,
             [clinic_id, email ?? null, role, expiresAt, identity.practitionerId],
         );
+        const invitation = result.rows[0];
 
-        return result.rows[0];
+        // Best-effort invitation mail over the portal's own SMTP.
+        // Without a configured mail server (or a recipient) the
+        // copyable link in the portal remains the delivery path.
+        let mailSent = false;
+        if (email) {
+            try {
+                const { smtp, templates } = await getPortalMailSettings();
+                if (isMailConfigured(smtp) && smtp.portal_base_url) {
+                    const clinicName = (await getOrganizationName(clinic_id)) ?? clinic_id;
+                    const vars = {
+                        clinic: clinicName,
+                        role,
+                        invite_link: `${smtp.portal_base_url}/app/register/${invitation.token}`,
+                        expires_at: new Date(expiresAt).toLocaleDateString("de-DE"),
+                    };
+                    await sendMail(smtp, {
+                        to: email,
+                        subject: renderMailTemplate(templates.invitation.subject, vars),
+                        html: renderMailTemplate(templates.invitation.body, vars),
+                    });
+                    mailSent = true;
+                }
+            } catch (mailErr) {
+                req.log.warn({ err: mailErr }, "invitation mail failed");
+            }
+        }
+
+        return { ...invitation, mail_sent: mailSent };
     });
 
     /**
@@ -1833,6 +1877,242 @@ export async function routes(app: FastifyInstance) {
                 active: byStatus.active ?? 0,
                 revoked: byStatus.revoked ?? 0,
             };
+        },
+    );
+
+    // -----------------------------------------------------------------
+    // Saved grid views (portal) — evidencespace pattern: the URL only
+    // carries ?view=<id>, the params live behind the id. Views always
+    // belong to the authenticated portal user; the user id is taken
+    // from the token, never from the client.
+    // -----------------------------------------------------------------
+
+    const SAVED_VIEW_COLUMNS = `id, scope, name, search_params, pinned, is_default,
+              created_at, updated_at`;
+
+    app.get("/portal/views", async (req: FastifyRequest, reply: FastifyReply) => {
+        const identity = await requireClinician(req, reply);
+        if (!identity) return;
+        const scope = (req.query as { scope?: string }).scope;
+        const params: unknown[] = [identity.practitionerId];
+        let where = "user_id = $1";
+        if (scope) {
+            params.push(scope);
+            where += ` AND scope = $${params.length}`;
+        }
+        const { rows } = await pool.query(
+            `SELECT ${SAVED_VIEW_COLUMNS}
+               FROM saved_view
+              WHERE ${where}
+              ORDER BY is_default DESC, pinned DESC, updated_at DESC`,
+            params,
+        );
+        return { views: rows };
+    });
+
+    app.post("/portal/views", async (req: FastifyRequest, reply: FastifyReply) => {
+        const identity = await requireClinician(req, reply);
+        if (!identity) return;
+        const parsed = CreateSavedViewSchema.safeParse(req.body);
+        if (!parsed.success) {
+            reply.code(400).send({ error: "invalid_body", details: parsed.error.flatten() });
+            return;
+        }
+        const body = parsed.data;
+        if (body.is_default) {
+            await pool.query(
+                `UPDATE saved_view SET is_default = FALSE
+                  WHERE user_id = $1 AND scope = $2 AND is_default`,
+                [identity.practitionerId, body.scope],
+            );
+        }
+        const { rows } = await pool.query(
+            `INSERT INTO saved_view (user_id, scope, name, search_params, pinned, is_default)
+             VALUES ($1, $2, $3, $4, $5, $6)
+             RETURNING ${SAVED_VIEW_COLUMNS}`,
+            [
+                identity.practitionerId, body.scope, body.name,
+                body.search_params, body.pinned, body.is_default,
+            ],
+        );
+        reply.code(201);
+        return { view: rows[0] };
+    });
+
+    app.patch(
+        "/portal/views/:viewId",
+        async (req: FastifyRequest<{ Params: { viewId: string } }>, reply: FastifyReply) => {
+            const identity = await requireClinician(req, reply);
+            if (!identity) return;
+            const parsed = UpdateSavedViewSchema.safeParse(req.body);
+            if (!parsed.success) {
+                reply.code(400).send({ error: "invalid_body", details: parsed.error.flatten() });
+                return;
+            }
+            const body = parsed.data;
+            const { rows: existing } = await pool.query<{ id: string; scope: string }>(
+                `SELECT id, scope FROM saved_view WHERE id = $1 AND user_id = $2`,
+                [req.params.viewId, identity.practitionerId],
+            );
+            if (existing.length === 0) {
+                reply.code(404).send({ error: "view_not_found" });
+                return;
+            }
+            if (body.is_default === true) {
+                await pool.query(
+                    `UPDATE saved_view SET is_default = FALSE
+                      WHERE user_id = $1 AND scope = $2 AND is_default AND id <> $3`,
+                    [identity.practitionerId, existing[0].scope, req.params.viewId],
+                );
+            }
+            const sets: string[] = ["updated_at = now()"];
+            const params: unknown[] = [req.params.viewId, identity.practitionerId];
+            for (const [column, value] of [
+                ["name", body.name],
+                ["search_params", body.search_params],
+                ["pinned", body.pinned],
+                ["is_default", body.is_default],
+            ] as const) {
+                if (value !== undefined) {
+                    params.push(value);
+                    sets.push(`${column} = $${params.length}`);
+                }
+            }
+            const { rows } = await pool.query(
+                `UPDATE saved_view SET ${sets.join(", ")}
+                  WHERE id = $1 AND user_id = $2
+                  RETURNING ${SAVED_VIEW_COLUMNS}`,
+                params,
+            );
+            return { view: rows[0] };
+        },
+    );
+
+    app.delete(
+        "/portal/views/:viewId",
+        async (req: FastifyRequest<{ Params: { viewId: string } }>, reply: FastifyReply) => {
+            const identity = await requireClinician(req, reply);
+            if (!identity) return;
+            const { rowCount } = await pool.query(
+                `DELETE FROM saved_view WHERE id = $1 AND user_id = $2`,
+                [req.params.viewId, identity.practitionerId],
+            );
+            if (rowCount === 0) {
+                reply.code(404).send({ error: "view_not_found" });
+                return;
+            }
+            return { ok: true };
+        },
+    );
+
+    // -----------------------------------------------------------------
+    // Mail-server settings + templates (Settings -> Mail-Server).
+    // hca-admin only; the SMTP password never leaves the server.
+    // -----------------------------------------------------------------
+
+    async function requireHcaAdmin(
+        req: FastifyRequest,
+        reply: FastifyReply,
+    ): Promise<ClinicianIdentity | null> {
+        const identity = await requireClinician(req, reply);
+        if (!identity) return null;
+        if (!identity.isHcaAdmin) {
+            reply.code(403).send({ error: "admin_only" });
+            return null;
+        }
+        return identity;
+    }
+
+    function safeSmtp(smtp: SmtpSettings) {
+        const { password: _pw, ...rest } = smtp;
+        return { ...rest, has_password: Boolean(smtp.password) };
+    }
+
+    app.get("/portal/settings/mail", async (req: FastifyRequest, reply: FastifyReply) => {
+        if (!(await requireHcaAdmin(req, reply))) return;
+        const { smtp, templates } = await getPortalMailSettings();
+        return {
+            smtp: safeSmtp(smtp),
+            templates,
+            defaults: DEFAULT_MAIL_TEMPLATES,
+            configured: isMailConfigured(smtp),
+        };
+    });
+
+    app.patch("/portal/settings/mail", async (req: FastifyRequest, reply: FastifyReply) => {
+        if (!(await requireHcaAdmin(req, reply))) return;
+        const parsed = SmtpSettingsSchema.safeParse(req.body);
+        if (!parsed.success) {
+            reply.code(400).send({ error: "invalid_body", details: parsed.error.flatten() });
+            return;
+        }
+        const body = parsed.data;
+        const current = (await getPortalMailSettings()).smtp;
+
+        // Empty password keeps the stored one; clear_password removes it.
+        let password = current.password;
+        if (body.clear_password) password = undefined;
+        else if (body.password) password = body.password;
+
+        const merged: SmtpSettings = {
+            host: body.host?.trim() || undefined,
+            port: body.port,
+            secure: body.secure,
+            username: body.username?.trim() || undefined,
+            password,
+            from_email: body.from_email?.trim() || undefined,
+            from_name: body.from_name?.trim() || undefined,
+            reply_to: body.reply_to?.trim() || undefined,
+            portal_base_url: body.portal_base_url?.trim().replace(/\/+$/, "") || undefined,
+        };
+        await saveSmtpSettings(merged);
+        return { smtp: safeSmtp(merged), configured: isMailConfigured(merged) };
+    });
+
+    app.patch(
+        "/portal/settings/mail/templates",
+        async (req: FastifyRequest, reply: FastifyReply) => {
+            if (!(await requireHcaAdmin(req, reply))) return;
+            const parsed = MailTemplatesPatchSchema.safeParse(req.body);
+            if (!parsed.success) {
+                reply.code(400).send({ error: "invalid_body", details: parsed.error.flatten() });
+                return;
+            }
+            const current = (await getPortalMailSettings()).templates;
+            const merged: MailTemplates = {
+                invitation: parsed.data.invitation ?? current.invitation,
+            };
+            await saveMailTemplates(merged);
+            return { templates: merged };
+        },
+    );
+
+    app.post(
+        "/portal/settings/mail/test",
+        async (req: FastifyRequest, reply: FastifyReply) => {
+            if (!(await requireHcaAdmin(req, reply))) return;
+            const parsed = TestMailSchema.safeParse(req.body);
+            if (!parsed.success) {
+                reply.code(400).send({ error: "invalid_body", details: parsed.error.flatten() });
+                return;
+            }
+            const { smtp } = await getPortalMailSettings();
+            try {
+                await sendMail(smtp, {
+                    to: parsed.data.to,
+                    subject: "TENOS Clinic Portal — Mail-Server-Test",
+                    html:
+                        "<p>Guten Tag,</p>" +
+                        "<p>diese Test-Mail bestätigt, dass die SMTP-Konfiguration " +
+                        "des TENOS Clinic Portals funktioniert.</p>" +
+                        "<p>Wenn Sie diese Mail erhalten, ist alles richtig eingestellt.</p>",
+                });
+                return { ok: true, sent_to: parsed.data.to };
+            } catch (mailErr) {
+                const message = mailErr instanceof Error ? mailErr.message : String(mailErr);
+                reply.code(400).send({ ok: false, error: message });
+                return;
+            }
         },
     );
 }

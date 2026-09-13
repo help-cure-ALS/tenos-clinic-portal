@@ -13,6 +13,7 @@
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocalStorage } from '@mantine/hooks';
 import {
   ActionIcon,
   Alert,
@@ -40,18 +41,24 @@ import {
   ThemeIcon,
   Title,
   Tooltip,
+  Indicator,
 } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
-import { Newspaper, Pin, Plus, Tags, Trash2 } from 'lucide-react';
+import { Newspaper, Pin, Plus, Tags, Trash2, Filter as FilterIcon } from 'lucide-react';
 import {
   PageHeader,
   DataGrid,
+  DataGridLayout,
+  FilterPanel,
+  usePanelRef,
   SearchInput,
   BulkActionBar,
   BulkPill,
   useGridSort,
   useRowSelection,
   type Column,
+  type DataGridSection,
+  type FilterPanelSection,
 } from '@hca/mantine-workbench';
 import { RichTextEditor } from '@hca/mantine-workbench/rich-text';
 import { useAuthStore } from '../../stores/auth';
@@ -74,6 +81,25 @@ import {
   type ContentArticle,
   type ContentCategory,
 } from '../../lib/contentApi';
+import {
+  articleGroupKey,
+  buildGroups,
+  ContentBoardView,
+  ContentCardsView,
+  STATUS_ORDER,
+  type ContentGroupBy,
+  type ContentViewMode,
+  type GroupContext,
+} from './ContentViews';
+import {
+  filterMatches,
+  patchViewParams,
+  useViewFilterSelection,
+  useViewQuery,
+  useViewSortSync,
+  useViewState,
+} from '../../hooks/useViewState';
+import { SavedViewsPanel } from '../../components/common/SavedViewsPanel';
 
 const APP_LANGUAGES = ['de', 'en', 'es', 'fr', 'it', 'ja', 'nl', 'pl', 'pt', 'ro', 'tr', 'zh'];
 
@@ -212,9 +238,55 @@ export function ContentPage() {
   const [articles, setArticles] = useState<ContentArticle[]>([]);
   const [categories, setCategories] = useState<ContentCategory[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [statusFilter, setStatusFilter] = useState<string>('all');
-  const [query, setQuery] = useState('');
   const [error, setError] = useState('');
+
+  // Search, status filter, layout, grouping and sort all live in the
+  // saved view (URL only carries ?view=<id> — evidencespace pattern).
+  const vs = useViewState('content');
+  const [query, setQuery] = useViewQuery(vs);
+  // Left filter panel (status/category/source), serialized as f_*
+  // params so saved views capture the panel state.
+  const { selection: filterSelection, setSelection: setFilterSelection } =
+    useViewFilterSelection(vs);
+
+  // Panel toggle (evidencespace pattern): button in the toolbar,
+  // collapsed state persisted per page, applied via the panel ref.
+  const filterPanelRef = usePanelRef();
+  const [filterCollapsed, setFilterCollapsed] = useLocalStorage<boolean>({
+    key: 'tenos-portal:content:filter-collapsed',
+    defaultValue: false,
+  });
+  useEffect(() => {
+    const panel = filterPanelRef.current;
+    if (!panel) return;
+    if (filterCollapsed) panel.collapse();
+    else panel.expand();
+  }, [filterCollapsed, filterPanelRef]);
+
+  // Badge on the filter toggle — active VALUES, same arithmetic as
+  // the panel's reset pill.
+  const activeFilterCount = useMemo(
+    () => Array.from(filterSelection.values()).reduce((sum, set) => sum + set.size, 0),
+    [filterSelection],
+  );
+  const viewRaw = vs.state.params.get('layout');
+  const view: ContentViewMode =
+    viewRaw === 'cards' || viewRaw === 'board' ? viewRaw : 'grid';
+  const groupRaw = vs.state.params.get('group');
+  const groupBy: ContentGroupBy =
+    groupRaw === 'status' || groupRaw === 'category' || (groupRaw === 'source' && isHca)
+      ? groupRaw
+      : view === 'board' ? 'status' : 'none';
+  const patchView = (next: { view?: ContentViewMode; groupBy?: ContentGroupBy }) => {
+    const v = next.view ?? view;
+    let g = next.groupBy ?? groupBy;
+    // The board needs a grouping — default to the status workflow.
+    if (v === 'board' && g === 'none') g = 'status';
+    patchViewParams(vs, {
+      layout: v === 'grid' ? null : v,
+      group: g === 'none' ? null : g,
+    });
+  };
 
   const [editorOpen, setEditorOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -263,11 +335,13 @@ export function ContentPage() {
   const filteredArticles = useMemo(() => {
     const q = query.trim().toLowerCase();
     return articles.filter((a) => {
-      if (statusFilter !== 'all' && a.status !== statusFilter) return false;
+      if (!filterMatches(filterSelection, 'status', a.status)) return false;
+      if (!filterMatches(filterSelection, 'category', a.category_id)) return false;
+      if (!filterMatches(filterSelection, 'source', a.source === 'hca' ? 'hca' : a.clinic_id ?? '')) return false;
       if (q && !a.title.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [articles, statusFilter, query]);
+  }, [articles, filterSelection, query]);
 
   const columns: Column<ContentArticle>[] = useMemo(
     () => [
@@ -336,6 +410,69 @@ export function ContentPage() {
     [t, isHca, categoryLabel],
   );
 
+  const statusLabel = useCallback(
+    (s: ArticleStatus): string =>
+      t(`content.status${s[0].toUpperCase()}${s.slice(1)}`),
+    [t],
+  );
+
+  const groupCtx = useMemo<GroupContext>(() => ({
+    groupBy,
+    categoryLabel,
+    statusLabel,
+    sourceHcaLabel: 'HCA',
+    sourceClinicFallback: t('content.sourceClinic'),
+  }), [groupBy, categoryLabel, statusLabel, t]);
+
+  const filterSections = useMemo<FilterPanelSection[]>(() => {
+    const countBy = (fn: (a: ContentArticle) => string) => {
+      const m = new Map<string, number>();
+      for (const a of articles) {
+        const key = fn(a);
+        m.set(key, (m.get(key) ?? 0) + 1);
+      }
+      return m;
+    };
+    const statusCounts = countBy((a) => a.status);
+    const categoryCounts = countBy((a) => a.category_id);
+    const sections: FilterPanelSection[] = [
+      {
+        key: 'status',
+        title: t('content.colStatus'),
+        mode: 'multi',
+        items: STATUS_ORDER.map((s) => ({
+          key: s,
+          label: statusLabel(s),
+          count: statusCounts.get(s) ?? 0,
+        })),
+      },
+      {
+        key: 'category',
+        title: t('content.colCategory'),
+        mode: 'multi',
+        items: [...categoryCounts.entries()]
+          .map(([id, count]) => ({ key: id, label: categoryLabel(id), count }))
+          .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)),
+      },
+    ];
+    if (isHca) {
+      const sourceCounts = countBy((a) => (a.source === 'hca' ? 'hca' : a.clinic_id ?? ''));
+      const labelFor = (key: string) => key === 'hca'
+        ? 'HCA'
+        : articles.find((a) => a.clinic_id === key)?.clinic_name ?? t('content.sourceClinic');
+      sections.push({
+        key: 'source',
+        title: t('content.colSource'),
+        mode: 'multi',
+        items: [...sourceCounts.entries()]
+          .filter(([key]) => key !== '')
+          .map(([key, count]) => ({ key, label: labelFor(key), count }))
+          .sort((a, b) => (a.key === 'hca' ? -1 : b.key === 'hca' ? 1 : b.count - a.count)),
+      });
+    }
+    return sections;
+  }, [articles, isHca, statusLabel, categoryLabel, t]);
+
   const countryOptions = useMemo(() => {
     const names = new Intl.DisplayNames([i18n.language], { type: 'region' });
     return COUNTRY_CODES
@@ -364,6 +501,23 @@ export function ContentPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
+
+  const gridSections = useMemo<DataGridSection<ContentArticle>[]>(() => {
+    if (groupBy === 'none') return [];
+    return buildGroups(sort.sortedData, groupCtx)
+      .filter((g) => g.count > 0)
+      .map((g) => ({
+        key: g.key,
+        header: (
+          <Group gap={8} align="baseline">
+            <Text fw={600} fz={13}>{g.label}</Text>
+            <Text fz={12} c="dimmed" ff="monospace">{g.count}</Text>
+          </Group>
+        ),
+        data: sort.sortedData.filter((a) => articleGroupKey(a, groupBy) === g.key),
+      }));
+  }, [groupBy, sort.sortedData, groupCtx]);
 
   async function openEditor(article?: ContentArticle) {
     pendingImage.current = undefined;
@@ -522,7 +676,9 @@ export function ContentPage() {
   }
 
   return (
-    <Stack gap="lg" h="100%" style={{ minHeight: 0 }}>
+    <Stack gap={0} h="100%" style={{ minHeight: 0 }}>
+      {articles.length === 0 ? (
+        <>
       <PageHeader
         title={t('content.title')}
         subtitle={t('content.subtitle')}
@@ -548,10 +704,7 @@ export function ContentPage() {
           </Group>
         }
       />
-
-      {error && <Alert color="red" mx="md">{error}</Alert>}
-
-      {articles.length === 0 ? (
+        {error && <Alert color="red" mx="md">{error}</Alert>}
         <Center style={{ flex: 1, minHeight: 0 }}>
           <Stack align="center" gap="sm" maw={360}>
             <ThemeIcon variant="light" size="xl" color="gray" radius="xl">
@@ -563,38 +716,141 @@ export function ContentPage() {
             </Text>
           </Stack>
         </Center>
+        </>
       ) : (
-        <>
+        <div style={{ flex: 1, minHeight: 0 }}>
+        <DataGridLayout
+          pageKey="content"
+          filterPanelRef={filterPanelRef}
+          onFilterCollapsedChange={setFilterCollapsed}
+          filterPanel={
+            <FilterPanel
+              sections={filterSections}
+              selection={filterSelection}
+              onChange={setFilterSelection}
+              storageKey="content"
+              topSlot={<SavedViewsPanel vs={vs} />}
+              title={t('filters.title')}
+              resetLabel={t('filters.reset')}
+            />
+          }
+          mainContent={
+        <Stack gap="md" h="100%" style={{ minHeight: 0, overflow: 'hidden' }}>
+      <PageHeader
+        title={t('content.title')}
+        subtitle={t('content.subtitle')}
+        actions={
+          <Group gap="xs">
+            {isHca && (
+              <Button
+                variant="light"
+                color="hca-purple"
+                leftSection={<Tags size={16} />}
+                onClick={() => setCategoriesOpen(true)}
+              >
+                {t('content.categories')}
+              </Button>
+            )}
+            <Button
+              color="hca-purple"
+              leftSection={<Plus size={16} />}
+              onClick={() => void openEditor()}
+            >
+              {t('content.newArticle')}
+            </Button>
+          </Group>
+        }
+      />
+          {error && <Alert color="red" mx="md">{error}</Alert>}
           <Group gap="md" mx="md" wrap="nowrap">
+            <Indicator
+              label={String(activeFilterCount)}
+              size={16}
+              disabled={activeFilterCount === 0}
+              color="dark"
+              offset={2}
+            >
+              <Tooltip label={filterCollapsed ? t('filters.show') : t('filters.hide')} withArrow>
+                <ActionIcon
+                  variant={filterCollapsed ? 'default' : 'filled'}
+                  color="gray"
+                  size="lg"
+                  onClick={() => setFilterCollapsed((c) => !c)}
+                  aria-pressed={!filterCollapsed}
+                >
+                  <FilterIcon size={16} />
+                </ActionIcon>
+              </Tooltip>
+            </Indicator>
             <SearchInput
               value={query}
               onChange={setQuery}
               placeholder={t('content.searchPlaceholder')}
-              style={{ maxWidth: 360, flex: 1 }}
+              style={{ flex: 1 }}
+            />
+            <Text fz="sm" c="dimmed" style={{ whiteSpace: 'nowrap' }}>
+              {sort.sortedData.length} / {articles.length}
+            </Text>
+            <Select
+              size="sm"
+              w={190}
+              value={groupBy}
+              onChange={(v) => v && patchView({ groupBy: v as ContentGroupBy })}
+              data={[
+                { value: 'none', label: t('content.groupNone'), disabled: view === 'board' },
+                { value: 'status', label: t('content.groupStatus') },
+                { value: 'category', label: t('content.groupCategory') },
+                ...(isHca ? [{ value: 'source', label: t('content.groupSource') }] : []),
+              ]}
+              style={{ marginLeft: 'auto' }}
             />
             <SegmentedControl
-              value={statusFilter}
-              onChange={setStatusFilter}
+              value={view}
+              onChange={(v) => patchView({ view: v as ContentViewMode })}
               data={[
-                { value: 'all', label: t('content.filterAll') },
-                { value: 'draft', label: t('content.statusDraft') },
-                { value: 'public', label: t('content.statusPublic') },
-                { value: 'archived', label: t('content.statusArchived') },
+                { value: 'grid', label: t('content.viewGrid') },
+                { value: 'cards', label: t('content.viewCards') },
+                { value: 'board', label: t('content.viewBoard') },
               ]}
             />
           </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
-            <DataGrid<ContentArticle>
-              columns={columns}
-              data={sort.sortedData}
-              getRowId={(row) => row.id}
-              sort={sort.value}
-              onSortChange={sort.set}
-              selection={selection.value}
-              onSelectionChange={selection.set}
-              onRowClick={(row) => void openEditor(row)}
-            />
+            {view === 'grid' ? (
+              /* Grouped: sections mode like the Explorer grid — one
+                 column header, group rows in between. */
+              <DataGrid<ContentArticle>
+                columns={columns}
+                data={groupBy === 'none' ? sort.sortedData : []}
+                sections={groupBy === 'none' ? undefined : gridSections}
+                getRowId={(row) => row.id}
+                sort={sort.value}
+                onSortChange={onSortChange}
+                selection={selection.value}
+                onSelectionChange={selection.set}
+                onRowClick={(row) => void openEditor(row)}
+              />
+            ) : view === 'cards' ? (
+              <ContentCardsView
+                articles={sort.sortedData}
+                groups={buildGroups(sort.sortedData, groupCtx)}
+                ctx={groupCtx}
+                selection={selection.value}
+                onToggle={selection.toggle}
+                onOpen={(a) => void openEditor(a)}
+                emptyLabel={t('content.empty')}
+              />
+            ) : (
+              <ContentBoardView
+                articles={sort.sortedData}
+                groups={buildGroups(sort.sortedData, groupCtx)}
+                ctx={groupCtx}
+                selection={selection.value}
+                onToggle={selection.toggle}
+                onOpen={(a) => void openEditor(a)}
+                emptyLabel={t('content.empty')}
+              />
+            )}
           </div>
 
           {selection.value.size > 0 && (
@@ -615,7 +871,10 @@ export function ContentPage() {
               </BulkPill>
             </BulkActionBar>
           )}
-        </>
+        </Stack>
+          }
+        />
+        </div>
       )}
 
       {/* ─── Editor ─────────────────────────────────────────── */}

@@ -80,7 +80,8 @@
     "language": "Sprache",
     "collapseSidebar": "Sidebar einklappen",
     "expandSidebar": "Sidebar ausklappen",
-    "content": "Redaktion"
+    "content": "Redaktion",
+    "settings": "Einstellungen"
   },
   "dashboard": {
     "welcome": "Willkommen zurück, {{name}}",
@@ -710,6 +711,75 @@
     "fieldRolesHint": "Leer = alle Rollen sehen den Artikel.",
     "rolePatient": "Patient",
     "roleCaregiver": "Angehörige/Caregiver",
-    "roleDoctor": "Arzt"
+    "roleDoctor": "Arzt",
+    "viewGrid": "Tabelle",
+    "viewCards": "Karten",
+    "viewBoard": "Board",
+    "groupNone": "Keine Gruppierung",
+    "groupStatus": "Nach Status",
+    "groupCategory": "Nach Kategorie",
+    "groupSource": "Nach Quelle"
+  },
+  "views": {
+    "title": "Gespeicherte Sichten",
+    "default": "Standard",
+    "unsaved": "Ungespeicherte Sicht",
+    "none": "Keine gespeicherten Sichten",
+    "saveCurrent": "Aktuelle Sicht speichern...",
+    "updateParent": "Sicht \"{{name}}\" aktualisieren",
+    "saveTitle": "Sicht speichern",
+    "nameLabel": "Name",
+    "defaultLabel": "Als Standard-Sicht verwenden",
+    "renameTitle": "Sicht umbenennen",
+    "setDefault": "Als Standard",
+    "rename": "Umbenennen",
+    "delete": "Löschen",
+    "error": "Sicht konnte nicht gespeichert werden",
+    "sectionTitle": "Sichten",
+    "updateWithCurrent": "Mit aktuellen Filtern aktualisieren",
+    "removeDefault": "Standard entfernen"
+  },
+  "filters": {
+    "title": "Filter",
+    "reset": "Zurücksetzen ({count})",
+    "show": "Filter anzeigen",
+    "hide": "Filter ausblenden"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "groupAdministration": "Verwaltung",
+    "groupSystem": "System",
+    "mailServer": "Mail-Server"
+  },
+  "mail": {
+    "subtitle": "SMTP-Konfiguration und E-Mail-Vorlagen für den Portalversand.",
+    "configured": "Konfiguriert",
+    "notConfigured": "Nicht konfiguriert",
+    "smtpSection": "SMTP-Server",
+    "host": "Host",
+    "port": "Port",
+    "secure": "TLS (SMTPS)",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "passwordStored": "(gespeichert)",
+    "fromEmail": "Absender-Adresse",
+    "fromName": "Absender-Name",
+    "replyTo": "Antwort-Adresse",
+    "portalBaseUrl": "Portal-Basis-URL",
+    "portalBaseUrlHint": "Für Links in Mails, z.B. den Einladungslink.",
+    "saved": "Mail-Einstellungen gespeichert",
+    "saveFailed": "Speichern fehlgeschlagen",
+    "testSection": "Test-Mail",
+    "testRecipient": "Empfänger",
+    "sendTest": "Test-Mail senden",
+    "testSent": "Test-Mail versendet",
+    "testFailed": "Test-Mail fehlgeschlagen",
+    "templateSection": "Vorlage: Einladung",
+    "templateHint": "HTML mit Platzhaltern: {clinic}, {role}, {invite_link}, {expires_at}. Wird beim Einladen mit E-Mail-Adresse automatisch versendet.",
+    "templateSubject": "Betreff",
+    "templateBody": "Inhalt (HTML)",
+    "saveTemplate": "Vorlage speichern",
+    "templateSaved": "Vorlage gespeichert",
+    "resetTemplate": "Auf Standard zurücksetzen"
   }
 }

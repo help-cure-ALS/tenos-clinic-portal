@@ -22,6 +22,8 @@ import {
   useRowSelection,
   type Column,
 } from '@hca/mantine-workbench';
+import { useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsControl } from '../../components/common/SavedViewsControl';
 
 import {
   useVerifications,
@@ -108,7 +110,8 @@ export function VerificationsPage() {
   );
 
   // ─── Search + Sort + Selection ─────────────────────────
-  const [query, setQuery] = useState('');
+  const vs = useViewState('verifications');
+  const [query, setQuery] = useViewQuery(vs);
 
   const filteredRows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -139,6 +142,7 @@ export function VerificationsPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   const selection = useRowSelection();
 
@@ -360,15 +364,15 @@ export function VerificationsPage() {
         </Center>
       ) : (
         <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('verifications.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+          <Group mx="md" wrap="nowrap" justify="space-between">
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('verifications.searchPlaceholder')}
+              style={{ maxWidth: 360, flex: 1 }}
+            />
+            <SavedViewsControl vs={vs} />
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<PendingRow>
@@ -376,7 +380,7 @@ export function VerificationsPage() {
               data={sort.sortedData}
               getRowId={(row) => row.id}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
             />

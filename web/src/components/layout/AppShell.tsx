@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   Outlet,
   Navigate,
@@ -16,14 +16,12 @@ import {
   Text,
 } from '@mantine/core';
 import {
-  ArrowLeftRight,
   Award,
   Building,
   Building2,
   Check,
   ChevronDown,
   FlaskConical,
-  FlaskRound,
   Hospital,
   Languages,
   LayoutDashboard,
@@ -33,7 +31,7 @@ import {
   ShieldCheck,
   Stethoscope,
   User,
-  Users,
+  Settings as SettingsIcon,
 } from 'lucide-react';
 import { Newspaper } from 'lucide-react';
 import {
@@ -145,13 +143,6 @@ export function AppShellLayout() {
 
     // Organization — clinic master data/setup
     {
-      to: '/users',
-      labelKey: 'nav.users',
-      icon: Users,
-      roles: ['clinic-admin'],
-      sectionKey: 'organization',
-    },
-    {
       to: '/clinic-studies',
       labelKey: 'nav.clinicStudies',
       icon: FlaskConical,
@@ -205,23 +196,9 @@ export function AppShellLayout() {
 
     // Configuration — HCA admin, write-heavy: platform settings
     {
-      to: '/supplier-workflow-policies',
-      labelKey: 'nav.supplierPolicies',
-      icon: ArrowLeftRight,
-      roles: ['hca-admin'],
-      sectionKey: 'configuration',
-    },
-    {
       to: '/studies',
       labelKey: 'nav.studies',
       icon: FlaskConical,
-      roles: ['hca-admin'],
-      sectionKey: 'configuration',
-    },
-    {
-      to: '/studies-sync',
-      labelKey: 'nav.studiesSync',
-      icon: FlaskRound,
       roles: ['hca-admin'],
       sectionKey: 'configuration',
     },
@@ -364,6 +341,14 @@ export function AppShellLayout() {
           <CollapsedHeader onExpand={() => setCollapsed(false)} />
         }
         footer={
+          <>
+            {(userRole === 'hca-admin' || userRole === 'clinic-admin') && (
+              <FooterSettingsItem
+                collapsed={collapsed}
+                label={t('nav.settings')}
+                active={location.pathname.startsWith('/settings')}
+              />
+            )}
           <UserMenu
             collapsed={collapsed}
             userName={userName}
@@ -375,6 +360,7 @@ export function AppShellLayout() {
             onLogout={handleLogout}
             t={t}
           />
+          </>
         }
         renderLink={({ href, isActive: itemActive, children, style, onMouseEnter, onMouseLeave }) => (
           <RouterNavLink
@@ -411,6 +397,85 @@ export function AppShellLayout() {
         <Outlet />
       </div>
     </div>
+  );
+}
+
+// ─── Footer: Settings item above the user menu ───────────
+// Same look as MainNav's item rows (moonshot ShellFooter pattern).
+// The lib treats the footer slot as opaque, so the row style is
+// duplicated here deliberately.
+
+const FOOTER_TEXT = 'rgba(255, 255, 255, 0.92)';
+const FOOTER_TEXT_DIMMED = 'rgba(255, 255, 255, 0.56)';
+const FOOTER_HOVER_BG = 'rgba(255, 255, 255, 0.08)';
+const FOOTER_ACTIVE_BG = 'rgba(255, 255, 255, 0.12)';
+
+function FooterSettingsItem({
+  collapsed,
+  label,
+  active,
+}: {
+  collapsed: boolean;
+  label: string;
+  active: boolean;
+}) {
+  const [hovered, setHovered] = useState(false);
+  const bg = active ? FOOTER_ACTIVE_BG : hovered ? FOOTER_HOVER_BG : 'transparent';
+  const color = active || hovered ? FOOTER_TEXT : FOOTER_TEXT_DIMMED;
+
+  if (collapsed) {
+    return (
+      <RouterNavLink
+        to="/settings"
+        aria-label={label}
+        aria-current={active ? 'page' : undefined}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          width: 36,
+          height: 36,
+          margin: '2px auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 8,
+          background: bg,
+          color,
+          textDecoration: 'none',
+          transition: 'background 120ms, color 120ms',
+        }}
+      >
+        <SettingsIcon size={18} strokeWidth={active ? 2 : 1.5} />
+      </RouterNavLink>
+    );
+  }
+  return (
+    <RouterNavLink
+      to="/settings"
+      aria-current={active ? 'page' : undefined}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12,
+        padding: '7px 10px',
+        marginBottom: 2,
+        borderRadius: 6,
+        background: bg,
+        color,
+        fontSize: 'var(--mantine-font-size-md)',
+        fontWeight: active ? 500 : 400,
+        textDecoration: 'none',
+        transition: 'background 120ms, color 120ms',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+      }}
+    >
+      <SettingsIcon size={16} strokeWidth={active ? 2 : 1.5} style={{ flexShrink: 0 }} />
+      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{label}</span>
+    </RouterNavLink>
   );
 }
 

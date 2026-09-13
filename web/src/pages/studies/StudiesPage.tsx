@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Stack,
@@ -10,22 +10,31 @@ import {
   Modal,
   Button,
   Group,
+  ActionIcon,
+  Tooltip,
+  Indicator,
 } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';
 import { useQueryClient } from '@tanstack/react-query';
-import { FlaskConical, Trash2 } from 'lucide-react';
+import { FlaskConical, Trash2, Filter as FilterIcon } from 'lucide-react';
 import type { ResearchStudy } from '@medplum/fhirtypes';
 import {
   PageHeader,
   DataGrid,
+  DataGridLayout,
+  FilterPanel,
+  usePanelRef,
   SearchInput,
   BulkActionBar,
   BulkPill,
   useGridSort,
   useRowSelection,
   type Column,
+  type FilterPanelSection,
 } from '@hca/mantine-workbench';
+import { filterMatches, useViewFilterSelection, useViewState, useViewQuery, useViewSortSync } from '../../hooks/useViewState';
+import { SavedViewsPanel } from '../../components/common/SavedViewsPanel';
 
 import { useStudies } from '../../hooks/useStudies';
 import { useExcludedStudies } from '../../hooks/useExcludedStudies';
@@ -84,15 +93,66 @@ export function StudiesPage() {
   };
 
   // ─── Search + sort + selection ─────────────────────────
-  const [query, setQuery] = useState('');
+  const vs = useViewState('studies');
+  const [query, setQuery] = useViewQuery(vs);
+  const { selection: filterSelection, setSelection: setFilterSelection } =
+    useViewFilterSelection(vs);
+
+  // Panel toggle (evidencespace pattern): button in the toolbar,
+  // collapsed state persisted per page, applied via the panel ref.
+  const filterPanelRef = usePanelRef();
+  const [filterCollapsed, setFilterCollapsed] = useLocalStorage<boolean>({
+    key: 'tenos-portal:studies:filter-collapsed',
+    defaultValue: false,
+  });
+  useEffect(() => {
+    const panel = filterPanelRef.current;
+    if (!panel) return;
+    if (filterCollapsed) panel.collapse();
+    else panel.expand();
+  }, [filterCollapsed, filterPanelRef]);
+
+  // Badge on the filter toggle — active VALUES, same arithmetic as
+  // the panel's reset pill.
+  const activeFilterCount = useMemo(
+    () => Array.from(filterSelection.values()).reduce((sum, set) => sum + set.size, 0),
+    [filterSelection],
+  );
+
+  const studyPhase = (s: ResearchStudy): string =>
+    s.phase?.text || s.phase?.coding?.[0]?.display || '';
 
   const filteredStudies = useMemo(() => {
     const q = query.trim().toLowerCase();
-    const visible = studies.filter((s) => !isExcluded(s));
-    if (!q) return visible;
-    return visible.filter((s) => (s.title ?? '').toLowerCase().includes(q));
+    return studies.filter((s) => {
+      if (isExcluded(s)) return false;
+      if (!filterMatches(filterSelection, 'status', s.status ?? '')) return false;
+      if (!filterMatches(filterSelection, 'phase', studyPhase(s))) return false;
+      return !q || (s.title ?? '').toLowerCase().includes(q);
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [studies, query, excludedKeys]);
+  }, [studies, query, filterSelection, excludedKeys]);
+
+  const filterSections = useMemo<FilterPanelSection[]>(() => {
+    const visible = studies.filter((s) => !isExcluded(s));
+    const countBy = (fn: (s: ResearchStudy) => string) => {
+      const m = new Map<string, number>();
+      for (const s of visible) {
+        const key = fn(s);
+        if (key) m.set(key, (m.get(key) ?? 0) + 1);
+      }
+      return m;
+    };
+    const toItems = (m: Map<string, number>) =>
+      [...m.entries()]
+        .map(([key, count]) => ({ key, label: key, count }))
+        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+    return [
+      { key: 'status', title: t('common.status'), mode: 'multi', items: toItems(countBy((s) => s.status ?? '')) },
+      { key: 'phase', title: t('studies.phase'), mode: 'multi', items: toItems(countBy(studyPhase)) },
+    ];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [studies, excludedKeys, t]);
 
   const sort = useGridSort<ResearchStudy>({
     mode: 'client',
@@ -111,6 +171,7 @@ export function StudiesPage() {
       }
     },
   });
+  const onSortChange = useViewSortSync(vs, sort);
 
   // The selection hook optionally takes an iterable of initial IDs;
   // we start with an empty selection. The getRowId logic lives on the DataGrid.
@@ -249,10 +310,10 @@ export function StudiesPage() {
   }
 
   return (
-    <Stack gap="lg" h="100%" style={{ minHeight: 0 }}>
-      <PageHeader title={t('studies.title')} subtitle={t('studies.subtitle')} />
-
+    <Stack gap={0} h="100%" style={{ minHeight: 0 }}>
       {studies.length === 0 ? (
+        <>
+        <PageHeader title={t('studies.title')} subtitle={t('studies.subtitle')} />
         <Center style={{ flex: 1, minHeight: 0 }}>
           <Stack align="center" gap="sm" maw={360}>
             <ThemeIcon variant="light" size="xl" color="gray" radius="xl">
@@ -264,17 +325,57 @@ export function StudiesPage() {
             </Text>
           </Stack>
         </Center>
+        </>
       ) : (
-        <>
-          <SearchInput
-            value={query}
-            onChange={setQuery}
-            placeholder={t('studies.searchPlaceholder')}
-            style={{
-              maxWidth: 360,
-              marginInline: 'var(--mantine-spacing-md)',
-            }}
-          />
+        <div style={{ flex: 1, minHeight: 0 }}>
+        <DataGridLayout
+          pageKey="studies"
+          filterPanelRef={filterPanelRef}
+          onFilterCollapsedChange={setFilterCollapsed}
+          filterPanel={
+            <FilterPanel
+              sections={filterSections}
+              selection={filterSelection}
+              onChange={setFilterSelection}
+              storageKey="studies"
+              topSlot={<SavedViewsPanel vs={vs} />}
+              title={t('filters.title')}
+              resetLabel={t('filters.reset')}
+            />
+          }
+          mainContent={
+        <Stack gap="md" h="100%" style={{ minHeight: 0, overflow: 'hidden' }}>
+          <PageHeader title={t('studies.title')} subtitle={t('studies.subtitle')} />
+          <Group mx="md" wrap="nowrap" gap="md">
+            <Indicator
+              label={String(activeFilterCount)}
+              size={16}
+              disabled={activeFilterCount === 0}
+              color="dark"
+              offset={2}
+            >
+              <Tooltip label={filterCollapsed ? t('filters.show') : t('filters.hide')} withArrow>
+                <ActionIcon
+                  variant={filterCollapsed ? 'default' : 'filled'}
+                  color="gray"
+                  size="lg"
+                  onClick={() => setFilterCollapsed((c) => !c)}
+                  aria-pressed={!filterCollapsed}
+                >
+                  <FilterIcon size={16} />
+                </ActionIcon>
+              </Tooltip>
+            </Indicator>
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder={t('studies.searchPlaceholder')}
+              style={{ flex: 1 }}
+            />
+            <Text fz="sm" c="dimmed" style={{ whiteSpace: 'nowrap' }}>
+              {filteredStudies.length} / {studies.filter((s) => !isExcluded(s)).length}
+            </Text>
+          </Group>
 
           <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
             <DataGrid<ResearchStudy>
@@ -282,7 +383,7 @@ export function StudiesPage() {
               data={sort.sortedData}
               getRowId={(row) => row.id ?? ''}
               sort={sort.value}
-              onSortChange={sort.set}
+              onSortChange={onSortChange}
               selection={selection.value}
               onSelectionChange={selection.set}
               onRowClick={(row) => setDetailStudy(row)}
@@ -302,7 +403,10 @@ export function StudiesPage() {
               </BulkPill>
             </BulkActionBar>
           )}
-        </>
+        </Stack>
+          }
+        />
+        </div>
       )}
 
       <StudyDetailDrawer
