@@ -90,6 +90,14 @@ export async function listCategories(includeInactive: boolean): Promise<ContentC
     return rows;
 }
 
+export async function getCategory(id: string): Promise<ContentCategory | null> {
+    const { rows } = await pool.query<ContentCategory>(
+        `SELECT id, label, labels_i18n, sort, active FROM content_categories WHERE id = $1`,
+        [id],
+    );
+    return rows[0] ?? null;
+}
+
 export async function upsertCategory(
     id: string,
     label: string,
@@ -111,6 +119,21 @@ export async function setCategoryLabels(id: string, labels: Record<string, strin
         `UPDATE content_categories SET labels_i18n = $2, updated_at = now() WHERE id = $1`,
         [id, JSON.stringify(labels)],
     );
+}
+
+/**
+ * Public articles of one category, without the image bytes — enough
+ * to rebuild the mirrored Basic resource (the image is referenced by
+ * the stored binary_id, not re-uploaded).
+ */
+export async function listPublicArticlesByCategory(categoryId: string): Promise<ContentArticleListRow[]> {
+    const { rows } = await pool.query<ContentArticleListRow>(
+        `SELECT ${LIST_COLUMNS}
+         FROM content_articles
+         WHERE status = 'public' AND category_id = $1`,
+        [categoryId],
+    );
+    return rows;
 }
 
 export async function categoryInUse(id: string): Promise<boolean> {

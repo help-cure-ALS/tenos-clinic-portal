@@ -44,7 +44,7 @@ import {
   Indicator,
 } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
-import { Newspaper, Pin, Plus, Tags, Trash2, Filter as FilterIcon } from 'lucide-react';
+import { ArrowDown, ArrowUp, Newspaper, Pencil, Pin, Plus, Tags, Trash2, Filter as FilterIcon } from 'lucide-react';
 import {
   PageHeader,
   DataGrid,
@@ -146,7 +146,8 @@ function emptyForm(lang: string, firstCategory: string): FormState {
   return {
     category_id: firstCategory,
     original_lang: APP_LANGUAGES.includes(lang) ? lang : 'de',
-    translate: true,
+    // Machine translation is opt-in per article.
+    translate: false,
     title: '',
     teaser: '',
     body_html: '',
@@ -300,6 +301,8 @@ export function ContentPage() {
 
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [newCategory, setNewCategory] = useState({ id: '', label: '' });
+  // Inline rename state in the categories modal.
+  const [editingCat, setEditingCat] = useState<{ id: string; label: string } | null>(null);
 
   const load = useCallback(async () => {
     setError('');
@@ -661,6 +664,60 @@ export function ContentPage() {
       await load();
     } catch (err) {
       notifications.show({ color: 'red', title: t('content.saveFailed'), message: String(err) });
+    }
+  }
+
+  /** Saves the inline rename; no-op when unchanged or empty. */
+  async function handleRenameCategory() {
+    if (!editingCat) return;
+    const cat = categories.find((c) => c.id === editingCat.id);
+    const label = editingCat.label.trim();
+    if (!cat || !label || label === cat.label) {
+      setEditingCat(null);
+      return;
+    }
+    try {
+      await saveContentCategory({
+        id: cat.id,
+        label,
+        original_lang: i18n.language === 'de' ? 'de' : 'en',
+        sort: cat.sort,
+        active: cat.active,
+      });
+      setEditingCat(null);
+      await load();
+    } catch (err) {
+      notifications.show({ color: 'red', title: t('content.saveFailed'), message: String(err) });
+    }
+  }
+
+  /**
+   * Moves a category one position up/down. Persists the index as the
+   * new sort for every row whose position changed (also normalizes
+   * historical duplicate sort values).
+   */
+  async function handleMoveCategory(index: number, dir: -1 | 1) {
+    const target = index + dir;
+    if (target < 0 || target >= categories.length) return;
+    const reordered = [...categories];
+    const [moved] = reordered.splice(index, 1);
+    reordered.splice(target, 0, moved);
+    try {
+      for (let i = 0; i < reordered.length; i += 1) {
+        const cat = reordered[i];
+        if (cat.sort === i) continue;
+        await saveContentCategory({
+          id: cat.id,
+          label: cat.label,
+          original_lang: i18n.language === 'de' ? 'de' : 'en',
+          sort: i,
+          active: cat.active,
+        });
+      }
+      await load();
+    } catch (err) {
+      notifications.show({ color: 'red', title: t('content.saveFailed'), message: String(err) });
+      await load();
     }
   }
 
@@ -1205,57 +1262,106 @@ export function ContentPage() {
           {categories.length === 0 ? (
             <Text size="sm" c="dimmed">{t('content.categoriesEmpty')}</Text>
           ) : (
+            <>
+            <Text size="xs" c="dimmed">{t('content.categoriesSortHint')}</Text>
             <Table verticalSpacing="sm">
               <Table.Thead>
                 <Table.Tr>
                   <Table.Th>{t('content.categoryLabel')}</Table.Th>
                   <Table.Th>{t('content.categoryId')}</Table.Th>
                   <Table.Th w={90}>{t('content.categoryInUse')}</Table.Th>
-                  <Table.Th w={50} />
+                  <Table.Th w={150} />
                 </Table.Tr>
               </Table.Thead>
               <Table.Tbody>
-                {categories.map((cat) => {
+                {categories.map((cat, index) => {
                   const usedBy = articles.filter((a) => a.category_id === cat.id).length;
+                  const isEditing = editingCat?.id === cat.id;
                   return (
                     <Table.Tr key={cat.id}>
                       <Table.Td>
-                        <Group gap="xs">
-                          <Text size="sm" fw={500}>{cat.label}</Text>
-                          {!cat.active && (
-                            <Badge variant="light" color="gray">{t('content.categoryInactive')}</Badge>
-                          )}
-                        </Group>
+                        {isEditing ? (
+                          <TextInput
+                            size="xs"
+                            value={editingCat.label}
+                            autoFocus
+                            onChange={(e) => setEditingCat({ id: cat.id, label: e.currentTarget.value })}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') void handleRenameCategory();
+                              if (e.key === 'Escape') setEditingCat(null);
+                            }}
+                            onBlur={() => void handleRenameCategory()}
+                          />
+                        ) : (
+                          <Group gap="xs">
+                            <Text size="sm" fw={500}>{cat.label}</Text>
+                            {!cat.active && (
+                              <Badge variant="light" color="gray">{t('content.categoryInactive')}</Badge>
+                            )}
+                          </Group>
+                        )}
                       </Table.Td>
                       <Table.Td><Text size="sm" c="dimmed" ff="monospace">{cat.id}</Text></Table.Td>
                       <Table.Td><Text size="sm" c="dimmed">{usedBy}</Text></Table.Td>
                       <Table.Td>
-                        <Tooltip
-                          label={usedBy > 0 ? t('content.categoryDeleteBlocked') : t('content.delete')}
-                        >
-                          <ActionIcon
-                            variant="subtle"
-                            color="red"
-                            disabled={usedBy > 0}
-                            onClick={() => {
-                              void deleteContentCategory(cat.id)
-                                .then(load)
-                                .catch((err) => notifications.show({
-                                  color: 'red',
-                                  title: t('content.categoryDeleteFailed'),
-                                  message: String(err),
-                                }));
-                            }}
+                        <Group gap={4} justify="flex-end" wrap="nowrap">
+                          <Tooltip label={t('content.categoryMoveUp')}>
+                            <ActionIcon
+                              variant="subtle"
+                              color="gray"
+                              disabled={index === 0}
+                              onClick={() => void handleMoveCategory(index, -1)}
+                            >
+                              <ArrowUp size={16} />
+                            </ActionIcon>
+                          </Tooltip>
+                          <Tooltip label={t('content.categoryMoveDown')}>
+                            <ActionIcon
+                              variant="subtle"
+                              color="gray"
+                              disabled={index === categories.length - 1}
+                              onClick={() => void handleMoveCategory(index, 1)}
+                            >
+                              <ArrowDown size={16} />
+                            </ActionIcon>
+                          </Tooltip>
+                          <Tooltip label={t('content.categoryRename')}>
+                            <ActionIcon
+                              variant="subtle"
+                              color="gray"
+                              onClick={() => setEditingCat({ id: cat.id, label: cat.label })}
+                            >
+                              <Pencil size={16} />
+                            </ActionIcon>
+                          </Tooltip>
+                          <Tooltip
+                            label={usedBy > 0 ? t('content.categoryDeleteBlocked') : t('content.delete')}
                           >
-                            <Trash2 size={16} />
-                          </ActionIcon>
-                        </Tooltip>
+                            <ActionIcon
+                              variant="subtle"
+                              color="red"
+                              disabled={usedBy > 0}
+                              onClick={() => {
+                                void deleteContentCategory(cat.id)
+                                  .then(load)
+                                  .catch((err) => notifications.show({
+                                    color: 'red',
+                                    title: t('content.categoryDeleteFailed'),
+                                    message: String(err),
+                                  }));
+                              }}
+                            >
+                              <Trash2 size={16} />
+                            </ActionIcon>
+                          </Tooltip>
+                        </Group>
                       </Table.Td>
                     </Table.Tr>
                   );
                 })}
               </Table.Tbody>
             </Table>
+            </>
           )}
 
           <Divider label={t('content.categoryAddTitle')} labelPosition="left" />

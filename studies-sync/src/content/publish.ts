@@ -14,6 +14,7 @@ import { getServiceClient } from "../medplum";
 import {
     getArticle,
     listExpiredPublicArticles,
+    listPublicArticlesByCategory,
     setArticleMirror,
     setArticlePublishError,
     setArticleStatus,
@@ -65,6 +66,11 @@ function buildArticleResource(
     // article so the app needs no second lookup for the chips.
     const label = category?.labels_i18n?.[article.original_lang] ?? category?.label;
     if (label) extensions.push(ext("category-label", { valueString: label }));
+    // Editorial chip order (portal category sort) — the app orders
+    // the filter chips by this instead of article order.
+    if (category && Number.isFinite(category.sort)) {
+        extensions.push(ext("category-sort", { valueInteger: category.sort }));
+    }
     for (const [lang, translated] of Object.entries(category?.labels_i18n ?? {})) {
         if (lang === article.original_lang || !translated) continue;
         extensions.push(ext(`category-label-${lang}`, { valueString: translated }));
@@ -184,6 +190,42 @@ export async function startPublishArticle(log: FastifyBaseLogger, articleId: str
                 log.error({ articleId, dbErr }, "[content] failed to record publish error");
             }
         });
+}
+
+/**
+ * Refreshes the mirrored Basic resources of all public articles in a
+ * category after its label or sort changed. Lightweight on purpose:
+ * no re-translation, no image re-upload — the resource is rebuilt
+ * from the stored article (existing binary_id) and updated in place,
+ * so renames and reorderings reach the app without a full republish.
+ */
+export async function refreshCategoryMirrors(
+    log: FastifyBaseLogger,
+    categoryId: string,
+): Promise<void> {
+    const rows = await listPublicArticlesByCategory(categoryId);
+    if (rows.length === 0) return;
+
+    const categories = await listCategories(true);
+    const category = categories.find((c) => c.id === categoryId);
+    const client = await getServiceClient();
+
+    let failed = 0;
+    for (const row of rows) {
+        if (!row.medplum_id) continue;
+        try {
+            const article: ContentArticle = { ...row, image: null };
+            const resource = buildArticleResource(article, category, row.binary_id);
+            await client.updateResource<Basic>({ ...resource, id: row.medplum_id });
+        } catch (err) {
+            failed += 1;
+            log.warn({ articleId: row.id, err }, "[content] category mirror refresh failed");
+        }
+    }
+    log.info(
+        { categoryId, refreshed: rows.length - failed, failed },
+        "[content] category mirrors refreshed",
+    );
 }
 
 /** Removes the care-server mirror (archive, back-to-draft, delete). */

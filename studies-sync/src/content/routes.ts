@@ -21,6 +21,7 @@ import {
     deleteArticle,
     deleteCategory,
     getArticle,
+    getCategory,
     listArticles,
     listCategories,
     setArticleImage,
@@ -31,7 +32,7 @@ import {
     type ArticleStatus,
     type ContentArticle,
 } from "./store";
-import { startPublishArticle, unpublishArticle } from "./publish";
+import { refreshCategoryMirrors, startPublishArticle, unpublishArticle } from "./publish";
 import { APP_LANGUAGES, translateCategoryLabel } from "./translate";
 
 const MAX_IMAGE_BYTES = 2 * 1024 * 1024;
@@ -162,16 +163,26 @@ export async function registerContentRoutes(app: FastifyInstance): Promise<void>
             reply.code(400).send({ error: "invalid_body", details: parsed.error.issues });
             return;
         }
+        const existing = await getCategory(parsed.data.id);
+        const labelChanged = existing?.label !== parsed.data.label;
+        const sortChanged = existing !== null && existing.sort !== parsed.data.sort;
         await upsertCategory(parsed.data.id, parsed.data.label, parsed.data.sort, parsed.data.active);
-        // Label translation runs in the background — the portal list
-        // is usable immediately, the app sees the labels on the next
-        // article publish.
-        void translateCategoryLabel(
-            req.log,
-            parsed.data.id,
-            parsed.data.label,
-            parsed.data.original_lang,
-        ).catch((err) => req.log.warn({ err }, "[content] category translation failed"));
+        // Background chain: translate the label (only when it actually
+        // changed — reorderings must not burn translation calls), then
+        // refresh the mirrored resources of public articles so renames
+        // and new sort orders reach the app without a manual republish.
+        const log = req.log;
+        const { id, label, original_lang } = parsed.data;
+        void (async () => {
+            if (labelChanged) {
+                await translateCategoryLabel(log, id, label, original_lang)
+                    .catch((err) => log.warn({ err }, "[content] category translation failed"));
+            }
+            if (labelChanged || sortChanged) {
+                await refreshCategoryMirrors(log, id)
+                    .catch((err) => log.warn({ err }, "[content] category mirror refresh failed"));
+            }
+        })();
         return { ok: true };
     });
 
